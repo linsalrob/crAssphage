@@ -2,7 +2,7 @@
 
 This project would not be successful without our great global collaborators. This is a list of people that have provided sequences. If I have inadvertently forgotten anyone, please email Rob.
 
-##[Edwards lab])(http://edwards.sdsu.edu/research)
+##[Edwards lab](http://edwards.sdsu.edu/research)
 *Where it all started*
 * Rob Edwards
 * Alex Vega
