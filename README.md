@@ -14,3 +14,11 @@ of the repository.
 
 If you use this data or analysis please let Rob know. 
 
+# Genbank Sequence
+
+The original sequence that was published in Genbank (but has since been deleted) is available as [JQ995537.gbk](JQ995537.gbk)
+
+# Sequences
+
+[Sequences](Sequences) are provided by our [collaborators](COLLABORATORS.md)
+
