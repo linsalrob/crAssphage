@@ -21,6 +21,7 @@ Utrecht,
 The Netherlands
 
 ## [Brouns lab](http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Agrotechnology-and-Food-Sciences/Laboratory-of-Microbiology/Research/Themes-Microbe-Bacteriophage-interactions.htm)
+*The first group to generate sequences*
 * Franklin Nóbrega
 * Stan Brouns
 Laboratory of Microbiology
