@@ -14,9 +14,15 @@ of the repository.
 
 If you use this data or analysis please let Rob know. 
 
+Please be aware that Rob and our collaborators are working on a manuscript describing this data, and so please do
+not use this data as part of a manuscript without asking Rob. We will almost certainly say *yes*, unless you are
+writing exactly the same manuscript that we are writing, and in which case we'll invite you to join our team!
+
+*Do the right thing!*
+
 # Genbank Sequence
 
-The original sequence that was published in Genbank (but has since been deleted) is available as [JQ995537.gbk](JQ995537.gbk)
+The original sequence that was published in Genbank (but has [since been deleted](http://www.ncbi.nlm.nih.gov/nuccore/JQ995537)) is available as [JQ995537.gbk](JQ995537.gbk)
 
 # Sequences
 

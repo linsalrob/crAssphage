@@ -67,3 +67,16 @@ Then 30 cycles of:
 
 **The expected product sizes are  A=1331 bp; B=1354 bp; C=1238 bp.**
 
+
+# Metadata
+
+We are trying to collect the metadata about where the sequences came from. Currently we are collecting the following information. Currently we include it in the header of each sequence. Although this results in a lot of redundancy, it also means that you have the information. There is no particular order to the keys, and not all sequences are guaranteed to have all the keys. If a key is missing it is assumed that the data is unknown.
+
+* date: Ideally, the date that the sample was collected, but we will also use the date that the sequence was received if necessary.
+* address: The location of the collection site. This is mainly used to verify lat/lon and we understand that not all locations want that shared!
+* altitude: The height of the collection site above sea level
+* latitude: The latitude of the collection site in [decimal degrees](https://en.wikipedia.org/wiki/Decimal_degrees)
+* longitude: The longitude of the collection site in [decimal degrees](https://en.wikipedia.org/wiki/Decimal_degrees)
+* name: The name of the sample or sequence. This can be an arbitrary string.
+
+
