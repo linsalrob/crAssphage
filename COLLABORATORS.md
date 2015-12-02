@@ -2,7 +2,7 @@
 
 This project would not be successful without our great global collaborators. This is a list of people that have provided sequences. If I have inadvertently forgotten anyone, please email Rob.
 
-##[Edwards lab](http://edwards.sdsu.edu/research)
+## [Edwards lab](http://edwards.sdsu.edu/research)
 *Where it all started*
   * Rob Edwards
   * Alex Vega
@@ -14,7 +14,7 @@ This project would not be successful without our great global collaborators. Thi
 > USA
 
 
-##[Dutilh lab](http://tbb.bio.uu.nl/dutilh)
+## [Dutilh lab](http://tbb.bio.uu.nl/dutilh)
 *Who actually did all the bioinformatics!*
   * Bas Dutilh
 
@@ -35,6 +35,12 @@ This project would not be successful without our great global collaborators. Thi
 > 6703 HB Wageningen,
 > The Netherlands
 
+## Cinek Lab
+
+> Department of Pediatrics,
+> Charles University in Prague,
+> Prague
+> Czech Republic 
 
 
 

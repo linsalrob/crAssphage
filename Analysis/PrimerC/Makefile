@@ -32,7 +32,7 @@ renum: seqs.fa
 	perl /home/redwards/bioinformatics/bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
 
 seqs.fa:
-	cat ../../Sequences/PrimerA/*.fasta > seqs.fa
+	cat ../../Sequences/PrimerC/*.fasta > seqs.fa
 
 clean:
 	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map
