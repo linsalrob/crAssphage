@@ -37,7 +37,7 @@ FEATURES             Location/Qualifiers
                      /country="USA"
                      /collection_date="15-Jul-2010"
                      /note="[virus wizard]"
-     CDS             join(96935..97092,1..127)
+     CDS             join(1..127,96935..97092)
                      /codon_start=1
                      /product="orf00001"
                      /translation="MKSYNESYSENNSNGNNNEDEGKGYIDNEEKSKYNGNDNEDENK
@@ -289,6 +289,10 @@ FEATURES             Location/Qualifiers
                      /translation="MGYRGELLIIFKNRTSRDLVHAVSTLAEIVDKLREHMHLPDSMI
                      GNARLKLNKVRTTVTNILDKLYTPPYNCDGEDRCCQLIINSAERISWKEVESIEELGE
                      SERGNKGFGEGTGGGAKA"
+     misc_feature    25634..25653
+                     /note="PrimerA fwd"
+     misc_feature    25634..26964
+                     /note="PCR product A"
      CDS             25943..26086
                      /codon_start=1
                      /product="orf00041"
@@ -306,6 +310,8 @@ FEATURES             Location/Qualifiers
                      LEDMILEKAVAGKNITEYPTCIIYRDDTEYKRYSNSVTWEELRNDINYLTGDEPTRQT
                      NNIFVEAFIDEHDCITRAKCADAIAWMWKYQNTKVEYIQTNVDNPNKFAVVIKDSWRT
                      YATYVYSDSLTTEMIKNTLLRVPNTIKEAVKNNAIVL"
+     misc_feature    complement(26945..26964)
+                     /note="PrimerA rev"
      CDS             27072..27350
                      /codon_start=1
                      /product="orf00045"
@@ -402,6 +408,12 @@ FEATURES             Location/Qualifiers
                      LPEHEKANIRRNLGDLLYVGAAIIGAIAITGMGGDDDEGIMYNLMLYHADRLASEAAS
                      FTPFGAYSEGKKLWSSPVAIGQTINDLLGTTAMAARFLIEEDFTEEYTTGRYKGMNKF
                      EVMAVRNIPVVRSINRVLDLPNNNSYYKVDENILSIIPYKDIGKDIFE"
+     misc_feature    33709..33728
+                     /note="PrimerB fwd"
+     misc_feature    33709..35062
+                     /note="PCR Product B"
+     misc_feature    complement(35045..35062)
+                     /note="PrimerB rev"
      CDS             complement(41728..47601)
                      /codon_start=1
                      /product="orf00053"
@@ -439,6 +451,12 @@ FEATURES             Location/Qualifiers
                      LKPYLFENFNTSEALEEFLVESITSNALMTALNEIKYDNRKVNKRKTLFSRLLEVIAD
                      MLGIKINEDSLLAAARDAYKAIKKMPKESNQEAIQGTFQFEEETASTEQTENPNEDNS
                      QDYNYNNDNLNDGLDMFSSVDDDIVSNMAELTSRLPIDQQSEFATLLDTGRISFSCM"
+     misc_feature    43820..43841
+                     /note="PrimerC fwd"
+     misc_feature    43820..45057
+                     /note="PCR Product C"
+     misc_feature    complement(45036..45057)
+                     /note="PrimerC rev"
      CDS             complement(47603..50176)
                      /codon_start=1
                      /product="orf00054"
