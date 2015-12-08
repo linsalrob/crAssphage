@@ -1,0 +1,117 @@
+CLUSTAL format alignment by MAFFT L-INS-i (v7.123b)
+
+
+crAssphage_A    ctgatagtatgattggtaatgctagacttaaacttaataaggttagaactacagttacta
+Qimron_Jericho_ --agnnntnnnnnangnnctnncgnnc--------------------nacacaatgacta
+_R_Qimron_Jeric ------------------------------------------------------------
+                                                                            
+
+crAssphage_A    atat-tcttgataaactttatactccgccatataattgtgatggtgaagatagatgttgt
+Qimron_Jericho_ acatatcttgctaaagtt--tnnnccaccatataattgtgatggtaaagatagatgttgt
+_R_Qimron_Jeric ------------------------------------------------------------
+                                                                            
+
+crAssphage_A    caact-tattattaatagtgctgaacgtattagttggaaagaagttgaatctattgaaga
+Qimron_Jericho_ caattatattattaatagtgctgaaagaattacttggaaagaagttgaatctattgaaga
+_R_Qimron_Jeric ------------------------------------------------------------
+                                                                            
+
+crAssphage_A    attaggagaaagtgaacgtggaaacaaaggatttggagaaggaaccggtggagg--agct
+Qimron_Jericho_ attaggagaaagtgaacgtggaaacaaaggatttggagaaggaaccggtggagc--agct
+_R_Qimron_Jeric -----------------------accaggaatttgagaaaggaacagggcggagcaagct
+                                       ** *.*.*****...******* **  *..   ****
+
+crAssphage_A    aaagcttaaaattggtgctcgttatattcataataaaacatctaatgaatatataattat
+Qimron_Jericho_ aaagcttaaagttggtgctcgttatattcataataaaacgtctaatgaatatataattat
+_R_Qimron_Jeric aaagcctaaagttggtgctcgttatattcataataaaacgtctaatnanatataagtgat
+                *****.****.****************************.****** *      *.* **
+
+crAssphage_A    tagtattactaaaatgaaacatccagatacaggtgaatggattcctgctgttatttataa
+Qimron_Jericho_ tagtattactaaaatgaaacatccagatacaggtgaatggattcctgctgttatttataa
+_R_Qimron_Jeric tagtagnnctaaaatgaaacatgcagatacaggtgaatggattcctgctgttatttataa
+                *****   ************** *************************************
+
+crAssphage_A    acttaatgggcctgaacctttatggtgtagaagtgttgaaagttttaaaagtcattttag
+Qimron_Jericho_ agttgatggacttgaacctttatggtgtagaagtgttgaaagttttaaaagtcattttag
+_R_Qimron_Jeric agttgatggacttgaacctttatggtgtagaagtgttgaaagttttaaaagtca-tttag
+                * **.****.*.****************************************** *****
+
+crAssphage_A    tgatgctaaagttgaaggtaatgaagtttatctatgaaaaagttaatcttattctattta
+Qimron_Jericho_ tgatgctaaagttgaaggtaatgaagtttatctatgaaaaagttaatcttgttttattta
+_R_Qimron_Jeric tgatgctaaagttgaaggtaatgaagtttatctatgaaaaagttaatcttgttttattta
+                **************************************************.**.******
+
+crAssphage_A    cctgattgtaatgttagtaaactttttgaagaaaggcttcataaagctcttgctctacct
+Qimron_Jericho_ cctgattgtaatgttagtaaactttttgaagaaaggcttcacaaagctcttgctcttcct
+_R_Qimron_Jeric cctgattgtaatgttagtaaactttttgaagaaaggcttcacaaagctcttgctctacct
+                *****************************************.************** ***
+
+crAssphage_A    gagtttgccggtaggtttaatcttattaggtataatctatatactgatactggtagacaa
+Qimron_Jericho_ gagtttgccggtaggtttaatcttattaggcataatctatatactgatactggtagacaa
+_R_Qimron_Jeric gagtttgccggtaggtttaatcttattaggtataatctatatactgatactggtagacaa
+                ******************************.*****************************
+
+crAssphage_A    gaagcgcgtagtgctggtattagtgatgctcctactgcttattgtaatggtgatatttta
+Qimron_Jericho_ gaagcgcgtagtgttggtattagtgatgctcctactgcttattgtaatggtgatattcta
+_R_Qimron_Jeric gaagcgcgtagtgctggtattagtgatgctcctactgcttattgtaatggtgatattcta
+                *************.*******************************************.**
+
+crAssphage_A    cgtggtgtgcaaagcgattacactattagaaaatatcttcgcaagctgctaggaaagtca
+Qimron_Jericho_ cgtggtgtgcaaagcgattacactattaggaagtatcttcgcaagctgttagganagtca
+_R_Qimron_Jeric cgtggtgtgcaaagcgattacactattaggaagtatcttcgcaagctgttaggatagtca
+                *****************************.**.***************.***** *****
+
+crAssphage_A    tagatatgattcttttgccctacattgaattttaattgttattgtgattaatctatcacg
+Qimron_Jericho_ tagatataattcttttgccctacattgaattttaattgttattgtgattaatctatcacg
+_R_Qimron_Jeric tagatatgattcttttgccctacattgaattttaattgtcattgtgattaatctatcacg
+                *******.*******************************.********************
+
+crAssphage_A    atatgattatcattcaatgtggggctttaaaatagct-aattttataaattctcattata
+Qimron_Jericho_ atatgaatatcattcaatgtggggctttaaaatagctaaattttataaattctcattata
+_R_Qimron_Jeric atatgaatatcattcaatgtggggctttaaaatagct-aattttataaattctcattata
+                ****** ****************************** **********************
+
+crAssphage_A    tta-tacgaatactat-ggttaaaattgaattttattataaaagtgct---gataaagat
+Qimron_Jericho_ ttattacgaatcctatgggttaaaattgaattttattataaaagtgcctgataaaagata
+_R_Qimron_Jeric tta-tacgaatactat-ggttaaaattgaattttattataaaagtgct---gataaagat
+                *** ******* **** ******************************.    * **..  
+
+crAssphage_A    aaaacagaagctat--gcaagaagctattgatatagctttatttggtactaatgttcaat
+Qimron_Jericho_ aaaacagaagctattgagaggaagctattgatatagctttatttggtactatgttcaatg
+_R_Qimron_Jeric aaaacagaagctat--gagagaagctattgatatagctttatttggtactaatgttcaat
+                **************  . ..*******************************   *. *  
+
+crAssphage_A    gtaattttaaaaatcttcctgaccatctt-attcttgaagatatgatacttgaaaa-ggc
+Qimron_Jericho_ gtaattttaaaaatcttcctgaccatcttaattctggaagatatgatacttgaaaagggc
+_R_Qimron_Jeric gtaattttaaaaatcttcctgaccatctt-attcttgaagatatgatacttgaaaa-ggc
+                ***************************** ***** ******************** ***
+
+crAssphage_A    tgttgctgg--taagaatattactgaatatcctacttgtattatata-----tagagatg
+Qimron_Jericho_ tgttgctgggtaagaattattactgaaaatccctactttgttttataataatccgcgatg
+_R_Qimron_Jeric tgttgctgg--taagaatattactgaatatcctacttgtattatata-----tcgagatg
+                *********   *..* ********** ****.  .* *.** ****     . * ****
+
+crAssphage_A    atacagaatataaacgatatagta---attctgttactt--gggaagaacttcgtaatga
+Qimron_Jericho_ tatccacaattaaacaatatgtgacattctctgttactttgggaagaactttcctaatgg
+_R_Qimron_Jeric atacagaatataaacgatatagta---attctgttactt--gggaagaacttcgtaatga
+                   * . *  *****.****.  *    .**********  **.*..* .*** *****.
+
+crAssphage_A    tatta----attatcttactggagatgaa---cctacaagacaaacaaataatatatttg
+Qimron_Jericho_ atttaaattaatctttcactggggatggaacccttcagaacaaaacaaatacaatat---
+_R_Qimron_Jeric tatta----attatcttactggagatgaa---cctacaagacaaacaaataatatatttg
+                  ***    * * *.*.*****.****.*   *.*  .*.  *********  ****   
+
+crAssphage_A    ttgaagcgtttattgatgaacatgattgtataactcgtgctaaatgtgctgatgctattg
+Qimron_Jericho_ ------------------------------------------------------------
+_R_Qimron_Jeric ttgaagcgtttattgatgaacatgattgtataactcgtgctaaatgtgctgatgctattg
+                                                                            
+
+crAssphage_A    cttggatgtggaaatatcagaatactaaagtagaatatattcaaactaatgttgataatc
+Qimron_Jericho_ ------------------------------------------------------------
+_R_Qimron_Jeric cttggatgtggaaatatcagaatactaaagtagaatatattcaaactaat-ntgatannc
+                                                                            
+
+crAssphage_A    ctaataagtttgctgttgtaattaaagatagttggagaacttat
+Qimron_Jericho_ -------------------------------------------a
+_R_Qimron_Jeric cgantnngt--------------------agt--annatnnnnn
+                                                            
