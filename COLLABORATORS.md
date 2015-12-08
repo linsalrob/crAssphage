@@ -43,4 +43,13 @@ This project would not be successful without our great global collaborators. Thi
 > Czech Republic 
 
 
+## [Qimron Lab](http://www.tau.ac.il/~ehudq/)
+   * Udi Qimron
+   * Joseph Manor
+   * Shahar Molshanski-Mor
 
+> Department of Clinical Microbiology and Immunology
+> Sackler School of Medicine
+> Tel Aviv University
+> Tel Aviv
+> Israel
