@@ -196,7 +196,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Parse a tree')
     parser.add_argument('-t', help='tree file', required=True)
     parser.add_argument('-i', help='id map file', required=True)
-    parser.add_argument('-n', help='name of the tag to use in the label. Valid tags are {}'.format(tags))
+    parser.add_argument('-n', help='name of the tag to use in the label. Valid tags are {}'.format(tags), default='id')
     args = parser.parse_args()
 
     if args.n.lower() not in tags:
@@ -216,7 +216,8 @@ if __name__ == '__main__':
                     tagcount[tagdata[args.n]] = tagcount.get(tagdata[args.n], 0)+1
                     idmap[p[0]] = "_".join(map (str, [tagdata[args.n], tagcount[tagdata[args.n]]]))
                 else:
-                    sys.stderr.write("No {} data found in sample: {}\n".format(args.n, l.strip()))
+                    if args.n.lower() != 'id':
+                        sys.stderr.write("No {} data found in sample: {}\n".format(args.n, l.strip()))
                     idmap[p[0]] = p[1].split()[0]
 
 
