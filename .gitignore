@@ -58,3 +58,31 @@ target/
 
 # PyCharm
 .idea/
+
+
+# Automatically "made" files
+Analysis/PrimerA/id.map
+Analysis/PrimerA/seqs.aln
+Analysis/PrimerA/seqs.aln.full
+Analysis/PrimerA/seqs.dnadist
+Analysis/PrimerA/seqs.fa
+Analysis/PrimerA/seqs.neighbor
+Analysis/PrimerA/seqs.renum.fa
+Analysis/PrimerA/seqs.tree
+Analysis/PrimerB/id.map
+Analysis/PrimerB/seqs.aln
+Analysis/PrimerB/seqs.aln.full
+Analysis/PrimerB/seqs.dnadist
+Analysis/PrimerB/seqs.fa
+Analysis/PrimerB/seqs.neighbor
+Analysis/PrimerB/seqs.renum.fa
+Analysis/PrimerB/seqs.tree
+Analysis/PrimerC/id.map
+Analysis/PrimerC/seqs.aln
+Analysis/PrimerC/seqs.aln.full
+Analysis/PrimerC/seqs.dnadist
+Analysis/PrimerC/seqs.fa
+Analysis/PrimerC/seqs.neighbor
+Analysis/PrimerC/seqs.renum.fa
+Analysis/PrimerC/seqs.tree
+
