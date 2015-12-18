@@ -120,7 +120,7 @@ def trim_alignment(alignment, cutoff):
     for i in range(alignmentlen):
         non_ir = 0 # non informative residues (i.e. '-')
         for a in alignment:
-            if a[i] == '-':
+            if a[i] == '-' or a[i].lower() == 'n':
                 non_ir += 1
         if (1.0 * (naligns - non_ir) / naligns) >= cutoff:
             keepposn.append(i)
