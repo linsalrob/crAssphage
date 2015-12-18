@@ -53,3 +53,22 @@ This project would not be successful without our great global collaborators. Thi
 > Tel Aviv University
 > Tel Aviv
 > Israel
+
+## [APC Microbiome Institute](http://apc.ucc.ie/)
+   * Ronan Strain
+
+> APC Microbiome Institute,
+> Room 3.39 BioSciences Building,
+> University College Cork,
+> Ireland
+
+## [Desnues](http://www.pathovirome.com)
+   * Christelle Desnues, PhD
+
+> CR1-CNRS Research Associate
+> Unité de recherche sur les maladies infectieuses et tropicales émergentes
+> URMITE - CNRS UMR 7278
+> Faculté de médecine
+> 27, Bd Jean Moulin
+> 13385 Marseille 
+> France
