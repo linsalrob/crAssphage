@@ -37,7 +37,7 @@ blastn: seqs.fa
 
 trim_seqs: seqs.aln
 	mv seqs.aln seqs.aln.full
-	python ../bin/trim_alignment.py -p seqs.aln.full -c 1 > seqs.aln
+	python ../bin/trim_alignment.py -p seqs.aln.full -c 0.9 > seqs.aln
 
 seqs.aln: align
 

@@ -20,7 +20,7 @@ country_tree: neighbor_tree
 tree: neighbor_tree
 	python ../bin/rename_trees.py -t seqs.neighbor -i id.map > seqs.tree
 
-neighbor_tree: align
+neighbor_tree: trim_seqs
 	cp seqs.aln infile
 	rm -f outfile 
 	echo "y\n" | phylip dnadist
@@ -34,6 +34,12 @@ neighbor_tree: align
 blastn: seqs.fa
 	blastn -db ../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
+
+trim_seqs: seqs.aln
+	mv seqs.aln seqs.aln.full
+	python ../bin/trim_alignment.py -p seqs.aln.full -c 0.98 > seqs.aln
+
+seqs.aln: align
 
 align: mafft
 
