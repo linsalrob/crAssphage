@@ -1,0 +1,27 @@
+Dear friends and colleagues,
+
+Last year we published a paper describing crAssphage, a phage that is present in feces from >50% of the people that we have metagenomes from: Unknown sequences in faecal metagenomes reveal a widely distributed and highly abundant bacteriophage; http://www.nature.com/ncomms/2014/140724/ncomms5498/full/ncomms5498.html
+
+We have found crAssphage on every continent we looked. The fact that we find this phage globally distributed is very unusual, and we'd like to understand more about the phylogeography (evolution and global spread) of the phage.
+
+We are undertaking a project to characterize the temporal and spatial variation of crAssphage. To do this, we would like to PCR amplify and sequence regions of the phage genome from samples around the world, and that is where we need your help. We're reaching out to as many scientists as we can find who could amplify and/or sequence crAssphage in their city.
+
+The easiest place to find it is in sewage, but you can also look in fecal samples from individual people. We have identified three regions of the phage that we can routinely amplify by PCR from 7 μl of sewage, in samples from four independent collection sites in San Diego, and we have begun monitoring these regions over time. We'd like to monitor these regions around the world, too!
+
+The crAssphage primer sequences and PCR conditions are included in the attached document. This should amplify enough product for DNA sequencing.
+
+If at all possible, we ask that you generate the primers, run the PCR amplifications, and generate the sequences. That way, we can be sure that the sequenced products are not contaminated on our end.
+
+However, we also realize that this request is both time consuming and potentially expensive. Thus, if you would like to be involved but cannot get primers and/or sequencing done, we will be happy to send you the three primer pairs, and/or generate the sequencing for you if you send us the PCR products.
+
+This is a (currently) unfunded project, and so we can't offer monetary incentives, but in return for your contribution we are happy to include you (and whoever did the work, of course) as co-authors on the publication when we get to that step.
+
+Could you please return the sequences to us by the end of February 2016 for inclusion in the paper.
+
+If you don't think you are able to help us in this project, do you know someone in your country who we should talk to?
+
+Many thanks, and we are looking forward to a fruitful collaboration project!
+
+Rob Edwards and Bas Dutilh
+San Diego State University, USA
+Universiteit Utrecht, The Netherlands
