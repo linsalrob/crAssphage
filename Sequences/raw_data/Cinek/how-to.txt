@@ -1,0 +1,14 @@
+/usr/local/genome/spades/current/bin/spades.py --only-assembler -s bin08.fastq -o bin08 
+
+
+
+blastn -db bin08/contigs.fasta -query primers/crAssphage_primers.fasta -out bin08/primers.contigs.blastn.m8 -outfmt '6 std qlen slen'
+python ~/Dropbox/GitHubs/EdwardsLab/blast/blast_to_sequences.py -b bin08/primers.contigs.blastn.m8 -f bin08/contigs.fasta -d -i 
+
+for i in bin08 bin11 bin12 bin13 bin14 bin15 bin16 bin17 bin55 bin56 bin57 bin69 bin71 bin79; do 
+	makeblastdb -in $i/contigs.fasta -dbtype nucl; 
+	blastn -db $i/contigs.fasta -query primers/crAssphage_primers.fasta -out $i/primers.contigs.blastn.m8 -outfmt '6 std qlen slen'; 
+	python ~/Dropbox/GitHubs/EdwardsLab/blast/blast_to_sequences.py -b $i/primers.contigs.blastn.m8 -f $i/contigs.fasta -d -i > $i/pcr_sequences.fasta; 
+done
+
+for binname in bin??; do export BIN=$binname; perl -npe 's/^>/>$ENV{BIN}_/' $binname/pcr_sequences.fasta; done > pcr_products.fasta
