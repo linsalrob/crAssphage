@@ -56,6 +56,8 @@ This project would not be successful without our great global collaborators. Thi
 
 ## [APC Microbiome Institute](http://apc.ucc.ie/)
    * Ronan Strain
+   * Angela McCann 
+   * Colin Hill
 
 > APC Microbiome Institute,
 > Room 3.39 BioSciences Building,
