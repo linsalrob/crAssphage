@@ -84,6 +84,8 @@ This project would not be successful without our great global collaborators. Thi
 > Stockholm University
 > 106 91 Stockholm
 
+Note: No sequences found in Sweden
+
 ## [MICROBIOLOGY OF WATER RELATED TO THE HEALTH (MARS)](http://www.ub.edu/microbiologia/grupmicrobiologiaen/index.html)
    * Maite Muniesa
    * Cristina Garcia Aljaro
@@ -96,3 +98,11 @@ This project would not be successful without our great global collaborators. Thi
 > 08028 Barcelona
 > Spain
 
+## Villagra lab
+   * Dr. Nicolás Villagra
+
+> Lab. Patogénesis Molecular y Antimicrobianos
+> Facultad de Medicina
+> Universidad Andrés Bello (UNAB)
+
+Note: No sequences found in Chile
