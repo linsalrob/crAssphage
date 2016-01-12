@@ -77,9 +77,22 @@ This project would not be successful without our great global collaborators. Thi
 
 
 ## [Nilsson group](http://www.su.se/mbw/research/research-groups/infection-and-immunobiology/group-nilsson)
-* Mohammadali Khan Mirzaei
+   * Mohammadali Khan Mirzaei
 
 > Department of Molecular Biosciences,
 > The Wenner-Gren Institute
 > Stockholm University
 > 106 91 Stockholm
+
+## [MICROBIOLOGY OF WATER RELATED TO THE HEALTH (MARS)](http://www.ub.edu/microbiologia/grupmicrobiologiaen/index.html)
+   * Maite Muniesa
+   * Cristina Garcia Aljaro
+   * Juan Jofre Torroella
+
+> Dpt. Microbiologia
+> Facultat de Biologia
+> Universitat de Barcelona
+> Av. Diagonal, 643
+> 08028 Barcelona
+> Spain
+
