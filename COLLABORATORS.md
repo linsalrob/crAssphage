@@ -106,3 +106,14 @@ Note: No sequences found in Sweden
 > Universidad Andrés Bello (UNAB)
 
 Note: No sequences found in Chile
+
+## Rob Lavigne Lab
+    * Jeroen Wagemans
+    * Rob Lavigne
+
+> KU Leuven,
+> Department of Biosystems, 
+> Laboratory of Gene Technology, 
+> Kasteelpark Arenberg 21 - box 2462, 
+> B-3001 Leuven, 
+> Belgium
