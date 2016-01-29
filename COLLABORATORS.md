@@ -108,8 +108,8 @@ Note: No sequences found in Sweden
 Note: No sequences found in Chile
 
 ## Rob Lavigne Lab
-    * Jeroen Wagemans
-    * Rob Lavigne
+   * Jeroen Wagemans
+   * Rob Lavigne
 
 > KU Leuven,
 > Department of Biosystems, 
