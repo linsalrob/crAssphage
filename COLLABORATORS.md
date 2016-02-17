@@ -117,3 +117,16 @@ Note: No sequences found in Chile
 > Kasteelpark Arenberg 21 - box 2462, 
 > B-3001 Leuven, 
 > Belgium
+
+## Grup de Microbiologia Molecular
+    * Maria Pilar Cortés Garmendia
+    * Montserrat Llagostera
+
+> Grup de Microbiologia Molecular
+> Departament de Genètica i de Microbiologia
+> UNIVERSITAT AUTÒNOMA DE BARCELONA
+> Avinguda de l'Eix Central / Carrer dels Til·lers
+> Facultat de BioCiències. Edifici C (Centre). Torre C3 senars (4a planta)
+> 08193 Bellaterra (Cerdanyola del Vallès), Spain
+
+Note: No sequences found in Barcelona
