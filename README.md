@@ -1,3 +1,7 @@
+# Updated data:
+
+Please take a look at [Kyle Levi's fork](https://github.com/KyleLevi/crAssphage) of this repository. He has more data that will eventually be merged here.
+
 # crAssphage
 
 Sequencing and analysis of crAssphage regions from around the globe
