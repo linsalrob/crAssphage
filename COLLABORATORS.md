@@ -142,3 +142,21 @@ Note: No sequences found in Barcelona
 > Australia
 
 Note: No sequences were found in Perth
+
+## Laboratorio de Microbiología Marina 
+   * Rodrigo De la Iglesia
+
+> Facultad de Ciencias Biológicas
+> P. Universidad Católica de Chile
+> Alameda 340, Casilla 114-D
+
+## Laboratorio "Bacterias Gram positivas sus fagos y estrés" 
+   * Mariana Piuri
+
+> Departamento de Química Biológica
+> FCEyN, UBA
+> Lab QB43 4to Piso PabII
+> Ciudad Universitaria
+> Intendente Güiraldes 2160
+> (1428) Ciudad Autónoma de Buenos Aires
+> Argentina
