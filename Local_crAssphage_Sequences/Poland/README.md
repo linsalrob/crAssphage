@@ -19,12 +19,14 @@ The sites are reasonably close to each other:
 
 Distance in km between sites:
 
- | Lodz | Oswiecim | Warsaw | Wyszkow
+
+City | Lodz | Oswiecim | Warsaw | Wyszkow
  --- | --- | --- | --- | ---
 Lodz | 0 | 188 | 129 | 171
 Oswiecim | 188 | 0 | 282 | 319
 Warsaw | 129 | 282 | 0 | 40
 Wyszkow | 171 | 319 | 40 | 0
+
 
 
 In addition, they modified the purification protocol because the PCR products were mostly not homogeneous (although they were specific), which gave ambiguous reads in particular positions during Sanger sequencing. 
