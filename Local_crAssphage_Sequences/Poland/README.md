@@ -15,6 +15,18 @@ while the other two are rather mixed type of communal and industrial wastes:
 - Municipal and Industrial Wastewater Treatment Plant, Nadwislanska 46, 32-642 Oswiecim, Poland
 
 
+The sites are reasonably close to each other:
+
+Distance in km between sites:
+
+ | Lodz | Oswiecim | Warsaw | Wyszkow
+ --- | --- | --- | --- | ---
+Lodz | 0 | 188 | 129 | 171
+Oswiecim | 188 | 0 | 282 | 319
+Warsaw | 129 | 282 | 0 | 40
+Wyszkow | 171 | 319 | 40 | 0
+
+
 In addition, they modified the purification protocol because the PCR products were mostly not homogeneous (although they were specific), which gave ambiguous reads in particular positions during Sanger sequencing. 
 
 1. Total metagenomic DNA was isolated from each sample using PowerSoil DNA Isolation Kit (MoBio Laboratories, Inc). This significantly improved the specificity of the PCR (and in some cases enabled PCR).
