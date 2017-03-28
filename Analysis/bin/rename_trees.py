@@ -61,7 +61,7 @@ def rename_nodes(node, idmap):
 
 if __name__ == '__main__':
 
-    tags = ['id', 'address','altitude','country','date','latitude','longitude','name','note']
+    tags = ['id', 'address','altitude','country','date','latitude','longitude','name','note', 'site']
 
     parser = argparse.ArgumentParser(description='Parse a tree')
     parser.add_argument('-t', help='tree file', required=True)
