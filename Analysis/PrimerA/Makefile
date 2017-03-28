@@ -9,16 +9,17 @@ help:
 	@echo "	   seqs.fa   assemble the DNA sequences into a single fasta file"
 	@echo "    renum     renumber the fasta file and create a separate id.map"
 	@echo "    clustalw  run a clustalw alignment on the sequences"
-	@echo "    mafft     run a mafft alignment on the sequences"
+	@echo "    mafft     run a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
+	@echo "    mafft_fa  run a mafft alignment but write the alignment in fasta format"
 	@echo "    neighbor_tree   create a neighbor joining tree"
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
 country_tree: neighbor_tree
-	python ../bin/rename_trees.py -t seqs.neighbor -i id.map -n country  > seqs.tree
+	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.tree
 
 tree: neighbor_tree
-	python ../bin/rename_trees.py -t seqs.neighbor -i id.map > seqs.tree
+	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
 
 neighbor_tree: trim_seqs
 	cp seqs.aln infile
@@ -29,6 +30,7 @@ neighbor_tree: trim_seqs
 	mv outtree seqs.neighbor
 	mv infile seqs.dnadist
 	rm -f outfile
+	python ../bin/negative_branch_lengths.py -t seqs.neighbor > seqs.nonneg.tree
 
 
 blastn: seqs.fa
@@ -42,6 +44,9 @@ trim_seqs: seqs.aln
 seqs.aln: align
 
 align: mafft
+
+mafft_fa: seqs.fa renum
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.renum.fa > seqs.faln
 
 mafft: seqs.fa renum
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.fa > seqs.aln
@@ -58,4 +63,4 @@ seqs.fa:
 	cat ../../Sequences/PrimerA/*.fasta > seqs.fa
 
 clean:
-	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree seqs.aln.full PrimerA.png
+	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree

@@ -1,7 +1,5 @@
 # Updated data:
 
-Please take a look at [Kyle Levi's fork](https://github.com/KyleLevi/crAssphage) of this repository. He has more data that will eventually be merged here.
-
 # crAssphage
 
 Sequencing and analysis of crAssphage regions from around the globe
@@ -43,3 +41,4 @@ We have started a preliminary [analysis](Analysis) of the data. You can download
 # Questions or Comments? Want to be a collaborator?
 
 Contact [Rob Edwards](http://edwards.sdsu.edu/research) and let him know.
+

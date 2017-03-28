@@ -6,6 +6,7 @@ This project would not be successful without our great global collaborators. Thi
 *Where it all started*
   * Rob Edwards
   * Alex Vega
+  * Kyle Levi
 
 
 > San Diego State University,
@@ -36,6 +37,8 @@ This project would not be successful without our great global collaborators. Thi
 > The Netherlands
 
 ## Cinek Lab
+   * Ondrej Cinek
+   * Karla Mazánková
 
 > Department of Pediatrics,
 > Charles University in Prague,
@@ -98,7 +101,7 @@ Note: No sequences found in Sweden
 > 08028 Barcelona
 > Spain
 
-## Villagra lab
+## Villagra Lab
    * Dr. Nicolás Villagra
 
 > Lab. Patogénesis Molecular y Antimicrobianos
@@ -118,45 +121,115 @@ Note: No sequences found in Chile
 > B-3001 Leuven, 
 > Belgium
 
-## Grup de Microbiologia Molecular
-    * Maria Pilar Cortés Garmendia
-    * Montserrat Llagostera
+## Lukasz Dziewit Lab
+  * Lukasz Dziewit
+  * Przemek Decewicz
 
-> Grup de Microbiologia Molecular
-> Departament de Genètica i de Microbiologia
-> UNIVERSITAT AUTÒNOMA DE BARCELONA
-> Avinguda de l'Eix Central / Carrer dels Til·lers
-> Facultat de BioCiències. Edifici C (Centre). Torre C3 senars (4a planta)
-> 08193 Bellaterra (Cerdanyola del Vallès), Spain
+> Department of Bacterial Genetics
+> Institute of Microbiology
+> University of Warsaw
+> Miecznikowa 1, 406A
+> 02-096, Warsaw, Poland
 
-Note: No sequences found in Barcelona
+## Gyu-Sung Cho Lab
+  * Gyu-Sung Cho
 
-## [Microblitz](https://www.microblitz.com.au/)
-   * Andy Whitely
-   * Deepak Kumaresan
+> Max Rubner-Institut
+> Microbiology and Biotechnology
+> Hermann-Weigmann-Straße 1 24103 Kiel
+> Karlsruhe, Germany
 
-> School of Earth and Environment
-> University of Western Australia
-> 35 Stirling Highway 
-> Perth WA 6009 
-> Australia
+## Botella Lab
+  * Josefa Anton Botella
 
-Note: No sequences were found in Perth
+> Department of Physiology, Genetics, and Microbiology
+> University of Alicante
+> 03080 Alicante, Spain
 
-## Laboratorio de Microbiología Marina 
-   * Rodrigo De la Iglesia
+## Fineran Lab
+  * Peter Fineran
 
-> Facultad de Ciencias Biológicas
-> P. Universidad Católica de Chile
-> Alameda 340, Casilla 114-D
+> Department of Microbiology and Immunology
+> University of Otago
+> 362 Leith St, North Dunedin
+> Dunedin 9016, New Zealand
 
-## Laboratorio "Bacterias Gram positivas sus fagos y estrés" 
-   * Mariana Piuri
+## Quan Lab
+  * Zhe-Xue Quan
+  * and students
 
-> Departamento de Química Biológica
-> FCEyN, UBA
-> Lab QB43 4to Piso PabII
-> Ciudad Universitaria
-> Intendente Güiraldes 2160
-> (1428) Ciudad Autónoma de Buenos Aires
-> Argentina
+> School of Life Sciences
+> Fudan University
+> 220 Handan Rd, WuJiaoChang, Yangpu, 
+> Shanghai China, 200433
+
+## National Scientific and Technical Research Council
+  * Raul Raya
+
+> Conicet
+> C1033AAJ, Av Rivadavia 1917
+> CABA, Argentina
+
+## Corporacion Corpogen
+  * Maria Mercedes Zambrano
+
+>Carrera 5 No 66A-34
+>110231
+>Bogotá, Colombia
+
+## University of Chicago
+  * A. Murat Eren (Meren)
+
+> Knapp Center for Biomedical Discovery
+> 900 E. 57th St.
+> MB 9, RM 9118
+> Chicago, IL  60637 USA
+
+## Diaz Muñoz Lab
+  * Samuel L. Díaz Muñoz
+  * Kristen Gulino
+  * Alan Twaddle
+  * Elodie Ghedin
+
+>Center for Genomics and Systems Biology, Department of Biology, New York University
+>12 Waverly Pl, New York
+>NY 10003
+
+## Santos Lab
+  * Ricardo Santos
+
+>Instituto Superior Técnico
+>Av. Rovisco Pais 1, 
+>1049-001 Lisboa, Portugal
+
+## Federal Research and Clinical Centre of Physical-Chemical Medicine
+  * Alexander V. Tyakht - 1,3
+  * Elena N. Ilina - 1
+  * Eugenia S. Lisitsyna - 2
+
+>1)  Federal Research and Clinical Centre of Physical-Chemical Medicine, 
+>Malaya Pirogovskaya 1a, 
+>Moscow 119435, Russia
+
+>2)  Lytech Ltd., 
+>Malaya Semenovskaya str. 3a, 
+>Moscow 107023, Russia
+
+>3)  Moscow Institute of Physics and Technology, 
+>Institutskiy per. 9, Dolgoprudny, 
+>Moscow Region 141700, Russia
+
+## Nigro Lab
+  * Olivia D. Nigro
+
+>Department of Oceanography
+>School of Ocean & Earth Science and Technology
+>University of Hawai‘i at Mānoa
+>1950 East-West Road, C-MORE Hale
+
+
+
+
+
+
+

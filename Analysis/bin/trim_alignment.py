@@ -25,7 +25,8 @@ def parse_phylip_file(filename):
     alignmentdata = []
     with open(filename, 'r') as f:
         l = f.readline()
-        nalignments, alignlen = map(int, l.strip().split())
+        parts = l.strip().split()
+        nalignments, alignlen = map(int, parts[0:2])
         currentline = 0
         for l in f:
             # sys.stderr.write("Current line: {} {}\n".format(currentline, l.strip()))
