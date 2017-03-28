@@ -20,7 +20,7 @@ The sites are reasonably close to each other:
 Distance in km between sites:
 
 
-     | Lodz | Oswiecim | Warsaw | Wyszkow
+ City | Lodz | Oswiecim | Warsaw | Wyszkow
  --- | --- | --- | --- | ---
 **Lodz** | 0 | 188 | 129 | 171
 **Oswiecim** | 188 | 0 | 282 | 319
