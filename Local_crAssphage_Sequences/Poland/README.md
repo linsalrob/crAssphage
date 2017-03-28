@@ -62,7 +62,8 @@ Wyszkow A seq 2 20160126 | Wyszkow A seq 2 20160303 |
 Wyszkow A seq 3 20160126 | Wyszkow A seq 3 20160303 | 
 
 
-The tree from primer A [<img src="TreeA.png" alt="Primer A tree, click for a larger version" style="width: 100px;"/>](TreeA.png) shows the separation of sequences across time and space.
+Here is the tree from primer A. 
+[<img src="TreeA.png" alt="Primer A tree, click for a larger version" style="width: 100px;"/>](TreeA.png)
 
 
 ## Primer B
@@ -100,5 +101,7 @@ Wyszkow C seq 2 20160126 | Wyszkow C seq 3 20160303
 
 
 
-The tree from primer C [<img src="TreeC.png" alt="Primer C tree, click for a larger version" style="width: 100px;"/>](TreeC.png) shows the separation of sequences across time and space.
+The tree from primer C shows the separation of sequences across time and space.
+
+[<img src="TreeC.png" alt="Primer C tree, click for a larger version" style="width: 100px;"/>](TreeC.png)
 
