@@ -36,10 +36,11 @@ and for primer B
 make tree PRIMER=B
 ```
 
-As noted below, there is a trimmed version of the primer A sequence, and you can make that with
+As noted below, there are trimmed versions of the sequences for primers A and C, and you can make trees for those sequences with
 
 ```
 make tree PRIMER=A_trimmed
+make tree PRIMER=C_trimmed
 ```
 
 ## Primer A
@@ -61,6 +62,43 @@ Wyszkow A seq 2 20160126 | Wyszkow A seq 2 20160303 |
 Wyszkow A seq 3 20160126 | Wyszkow A seq 3 20160303 | 
 
 
+The tree from primer A [<img src="TreeA.png" alt="Primer A tree, click for a larger version" style="width: 200px;"/>](TreeA.png) shows the separation of sequences across time and space.
 
 
+## Primer B
+
+The [full alignment of Primer B](seqs.aln.B.full) shows only three gaps in the whole alignment, and again, some identical sequences were found:
+
+Sequence 1 | Sequence 2 | Sequence 3 
+--- | --- | ---
+Lodz B seq 1 20160126 | Lodz B seq 2 20160303 | 
+Lodz B seq 3 20160303 | Lodz B seq 5 20160303 | 
+Oswiecim B seq 1 20160126 | Oswiecim B seq 1 20160303 | 
+Oswiecim B seq 2 20160126 | Oswiecim B seq 3 20160303 | 
+Oswiecim B seq 3 20160126 | Oswiecim B seq 4 20160303 | 
+Oswiecim B seq 4 20160126 | Oswiecim B seq 5 20160303 | 
+Warsaw B seq 1 20160126 | Warsaw B seq 1 20160303 | Warsaw B seq 2 20160303
+Wyszkow B seq 1 20160126 | Wyszkow B seq 1 20160303 | 
+Wyszkow B seq 2 20160126 | Wyszkow B seq 2 20160303 | 
+Wyszkow B seq 3 20160126 | Wyszkow B seq 3 20160303 | 
+Wyszkow B seq 4 20160126 | Wyszkow B seq 4 20160303 | 
+Wyszkow B seq 5 20160126 | Wyszkow B seq 5 20160303 | 
+
+## Primer C
+
+The [full alignment of Primer C](seqs.aln.C.full) also showed that one sequence was shorter than the others. This sequence (Oswiecim_Cseq1_20160126) was removed from the trimmed alignment (seqs.aln.C_trimmed.full)
+
+The following sequences are identical:
+
+Sequence 1 | Sequence 2
+--- | ---
+Lodz C seq 1 20160126 | Lodz C seq 1 20160303
+Lodz C seq 2 20160126 | Lodz C seq 2 20160303
+Warsaw C seq 1 20160126 | Warsaw C seq 2 20160303
+Wyszkow C seq 1 20160126 | Wyszkow C seq 1 20160303
+Wyszkow C seq 2 20160126 | Wyszkow C seq 3 20160303
+
+
+
+The tree from primer C [<img src="TreeC.png" alt="Primer C tree, click for a larger version" style="width: 200px;"/>](TreeC.png) shows the separation of sequences across time and space.
 
