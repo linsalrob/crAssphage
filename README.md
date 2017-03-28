@@ -1,4 +1,6 @@
-# Updated data:
+# Updated data
+
+This repository contains the latest data on the crAssphage project.
 
 # crAssphage
 
@@ -30,7 +32,7 @@ The original sequence that was published in Genbank (but has [since been deleted
 
 ## Sequences
 
-We have received sequences from the Netherlans, France, Israel, Denmark, and Ireland. We are still looking for more collaborators to provide sequences. Some sites have reported not finding any crAssphage, but not many!
+We have received sequences from around the globe. We are still looking for more collaborators to provide sequences. Some sites have reported not finding any crAssphage, but not many!
  
 [Sequences](Sequences) are provided by our [collaborators](COLLABORATORS.md)
 
