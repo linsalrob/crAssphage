@@ -2,7 +2,7 @@
 
 These sequences were provided by Lukasz Dziewit and Przemek Decewicz from [Uniwersytet Warszawski](http://www.uw.edu.pl/). They sampled four locations from around Poland on two different dates, 01/26/2016 and 03/03/2016. 
 
-[![alt text](Poland_crAssphage.png "crAssphage sampling sites in Poland")](https://drive.google.com/open?id=1iPazu6smwlTutk75UbrUBvlNb2Q&usp=sharing)
+[![img](Poland_crAssphage.png "crAssphage sampling sites in Poland")](https://drive.google.com/open?id=1iPazu6smwlTutk75UbrUBvlNb2Q&usp=sharing)
 
 They sampled four different wastewater plants: two are typical municipal plants:
 
