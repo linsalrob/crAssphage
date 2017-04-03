@@ -23,17 +23,17 @@ help:
 	@echo "You should define the primer you want to analyse with PRIMER=A, PRIMER=B, or PRIMER=C on the command line. The default is PRIMER=A"
 
 site_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
 
 country_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
 
 tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map > seqs.named.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-neighbor_tree: seqs.nonneg.$(PRIMER).tree
+neighbor_tree: seqs.$(PRIMER).nonneg.tree
 
-seqs.nonneg.$(PRIMER).tree: seqs.$(PRIMER).aln
+seqs.$(PRIMER).nonneg.tree: seqs.$(PRIMER).aln
 	cp seqs.$(PRIMER).aln infile
 	rm -f outfile 
 	echo "y\n" | phylip dnadist
@@ -42,7 +42,7 @@ seqs.nonneg.$(PRIMER).tree: seqs.$(PRIMER).aln
 	mv outtree seqs.$(PRIMER).neighbor
 	mv infile seqs.$(PRIMER).dnadist
 	rm -f outfile
-	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.nonneg.$(PRIMER).tree
+	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.$(PRIMER).nonnegtree
 
 
 blastn: seqs.$(PRIMER).fa
@@ -79,4 +79,4 @@ seqs.$(PRIMER).fa:
 	cat Edwards_$(PRIMER)*.fasta > seqs.$(PRIMER).fa
 
 clean:
-	rm -f *.aln *.dnd seqs.*.fa seqs.renum.*.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.named.*.tree seqs.nonneg.*.tree
+	rm -f *.aln *.dnd seqs.*.fa seqs.renum.*.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
