@@ -7,6 +7,7 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "    tree            create a neighbor joining tree and rename the leaves using the id in the fasta def line"
 	@echo "    country_tree    create a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
 	@echo "    blastn    blast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "    align     align the sequences using the default aligner (mafft)"
@@ -17,22 +18,22 @@ help:
 	@echo "    mafft_fa  run a mafft alignment but write the alignment in fasta format"
 	@echo "    neighbor_tree   create a neighbor joining tree"
 	@echo ""
-	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
+	@echo "You probably want to start with tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 	@echo ""
 	@echo "You should define the primer you want to analyse with PRIMER=A, PRIMER=B, or PRIMER=C on the command line. The default is PRIMER=A"
 
 site_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
 
 country_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
 
 tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.nonneg.$(PRIMER).tree -i id.$(PRIMER).map > seqs.named.$(PRIMER).tree
+	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-neighbor_tree: seqs.nonneg.$(PRIMER).tree
+neighbor_tree: seqs.$(PRIMER).nonneg.tree
 
-seqs.nonneg.$(PRIMER).tree: seqs.$(PRIMER).aln
+seqs.$(PRIMER).nonneg.tree: seqs.$(PRIMER).aln
 	cp seqs.$(PRIMER).aln infile
 	rm -f outfile 
 	echo "y\n" | phylip dnadist
@@ -41,7 +42,7 @@ seqs.nonneg.$(PRIMER).tree: seqs.$(PRIMER).aln
 	mv outtree seqs.$(PRIMER).neighbor
 	mv infile seqs.$(PRIMER).dnadist
 	rm -f outfile
-	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.nonneg.$(PRIMER).tree
+	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.$(PRIMER).nonneg.tree
 
 
 blastn: seqs.$(PRIMER).fa
@@ -60,10 +61,10 @@ seqs.aln: align
 align: mafft
 
 mafft_fa: seqs.$(PRIMER).fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.renum.$(PRIMER).fa > seqs.$(PRIMER).faln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 mafft: seqs.$(PRIMER).fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.$(PRIMER).fa > seqs.$(PRIMER).aln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
@@ -71,11 +72,11 @@ clustalw: seqs.$(PRIMER).fa
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../Analysis/bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.renum.$(PRIMER).fa id.$(PRIMER).map
+	perl ../../Analysis/bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	@echo "MAKING A NEW FASTA"
-	cat Decewicz_$(PRIMER).fasta > seqs.$(PRIMER).fa
+	cat Decewicz_$(PRIMER)*.fasta > seqs.$(PRIMER).fa
 
 clean:
-	rm -f *.aln *.dnd seqs.*.fa seqs.renum.*.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.named.*.tree seqs.nonneg.*.tree
+	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
