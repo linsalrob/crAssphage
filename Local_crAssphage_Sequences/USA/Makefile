@@ -7,6 +7,7 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "    tree            create a neighbor joining tree and rename the leaves using the id in the fasta def line"
 	@echo "    country_tree    create a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
 	@echo "    blastn    blast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "    align     align the sequences using the default aligner (mafft)"
@@ -17,7 +18,7 @@ help:
 	@echo "    mafft_fa  run a mafft alignment but write the alignment in fasta format"
 	@echo "    neighbor_tree   create a neighbor joining tree"
 	@echo ""
-	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
+	@echo "You probably want to start with tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 	@echo ""
 	@echo "You should define the primer you want to analyse with PRIMER=A, PRIMER=B, or PRIMER=C on the command line. The default is PRIMER=A"
 
