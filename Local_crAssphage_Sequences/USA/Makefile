@@ -42,7 +42,7 @@ seqs.$(PRIMER).nonneg.tree: seqs.$(PRIMER).aln
 	mv outtree seqs.$(PRIMER).neighbor
 	mv infile seqs.$(PRIMER).dnadist
 	rm -f outfile
-	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.$(PRIMER).nonnegtree
+	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.$(PRIMER).nonneg.tree
 
 
 blastn: seqs.$(PRIMER).fa
@@ -61,10 +61,10 @@ seqs.aln: align
 align: mafft
 
 mafft_fa: seqs.$(PRIMER).fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.renum.$(PRIMER).fa > seqs.$(PRIMER).faln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 mafft: seqs.$(PRIMER).fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.$(PRIMER).fa > seqs.$(PRIMER).aln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
@@ -72,11 +72,11 @@ clustalw: seqs.$(PRIMER).fa
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../Analysis/bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.renum.$(PRIMER).fa id.$(PRIMER).map
+	perl ../../Analysis/bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	@echo "MAKING A NEW FASTA"
 	cat Edwards_$(PRIMER)*.fasta > seqs.$(PRIMER).fa
 
 clean:
-	rm -f *.aln *.dnd seqs.*.fa seqs.renum.*.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
+	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
