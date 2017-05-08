@@ -59,4 +59,5 @@ target/
 # PyCharm
 .idea/
 
-
+# backup files
+*~
