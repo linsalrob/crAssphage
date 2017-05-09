@@ -15,14 +15,20 @@ help:
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-country_tree: neighbor_tree
-	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.tree
+country_tree: seqs.country.tree
 
-tree: neighbor_tree
+seqs.country.tree: seqs.nonneg.tree
+	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.country.tree
+
+tree: seqs.named.tree
+
+seqs.named.tree: seqs.nonneg.tree
 	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
 
-neighbor_tree: trim_seqs
-	cp seqs.aln infile
+neighbor_tree: seqs.nonneg.tree
+
+seqs.nonneg.tree: seqs.trim.aln
+	cp seqs.trim.aln infile
 	rm -f outfile 
 	echo "y\n" | phylip dnadist
 	mv -f outfile infile
@@ -37,22 +43,26 @@ blastn: seqs.fa
 	blastn -db ../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
 
-trim_seqs: seqs.aln
-	mv seqs.aln seqs.aln.full
-	python ../bin/trim_alignment.py -p seqs.aln.full -c 0.9 > seqs.aln
-
-seqs.aln: align
+seqs.trim.aln: seqs.aln
+	python ../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
 
 align: mafft
 
-mafft_fa: seqs.fa renum
+mafft_fa: seqs.faln
+
+seqs.faln: seqs.fa renum
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.renum.fa > seqs.faln
 
-mafft: seqs.fa renum
+mafft: seqs.aln
+
+seqs.aln: seqs.fa id.map
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.fa > seqs.aln
 
-clustalw:
-	clustalw seqs.fa
+clustalw: seqs.clustalw
+
+seqs.clustalw:
+	clustalw -INFILE=seqs.fa -OUTFILE=seqs.clustalw
+	
 
 renum: id.map
 
@@ -63,4 +73,6 @@ seqs.fa:
 	cat ../../Sequences/PrimerB/*.fasta > seqs.fa
 
 clean:
-	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree
+	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree 
+	rm -f seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree seqs.clustalw seqs.country.tree
+
