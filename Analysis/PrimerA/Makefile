@@ -61,8 +61,8 @@ seqs.aln: seqs.fa id.map
 clustalw: seqs.clustalw
 
 seqs.clustalw:
-	clustalw -INFILE=seqs.fa -OUTFILE=seqs.clustalw
-	
+	# clustalw -INFILE=seqs.fa -OUTFILE=seqs.clustalw
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder  --clustalout --thread 8 seqs.renum.fa > seqs.clustalw
 
 renum: id.map
 
