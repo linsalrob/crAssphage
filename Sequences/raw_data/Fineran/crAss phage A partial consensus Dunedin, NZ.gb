@@ -1,0 +1,27 @@
+LOCUS       crAss_phage_A_pa         862 bp    DNA     linear   UNA 24-JAN-2016
+DEFINITION  Assembly of 2 reads: A2.PF1890.ab1 (reversed), A2.PF1890v2.ab1
+            (reversed).
+ACCESSION   urn.local...3i-5oggpxc
+VERSION     urn.local...3i-5oggpxc
+KEYWORDS    .
+SOURCE      
+  ORGANISM  
+            .
+FEATURES             Location/Qualifiers
+ORIGIN      
+        1 tgaagtttaa agtcatttag tgatgctaag tgaaggtaat gaagttatct atgaaaagtt
+       61 aatctttttt atttacctga ttgtaatgtt agtaaacttt tgaagaaagg cttcayaaag
+      121 ctcttgctct wcctgagttt gccggtaggt ttaatcttat taggcataat ctatatactg
+      181 atactggtag acaagaagcg cgtagtgytg gtattagtga tgctcctact gcttattgta
+      241 atggtgatat tctacgtggt gtgcaaagcg attacactat tagraartat cttcgcaagc
+      301 tgttaggaca gtcatagata yrrttctttt gccctacatt gaattttaat tgttattgtg
+      361 attaatctat cacgatatga atatcattca atgtggggct ttaaaatagc taattttata
+      421 aattctcatt atattatacg aatactatgg ttaaaattga attttattat aaaagtgctg
+      481 ataaagataa aacagaagct atgmgagaag ctattgatat agctttattt ggtactaatg
+      541 ttcaatgtaa ttttaaaaat cttcctgacc atcttattct tgaagatatg atacttgaaa
+      601 aggctgttgc tggtaagaat attactgaat atcctacttg tattatatat cgagatgata
+      661 cagaatataa acgatatagt aattctgtta cttgggaaga acttcgtaat gatattaatt
+      721 atcttactgg agatgaacct acaagacaaa caaataatat atttgttgaa gcgtttattg
+      781 atgaacatga ttgtataact cgtgctaaat gtgctgatgc tattgcttgg atgtggaaat
+      841 atcaaaatac taaagtagaa ta
+//
