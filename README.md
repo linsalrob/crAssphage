@@ -40,6 +40,10 @@ We have received sequences from around the globe. We are still looking for more 
 
 We have started a preliminary [analysis](Analysis) of the data. You can download the sequences and run your own analysis too, we'd love to know what you try and how it works.
 
+## Git LFS
+
+We use Git Large File Storage to store some of the large files. You will need to [install Git LFS](https://git-lfs.github.com/) for that to work properly. Its easy to do, and you only need to do it once.
+
 # Questions or Comments? Want to be a collaborator?
 
 Contact [Rob Edwards](http://edwards.sdsu.edu/research) and let him know.
