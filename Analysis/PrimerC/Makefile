@@ -18,12 +18,12 @@ help:
 country_tree: seqs.country.tree
 
 seqs.country.tree: seqs.nonneg.tree
-	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.country.tree
+	python ../../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.country.tree
 
 tree: seqs.named.tree
 
 seqs.named.tree: seqs.nonneg.tree
-	python ../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
+	python ../../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
 
 neighbor_tree: seqs.nonneg.tree
 
@@ -36,7 +36,7 @@ seqs.nonneg.tree: seqs.trim.aln
 	mv outtree seqs.neighbor
 	mv infile seqs.dnadist
 	rm -f outfile
-	python ../bin/negative_branch_lengths.py -t seqs.neighbor > seqs.nonneg.tree
+	python ../../bin/negative_branch_lengths.py -t seqs.neighbor > seqs.nonneg.tree
 
 
 blastn: seqs.fa
@@ -44,7 +44,7 @@ blastn: seqs.fa
 
 
 seqs.trim.aln: seqs.aln
-	python ../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
+	python ../../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
 
 align: mafft
 
@@ -67,7 +67,7 @@ seqs.clustalw:
 renum: id.map
 
 id.map: seqs.fa
-	perl ../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
+	perl ../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
 
 seqs.fa:
 	cat ../../Sequences/PrimerC/*.fasta > seqs.fa
