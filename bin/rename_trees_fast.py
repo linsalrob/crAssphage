@@ -48,8 +48,6 @@ def rename_leaf(name, idmap):
     :rtype: Node
     """
 
-    sys.stderr.write("NAME {} ".format(name))
-
     firstchar = name[0]
     name = name[1:]
 
@@ -57,12 +55,8 @@ def rename_leaf(name, idmap):
         # this was reverse complemented by MAFFT
         name = name.replace('_R_', '')
 
-    sys.stderr.write(" BECAME {} AND ".format(name))
-
     if name and name in idmap:
         name = clean_name(idmap[name])
-
-    sys.stderr.write(" BECAME {}\n".format(name))
 
     return firstchar + name
 
