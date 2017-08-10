@@ -61,3 +61,6 @@ target/
 
 # backup files
 *~
+
+# NFS system files
+.nfs*
