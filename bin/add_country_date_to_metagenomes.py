@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 import re
+import codecs
 from roblib import sequences
 
 """
@@ -39,25 +40,28 @@ def parse_metadata(metadatafile, srs):
     """
 
     srr={}
-    with open(metadatafile, 'r') as f:
-        for l in f:
-            if l.startswith('Sample Accession'):
-                continue
-            p=l.split("\t")
-            m=re.search('SRA\|(\w+);', p[1])
-            if not m:
-                sys.stderr.write("Couldn't find an SRA sample in {}".format(l))
-                continue
-            srsid = m.groups()[0]
-            if srsid not in srs:
-                sys.stderr.write("No SRS info found for {}\n".format(srsid))
-                continue
-            if ':' in p[51]:
-                countryparts = p[51].split(':')
-                p[51] = countryparts[0]
-            if p[51] and p[29]:
-                for srrid in srs[srsid]:
-                    srr[srrid]=[p[51], p[29], p[80]]
+    #with open(metadatafile, 'r') as f:
+    f = codecs.open(metadatafile, encoding='utf-8')
+    for l in f:
+        l = l.encode('ascii', 'ignore').decode('ascii')
+        if l.startswith('Sample Accession'):
+            continue
+        p=l.split("\t")
+        m=re.search('SRA\|(\w+);', p[1])
+        if not m:
+            sys.stderr.write("Couldn't find an SRA sample in {}".format(l))
+            continue
+        srsid = m.groups()[0]
+        if srsid not in srs:
+            sys.stderr.write("No SRS info found for {}\n".format(srsid))
+            continue
+        if ':' in p[51]:
+            countryparts = p[51].split(':')
+            p[51] = countryparts[0]
+        if p[51] and p[29]:
+            for srrid in srs[srsid]:
+                srr[srrid]=[p[51], p[29], p[80]]
+
 
     return srr
 
