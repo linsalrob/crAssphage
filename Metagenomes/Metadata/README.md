@@ -27,7 +27,11 @@ A couple of key columns are (these are 0-indexed):
 * latitude/longitude is in lat_lon column 80.
 
 
+## Metadata files
 
+There are two metadata files specifically for country and date:
+1. [crAssphage.country.date.tsv](crAssphage.country.date.tsv) has all 137 fields listed below, but only has the sample IDs
+2. [runs_country_date.tsv](runs_country_date.tsv) has only four fields: Run ID, Country, Date of Collection, and Lat Lon. At least country and date are populated, but lat lon may not be
 
 
 
