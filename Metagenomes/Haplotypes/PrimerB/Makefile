@@ -62,7 +62,8 @@ id.map: seqs.fa
 	perl ../../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
 
 seqs.fa:
-	ln -s gretel_haplotypes_pcrB.fasta seqs.fa
+	# ln -s gretel_haplotypes_pcrB.fasta seqs.fa
+	ln -s haplotypes_country.fasta seqs.fa
 
 clean:
 	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree 
