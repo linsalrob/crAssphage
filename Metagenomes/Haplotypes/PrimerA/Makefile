@@ -47,6 +47,9 @@ seqs.faln: seqs.fa renum
 
 mafft: seqs.aln
 
+seqs.all.aln:
+	muscle -in seqs.all.renum.fa -out seqs.all.aln -maxiters 2 -diags
+
 seqs.aln: seqs.fa id.map
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.fa > seqs.aln
 
