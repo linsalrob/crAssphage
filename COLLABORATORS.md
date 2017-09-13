@@ -227,7 +227,20 @@ Note: No sequences found in Chile
 >University of Hawai‘i at Mānoa
 >1950 East-West Road, C-MORE Hale
 
+## Barr Lab
+  * Jeremy Barr
 
+>School of Biological Sciences
+>Monash University, Clayton, Victoria 3800
+>Australia
+
+## Mccarthy Lab
+   * Dave McCarthy, Associate Professor
+ 
+>Environmental and Public Health Microbiology Lab (EPHM LAB) – www.ephmlab.com.au
+>Monash University, Clayton, Vic, Australia, 3800
+  
+[http://www.ephmlab.com.au/People/David-McCarthy/](http://www.ephmlab.com.au/People/David-McCarthy/)
 
 
 
