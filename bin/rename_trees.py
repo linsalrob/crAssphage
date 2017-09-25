@@ -1,5 +1,6 @@
 import os
 import sys
+sys.setrecursionlimit(5000)
 import argparse
 import os
 import string

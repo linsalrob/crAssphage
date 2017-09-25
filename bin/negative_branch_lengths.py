@@ -12,6 +12,7 @@ We will identify negative branch lengths, set them to 0 and transfer the remaind
 
 import os
 import sys
+sys.setrecursionlimit(5000)
 from newick import Newick_Tree
 import argparse
 
