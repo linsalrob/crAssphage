@@ -1,3 +1,4 @@
+*.ab1 filter=lfs diff=lfs merge=lfs -text
 *.fastq filter=lfs diff=lfs merge=lfs -text
 Sequences/raw_data/Cinek/bin08.fastq filter=lfs diff=lfs merge=lfs -text
 Sequences/raw_data/Cinek/bin11.fastq filter=lfs diff=lfs merge=lfs -text
