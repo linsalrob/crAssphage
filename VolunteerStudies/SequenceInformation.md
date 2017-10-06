@@ -3,6 +3,30 @@
 We have generated a lot of sequences from individuals, and we have sequenced both ends of the reads. This page just 
 keeps track of the sequences and how we have processed them.
 
+The table below shows the current status of the sequences. For each sample, we try and sequence from 
+the left and right ends. We then manually trim those using FinchTV, and align them using mafft with this command:
+
+```angular2html
+export SID=DE12
+mafft --adjustdirectionaccurately  --maxiterate 16   --thread 8 $SID.fna > $SID.aln; clustalx $SID.aln
+clustalx $SID.aln
+perl ../bin/fasta_consensus.pl $SID.aln  > ../final_sequences/$SID.fna
+```
+
+The `clustalx` step in there is a manual inspection of the alignment to ensure that we have included enough
+ sequence from each read to generate a meaningful overlap.
+ 
+The data in the table shows the sample ID, the identifiers of the left and right reads, whether the sequencing
+was successful or not (this is basically from our manual inspection of the ab1 files), and we have left and
+right reads respectively. (Note: We are not sure why the right side appears to fail a lot more than the left side. 
+It suggests there is an issue with that primer.) If we have a failed read, we can't generate a consensus sequence
+and only have a single read. These are placed in the [Singles](Sequences/raw_data/final_sequences/Singles) directory.
+If we have left and right reads, we grab the consensus sequence, (using [fasta_consensus.pl](../bin/fasta_consensus.pl)),
+and then we have the final sequence length.
+
+Note that the ab1 files are in the two tarballs [ab1.tar.bz2](Sequences/raw_data/ab1.tar.bz2) and 
+[Failed.tar.bz2](Sequences/raw_data/Failed.tar.bz2). The trimmed fasta files are in the tarball 
+[fasta_trimmed]
 
 Sample | Left ID | Right ID | Status | Final Status | Length (bp) |
 --- | --- | --- | --- | --- | --- |
@@ -29,3 +53,4 @@ WE7 | DA_037_WE7V12F_V12F_E05 | DA_038_WE7V12R_V12R_F05 | Passed / Passed | Cons
 WMi4 | UB_003_WMi4V11F_V11F_A02 | UB_004_WMi4V11R_V11R_B02 | Failed / Failed | - | -
 WMi | UB_013_WMiV11F_V11F_C03 | UB_014_WMiV11R_V11R_D03 | Failed / Failed | - | -
 Y1 | UB_025_Y1V11F_V11F_G04 | UB_026_Y1V11R_V11R_H04 | Passed / Passed | Consensus | 1257
+
