@@ -6,7 +6,7 @@ We have a complex pipeline, and in other work Rob is collaborating with research
 
 Here are the steps that we use, and the commands that were performed to.
 
-## Step 1: Map all SRA Runs to crAssphage
+## Map all SRA Runs to crAssphage
 
 We have developed a protocol for separating amplicon, metagenome, and other data sets from the SRA, called [PARTIE](https://github.com/linsalrob/partie). We start with this list of WGS metagenomes, and compare 100,000 reads from each metagenome to crAssphage using bowtie2. Our bowtie command is:
 
@@ -19,45 +19,19 @@ samtools index output_dir/$SRR
 
 Once we have a set of metagenomes where _any_ read in the 100,000 reads matches crAssphage, we go back and remap the whole run to crAssphage. This is a heuristic that allows us to search the whole SRA in a reasonable time frame.
 
-At the end of this, we have a series of .bam files, one per metagenome.
+At the end of this, we have a series of .bam files, one per metagenome. Please note, we do not include these bam files in the repository because they are too large.
 
-## Step 2. Pull out those sequences that map to the three PCR regions. 
+These files are used to extract the [haplotypes](Haplotypes/) using Gretel.
 
-We use either the code we [wrote in python](https://github.com/linsalrob/EdwardsLab/blob/master/crAssphage/extract_pcr_regions.py) or this samtools command to pull out the reads from the bam file that overlap our PCR regions (bamfiles is a directory with all the bamfiles).
 
-```
-for BAM in $(ls bamfiles | grep bam$):
-do 
-	FQ=$(echo $BAM|sed -e 's/bam/fastq/');
-	samtools view ../../bamfiles/$BAM JQ995537:25633-26964 -b | samtools fastq - > fastq_A/$FQ
-	samtools view ../../bamfiles/$BAM JQ995537:33708-35062 -b | samtools fastq - > fastq_B/$FQ
-	samtools view ../../bamfiles/$BAM JQ995537:43819-45057 -b | samtools fastq - > fastq_C/$FQ
-done
-```
-
-This creates the fastq files in fastq_A, fastq_B, and fastq_C that are provided here as bzip2 tar files.
-
-## Step 3. Assemble those sequences
-
-We compared using cap3, spades using -k77,99 or -k21,33, and newbler with the commands below to assemble the sequences. Note that cap3 and newbler used fasta, spades used fastq.
-
-```
-cap3 fasta_A/DRR002659.fasta -p 90 -o 20 -k 0 -h 70 -s 251 -i 30 -j 31
-spades.py -k 77,99 -s fastq_A/DRR002659.fastq -o DRR002659/
-spades.py -k 21,33 -s fastq_A/DRR002659.fastq -o DRR002659/
-runAssembly -o DRR002659/ -p fasta_A/DRR002659.fasta
-```
-
-We found that cap3 gave lots of short contigs, spades kept crashing with core dumps, and newbler gave a reasonable number of long contigs, so we used the newbler data.
-
-## Step 4. Extract the country information from the SRA metadata.
+## Attach the metadata for the metagenomes
 
 We downloaded the [biosample xml file from NCBI](ftp://ftp.ncbi.nih.gov/biosample) and then [parsed the XML using perl](../bin/parse_sra_metadata.pl). (Note that we don't read the whole file in because it is about 15G, so we just parse line by line.)
 
-We also get the SRR data from the SQL using this code:
+We also get the SRR data from the SQL using this code (crAssphage_srr_ids.txt is just a file that has all the SRR ids for the runs that match to crAssphage, one per line). SRAmetadb.sqlite is the [SRA metadata](https://edwards.sdsu.edu/research/sra-metadata/) database.
 
 ```
-for SRR in $(cat /home3/redwards/Phage/crAssphage/SRA_alignments/crAssphage_srr_ids.txt);
+for SRR in $(cat crAssphage_srr_ids.txt);
 do 
 	SRS=$(sqlite3 SRAmetadb.sqlite "select sample_accession, xref_link from sample where sample_accession in (select sample_accession from experiment where experiment_accession in (select experiment_accession from run where run_accession='$SRR'))");
 	echo -e "$SRR\t$SRS";
@@ -67,13 +41,6 @@ done > /home3/redwards/Phage/crAssphage/SRA_alignments/sample_ids.txt
 
 Then we just join those two tables to get the SRA information we need.
 
-## Step 5. Align the assemblies
-
-We renamed the assemblies, and added the country information for each of the reads from step 4, and then put this through our usual pipeline with a couple of minor modifications:
-1. We switched the phylogenetics program from PHYLIP to FastTreeDbl to handle the larger datasets
-2. We use the heuristic tree parsing code (rename_tree_fast.py) that uses regular expressions to rename the tree rather than parsing the whole tree.
-
-That approach gives the trees in the repostiory.
 
 
 
