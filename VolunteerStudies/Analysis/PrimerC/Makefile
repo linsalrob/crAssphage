@@ -74,8 +74,8 @@ id.map: seqs.fa
 	perl ../../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
 
 seqs.fa:
-	cat ../../Sequences/PrimerA/* > seqs.fa
-	# cat ../../Sequences/PrimerA/consensus_sequences.fasta > seqs.fa
+	cat ../../Sequences/PrimerC/* > seqs.fa
+	# cat ../../Sequences/PrimerC/consensus_sequences.fasta > seqs.fa
 clean:
 	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree 
 	rm -f seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree seqs.clustalw seqs.country.tree seqs.named.faln
