@@ -42,6 +42,8 @@ done > /home3/redwards/Phage/crAssphage/SRA_alignments/sample_ids.txt
 Then we just join those two tables to get the SRA information we need.
 
 
+## Other Metagenome Sequences
 
+We have also extracted sequences from other metagenomes. 
 
 
