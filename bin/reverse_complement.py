@@ -21,7 +21,7 @@ def stream_fasta(fastafile):
         if fastafile.endswith('.gz'):
             f = gzip.open(fastafile, 'rb')
         else:
-            f = open(fastafile, 'r')
+            f = open(fastafile, 'r', encoding='utf-8')
     except IOError as e:
         sys.stderr.write(str(e) + "\n")
         sys.stderr.write("Message: \n" + str(e.message) + "\n")
