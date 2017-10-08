@@ -1,6 +1,6 @@
 import os
 import sys
-sys.setrecursionlimit(5000)
+sys.setrecursionlimit(10000)
 import argparse
 import os
 import string
@@ -8,6 +8,7 @@ import sys
 
 import re
 from newick import Newick_Tree
+
 
 __author__ = 'Rob Edwards'
 
@@ -97,7 +98,7 @@ if __name__ == '__main__':
         for l in f:
             tre.append(l.strip())
 
-    root = Newick_Tree().parse(''.join(tre))
+    root = Newick_Tree().parse(''.join(tre), verbose=True)
     root = rename_nodes(root, idmap)
     Newick_Tree().print_tree(root)
 
