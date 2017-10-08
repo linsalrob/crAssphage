@@ -1,6 +1,6 @@
-# Haplotypes from metagenomes
+# Strain-resolved bioinformatics
 
-For each of the metagenomes where we have identified crAssphage, we attempted to generate the haplotypes within each sequence using [gretel](https://gretel.readthedocs.io) by Sam Nicholls. ([Here is the borxiv paper](http://www.biorxiv.org/content/early/2016/08/02/067215) describing gretel.)
+For each of the metagenomes where we have identified crAssphage, we attempted to generate the strains ('haplotypes') within each sequence using [gretel](https://gretel.readthedocs.io) by Sam Nicholls. ([Here is the borxiv paper](http://www.biorxiv.org/content/early/2016/08/02/067215) describing gretel.)
 
 We started by aligning all the reads from the SRA library against crAssphage, and then used snpper.py from [gretel-test](https://github.com/SamStudio8/gretel-test) to create VCF (variant files) for each of the three regions that we are interested in:
 
@@ -35,7 +35,7 @@ if [ -e gretel/out.fasta ]; then mv gretel/out.fasta gretel/pcrC.fasta; fi
 mv gretel/gretel.crumbs gretel/gretel.C.crumbs
 ```
 
-Finally, we combine all those outputs into a single fasta file for each of the three primers, that we've called gretel_haplotypes_pcrA.fasta, gretel_haplotypes_pcrB.fasta, and gretel_haplotypes_pcrC.fasta and you can access in [PrimerA](PrimerA/), [PrimerB](PrimerB/), and [PrimerC](PrimerC/).
+Finally, we combine all those outputs into a single fasta file for each of the three primers, that we've called gretel_strains_pcrA.fasta, gretel_strains_pcrB.fasta, and gretel_strains_pcrC.fasta and you can access in [PrimerA](PrimerA/), [PrimerB](PrimerB/), and [PrimerC](PrimerC/).
 
 In those directories, as usual, we have Makefiles for aligning the sequences and building trees. 
 
