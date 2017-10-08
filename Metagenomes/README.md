@@ -21,7 +21,7 @@ Once we have a set of metagenomes where _any_ read in the 100,000 reads matches 
 
 At the end of this, we have a series of .bam files, one per metagenome. Please note, we do not include these bam files in the repository because they are too large.
 
-These files are used to extract the [haplotypes](Haplotypes/) using Gretel.
+These files are used to extract the [strains](Strains/) using Gretel.
 
 
 ## Attach the metadata for the metagenomes
