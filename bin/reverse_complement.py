@@ -76,7 +76,7 @@ if __name__ == '__main__':
         for l in idF:
             torc.add(l.strip())
 
-    with open('args.o', 'w', encoding='utf-8') as out:
+    with open(args.o, 'w', encoding='utf-8') as out:
         for ids, seq in stream_fasta(args.f):
             name = ids.split(" ")[0]
             if name in torc:
