@@ -7,64 +7,47 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "    tree            create a neighbor joining tree and rename the leaves using the id in the fasta def line"
-	@echo "    country_tree    create a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
-	@echo "    blastn    blast all the sequences against crAssphage (e.g. to check orientation)"
-	@echo "    align     align the sequences using the default aligner (mafft)"
-	@echo "    seqs.$(PRIMER).fa assemble the DNA sequences into a single fasta file"
-	@echo "    renum     renumber the fasta file and create a separate id.$(PRIMER).map"
-	@echo "    clustalw  run a clustalw alignment on the sequences"
-	@echo "    mafft     run a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
-	@echo "    mafft_fa  run a mafft alignment but write the alignment in fasta format"
-	@echo "    neighbor_tree   create a neighbor joining tree"
+	@echo "\tcountry_tree\tcreate a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\ttree\t\tmake a tree named with the label of the sequences"
+	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
+	@echo "\talign\t\talign the sequences using the default aligner (mafft)"
+	@echo "\tseqs.fa\t\tassemble the DNA sequences into a single fasta file"
+	@echo "\trenum\t\trenumber the fasta file and create a separate id.map"
+	@echo "\tclustalw\trun a clustalw alignment on the sequences"
+	@echo "\tmafft\t\trun a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
+	@echo "\tmafft_fa\trun a mafft alignment but write the alignment in fasta format"
+	@echo "\tmafft_fa_name\trun a mafft alignment but write the alignment in fasta format and rename the sequences"
 	@echo ""
-	@echo "You probably want to start with tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
-	@echo ""
-	@echo "You should define the primer you want to analyse with PRIMER=A, PRIMER=B, or PRIMER=C on the command line. The default is PRIMER=A"
+	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-site_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
+site_tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
 
-country_tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+country_tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
 
-tree: neighbor_tree
-	python ../../Analysis/bin/rename_trees.py -t seqs.$(PRIMER).nonneg.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
+tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-neighbor_tree: seqs.$(PRIMER).nonneg.tree
-
-seqs.$(PRIMER).nonneg.tree: seqs.$(PRIMER).aln
-	cp seqs.$(PRIMER).aln infile
-	rm -f outfile 
-	echo "y\n" | phylip dnadist
-	mv -f outfile infile
-	echo "y\n" | phylip neighbor
-	mv outtree seqs.$(PRIMER).neighbor
-	mv infile seqs.$(PRIMER).dnadist
-	rm -f outfile
-	python ../../Analysis/bin/negative_branch_lengths.py -t seqs.$(PRIMER).neighbor > seqs.$(PRIMER).nonneg.tree
-
+seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
+	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
 
 blastn: seqs.$(PRIMER).fa
 	blastn -db ../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
 
-trim_seqs: seqs.$(PRIMER).aln
-	
-	
-seqs.$(PRIMER).aln: seqs.aln
-	mv seqs.$(PRIMER).aln seqs.aln.$(PRIMER).full
-	python ../../Analysis/bin/trim_alignment.py -p seqs.aln.$(PRIMER).full -c 0.9 > seqs.$(PRIMER).aln
-
-seqs.aln: align
+seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
+	python ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 align: mafft
 
-mafft_fa: seqs.$(PRIMER).fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
+mafft: seqs.$(PRIMER).aln
 
-mafft: seqs.$(PRIMER).fa renum
+seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
+
+mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
@@ -72,7 +55,7 @@ clustalw: seqs.$(PRIMER).fa
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../Analysis/bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
+	perl ../../../bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	@echo "MAKING A NEW FASTA"

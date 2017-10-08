@@ -26,19 +26,10 @@ tree: seqs.named.tree
 seqs.named.tree: seqs.nonneg.tree
 	python ../../../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
 
-neighbor_tree: seqs.nonneg.tree
+neighbor_tree: seqs.neighbor
 
-seqs.nonneg.tree: seqs.trim.aln
-	cp seqs.trim.aln infile
-	rm -f outfile 
-	echo "y\n" | phylip dnadist
-	mv -f outfile infile
-	echo "y\n" | phylip neighbor
-	mv outtree seqs.neighbor
-	mv infile seqs.dnadist
-	rm -f outfile
-	python ../../../bin/negative_branch_lengths.py -t seqs.neighbor > seqs.nonneg.tree
-
+seqs.neighbor: seqs.trim.aln
+	FastTreeDbl -nt seqs.trim.aln > seqs.$(PRIMER).neighbor
 
 blastn: seqs.fa
 	blastn -db ../../../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
