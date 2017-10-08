@@ -7,7 +7,10 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "\tcountry_tree\tcreate a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\tsite_date\tcreate a FastTree and rename the leaves using both the site and date tags"
+	@echo "\tcountry_tree\tcreate a FastTree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\tsite_tree\tcreate a FastTree and rename the leaves using the site= tag in the fasta def line"
+	@echo "\tdate_tree\tcreate a FastTree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
 	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "\talign\t\talign the sequences using the default aligner (mafft)"
@@ -20,8 +23,14 @@ help:
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
+site_date: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site -n date > seqs.$(PRIMER).sitedate.tree
+
+date_tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
+
 site_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site > seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
 
 country_tree: seqs.$(PRIMER).neighbor
 	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
@@ -63,3 +72,4 @@ seqs.$(PRIMER).fa:
 
 clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
+	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree
