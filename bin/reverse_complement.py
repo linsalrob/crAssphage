@@ -64,21 +64,32 @@ def rc(dna):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Reverse complement some sequences')
+    parser = argparse.ArgumentParser(description='Reverse complement some sequences, and eliminate without a blast hit')
     parser.add_argument('-f', help='fasta file of sequences', required=True)
-    parser.add_argument('-i', help='file with list of IDs, one per line', required=True)
+    parser.add_argument('-b', help='blast output file', required=True)
     parser.add_argument('-o', help='output file', required=True)
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
     torc = set()
-    with open(args.i) as idF:
-        for l in idF:
-            torc.add(l.strip())
+    tokeep = set()
+    # perl -ne '@a=split /\t/; if (!$$s{$$a[0]} && $$a[8] > $$a[9]) {print "$$a[0]\n"} $$s{$$a[0]}=1'  seqs.$(PRIMER).crassphage.blastn > seqs.$(PRIMER)_to_rc.txt
+    seen = set()
+    with open(args.b, 'r') as f:
+        for l in f:
+            p = l.strip().split("\t")
+            if p[0] in seen:
+                continue
+            seen.add(p[0]) # so we don't worry about 2nd best hits
+            tokeep.add(p[0])
+            if int(p[8]) > int(p[9]):
+                torc.add(p[0])
+
 
     with open(args.o, 'w', encoding='utf-8') as out:
         for ids, seq in stream_fasta(args.f):
             name = ids.split(" ")[0]
             if name in torc:
                 seq = rc(seq)
-            out.write(">{}\n{}\n".format(ids, seq))
+            if name in tokeep:
+                out.write(">{}\n{}\n".format(ids, seq))
