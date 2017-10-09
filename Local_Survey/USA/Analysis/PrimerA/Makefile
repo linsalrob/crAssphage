@@ -39,21 +39,17 @@ seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
 	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
 
 blastn: seqs.$(PRIMER).fa
-	blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
-
+	blastn -db ../../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
-	python ../../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+	python ../../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 align: mafft
 
 mafft: seqs.$(PRIMER).aln
 
 seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
-
-mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
@@ -69,4 +65,4 @@ seqs.$(PRIMER).fa:
 
 clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
-	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree
+	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.crassphage.blastn
