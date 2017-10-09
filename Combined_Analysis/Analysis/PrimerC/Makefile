@@ -2,6 +2,8 @@
 
 PRIMER = C
 
+.PHONY: clean help
+
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "\tsite_date\tcreate a FastTree and rename the leaves using both the site and date tags"
@@ -17,6 +19,7 @@ help:
 	@echo "\tmafft\t\trun a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
 	@echo "\tmafft_fa\trun a mafft alignment but write the alignment in fasta format"
 	@echo "\tmafft_fa_name\trun a mafft alignment but write the alignment in fasta format and rename the sequences"
+	@echo "\treverse_complement\trenumber the sequences, run a blast to match them, and reverse complement ones in the wrong orientation"
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
@@ -61,6 +64,13 @@ mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
 
+reverse_complement: seqs.$(PRIMER).renum.rc.fa
+
+seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
+	blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen'
+	perl -ne '@a=split /\t/; if (!$$s{$$a[0]} && $$a[8] > $$a[9]) {print "$$a[0]\n"} $$s{$$a[0]}=1'  seqs.$(PRIMER).crassphage.blastn > seqs.$(PRIMER)_to_rc.txt
+	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -i seqs.$(PRIMER)_to_rc.txt -o seqs.$(PRIMER).renum.rc.fa
+
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
@@ -71,4 +81,4 @@ seqs.$(PRIMER).fa:
 
 clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
-	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree
+	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER)_to_rc.txt seqs.$(PRIMER).renum.rc.fa
