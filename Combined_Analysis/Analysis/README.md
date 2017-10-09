@@ -13,3 +13,14 @@ Now that we have all the good sequencces in the same direction, we align them us
 Once the alignment is complete we trim to remove any column that is <90% _informative characters_ and subsequently to remove any sequence that is <80%_ informative characters_. By _informative characters_, we basically mean not a hyphen (_-_). 
 
 Finally, we use [FastTree](microbesonline.org/fasttree/) (well, actually FastTreeDbl) to build the tree from the alignment.
+
+As noted above, all of this is in the Makefile, however we typically run it in two steps:
+
+```
+make reverse_complement
+qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh
+```
+
+The first step makes the fasta file, blasts it, and reverse complements as needed.
+
+The second step does all the rest.
