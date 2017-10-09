@@ -24,3 +24,11 @@ qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh
 The first step makes the fasta file, blasts it, and reverse complements as needed.
 
 The second step does all the rest.
+
+## Making the world maps
+
+We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. Once you have it installed you should be able to do something like:
+
+```
+python3 ~/crAssphage/bin/crAssphage_ete.py -i id.A.map -t seqs.A.rc.trim.tree -o PrimerA_map.svg
+```
