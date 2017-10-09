@@ -67,7 +67,7 @@ if __name__ == '__main__':
     for seq in ids:
         count = 0
         for i in coltokeep:
-            if '_' != dna[seq][i]:
+            if "-" != dna[seq][i]:
                 count += 1
         if 1.0 * count/finalbases > args.r:
             rowtokeep.append(seq)
