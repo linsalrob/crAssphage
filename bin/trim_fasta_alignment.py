@@ -71,9 +71,8 @@ if __name__ == '__main__':
                 count += 1
         if 1.0 * count/finalbases > args.r:
             rowtokeep.append(seq)
-            sys.stderr.write("Accepted sequence {} because it has {}% bases [count: {} finalbases: {}]\n".format(seq, 1.0 * count / finalbases, count, finalbases))
         elif args.v:
-            sys.stderr.write("Rejected sequence {} because it has {}% bases\n".format(seq, 1.0 * count/finalbases))
+            sys.stderr.write("Rejected\t{}\t{}% bases\n".format(seq, 1.0 * count/finalbases))
 
     for seq in rowtokeep:
         print(seq)
