@@ -2,7 +2,7 @@
 
 PRIMER = C
 
-.PHONY: clean help
+.PHONY: clean help reverse_complement reverse_complement_tree mafft align
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -11,6 +11,8 @@ help:
 	@echo "\tsite_tree\tcreate a FastTree and rename the leaves using the site= tag in the fasta def line"
 	@echo "\tdate_tree\tcreate a FastTree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
+	@echo "\treverse_complement_tree\tReverse complement sequences as below and make an alignment and tree of them"
+	@echo "\treverse_complement\tReverse complement sequences as required and filter to only those that match crassphage"
 	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "\talign\t\talign the sequences using the default aligner (mafft)"
 	@echo "\tseqs.fa\t\tassemble the DNA sequences into a single fasta file"
@@ -42,7 +44,7 @@ seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
 	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
 
 blastn: seqs.$(PRIMER).fa
-	blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
+	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
 
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
@@ -64,12 +66,19 @@ mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
 
+reverse_complement_tree: seqs.$PRIMER.rc.trim.tree
+
+seqs.$PRIMER.rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
+	@echo "Running muscle may take a while. You might want to run these steps on the cluster"
+	muscle -in seqs.$(PRIMER).renum.rc.fa -out seqs.$(PRIMER).renum.rc.aln -maxiters 2 -diags
+	python3 ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).renum.rc.aln -c 0.9 -r 0.8 -v > seqs.$(PRIMER).rc.trim.aln
+	fasttree -nt seqs.$(PRIMER).rc.trim.aln > seqs.$(PRIMER).rc.trim.tree
+
 reverse_complement: seqs.$(PRIMER).renum.rc.fa
 
 seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
-	blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen'
-	perl -ne '@a=split /\t/; if (!$$s{$$a[0]} && $$a[8] > $$a[9]) {print "$$a[0]\n"} $$s{$$a[0]}=1'  seqs.$(PRIMER).crassphage.blastn > seqs.$(PRIMER)_to_rc.txt
-	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -i seqs.$(PRIMER)_to_rc.txt -o seqs.$(PRIMER).renum.rc.fa
+	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
+	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
 
 renum: id.$(PRIMER).map
 
@@ -81,4 +90,4 @@ seqs.$(PRIMER).fa:
 
 clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
-	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER)_to_rc.txt seqs.$(PRIMER).renum.rc.fa
+	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER).renum.rc.fa

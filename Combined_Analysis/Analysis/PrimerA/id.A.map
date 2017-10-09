@@ -211,7 +211,7 @@
 210	Mazankova_primerA_222.20170421 [name=Mazankova primer A sample 222 20170421] [date=20170421] [latitude=31.9454] [longitude=35.9284] [sample_number=222] [country=Jordan]
 211	Mazankova_primerA_362.20170421 [name=Mazankova primer A sample 362 20170421] [date=20170421] [latitude=40.4093] [longitude=49.8671] [sample_number=362] [country=Azerbaijan]
 212	Mazankova_primerA_296.20170421 [name=Mazankova primer A sample 296 20170421] [date=20170421] [sample_date=20160305] [latitude=15.5007] [longitude=32.5599] [sample_number=296] [country=Sudan]
-213	crAssphage_A [name=crAssphage Primer A] [latitude=0.0] [longitude=0.0] [date=20140724] [country=crAssphage A]
+213	crAssphage_A [name=crAssphage Primer A] [latitude=38.6487895] [longitude=-90.3107962] [date=20140724] [country=crAssphage A]
 214	ERR209558_1 [name=SRA Sample ERR209558 1] [method=haplotype called by gretel version 0.0.8] [country=Spain] [date=2008-2010] [latitude=40.463667] [longitude=-3.74922]
 215	ERR209558_2 [name=SRA Sample ERR209558 2] [method=haplotype called by gretel version 0.0.8] [country=Spain] [date=2008-2010] [latitude=40.463667] [longitude=-3.74922]
 216	ERR209558_3 [name=SRA Sample ERR209558 3] [method=haplotype called by gretel version 0.0.8] [country=Spain] [date=2008-2010] [latitude=40.463667] [longitude=-3.74922]

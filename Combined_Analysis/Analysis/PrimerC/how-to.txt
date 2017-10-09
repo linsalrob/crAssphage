@@ -1,7 +1,0 @@
-1. make blastn
-2. find the ones to RC
-	perl -ne '@a=split /\t/; if (!$s{$a[0]} && $a[8] > $a[9]) {print "$a[0]\n"} $s{$a[0]}=1' seqs.crassphage.blastn > sequences_to_rc.txt
-3. rc those
-	python3 ../../../bin/reverse_complement.py -f seqs.C.fa -i sequences_to_rc.txt -o seqs.C.rc.fa
-4. muscle them on the cluster
-	qsub -cwd -o sge -e sge -pe make 16 ./muscle.sh
