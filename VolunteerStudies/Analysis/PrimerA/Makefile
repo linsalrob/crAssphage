@@ -1,10 +1,17 @@
 # We're using make to generate alignments and trees because, well why not!
 
+PRIMER = A
+
+.PHONY: clean help reverse_complement reverse_complement_tree mafft align
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "\tcountry_tree\tcreate a neighbor joining tree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\tvol_date\tcreate a FastTree and rename the leaves using both the volunteer and date tags"
+	@echo "\tvolunteer_tree\tcreate a FastTree and rename the leaves using the volunteer= tag in the fasta def line"
+	@echo "\tdate_tree\tcreate a FastTree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
+	@echo "\treverse_complement_tree\tReverse complement sequences as below and make an alignment and tree of them"
+	@echo "\treverse_complement\tReverse complement sequences as required and filter to only those that match crassphage"
 	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "\talign\t\talign the sequences using the default aligner (mafft)"
 	@echo "\tseqs.fa\t\tassemble the DNA sequences into a single fasta file"
@@ -13,61 +20,70 @@ help:
 	@echo "\tmafft\t\trun a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
 	@echo "\tmafft_fa\trun a mafft alignment but write the alignment in fasta format"
 	@echo "\tmafft_fa_name\trun a mafft alignment but write the alignment in fasta format and rename the sequences"
+	@echo "\treverse_complement\trenumber the sequences, run a blast to match them, and reverse complement ones in the wrong orientation"
 	@echo ""
-	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
+	@echo "You probably want to start with vol_date, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-country_tree: seqs.country.tree
+vol_date: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n volunteer -n date > seqs.$(PRIMER).volunteerdate.tree
 
-seqs.country.tree: seqs.nonneg.tree
-	python ../../../bin/rename_trees.py -t seqs.nonneg.tree -i id.map -n country  > seqs.country.tree
+date_tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
 
-tree: seqs.named.tree
+vol_tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n volunteer > seqs.$(PRIMER).volunteer.tree
 
-seqs.named.tree: seqs.nonneg.tree
-	python ../../../bin/rename_trees.py -t seqs.nonneg.tree -i id.map > seqs.named.tree
+tree: seqs.$(PRIMER).neighbor
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-neighbor_tree: seqs.neighbor
+seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
+	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
 
-seqs.neighbor: seqs.trim.aln
-	FastTreeDbl -nt seqs.trim.aln > seqs.$(PRIMER).neighbor
-
-blastn: seqs.fa
-	blastn -db ../../../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
+blastn: seqs.$(PRIMER).fa
+	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 1e-12
 
 
-seqs.trim.aln: seqs.aln
-	python ../../../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
+seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
+	python ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+
+seqs.all.aln:
+	muscle -in seqs.all.renum.fa -out seqs.all.aln -maxiters 2 -diags
 
 align: mafft
 
-mafft_fa_name: seqs.faln
-	perl ../../../bin/rename_faln.pl id.map seqs.faln  > seqs.named.faln
+mafft: seqs.$(PRIMER).aln
 
-mafft_fa: seqs.faln
+seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
-seqs.faln: seqs.fa renum
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.renum.fa > seqs.faln
+mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
-mafft: seqs.aln
+clustalw: seqs.$(PRIMER).fa
+	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
 
-seqs.aln: seqs.fa id.map
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.renum.fa > seqs.aln
+reverse_complement_tree: seqs.$PRIMER.rc.trim.tree
 
-clustalw: seqs.clustalw
+seqs.$PRIMER.rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
+	@echo "Running muscle may take a while. You might want to run these steps on the cluster"
+	muscle -in seqs.$(PRIMER).renum.rc.fa -out seqs.$(PRIMER).renum.rc.aln -maxiters 2 -diags
+	python3 ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).renum.rc.aln -c 0.9 -r 0.8 -v > seqs.$(PRIMER).rc.trim.aln
+	fasttree -nt seqs.$(PRIMER).rc.trim.aln > seqs.$(PRIMER).rc.trim.tree
 
-seqs.clustalw:
-	# clustalw -INFILE=seqs.fa -OUTFILE=seqs.clustalw
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder  --clustalout --thread 8 seqs.renum.fa > seqs.clustalw
+reverse_complement: seqs.$(PRIMER).renum.rc.fa
 
-renum: id.map
+seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
+	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
+	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
 
-id.map: seqs.fa
-	perl ../../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
+renum: id.$(PRIMER).map
 
-seqs.fa:
-	cat ../../Sequences/PrimerA/* > seqs.fa
-	# cat ../../Sequences/PrimerA/consensus_sequences.fasta > seqs.fa
+id.$(PRIMER).map: seqs.$(PRIMER).fa
+	perl ../../../bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
+
+seqs.$(PRIMER).fa:
+	cat ../../Sequences/Primer$(PRIMER)/*.fasta > seqs.$(PRIMER).fa
+
 clean:
-	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree seqs.crassphage.blastn
-	rm -f seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree seqs.clustalw seqs.country.tree seqs.named.faln
-
+	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
+	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER).renum.rc.fa
