@@ -11,7 +11,7 @@ from ete3 import Tree
 
 if __name__ == '__main__':
 
-    tags = ['id', 'address','altitude','country','date','latitude','longitude','name','note', 'site']
+    tags = ['address', 'altitude', 'country', 'date', 'id', 'latitude', 'location', 'longitude', 'name', 'note', 'samplecount', 'site', 'volunteer']
 
     parser = argparse.ArgumentParser(description='Parse a tree')
     parser.add_argument('-t', help='tree file', required=True)
