@@ -68,6 +68,6 @@ seqs.fa:
 	cat ../../Sequences/PrimerA/* > seqs.fa
 	# cat ../../Sequences/PrimerA/consensus_sequences.fasta > seqs.fa
 clean:
-	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree 
+	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree seqs.crassphage.blastn
 	rm -f seqs.aln.full seqs.faln  seqs.named.tree seqs.nonneg.tree seqs.clustalw seqs.country.tree seqs.named.faln
 
