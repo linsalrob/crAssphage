@@ -44,7 +44,7 @@ blastn: seqs.$(PRIMER).fa
 
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
-	python ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+	python ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 seqs.all.aln:
 	muscle -in seqs.all.renum.fa -out seqs.all.aln -maxiters 2 -diags
@@ -54,6 +54,10 @@ align: mafft
 mafft: seqs.$(PRIMER).aln
 
 seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
+
+
+phylipoutput:
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
 mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map

@@ -1,4 +1,4 @@
->0
+>DE10V3_20170714_10
 taatgttagactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -21,7 +21,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcctaa-
->_R_9
+>DE15V3_20170721_15
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -44,7 +44,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatccta--
->_R_13
+>WE5V3_20170629_5
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -67,7 +67,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcctaa-
->3
+>DE14V3_20170720_14
 ---tgttagactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -90,7 +90,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatccta--
->_R_8
+>DE11V3_20170717_11
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -113,7 +113,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcng---
->1
+>DE12V3_20170718_12
 ---------actacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -136,7 +136,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataa-------
->2
+>DE13V3_20170719_13
 ----gttagactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -159,7 +159,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcc----
->6
+>WE6V3_20170731_6
 -atgttagaactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -182,7 +182,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcctaac
->10
+>DE7V3_20170711_7
 -atgttagaactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -205,7 +205,7 @@ ttcaatgta-gggctttaaaatagctaattttataaattctcattatattatacgaat--
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------
->7
+>WE7V3_20170725_7
 -tatgttagactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattagttggaaa
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -228,7 +228,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatc-----
->_R_14
+>Y1V3_20170518_1
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -251,7 +251,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcatttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgat---------
->4
+>DE8V3_20170712_8
 ---tgttagactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgatagaattaccaatcat
 actatcagatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -274,7 +274,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgt-gataatcctaac
->5
+>WD7V3_20170729_7
 -------tgactacaatgactaacatacttgctaaagtttctactccaccatataattgt
 gatggtaaagatagatgttgtcaattaattattaatagtgctgaaagaattacctggata
 gaagttgaatctattgaagaattaggagaaagtgaacgtggaaacaaaggatttggagaa
@@ -297,7 +297,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttgataatcctaa-
->_R_12
+>WD6V3_20170722_6
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
@@ -320,7 +320,7 @@ aaacgatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttact
 ggagatgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacat
 gattgtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcaaaat
 actaaagtagaatatattcaaactaatgttg-----------
->_R_11
+>H1V3_unknown_1
 ------------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
