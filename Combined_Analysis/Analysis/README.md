@@ -27,8 +27,9 @@ The second step does all the rest.
 
 ## Making the world maps
 
-We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. Once you have it installed you should be able to do something like:
+We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements:
 
 ```
-python3 ~/crAssphage/bin/crAssphage_ete.py -i id.A.map -t seqs.A.rc.trim.tree -o PrimerA_map.svg
+python3 ~/crAssphage/bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.tree > seqs.A.rc.trim.matrix
+python3 ~/crAssphage/bin/crAssphage_cophenetic.py -i id.A.map -m seqs.A.rc.trim.matrix -o PrimerA_map.svg
 ```
