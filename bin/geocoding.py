@@ -6,11 +6,18 @@ import json
 # we store the google api in a key file that is not available on github.
 # You can request your own key here: 
 # https://developers.google.com/maps/documentation/geocoding/get-api-key
-if not os.path.exists('googleapi.key'):
+
+basepath = os.path.dirname(sys.argv[0])
+keyfile = None
+if os.path.exists(os.path.join(basepath, "googleapi.key")):
+    keyfile = os.path.join(basepath, "googleapi.key")
+elif os.path.exists('googleapi.key'):
+    keyfile = 'googleapi.key'
+else:
     sys.stderr.write("ERROR: You need to obtain or create a Google API key before you can geocode\n")
     sys.exit(-1)
 
-with open('googleapi.key', 'r') as f:
+with open(keyfile, 'r') as f:
     googlekey = f.readline().strip()
 
 
@@ -41,12 +48,16 @@ def place_to_latlon(city, country, verbose=False):
         sys.stderr.write("{}\n".format(url))
         sys.stderr.write("{}\n".format(v))
     j = json.loads(v.text)
+    if "ZERO_RESULTS" == j['status']:
+        sys.stderr.write("Could not find a place for {},{}\n".format(lat, lon))
+        return None, None
+
     # latlon = j['results'][0]['address_components']['location']
     try:
         latlon = j['results'][0]['geometry']['location']
     except:
         sys.stderr.write("There was an error getting the results for {}\n".format(url))
-        return "", ""
+        return None, None
     return latlon['lat'], latlon['lng']
 
 
@@ -57,7 +68,15 @@ def latlon_to_place(lat, lon, verbose=False):
     if verbose:
         sys.stderr.write("{}\n".format(v))
     j = json.loads(v.text)
-    components = j['results'][0]['address_components']
+    if "ZERO_RESULTS" == j['status']:
+        sys.stderr.write("Could not find a place for {},{}\n".format(lat, lon))
+        return None, None
+
+    try:
+        components = j['results'][0]['address_components']
+    except:
+        sys.stderr.write("There was an error getting the results for {}\n".format(url))
+        return None, None
     country = locality = None
     for c in components:
         if "country" in c['types']:
