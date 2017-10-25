@@ -1,10 +1,15 @@
 import sys
+import os
 import requests
 import json
 
 # we store the google api in a key file that is not available on github.
 # You can request your own key here: 
 # https://developers.google.com/maps/documentation/geocoding/get-api-key
+if not os.path.exists('googleapi.key'):
+    sys.stderr.write("ERROR: You need to obtain or create a Google API key before you can geocode\n")
+    sys.exit(-1)
+
 with open('googleapi.key', 'r') as f:
     googlekey = f.readline().strip()
 
@@ -13,15 +18,35 @@ def place_to_latlon(city, country, verbose=False):
     """
     Convert and city and country to a lat lon
     """
+
+    # this is a simple fix that seems to work
+    if 'USA' == country:
+        country = 'US'
+
     url = "https://maps.googleapis.com/maps/api/geocode/json?key={}&".format(googlekey)
-    url += "components=locality:{}|country={}".format(city, country)
+    components = []
+    if city and city != "":
+        components.append("locality:{}".format(city))
+    if country and country != "":
+        components.append("country:{}".format(country))
+    if not components:
+        sys.stderr.write("ERROR: You must specify a city or a country\n")
+        sys.exit(-1)
+    
+    c = "|".join(components)
+        
+    url += "components={}".format(c)
     v = requests.get(url)
     if verbose:
         sys.stderr.write("{}\n".format(url))
         sys.stderr.write("{}\n".format(v))
     j = json.loads(v.text)
     # latlon = j['results'][0]['address_components']['location']
-    latlon = j['results'][0]['geometry']['location']
+    try:
+        latlon = j['results'][0]['geometry']['location']
+    except:
+        sys.stderr.write("There was an error getting the results for {}\n".format(url))
+        return "", ""
     return latlon['lat'], latlon['lng']
 
 
