@@ -2,7 +2,6 @@
 # We use this to verfy our country names and to associate them with a coordinate if we don't have them in our metadata
 # This list comes from Google Developers Toolkit:  https://developers.google.com/public-data/docs/canonical/countries_csv
 # Portions of this page are reproduced from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.
-# Portions of this page are reproduced from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.
 
 country	latitude	longitude	name
 AD	42.546245	1.601554	Andorra
