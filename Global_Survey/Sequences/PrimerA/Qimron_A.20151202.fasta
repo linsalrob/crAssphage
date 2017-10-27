@@ -1,4 +1,4 @@
->Qimron_Jericho_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=31.85,35.45] [latitude=31.85] [longitude=35.45] [note=Collected in Jericho] [country=Israel]
+>Qimron_Jericho_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=31.85,35.45] [latitude=31.85] [longitude=35.45] [note=Collected in Jericho] [country=Israel] [locality=Jericho]
 agnnntnnnnnangnnctnncgnncnacacaatgacta
 acatatcttgctaaagtttnnnccaccatataattgtgatggtaaagatagatgttgt
 caattatattattaatagtgctgaaagaattacttggaaagaagttgaatctattgaaga
@@ -22,7 +22,7 @@ tattaattatcttactggagatgaacctacaagacaaacaaataatatatttg
 ttgaagcgtttattgatgaacatgattgtataactcgtgctaaatgtgctgatgctattg
 cttggatgtggaaatatcagaatactaaagtagaatatattcaaactaatntgatannc
 cgantnngtagtannat
->Qimron_Qalqilyah_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=32.18,34.97] [latitude=32.18] [longitude=34.97] [note=Collected in Qalqilyah] [country=Israel]
+>Qimron_Qalqilyah_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=32.18,34.97] [latitude=32.18] [longitude=34.97] [note=Collected in Qalqilyah] [country=Israel] [locality=Qalqilya]
 nntnnntggnnttctaatagttaganctacaatgtact
 aatatatccttgctaaagtttctactccgccctataattgtgatggtaaagatagatgtt
 gtcaactaattattaatagtgctcaaagaattacttggaaagaagttgaatctattga
@@ -45,7 +45,7 @@ gatatagtaattctgttacttgggaagaacttcgtaatgatattaattatcttactggag
 atgaacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacatgatt
 gtataactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcagaatagct
 aaagtagaatatattcaaactaatgtgaaanccgaacaaatn
->Qimron_Ramallah_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=31.9,35.19] [latitude=31.9] [longitude=35.19] [note=Collected in Ramallah] [country=Israel]
+>Qimron_Ramallah_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=31.9,35.19] [latitude=31.9] [longitude=35.19] [note=Collected in Ramallah] [country=Israel] [locality=Ramallah]
 antaccatgnncttctaatgttagacacaatgactaat
 atatccttgctaaagtttctactccccctataattgtgatggtaaagatagatgttgtc
 aattaattattaatagtgctgaacgaattacttggaaagaagttgaatctattgaagaat
@@ -69,7 +69,7 @@ aacctacaagacaaacaaataatatatttgttgaagcgtttattgatgaacatgattgta
 taactcgtgctaaatgtgctgatgctattgcttggatgtggaaatatcagaatggctaaa
 gtagaatatattcaaactaatntgataancgaacat
 aatagggncnnntgnnt
->Qimron_Salfit_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=32.08,35.18] [latitude=32.08] [longitude=35.18] [note=Collected in Salfit] [country=Israel]
+>Qimron_Salfit_A_20151202 [name=Qimron lab primer A 20151202] [date=20151202] [latlon=32.08,35.18] [latitude=32.08] [longitude=35.18] [note=Collected in Salfit] [country=Israel] [locality=Salfit]
 anntnntttacttactatgttagactcaatgacta
 atattccttgctaaagtttctactcctcctataattgtgatggtaaagatagatgttgt
 caactatattattaatagtgctcaacgaattacttggaaagaagttgaatctattgaaga
