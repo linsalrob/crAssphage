@@ -25,20 +25,20 @@ help:
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-site_date: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site -n date > seqs.$(PRIMER).sitedate.tree
+site_date: seqs.$(PRIMER).rc.trim.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n site -n date > seqs.$(PRIMER).sitedate.tree
 
-date_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
+date_tree: seqs.$(PRIMER).rc.trim.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
 
-site_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
+site_tree: seqs.$(PRIMER).rc.trim.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
 
-country_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+country_tree: seqs.$(PRIMER).rc.trim.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
 
-tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
+tree: seqs.$(PRIMER).rc.trim.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
 seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
 	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
@@ -68,7 +68,7 @@ clustalw: seqs.$(PRIMER).fa
 
 reverse_complement_tree: seqs.$PRIMER.rc.trim.tree
 
-seqs.$PRIMER.rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
+seqs.$(PRIMER).rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
 	@echo "Running muscle may take a while. You might want to run these steps on the cluster"
 	muscle -in seqs.$(PRIMER).renum.rc.fa -out seqs.$(PRIMER).renum.rc.aln -maxiters 2 -diags
 	python3 ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).renum.rc.aln -c 0.9 -r 0.8 -v > seqs.$(PRIMER).rc.trim.aln
