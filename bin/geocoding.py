@@ -1,5 +1,6 @@
 import sys
 import os
+import argparse
 import requests
 import json
 import location_db as ldb
@@ -9,7 +10,8 @@ import location_db as ldb
 # https://developers.google.com/maps/documentation/geocoding/get-api-key
 
 basepath = os.path.dirname(sys.argv[0])
-basepath = basepath[:basepath.rindex('/')]
+if basepath:
+    basepath = basepath[:basepath.rindex('/')]
 
 keyfile = None
 if os.path.exists(os.path.join(basepath, "bin/googleapi.key")):
@@ -26,15 +28,17 @@ with open(keyfile, 'r') as f:
 
 localitydb = os.path.join(basepath, "data/localities.db")
 if not os.path.exists(localitydb):
-    sys.stderr.write("ERROR: We can't find the location SQLite database ")
-    sys.stderr.write("(which should be in {})\n".format(localitydb))
-    sys.stderr.write("Please check your installation\n")
-    sys.exit(-1)
+    localitydb = '../data/localities.db'
+    if not os.path.exists(localitydb):
+        sys.stderr.write("ERROR: We can't find the location SQLite database ")
+        sys.stderr.write("(which should be in {})\n".format(localitydb))
+        sys.stderr.write("Please check your installation\n")
+        sys.exit(-1)
 
 
 conn = ldb.get_database_connection(localitydb)
 
-def place_to_latlon(city, country, verbose=False):
+def place_to_latlon(city, country, verbose=False, force_api=False):
     """
     Convert and city and country to a lat lon
     """
@@ -88,10 +92,10 @@ def place_to_latlon(city, country, verbose=False):
     return latlon['lat'], latlon['lng']
 
 
-def latlon_to_place(lat, lon, verbose=False):
+def latlon_to_place(lat, lon, verbose=False, force_api=False):
 
     results = ldb.get_by_latlon(lat, lon)
-    if results:
+    if results and not force_api:
         return results[4], results[5]
 
     if verbose:
@@ -101,7 +105,7 @@ def latlon_to_place(lat, lon, verbose=False):
     url += "latlng={},{}".format(lat, lon)
     v = requests.get(url)
     if verbose:
-        sys.stderr.write("{}\n".format(v))
+        sys.stderr.write("{}\n{}\n".format(url, v))
     j = json.loads(v.text)
     if "ZERO_RESULTS" == j['status']:
         sys.stderr.write("Could not find a place for {},{}\n".format(lat, lon))
@@ -132,15 +136,22 @@ def latlon_to_place(lat, lon, verbose=False):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Find geocoordinates')
+    parser.add_argument('-l', help='Lat/Lon in format lat,lon (eg: -14.235004,-51.92528)')
+    parser.add_argument('-p', help='Place (eg. San Diego) (requires a country)')
+    parser.add_argument('-c', help='Country')
+    parser.add_argument('-f', help='force a web search vs a db search', action='store_true')
+    parser.add_argument('-v', help='verbose', action='store_true')
+    args = parser.parse_args()
+
     
-    city="San Diego"
-    country="USA"
-    lat, lon = place_to_latlon(city, country, True)
-    print("San Diego: {},{}".format(lat,lon))
-    sys.exit(0);
-    
-    p=latlon_to_place(50.038062,19.321854)
-    with open("temp", 'w', encoding='utf-8') as out:
-        out.write("{}\t{}\n".format(p[0], p[1]))
-    locality, country = latlon_to_place(33.116202,-117.321597)
-    print("33.116202,-117.321597: {}, {}".format(locality, country))
+    if args.p and args.c:
+        lat, lon = place_to_latlon(args.p, args.c, args.v, args.f)
+        print("{}, {}: {},{}".format(args.p, args.c, lat,lon))
+    elif args.c:
+        lat, lon = place_to_latlon(None, args.c, args.v, args.f)
+        print("{}: {},{}".format(args.c, lat,lon))
+    elif args.l:
+        (lat, lon) = args.l.split(',')
+        locality, country = latlon_to_place(lat, lon, args.v, args.f)
+        print("{},{} : {}, {}".format(lat, lon, locality, country))
