@@ -90,7 +90,7 @@ def rename(fafile, idmapfile, outputfa):
                         while not re.match('\d{8}', dt):
                             dt += '0'
 
-                identifier = "{}:{}:{}:".format(lcl, cnt, dt)
+                identifier = "{}|{}|{}|".format(lcl, cnt, dt)
 
                 counts[identifier] = counts.get(identifier, 0) + 1
                 identifier += str(counts[identifier])
