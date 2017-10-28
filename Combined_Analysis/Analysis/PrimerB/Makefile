@@ -16,12 +16,12 @@ help:
 	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
 	@echo "\talign\t\talign the sequences using the default aligner (mafft)"
 	@echo "\tseqs.fa\t\tassemble the DNA sequences into a single fasta file"
-	@echo "\trenum\t\trenumber the fasta file and create a separate id.map"
+	@echo "\trenum\t\trename the fasta file and create a separate id.map file that has the keys"
 	@echo "\tclustalw\trun a clustalw alignment on the sequences"
 	@echo "\tmafft\t\trun a mafft alignment on the sequences (this makes a phylip format output used for building the trees)"
 	@echo "\tmafft_fa\trun a mafft alignment but write the alignment in fasta format"
 	@echo "\tmafft_fa_name\trun a mafft alignment but write the alignment in fasta format and rename the sequences"
-	@echo "\treverse_complement\trenumber the sequences, run a blast to match them, and reverse complement ones in the wrong orientation"
+	@echo "\treverse_complement\trename the sequences, run a blast to match them, and reverse complement ones in the wrong orientation"
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
@@ -57,10 +57,10 @@ align: mafft
 
 mafft: seqs.$(PRIMER).aln
 
-seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
+seqs.$(PRIMER).aln: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
-mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
+mafft_fa: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 clustalw: seqs.$(PRIMER).fa
@@ -76,14 +76,17 @@ seqs.$PRIMER.rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
 
 reverse_complement: seqs.$(PRIMER).renum.rc.fa
 
-seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
+seqs.$(PRIMER).renum.rc.fa: metadata.$(PRIMER).tsv
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
+
+metadata.$(PRIMER).tsv: id.$(PRIMER).map
+	python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../../bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
+	python3 ../../../bin/rename_fasta.py -f seqs.$(PRIMER).fa -o seqs.$(PRIMER).renum.fa -i id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	cat ../../Sequences/Primer$(PRIMER)/*.fasta > seqs.$(PRIMER).fa

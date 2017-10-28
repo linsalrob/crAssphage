@@ -57,10 +57,10 @@ align: mafft
 
 mafft: seqs.$(PRIMER).aln
 
-seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
+seqs.$(PRIMER).aln: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
-mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
+mafft_fa: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 clustalw: seqs.$(PRIMER).fa
@@ -76,14 +76,17 @@ seqs.$(PRIMER).rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
 
 reverse_complement: seqs.$(PRIMER).renum.rc.fa
 
-seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
+seqs.$(PRIMER).renum.rc.fa: metadata.$(PRIMER).tsv
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
+
+metadata.$(PRIMER).tsv: id.$(PRIMER).map
+	python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../../bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
+	python3 ../../../bin/rename_fasta.py -f seqs.$(PRIMER).fa -o seqs.$(PRIMER).renum.fa -i id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	cat ../../Sequences/Primer$(PRIMER)/*.fasta > seqs.$(PRIMER).fa
