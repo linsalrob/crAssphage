@@ -4,15 +4,25 @@ The trees and alignments are made in several steps, although all the steps are l
 
 First, we collect all the sequenes in fasta format. Hopefully, those sequences are symbolic links to the original data directories (they are on our machines!)
 
-Second, we renumber the sequences as usual, so we can separate out the ID and the metadata.
+Second, we rename the sequences using a commmon sequence identifier:
+
+Locality|Date|Country|Sample\_Number
+
+In this format:
+* Locality is generally the city where the sample came from. This is usually taken from the [locality](https://developers.google.com/maps/documentation/geocoding/intro#Types) entry from the Google Maps API. We chose this as it is a uniform way to ensure every sample has a locality
+* Date is an eight digit number in the format YYYYMMDD. If the date is not known, we use 00000000.
+* Country is the name of the country
+* Sample number is to disambiguate different samples from the same city on the same date.
+
+Note also that both locality and country match the regular expression \w+ (i.e. only contain the characters a-z, A-Z, 0-9 and \_). 
 
 Next, we blast the sequences against the crAssphage sequence. This allows us to do two things: 1) we reverse complement any sequences that are in the wrong orientation and 2) we remove any spurious sequences that do not appear to be similar to crAssphage. We have a few of these that have leaked through our pipeline to create strains, and we are not sure where they are from.
 
-Now that we have all the good sequencces in the same direction, we align them using [muscle](www.drive5.com/muscle/muscle.html). There is a script for doing that, and if you are using the cluster, you can make it go very fast by making a virtual parallel environment and running the alignment in that. For example, to submit to the cluster and use 150 cores as an environment, you can use the command `qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh`.
+Now that we have all the good sequences in the same direction, we align them using [muscle](www.drive5.com/muscle/muscle.html). There is a script for doing that, and if you are using the cluster, you can make it go very fast by making a virtual parallel environment and running the alignment in that. For example, to submit to the cluster and use 150 cores as an environment, you can use the command `qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh`.
 
 Once the alignment is complete we trim to remove any column that is <90% _informative characters_ and subsequently to remove any sequence that is <80%_ informative characters_. By _informative characters_, we basically mean not a hyphen (_-_). 
 
-Finally, we use [FastTree](microbesonline.org/fasttree/) (well, actually FastTreeDbl) to build the tree from the alignment.
+Finally, we use either [FastTree](microbesonline.org/fasttree/) (well, actually FastTreeDbl) or [iq-tree](http://www.iqtree.org/) to build the tree from the alignment.
 
 As noted above, all of this is in the Makefile, however we typically run it in two steps:
 
@@ -27,9 +37,9 @@ The second step does all the rest.
 
 ## Making the world maps
 
-We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements:
+We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements. We need to make the matrix otherwise you need to iterate over the tree to find closest neighbors.
 
 ```
-python3 ~/crAssphage/bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.tree > seqs.A.rc.trim.matrix
-python3 ~/crAssphage/bin/crAssphage_cophenetic.py -i id.A.map -m seqs.A.rc.trim.matrix -o PrimerA_map.svg
+python3 ../../../bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.tree > seqs.A.rc.trim.matrix
+python3 ../../../bin/crAssphage_cophenetic.py -i id.A.map -m seqs.A.rc.trim.matrix -o PrimerA_map.svg
 ```
