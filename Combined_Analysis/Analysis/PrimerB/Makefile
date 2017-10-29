@@ -6,10 +6,10 @@ PRIMER = B
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "\tsite_date\tcreate a FastTree and rename the leaves using both the site and date tags"
-	@echo "\tcountry_tree\tcreate a FastTree and rename the leaves using the country= tag in the fasta def line"
-	@echo "\tsite_tree\tcreate a FastTree and rename the leaves using the site= tag in the fasta def line"
-	@echo "\tdate_tree\tcreate a FastTree and rename the leaves using the date= tag in the fasta def line"
+	@echo "\tsite_date\tcreate a iq-tree and rename the leaves using both the site and date tags"
+	@echo "\tcountry_tree\tcreate a iq-tree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\tsite_tree\tcreate a iq-tree and rename the leaves using the site= tag in the fasta def line"
+	@echo "\tdate_tree\tcreate a iq-tree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
 	@echo "\treverse_complement_tree\tReverse complement sequences as below and make an alignment and tree of them"
 	@echo "\treverse_complement\tReverse complement sequences as required and filter to only those that match crassphage"
@@ -25,23 +25,26 @@ help:
 	@echo ""
 	@echo "You probably want to start with country_tree, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-site_date: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site -n date > seqs.$(PRIMER).sitedate.tree
+site_date: seqs.$(PRIMER).rc.trim.aln.treefile
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n site -n date > seqs.$(PRIMER).sitedate.tree
 
-date_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
+date_tree: seqs.$(PRIMER).rc.trim.aln.treefile
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
 
-site_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
+site_tree: seqs.$(PRIMER).rc.trim.aln.treefile
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
 
-country_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+country_tree: seqs.$(PRIMER).rc.trim.aln.treefile
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
 
-tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
+tree: seqs.$(PRIMER).rc.trim.aln.treefile
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
-	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
+seqs.$(PRIMER).rc.trim.aln.treefile: seqs.$(PRIMER).trim.aln
+	iq-tree -nt AUTO -s seqs.$(PRIMER).trim.aln
+
+FastTree:
+	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).fasttree
 
 blastn: seqs.$(PRIMER).fa
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
