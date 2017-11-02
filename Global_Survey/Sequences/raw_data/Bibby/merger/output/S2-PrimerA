@@ -1,0 +1,148 @@
+########################################
+# Program: merger
+# Rundate: Wed  1 Nov 2017 23:51:56
+# Commandline: merger
+#    -asequence phred/fastq/S2-Primer_A-F.ab1.fastq
+#    -bsequence phred/fastq/S2-Primer_A-R.ab1.fastq
+#    -sreverse2
+#    -outfile merger/output/S2-PrimerA
+#    -outseq merger/fasta/2-PrimerA.fasta
+#    -sformat1 fastq-sanger
+#    -sformat2 fastq-sanger
+# Align_format: simple
+# Report_file: merger/output/S2-PrimerA
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: S2-Primer_A-F.ab1
+# 2: S2-Primer_A-R.ab1
+# Matrix: EDNAFULL
+# Gap_penalty: 50.0
+# Extend_penalty: 5.0
+#
+# Length: 1300
+# Identity:       3/1300 ( 0.2%)
+# Similarity:     3/1300 ( 0.2%)
+# Gaps:        1294/1300 (99.5%)
+# Score: 3.0
+# 
+#
+#=======================================
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R   1239 gaggttgtatagatagttgtgggagaggatttagtgtttttctattttaa   1190
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R   1189 gaaagatattagagaatgtttaatagtttgatgtatttatgtttttttac   1140
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R   1139 ttgtattaattaaaacaaaaataaggacaaaaagttaaaaaaataaatga   1090
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R   1089 ggagtaagaggtaattgagtaggcctgtaaatacacgaaaattaaaaatg   1040
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R   1039 aaggattgcaatgttatatatggctaaagtagaaaggataaaaaagtttt    990
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    989 tataaaggagaaacaatgaggcaggaaagttatgaattcaaaaaattgaa    940
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    939 agagactttttaaaatttgaaaaatagtgaaaaagttctatgtttttaaa    890
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    889 agatgttaatggaatattttgggttaaagttttctgaaagggtcggtgta    840
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    839 catagaaaagtgtttacttcttgcactaactctcgcggcttgtgctgagt    790
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    789 tcgctggatggactaagctcgtatatgtataatggataggagaagaagcc    740
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    739 ggtagacaatatgttgggcggtgggggagaaattcttacatcgagcaggg    690
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    689 tatttcatgaggattttataggtgtttggcccatttgatcaagttattag    640
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    639 catgtatggatgatatcactcttagctagcttttgaagaccctgcttcga    590
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    589 gtctaacatgaatatttgtattagtcctgcatcgtcaagtgtacactcta    540
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    539 ttagatactttgggacagtgctactggcactgaaggctcagtgtatcatg    490
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    489 atgttgagtaggttaacaatcactgagtcttcattctaggccggacagat    440
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    439 acagaaaatcagctctctccggagagcgattgcaacagcacaacagattt    390
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    389 gagaatcaacatatgcagaaggcagttccatgcgctgctcatttcttctg    340
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    339 aaagtacaaaaatccaacagaatcggtgaccgcagagatgtcaggaacca    290
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    289 tgctgaggcggcccagttcagttgtcacaggcattcgatgcagtcgatga    240
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    239 ggcagtcttttcctgcctgtcgagggaccgccgctatgatatctttaggg    190
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    189 tgaggaggcgagtagaccgtcatagggtaggtcacaccagcggcgcagct    140
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R    139 ctgaagcgctatagcgacttacatcggtggagaaacaataccccatagag     90
+
+S2-Primer_A-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_A-R     89 ggcacacggtgttgtctataagtgagagacttgtcctcggcgtcactgat     40
+
+S2-Primer_A-F      1 ---------------------------------gtataaaggagggacgg     17
+                                                      ||.|..           
+S2-Primer_A-R     39 aataagctgtaatgctgatatcgttactgtttcgttttt-----------      1
+
+S2-Primer_A-F     18 aactggttacacgtgtagacgcggaattgatcatgatgtactgtctccct     67
+                                                                       
+S2-Primer_A-R      0 --------------------------------------------------      1
+
+
+#---------------------------------------
+#
+# Conflicts: S2-Primer_A-F.a S2-Primer_A-R.a
+#              position base   position base Using
+#                     3  'a'       1236  'T'   'T'
+#                     5  'A'       1238  't'   'A'
+#                     6  'A'       1239  't'   'A'
+# 
+#
+#---------------------------------------

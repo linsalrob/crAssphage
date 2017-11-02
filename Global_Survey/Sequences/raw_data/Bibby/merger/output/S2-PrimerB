@@ -1,0 +1,56 @@
+########################################
+# Program: merger
+# Rundate: Wed  1 Nov 2017 23:51:56
+# Commandline: merger
+#    -asequence phred/fastq/S2-Primer_B-F.ab1.fastq
+#    -bsequence phred/fastq/S2-Primer_B-R.ab1.fastq
+#    -sreverse2
+#    -outfile merger/output/S2-PrimerB
+#    -outseq merger/fasta/2-PrimerB.fasta
+#    -sformat1 fastq-sanger
+#    -sformat2 fastq-sanger
+# Align_format: simple
+# Report_file: merger/output/S2-PrimerB
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: S2-Primer_B-F.ab1
+# 2: S2-Primer_B-R.ab1
+# Matrix: EDNAFULL
+# Gap_penalty: 50.0
+# Extend_penalty: 5.0
+#
+# Length: 121
+# Identity:       4/121 ( 3.3%)
+# Similarity:     4/121 ( 3.3%)
+# Gaps:         114/121 (94.2%)
+# Score: 8.0
+# 
+#
+#=======================================
+
+S2-Primer_B-F      1 --------------------------------------------------      0
+                                                                       
+S2-Primer_B-R     62 natccagtttccaaagcatcacatcgttcagaccgggcatgtcgcctgaa     13
+
+S2-Primer_B-F      1 -----aaaattttcgacgtggcgcatcgtctgacattcctcatgcccaaa     45
+                          ..|||.|                                      
+S2-Primer_B-R     12 ggtaggtaatgt--------------------------------------      1
+
+S2-Primer_B-F     46 tagctattccgccctcacaga     66
+                                          
+S2-Primer_B-R      0 ---------------------      1
+
+
+#---------------------------------------
+#
+# Conflicts: S2-Primer_B-F.a S2-Primer_B-R.a
+#              position base   position base Using
+#                     1  'a'         56  'G'   'G'
+#                     2  'a'         57  'T'   'T'
+#                     6  'T'         61  'g'   'T'
+# 
+#
+#---------------------------------------

@@ -1,0 +1,367 @@
+########################################
+# Program: merger
+# Rundate: Wed  1 Nov 2017 23:51:56
+# Commandline: merger
+#    -asequence phred/fastq/S3-Primer_B-F.ab1.fastq
+#    -bsequence phred/fastq/S3-Primer_B-R.ab1.fastq
+#    -sreverse2
+#    -outfile merger/output/S3-PrimerB
+#    -outseq merger/fasta/3-PrimerB.fasta
+#    -sformat1 fastq-sanger
+#    -sformat2 fastq-sanger
+# Align_format: simple
+# Report_file: merger/output/S3-PrimerB
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: S3-Primer_B-F.ab1
+# 2: S3-Primer_B-R.ab1
+# Matrix: EDNAFULL
+# Gap_penalty: 50.0
+# Extend_penalty: 5.0
+#
+# Length: 1344
+# Identity:     916/1344 (68.2%)
+# Similarity:   916/1344 (68.2%)
+# Gaps:         239/1344 (17.8%)
+# Score: 3229.0
+# 
+#
+#=======================================
+
+S3-Primer_B-F      1 attttaagaacaacttatataattaaggattagtagtacgtaattgaatc     50
+                                                                       
+S3-Primer_B-R   1179 --------------------------------------------------   1180
+
+S3-Primer_B-F     51 catctttcaaaccaatcttttctagcagaacgtatagtagtattagaatc    100
+                                                                       
+S3-Primer_B-R   1179 --------------------------------------------------   1180
+
+S3-Primer_B-F    101 aacttgattaactaatttttgaatctttctaatattctctttagttttat    150
+                                                            ||.|....|.|
+S3-Primer_B-R   1179 ---------------------------------------ttaaaaggttt   1169
+
+S3-Primer_B-F    151 catcaagatttgtactatcaatatcaatttcgctaataagtttgtattta    200
+                     ..|.....||...|.|.|.|||.|....||....||....|||.|.|||.
+S3-Primer_B-R   1168 tgttttttttcaaaatttaaatttttccttaaaaaaattttttttttttt   1119
+
+S3-Primer_B-F    201 ttcttaaatgtattagcact--aagaataacatctaagaaacgattttga    248
+                     ||.|.|||..|.|||.|.||  |..||.|||.|..||||||.||||||||
+S3-Primer_B-R   1118 ttttaaaagtttttaccccttaagaaaaaactttaaagaaaagattttga   1069
+
+S3-Primer_B-F    249 agttgttcatctttaagaactttaccaataacatctttatcgttaatagg    298
+                     |||||||..|.||||||||||||.||||..|.||.|||.|.|||||||||
+S3-Primer_B-R   1068 agttgtttctttttaagaactttcccaaataaattttttttgttaatagg   1019
+
+S3-Primer_B-F    299 tttatcaataccgtcaattttaataaaacgattaatatcattaagaatat    348
+                     |||.|||||.||...|..|.||||||||||||||||.||.||||||||.|
+S3-Primer_B-R   1018 tttttcaatccctcaatgtataataaaacgattaatttctttaagaattt    969
+
+S3-Primer_B-F    349 tattagcttcaacatctatataattagctatgactgataatgaaaattca    398
+                     ||||||||||||||||||||||||||||.||||||||||||||||.|||.
+S3-Primer_B-R    968 tattagcttcaacatctatataattagcaatgactgataatgaaatttcc    919
+
+S3-Primer_B-F    399 g-aattatcagaaagactactactatcaagataattaatttcagcattat    447
+                     | ||||||||||||||||||||||||||||||||||||||||||||||||
+S3-Primer_B-R    918 gaaattatcagaaagactactactatcaagataattaatttcagcattat    869
+
+S3-Primer_B-F    448 taagagcattaagaacattttgagcagcaggttgaccatgacgaacagct    497
+                     |||||||||.||||||||||||||||||||||||.|||||||||||||||
+S3-Primer_B-R    868 taagagcataaagaacattttgagcagcaggttgtccatgacgaacagct    819
+
+S3-Primer_B-F    498 cgtgaaataactaaacttgcatttttagcaaatctaccaataggagtttg    547
+                     ||||||||||.||||||.||||||||||||||||||||||||||||||||
+S3-Primer_B-R    818 cgtgaaataattaaactagcatttttagcaaatctaccaataggagtttg    769
+
+S3-Primer_B-F    548 gtcatcaacactactatatctatcagtattactagtaactctatctattt    597
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+S3-Primer_B-R    768 gtcatcaacactactatatctatcagtattactagtaactctatctattt    719
+
+S3-Primer_B-F    598 cattttcattaatttcaataaataatccaagtttattatcttcaatatta    647
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+S3-Primer_B-R    718 cattttcattaatttcaataaataatccaagtttattatcttcaatatta    669
+
+S3-Primer_B-F    648 ggatatttagctttatattgttgtaaatcatcgcttatattaatagcagt    697
+                     |||||||||||||||||||||||||||||||||||||.||||||||||||
+S3-Primer_B-R    668 ggatatttagctttatattgttgtaaatcatcgcttaaattaatagcagt    619
+
+S3-Primer_B-F    698 agttccattaatgttaagataaaatttatcattaatagtatatatagtat    747
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+S3-Primer_B-R    618 agttccattaatgttaagataaaatttatcattaatagtatatatagtat    569
+
+S3-Primer_B-F    748 tattctcaaaaggagtattcataaaaggttggaaatactcatcagaaata    797
+                     ||||||||||||||||||||||||||||||||||||||||||||||.|||
+S3-Primer_B-R    568 tattctcaaaaggagtattcataaaaggttggaaatactcatcagatata    519
+
+S3-Primer_B-F    798 tatttactatatagttcaagaacttctttataacctttatttacagcttc    847
+                     ||||||||||||||||||.|||||||||||||||||||||||||||||||
+S3-Primer_B-R    518 tatttactatatagttcaggaacttctttataacctttatttacagcttc    469
+
+S3-Primer_B-F    848 attaatattatctttaataccatcaaataattttatctcgtttttcttgt    897
+                     |||||||||||||||||||||||| |||||.||||||||.||||||||||
+S3-Primer_B-R    468 attaatattatctttaataccatc-aataaatttatctcttttttcttgt    420
+
+S3-Primer_B-F    898 tgagtaagaacctttataaagaaaacaaggtaatggtttaggaaaattat    947
+                     |||||||| ||||||||||||||.|..||.||||||||||.|||.|||||
+S3-Primer_B-R    419 tgagtaag-acctttataaagaagaacagctaatggtttatgaatattat    371
+
+S3-Primer_B-F    948 aattagctataatactagggttcaaactattaaaaagtttcaaatgattc    997
+                     .||||||||||||||||||.|..|.|||||| |.||||||||||||||||
+S3-Primer_B-R    370 tattagctataatactaggttcaatactatt-ataagtttcaaatgattc    322
+
+S3-Primer_B-F    998 aagtctatccaaaggaaaataagccaaaagttccatcaaaagttcccttt   1047
+                     |||||||||.|.||||.|||||| |.||||||||||||.|||||||  ||
+S3-Primer_B-R    321 aagtctatcaataggataataag-ctaaagttccatcataagttcc--tt    275
+
+S3-Primer_B-F   1048 aataatataaattcctattaaattcaaataaaactttaaaagcattcttc   1097
+                     .|..|||||||||.|||||||.|..|   |.|||.||||.|||||.....
+S3-Primer_B-R    274 taatatataaatttctattaattcta---ataacattaacagcatctcca    228
+
+S3-Primer_B-F   1098 tttttttttttatttcccaaatttttcaaaaaaattttttttgaaccatt   1147
+                     |||.||.||.|...|.|...||         .||..||||.|..||||||
+S3-Primer_B-R    227 tttcttattattcctacattat---------caagattttcttgaccatt    187
+
+S3-Primer_B-F   1148 ttaaaaagaaaaaaaaaaaccccctttctttttttaaaaaaaaaaaattt   1197
+                             ||||..||.||..||..||||||||..|..|.||..||.|||
+S3-Primer_B-R    186 --------aaaagtaataataccacttctttttagactataattaatttt    145
+
+S3-Primer_B-F   1198 aaatttttttttttattaaaaaaaaaagctttttttaaaaaggggaaaaa   1247
+                     |...||..|...|..||.|||...|.|.||......|..||....|..|.
+S3-Primer_B-R    144 attattagtaagtcttttaaatgtataactaggacaattaaaactattat     95
+
+S3-Primer_B-F   1248 aaaaaaggggaaaaaaatttaaa---------------------------   1270
+                     ||.......|||.||||...|..                           
+S3-Primer_B-R     94 aattgttacgaataaaaccaattattcttcaacattatcttatcactaaa     45
+
+S3-Primer_B-F   1271 --------------------------------------------   1270
+                                                                 
+S3-Primer_B-R     44 accatagtataatctgaagcgtagttattacaaaaaagattgtg      1
+
+
+#---------------------------------------
+#
+# Conflicts: S3-Primer_B-F.a S3-Primer_B-R.a
+#              position base   position base Using
+#                   142  'T'          3  'a'   'T'
+#                   144  'G'          5  'a'   'G'
+#                   145  'T'          6  'a'   'T'
+#                   146  'T'          7  'g'   'T'
+#                   147  'T'          8  'g'   'T'
+#                   149  'A'         10  't'   'A'
+#                   151  'C'         12  't'   'C'
+#                   152  'A'         13  'g'   'A'
+#                   154  'C'         15  't'   'C'
+#                   155  'A'         16  't'   'A'
+#                   156  'A'         17  't'   'A'
+#                   157  'G'         18  't'   'G'
+#                   158  'A'         19  't'   'A'
+#                   161  'T'         22  'c'   'T'
+#                   162  'G'         23  'a'   'G'
+#                   163  'T'         24  'a'   'T'
+#                   165  'C'         26  'a'   'C'
+#                   167  'A'         28  't'   'A'
+#                   169  'C'         30  'a'   'C'
+#                   173  'A'         34  't'   'A'
+#                   175  'C'         36  't'   'C'
+#                   176  'A'         37  't'   'A'
+#                   177  'A'         38  'c'   'A'
+#                   178  'T'         39  'c'   'T'
+#                   181  'C'         42  'a'   'C'
+#                   182  'G'         43  'a'   'G'
+#                   183  'C'         44  'a'   'C'
+#                   184  'T'         45  'a'   'T'
+#                   187  'T'         48  'a'   'T'
+#                   188  'A'         49  't'   'A'
+#                   189  'A'         50  't'   'A'
+#                   190  'G'         51  't'   'G'
+#                   194  'G'         55  't'   'G'
+#                   196  'A'         57  't'   'A'
+#                   200  'A'         61  't'   'A'
+#                   203  'C'         64  't'   'C'
+#                   205  'T'         66  'a'   'T'
+#                   209  'T'         70  'g'   'T'
+#                   210  'G'         71  't'   'G'
+#                   212  'A'         73  't'   'A'
+#                   216  'G'         77  'c'   'G'
+#                   218  'A'         79  'c'   'A'
+#                   221  '.'         82  't'   '.'
+#                   221  '.'         83  'a'   '.'
+#                   222  'A'         85  'g'   'A'
+#                   223  'G'         86  'a'   'G'
+#                   226  'T'         89  'a'   'T'
+#                   230  'A'         93  't'   'A'
+#                   232  'C'         95  't'   'C'
+#                   233  'T'         96  'a'   'T'
+#                   240  'C'        103  'a'   'C'
+#                   256  'C'        119  't'   'C'
+#                   257  'A'        120  'c'   'A'
+#                   259  'C'        122  't'   'C'
+#                   272  'A'        135  'c'   'A'
+#                   277  'T'        140  'a'   'T'
+#                   278  'A'        141  't'   'A'
+#                   280  'C'        143  'a'   'C'
+#                   283  'C'        146  't'   'C'
+#                   287  'A'        150  't'   'A'
+#                   289  'C'        152  't'   'C'
+#                   302  'A'        165  't'   'A'
+#                   308  'A'        171  'c'   'A'
+#                   311  'G'        174  't'   'G'
+#                   312  'T'        175  'c'   'T'
+#                   313  'C'        176  'a'   'C'
+#                   315  'A'        178  't'   'A'
+#                   316  'T'        179  'g'   'T'
+#                   318  'T'        181  'a'   'T'
+#                   335  'A'        198  't'   'A'
+#                   338  'A'        201  't'   'A'
+#                   347  'A'        210  't'   'A'
+#                   377  'T'        240  'a'   'T'
+#                   394  'A'        257  't'   'A'
+#                   398  'A'        261  'c'   'A'
+#                   400  '.'        263  'a'   '.'
+#                   457  'T'        321  'a'   'T'
+#                   482  'A'        346  't'   'A'
+#                   508  'C'        372  't'   'C'
+#                   515  'T'        379  'a'   'T'
+#                   685  'T'        549  'a'   'T'
+#                   794  'A'        658  't'   'A'
+#                   816  'A'        680  'g'   'A'
+#                   872  'A'        736  '.'   'A'
+#                   878  'T'        741  'a'   'T'
+#                   887  'G'        750  't'   'G'
+#                   906  'A'        769  '.'   'A'
+#                   921  'A'        783  'g'   'A'
+#                   923  'C'        785  'a'   'C'
+#                   924  'A'        786  'c'   'A'
+#                   927  'G'        789  'c'   'G'
+#                   938  'G'        800  't'   'G'
+#                   942  'A'        804  't'   'A'
+#                   948  'A'        810  't'   'A'
+#                   967  'G'        829  't'   'G'
+#                   969  'T'        831  'c'   'T'
+#                   970  'C'        832  'a'   'C'
+#                   972  'A'        834  't'   'A'
+#                   979  'A'        841  '.'   'A'
+#                   981  'A'        842  't'   'A'
+#                  1007  'C'        868  'a'   'C'
+#                  1009  'A'        870  't'   'A'
+#                  1014  'A'        875  't'   'A'
+#                  1021  'C'        882  '.'   'C'
+#                  1023  'A'        883  't'   'A'
+#                  1036  'A'        896  't'   'A'
+#                  1044  'C'        904  '.'   'C'
+#                  1045  'T'        904  '.'   'T'
+#                  1048  'A'        906  't'   'A'
+#                  1050  'T'        908  'a'   'T'
+#                  1051  'A'        909  't'   'A'
+#                  1061  'C'        919  't'   'C'
+#                  1069  'A'        927  't'   'A'
+#                  1071  'T'        929  'c'   'T'
+#                  1072  'C'        930  't'   'C'
+#                  1074  'A'        932  '.'   'A'
+#                  1075  'A'        932  '.'   'A'
+#                  1076  'T'        932  '.'   'T'
+#                  1078  'A'        933  't'   'A'
+#                  1082  'T'        937  'a'   'T'
+#                  1087  'A'        942  'c'   'A'
+#                  1093  'T'        948  'c'   'T'
+#                  1094  'C'        949  't'   'C'
+#                  1095  'T'        950  'c'   'T'
+#                  1096  'T'        951  'c'   'T'
+#                  1097  'C'        952  'a'   'C'
+#                  1101  'T'        956  'c'   'T'
+#                  1104  'T'        959  'a'   'T'
+#                  1107  'T'        962  'a'   'T'
+#                  1109  'A'        964  't'   'A'
+#                  1110  'T'        965  'c'   'T'
+#                  1111  'T'        966  'c'   'T'
+#                  1113  'C'        968  'a'   'C'
+#                  1115  'C'        970  'a'   'C'
+#                  1116  'A'        971  't'   'A'
+#                  1117  'A'        972  't'   'A'
+#                  1120  'T'        975  '.'   'T'
+#                  1121  'T'        975  '.'   'T'
+#                  1122  'T'        975  '.'   'T'
+#                  1123  'T'        975  '.'   'T'
+#                  1124  'C'        975  '.'   'C'
+#                  1125  'A'        975  '.'   'A'
+#                  1126  'A'        975  '.'   'A'
+#                  1127  'A'        975  '.'   'A'
+#                  1128  'A'        975  '.'   'A'
+#                  1129  'A'        975  'c'   'A'
+#                  1132  'T'        978  'g'   'T'
+#                  1133  'T'        979  'a'   'T'
+#                  1138  'T'        984  'c'   'T'
+#                  1140  'G'        986  't'   'G'
+#                  1141  'A'        987  'g'   'A'
+#                  1148  'T'        994  '.'   'T'
+#                  1149  'T'        994  '.'   'T'
+#                  1150  'A'        994  '.'   'A'
+#                  1151  'A'        994  '.'   'A'
+#                  1152  'A'        994  '.'   'A'
+#                  1153  'A'        994  '.'   'A'
+#                  1154  'A'        994  '.'   'A'
+#                  1155  'G'        994  '.'   'G'
+#                  1160  'A'        998  'g'   'A'
+#                  1161  'A'        999  't'   'A'
+#                  1164  'A'       1002  't'   'A'
+#                  1167  'C'       1005  't'   'C'
+#                  1168  'C'       1006  'a'   'C'
+#                  1171  'C'       1009  'a'   'C'
+#                  1172  'T'       1010  'c'   'T'
+#                  1181  'T'       1019  'a'   'T'
+#                  1182  'T'       1020  'g'   'T'
+#                  1184  'A'       1022  'c'   'A'
+#                  1185  'A'       1023  't'   'A'
+#                  1187  'A'       1025  't'   'A'
+#                  1190  'A'       1028  't'   'A'
+#                  1191  'A'       1029  't'   'A'
+#                  1194  'A'       1032  't'   'A'
+#                  1199  'A'       1037  't'   'A'
+#                  1200  'A'       1038  't'   'A'
+#                  1201  'T'       1039  'a'   'T'
+#                  1204  'T'       1042  'a'   'T'
+#                  1205  'T'       1043  'g'   'T'
+#                  1207  'T'       1045  'a'   'T'
+#                  1208  'T'       1046  'a'   'T'
+#                  1209  'T'       1047  'g'   'T'
+#                  1211  'T'       1049  'c'   'T'
+#                  1212  'A'       1050  't'   'A'
+#                  1215  'A'       1053  't'   'A'
+#                  1219  'A'       1057  't'   'A'
+#                  1220  'A'       1058  'g'   'A'
+#                  1221  'A'       1059  't'   'A'
+#                  1223  'A'       1061  't'   'A'
+#                  1225  'G'       1063  'a'   'G'
+#                  1228  'T'       1066  'a'   'T'
+#                  1229  'T'       1067  'g'   'T'
+#                  1230  'T'       1068  'g'   'T'
+#                  1231  'T'       1069  'a'   'T'
+#                  1232  'T'       1070  'c'   'T'
+#                  1233  'T'       1071  'a'   'T'
+#                  1235  'A'       1073  't'   'A'
+#                  1236  'A'       1074  't'   'A'
+#                  1239  'G'       1077  'a'   'G'
+#                  1240  'G'       1078  'a'   'G'
+#                  1241  'G'       1079  'c'   'G'
+#                  1242  'G'       1080  't'   'G'
+#                  1244  'A'       1082  't'   'A'
+#                  1245  'A'       1083  't'   'A'
+#                  1247  'A'       1085  't'   'A'
+#                  1250  'A'       1088  't'   'A'
+#                  1251  'A'       1089  't'   'A'
+#                  1252  'a'       1090  'G'   'G'
+#                  1253  'a'       1091  'T'   'T'
+#                  1254  'g'       1092  'T'   'T'
+#                  1255  'g'       1093  'A'   'A'
+#                  1256  'g'       1094  'C'   'C'
+#                  1260  'a'       1098  'T'   'T'
+#                  1265  't'       1103  'C'   'C'
+#                  1266  't'       1104  'C'   'C'
+#                  1267  't'       1105  'A'   'A'
+#                  1269  'a'       1107  'T'   'T'
+#                  1270  'a'       1108  'T'   'T'
+# 
+#
+#---------------------------------------
