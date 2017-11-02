@@ -1,4 +1,4 @@
-#Sequence ID	name	volunteer	sampletype	primer	sampleid	latlon	latitude	longtitude	locality	country	note	date
+#Sequence ID	name	volunteer	sampletype	primer	sampleid	latlon	latitude	longitude	locality	country	note	date
 E|201707201	VolunteerE_20170720	E	Daily	C	DE14	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170720
 D|201706081	VolunteerD_20170608	D	Weekly	C	WD2	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170608
 D|201707291	VolunteerD_20170729	D	Weekly	C	WD7	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170729
