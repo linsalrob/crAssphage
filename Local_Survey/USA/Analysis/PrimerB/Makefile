@@ -41,7 +41,7 @@ seqs.$(PRIMER).tree: seqs.$(PRIMER).trim.aln
 blastn: seqs.$(PRIMER).fa
 	blastn -db ../../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
-seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
+seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln 
 	python ../../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 align: mafft

@@ -49,7 +49,7 @@ align: mafft
 
 mafft: seqs.$(PRIMER).aln
 
-seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map
+seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map metadata.$(PRIMER).tsv
 	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
 mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
@@ -59,7 +59,7 @@ clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
 
 metadata.$(PRIMER).tsv: id.$(PRIMER).map
-	        python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
+	python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
