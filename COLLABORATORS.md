@@ -242,6 +242,12 @@ Note: No sequences found in Chile
   
 [http://www.ephmlab.com.au/People/David-McCarthy/](http://www.ephmlab.com.au/People/David-McCarthy/)
 
+## Bibby Lab
+   * Kyle Bibby, Associate Professor and Wanzek Collegiate Chair
+   * Elyse Stachler
+>Civil and Environmental Engineering and Earth Sciences
+>University of Notre Dame
+
 
 
 
