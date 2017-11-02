@@ -40,11 +40,11 @@ country_tree: seqs.$(PRIMER).rc.trim.aln.treefile
 tree: seqs.$(PRIMER).rc.trim.aln.treefile
 	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-seqs.$(PRIMER).rc.trim.aln.treefile: seqs.$(PRIMER).trim.aln
-	iq-tree -nt AUTO -s seqs.$(PRIMER).trim.aln
+seqs.$(PRIMER).rc.trim.aln.treefile: seqs.$(PRIMER).rc.trim.tree
+	iq-tree -nt AUTO -s seqs.$(PRIMER).rc.trim.aln
 
-FastTree:
-	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).fasttree
+FastTree: seqs.$(PRIMER).rc.trim.tree
+	FastTreeDbl -nt seqs.$(PRIMER).rc.trim.aln > seqs.$(PRIMER).fasttree
 
 blastn: seqs.$(PRIMER).fa
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
@@ -95,5 +95,5 @@ seqs.$(PRIMER).fa:
 	cat ../../Sequences/Primer$(PRIMER)/*.fasta > seqs.$(PRIMER).fa
 
 clean:
-	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
+	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.tree  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
 	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER).renum.rc.fa metadata.$(PRIMER).tsv

@@ -6,9 +6,9 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "\tvol_date\tcreate a FastTree and rename the leaves using both the volunteer and date tags"
-	@echo "\tvolunteer_tree\tcreate a FastTree and rename the leaves using the volunteer= tag in the fasta def line"
-	@echo "\tdate_tree\tcreate a FastTree and rename the leaves using the date= tag in the fasta def line"
+	@echo "\tvol_date\tcreate a tree and rename the leaves using both the volunteer and date tags"
+	@echo "\tvolunteer_tree\tcreate a tree and rename the leaves using the volunteer= tag in the fasta def line"
+	@echo "\tdate_tree\tcreate a tree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
 	@echo "\treverse_complement_tree\tReverse complement sequences as below and make an alignment and tree of them"
 	@echo "\treverse_complement\tReverse complement sequences as required and filter to only those that match crassphage"
@@ -24,20 +24,20 @@ help:
 	@echo ""
 	@echo "You probably want to start with vol_date, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
-vol_date: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n volunteer -n date > seqs.$(PRIMER).volunteerdate.tree
+vol_date: seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer -n date > seqs.$(PRIMER).volunteerdate.tree
 
-date_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
+date_tree: seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
 
-vol_tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map -n volunteer > seqs.$(PRIMER).volunteer.tree
+vol_tree: seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer > seqs.$(PRIMER).volunteer.tree
 
-tree: seqs.$(PRIMER).neighbor
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).neighbor -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
+tree: seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
-seqs.$(PRIMER).neighbor: seqs.$(PRIMER).trim.aln
-	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).neighbor
+seqs.$(PRIMER).tree: seqs.$(PRIMER).trim.aln
+	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).tree
 
 blastn: seqs.$(PRIMER).fa
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 1e-12
@@ -76,14 +76,17 @@ seqs.$PRIMER.rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
 
 reverse_complement: seqs.$(PRIMER).renum.rc.fa
 
-seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map
+seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map metadata.$(PRIMER).tsv
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
+
+metadata.$(PRIMER).tsv: id.$(PRIMER).map
+	        python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
 id.$(PRIMER).map: seqs.$(PRIMER).fa
-	perl ../../../bin/renumber_fasta.pl seqs.$(PRIMER).fa seqs.$(PRIMER).renum.fa id.$(PRIMER).map
+	python3 ../../../bin/rename_fasta.py -f seqs.$(PRIMER).fa -o seqs.$(PRIMER).renum.fa -i id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
 	cat ../../Sequences/Primer$(PRIMER)/*.fasta > seqs.$(PRIMER).fa
