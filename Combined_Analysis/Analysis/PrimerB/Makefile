@@ -97,3 +97,4 @@ seqs.$(PRIMER).fa:
 clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.neighbor  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
 	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER).renum.rc.fa metadata.$(PRIMER).tsv
+	rm -f seqs.$(PRIMER).rc.trim.fasttree
