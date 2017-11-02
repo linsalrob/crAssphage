@@ -1,0 +1,26 @@
+#Sequence ID	name	volunteer	sampletype	primer	sampleid	latlon	latitude	longtitude	locality	country	note	date
+E|201707201	VolunteerE_20170720	E	Daily	C	DE14	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170720
+D|201706081	VolunteerD_20170608	D	Weekly	C	WD2	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170608
+D|201707291	VolunteerD_20170729	D	Weekly	C	WD7	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170729
+D|201707101	VolunteerD_20170710	D	Daily	C	DD11	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170710
+D|201707221	VolunteerD_20170722	D	Weekly	C	WD6	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, single read	20170722
+D|201707071	VolunteerD_20170707	D	Daily	C	DD10	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170707
+E|201707111	VolunteerE_20170711	E	Daily	C	DE7	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, single read	20170711
+E|201707181	VolunteerE_20170718	E	Daily	C	DE12	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170718
+I|Unknown1	VolunteerI_Unknown1	I	Pre	C	I1	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, single read	Unknown
+E|201707251	VolunteerE_20170725	E	Weekly	C	WE7	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170725
+D|201707041	VolunteerD_20170704	D	Daily	C	DD7	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170704
+E|201704211	VolunteerE_20170421	E	Pre	C	E1	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, single read	20170421
+E|201707211	VolunteerE_20170721	E	Daily	C	DE15	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170721
+E|201707121	VolunteerE_20170712	E	Daily	C	DE8	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170712
+E|201707311	VolunteerE_20170731	E	Weekly	C	WE6	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170731
+E|201707141	VolunteerE_20170714	E	Daily	C	DE10	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170714
+E|201706291	VolunteerE_20170629	E	Weekly	C	WE5	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170629
+E|201707101	VolunteerE_20170710	E	Daily	C	DE6	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170710
+D|201706011	VolunteerD_20170601	D	Weekly	C	WD1	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170601
+D|201706221	VolunteerD_20170622	D	Daily	C	DD3	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170622
+E|201707191	VolunteerE_20170719	E	Daily	C	DE13	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170719
+E|201707131	VolunteerE_20170713	E	Daily	C	DE9	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170713
+D|201704211	VolunteerD_20170421	D	Pre	C	D1	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, single read	20170421
+E|201707171	VolunteerE_20170717	E	Daily	C	DE11	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170717
+D|201706291	VolunteerD_20170629	D	Daily	C	DD5	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger	20170629
