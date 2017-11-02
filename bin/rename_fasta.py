@@ -28,12 +28,13 @@ def stripout(txt):
     return re.sub('\W', '', txt)
 
 
-def rename(fafile, idmapfile, outputfa):
+def rename(fafile, idmapfile, outputfa, labels):
     """
     Rename the sequences
     :param fafile: input fasta file
     :param idmapfile: output id.map file with new name and original name
     :param outputfa: output fasta file
+    :param labels: the optional list of labels to use for the identifier
     :return: None
     """
 
@@ -90,7 +91,24 @@ def rename(fafile, idmapfile, outputfa):
                         while not re.match('\d{8}', dt):
                             dt += '0'
 
-                identifier = "{}|{}|{}|".format(lcl, dt, cnt)
+                tags = {}
+                if labels:
+                    for t in labels:
+                        if t in l:
+                            m = re.search('\[{}=(.*?)\]'.format(t), l)
+                            if not m:
+                                sys.stderr.write("Even though its there, can't parse country in {}\n".format(l))
+                                fatal_error = True
+                            tags[t] = stripout(m.groups()[0])
+                        else:
+                            sys.stderr.write("WARNING: {} was not found in {}. using Unknown as the value\n".format(t,l))
+                            tags[t] = 'Unknown'
+
+
+                if labels:
+                    identifier = "|".join([tags[t] for t in labels])
+                else:
+                    identifier = "{}|{}|{}|".format(lcl, dt, cnt)
 
                 counts[identifier] = counts.get(identifier, 0) + 1
                 identifier += str(counts[identifier])
@@ -112,7 +130,8 @@ if __name__ == '__main__':
     parser.add_argument('-f', help="fasta file to rename", required=True)
     parser.add_argument('-o', help='output fasta file', required=True)
     parser.add_argument('-i', help='output id.map file that has the original information and the new information', required=True)
+    parser.add_argument('-t', help='tags to use for the label. You can supply multiple -t options and they will be used in order. Default: locality, date, country', action='append')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
-    rename(args.f, args.i, args.o)
+    rename(args.f, args.i, args.o, args.t)
