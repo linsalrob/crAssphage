@@ -50,10 +50,10 @@ align: mafft
 mafft: seqs.$(PRIMER).aln
 
 seqs.$(PRIMER).aln: seqs.$(PRIMER).fa id.$(PRIMER).map metadata.$(PRIMER).tsv
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
 
-mafft_fa: seqs.$(PRIMER).fa id.$(PRIMER).map
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
+mafft_ph: seqs.$(PRIMER).fa id.$(PRIMER).map
+	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
 
 clustalw: seqs.$(PRIMER).fa
 	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
