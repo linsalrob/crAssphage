@@ -30,7 +30,7 @@ site_tree: seqs.$(PRIMER).tree
 	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n site > seqs.$(PRIMER).site.tree
 
 country_tree: seqs.$(PRIMER).tree
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).tree
+	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n country  > seqs.$(PRIMER).country.tree
 
 tree: seqs.$(PRIMER).tree
 	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
@@ -43,7 +43,7 @@ blastn: seqs.$(PRIMER).fa
 
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
-	python ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+	python ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 align: mafft
 
