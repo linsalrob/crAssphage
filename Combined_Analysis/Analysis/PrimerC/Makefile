@@ -51,7 +51,7 @@ blastn: seqs.$(PRIMER).fa
 
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
-	python ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+	python3 ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 seqs.all.aln:
 	muscle -in seqs.all.renum.fa -out seqs.all.aln -maxiters 2 -diags
@@ -84,7 +84,7 @@ seqs.$(PRIMER).renum.rc.fa: metadata.$(PRIMER).tsv
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
 
 metadata.$(PRIMER).tsv: id.$(PRIMER).map
-	python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
+	python3 ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
