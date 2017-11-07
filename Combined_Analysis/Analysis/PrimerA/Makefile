@@ -98,3 +98,5 @@ clean:
 	rm -f *.aln *.dnd seqs.*.fa seqs.?.renum.fa id.*.map seqs.*.dnadist  seqs.*.tree  seqs.*.tree seqs.aln.*.full seqs.*.faln  seqs.?.named.tree seqs.?.nonneg.tree
 	rm -f seqs.$(PRIMER).sitedate.tree seqs.$(PRIMER).date.tree seqs.$(PRIMER).site.tree seqs.$(PRIMER).crassphage.blastn seqs.$(PRIMER).renum.rc.fa metadata.$(PRIMER).tsv
 	rm -f seqs.$(PRIMER).rc.trim.fasttree
+	rm -f seqs.$(PRIMER).rc.trim.aln.bionj seqs.$(PRIMER).rc.trim.aln.iqtree seqs.$(PRIMER).rc.trim.aln.mldist seqs.$(PRIMER).rc.trim.aln.treefile seqs.$(PRIMER).rc.trim.aln.ckp.gz
+	rm -f seqs.$(PRIMER).rc.trim.aln.log seqs.$(PRIMER).rc.trim.aln.model seqs.$(PRIMER).rc.trim.aln.uniqueseq.phy sgeout iqout iqerr sgeerr
