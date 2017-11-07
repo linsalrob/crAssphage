@@ -25,16 +25,16 @@ help:
 	@echo "You probably want to start with vol_date, as it will create the sequences, build an alignment, rename the sequences, etc etc"
 
 vol_date: seqs.$(PRIMER).tree
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer -n date > seqs.$(PRIMER).volunteerdate.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer -n date > seqs.$(PRIMER).volunteerdate.tree
 
 date_tree: seqs.$(PRIMER).tree
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n date > seqs.$(PRIMER).date.tree
 
 vol_tree: seqs.$(PRIMER).tree
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer > seqs.$(PRIMER).volunteer.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map -n volunteer > seqs.$(PRIMER).volunteer.tree
 
 tree: seqs.$(PRIMER).tree
-	python ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
+	python3 ../../../bin/rename_trees.py -t seqs.$(PRIMER).tree -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
 seqs.$(PRIMER).tree: seqs.$(PRIMER).trim.aln
 	FastTreeDbl -nt seqs.$(PRIMER).trim.aln > seqs.$(PRIMER).tree
@@ -44,7 +44,7 @@ blastn: seqs.$(PRIMER).fa
 
 
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
-	python ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
+	python3 ../../../bin/trim_fasta_alignment.py -f seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
 seqs.all.aln:
 	muscle -in seqs.all.renum.fa -out seqs.all.aln -maxiters 2 -diags
@@ -80,7 +80,7 @@ seqs.$(PRIMER).renum.rc.fa: id.$(PRIMER).map metadata.$(PRIMER).tsv
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
 
 metadata.$(PRIMER).tsv: id.$(PRIMER).map
-	        python ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
+	        python3 ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
 
 renum: id.$(PRIMER).map
 
