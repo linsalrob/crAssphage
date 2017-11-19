@@ -28,8 +28,11 @@ if __name__ == '__main__':
     with open(args.i, 'r') as f:
         for l in f:
             p=l.strip().split("\t")
+            # note that some programs replace | with _ so we use both
+            altid = p[0].replace('|', '_')
             if tags == 'id':
                 idmap[p[0]]=p[1].split()[0]
+                idmap[altid]=p[1].split()[0]
             else:
                 m = re.findall('\[(\S+)\=(.*?)\]', p[1])
                 tagdata = {t[0]:t[1] for t in m}
@@ -42,9 +45,11 @@ if __name__ == '__main__':
                 if '' == tagstring:
                     sys.stderr.write("No {} data found in sample: {}\n".format(args.n, l.strip()))
                     idmap[p[0]] = p[1].split()[0]
+                    idmap[altid] = p[1].split()[0]
                 else:
                     tagcount[tagstring] = tagcount.get(tagstring, 0)+1
                     idmap[p[0]] = "{}_{}".format(tagstring, tagcount[tagstring])
+                    idmap[altid] = "{}_{}".format(tagstring, tagcount[tagstring])
 
     tree = Tree(args.t)
     for leaf in tree:
