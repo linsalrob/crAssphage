@@ -33,7 +33,11 @@ qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh
 
 The first step makes the fasta file, blasts it, and reverse complements as needed.
 
-The second step does all the rest.
+The second step makes a fasttree of the alignment. 
+
+## Making an IQtree
+
+We also have an approach to use [iq-tree](
 
 ## Making the world maps
 
