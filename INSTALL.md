@@ -4,9 +4,10 @@ As you might expect, we have several dependencies that we rely on for this analy
 
 ## Phylogenetics
 
-Install both:
+Install all of:
 - [phylip](http://evolution.genetics.washington.edu/phylip/)
 - [FastTreeDbl](http://microbesonline.org/fasttree/) (Note, [as described here by Aaron Darling](http://darlinglab.org/blog/2015/03/23/not-so-fast-fasttree.html), be sure to use fast tree double, not regular fast tree).
+- [iq-tree](http://www.iqtree.org/)
 
 ## Similarities
 - [blast+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
