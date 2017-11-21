@@ -18,12 +18,12 @@ help:
 country_tree: seqs.country.tree
 
 seqs.country.tree: seqs.neighbor
-	python3 ../../../bin/rename_trees_fast.py -t seqs.neighbor -i id.map -n country  > seqs.country.tree
+	python3 ../../../../bin/rename_trees_fast.py -t seqs.neighbor -i id.map -n country  > seqs.country.tree
 
 tree: seqs.named.tree
 
 seqs.named.tree: seqs.neighbor
-	python3 ../../../bin/rename_trees_fast.py -t seqs.neighbor -i id.map > seqs.named.tree
+	python3 ../../../../bin/rename_trees_fast.py -t seqs.neighbor -i id.map > seqs.named.tree
 
 neighbor_tree: seqs.neighbor
 
@@ -32,11 +32,11 @@ seqs.neighbor: seqs.trim.aln
 
 
 blastn: seqs.fa
-	blastn -db ../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
+	blastn -db ../../../data/JQ995537.fna -query seqs.fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen'
 
 
 seqs.trim.aln: seqs.aln
-	python3 ../../../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
+	python3 ../../../../bin/trim_alignment.py -p seqs.aln -c 0.9 > seqs.trim.aln
 
 align: mafft
 
@@ -62,11 +62,11 @@ seqs.clustalw:
 renum: id.map
 
 id.map: seqs.fa
-	perl ../../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
+	perl ../../../../bin/renumber_fasta.pl seqs.fa seqs.renum.fa id.map
 
 seqs.fa:
 	#ln -s gretel_strains_pcrA.fasta seqs.fa
-	ln -s strains_country.fasta seqs.fa
+	ln -s ../../Sequences/PrimerA/strains_country_pcrA.fasta seqs.fa
 
 clean:
 	rm -f *.aln *.dnd seqs.fa seqs.renum.fa id.map seqs.dnadist  seqs.neighbor  seqs.tree 
