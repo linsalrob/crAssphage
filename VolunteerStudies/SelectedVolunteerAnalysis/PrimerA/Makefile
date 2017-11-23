@@ -45,19 +45,6 @@ blastn: seqs.$(PRIMER).fa
 seqs.$(PRIMER).trim.aln: seqs.$(PRIMER).aln
 	python3 ../../../bin/trim_alignment.py -p seqs.$(PRIMER).aln -c 0.9 > seqs.$(PRIMER).trim.aln
 
-align: mafft
-
-mafft: seqs.$(PRIMER).aln
-
-seqs.$(PRIMER).aln: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --phylipout --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).aln
-
-mafft_fa: seqs.$(PRIMER).fa metadata.$(PRIMER).tsv
-	mafft --adjustdirectionaccurately --localpair  --maxiterate 16 --reorder seqs.$(PRIMER).renum.fa > seqs.$(PRIMER).faln
-
-clustalw: seqs.$(PRIMER).fa
-	clustalw seqs.$(PRIMER).fa -OUTFILE=seqs.$(PRIMER).clustalw
-
 reverse_complement_tree: seqs.$(PRIMER).rc.trim.tree
 
 seqs.$(PRIMER).rc.trim.tree: seqs.$(PRIMER).renum.rc.fa
