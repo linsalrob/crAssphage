@@ -33,11 +33,21 @@ qsub -cwd -o sge_out -e sge_err -pe make 150 ./muscle.sh
 
 The first step makes the fasta file, blasts it, and reverse complements as needed.
 
-The second step makes a fasttree of the alignment. 
+The second step makes an alignment of the sequences using muscle.
 
 ## Making an IQtree
 
-We also have an approach to use [iq-tree](
+We also have an approach to use [iq-tree](http://www.iqtree.org/). The code is in  `iqtree.sh`. There are several issues with iq-tree. First, it checks the machine it is running on to see how many possible cores it can use. However, if you run it in a parallel environment like the command above for muscle, and force it to use more cores, it complains that you are asking it to use more cores than are available, even though you are not. Second, if you run it without specifying how many threads to use, it will determine what it thinks is the right solution, and in my case runs with two threads. However, empirical testing shows that it runs faster with more threads. If you specify the number of threads (as we do in `iqtree.sh`) at _every_ iteration it complains that it thinks it is using too many threads. Even though it runs faster. Finally, iq-tree unilaterally renames sequences, replacing | with \_. There is no reason to do this, as far as I can tell.
+
+
+The files that iq-tree outputs are: (these examples are linked to PrimerC, but there are equivilent files for primers A and B).
+IQ-TREE report: [seqs.C.rc.trim.aln.iqtree](PrimerC/seqs.C.rc.trim.aln.iqtree)
+Maximum-likelihood tree: [seqs.C.rc.trim.aln.treefile](PrimerC/seqs.C.rc.trim.aln.treefile)
+Likelihood distances: [seqs.C.rc.trim.aln.mldist](PrimerC/seqs.C.rc.trim.aln.mldist.gz)
+Screen log file: [seqs.C.rc.trim.aln.log](seqs.C.rc.trim.aln.log)
+
+Note that we store seqs.C.rc.trim.aln.mldist as a gzip compressed file in the repo to save space.
+
 
 ## Making the world maps
 
