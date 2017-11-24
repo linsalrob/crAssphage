@@ -66,7 +66,7 @@ id.$(PRIMER).map: seqs.$(PRIMER).fa
 	python3 ../../../bin/rename_fasta.py -f seqs.$(PRIMER).fa -o seqs.$(PRIMER).renum.fa -i id.$(PRIMER).map
 
 seqs.$(PRIMER).fa:
-	for VOLUNTEER in D E ; do \
+	for VOLUNTEER in Mi D E ; do \
 		echo "Reading ../../Sequences/Primer$(PRIMER)/Volunteer$$VOLUNTEER.*.fasta"; \
 		cat ../../Sequences/Primer$(PRIMER)/Volunteer$$VOLUNTEER.*.fasta >> seqs.$(PRIMER).fa; \
 	done
