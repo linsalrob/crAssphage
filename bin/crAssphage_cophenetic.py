@@ -43,6 +43,8 @@ def get_lon_lat(idf, maxtoget=50000):
             lon = s.group(1)
             p=l.split("\t")
             lonlat[p[0]] = (float(lon), float(lat))
+            newname = p[0].replace('|', '_')
+            lonlat[newname] = (float(lon), float(lat))
     return lonlat
 
 def latlon2distance(lat1, long1, lat2, long2, miles=False):
