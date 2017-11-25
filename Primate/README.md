@@ -14,7 +14,7 @@ Instead, we assembled the sequences using [SPAdes](http://cab.spbu.ru/software/s
 We used those to build a tree using iq-tree. To generate the bootstraps we used
 
 ```
-iqtree-omp -s all_apes.muscle3.8.31 -nt 10 -alrt 1000 -bb 1000
+iqtree-omp -s all_primates.muscle -nt 10 -alrt 1000 -bb 1000
 ```
 
 
