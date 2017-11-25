@@ -23,3 +23,10 @@ Install all three of:
 ## Python and Perl
 
 We use python version 3 and perl 5 for all the other code.
+
+### Python libraries we depend on
+
+In addition to the usual scientific stack that you probably already have installed (numpy, matplotlib, scipy), we also use these libraries for different aspects of the analysis:
+
+- [ete3](http://etetoolkit.org/) to parse tree files, calculate distances, and relabel leaves
+- [cartopy](http://scitools.org.uk/cartopy/) to make the map figures
