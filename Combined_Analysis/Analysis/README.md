@@ -54,6 +54,6 @@ Note that we store seqs.C.rc.trim.aln.mldist as a gzip compressed file in the re
 We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements. We need to make the matrix otherwise you need to iterate over the tree to find closest neighbors.
 
 ```
-python3 ../../../bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.tree > seqs.A.rc.trim.matrix
+python3 ../../../bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.aln.treefile > seqs.A.rc.trim.matrix
 python3 ../../../bin/crAssphage_cophenetic.py -i id.A.map -m seqs.A.rc.trim.matrix -o PrimerA_map.svg
 ```
