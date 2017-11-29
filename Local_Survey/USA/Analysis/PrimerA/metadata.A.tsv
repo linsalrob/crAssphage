@@ -1,0 +1,23 @@
+#Sequence ID	name	latlon	latitude	longitude	address	date	country	site	yearmonth	locality
+Carlsbad|20160915|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160915	USA	3	201609	Carlsbad
+Carlsbad|20160908|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160908	USA	3	201609	Carlsbad
+San_Marcos|20160901|USA|1	San_Marcos Primer A Site 4 20160901	33.144526,-117.178849	33.144526	-117.178849	Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069	20160901	USA	4	201609	San Marcos
+San_Marcos|20161101|USA|1	San_Marcos Primer A Site 4 20161101	33.144526,-117.178849	33.144526	-117.178849	Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069	20161101	USA	4	201611	San Marcos
+San_Marcos|20160301|USA|1	San_Marcos Primer A Site 4 20160301	33.144526,-117.178849	33.144526	-117.178849	Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069	20160301	USA	4	201603	San Marcos
+Carlsbad|20160301|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160301	USA	3	201603	Carlsbad
+Carlsbad|20160718|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160718	USA	3	201607	Carlsbad
+Encinitas|20160101|USA|1	Cardiff Primer A Site 2 20160101	33.016467,-117.273686	33.016467	-117.273686	San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077	20160101	USA	2	201601	Encinitas
+Encinitas|20161101|USA|1	Cardiff Primer A Site 2 20161101	33.016467,-117.273686	33.016467	-117.273686	San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077	20161101	USA	2	201611	Encinitas
+Carlsbad|20160725|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160725	USA	3	201607	Carlsbad
+Carlsbad|20160901|USA|2	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160901	USA	3	201609	Carlsbad
+Escondido|20160301|USA|1	Escondido Primer A Site 1 20160301	33.105788,-117.114064	33.105788	-117.114064	Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA	20160301	USA	1	201603	Escondido
+Escondido|20160901|USA|1	Escondido Primer A Site 1 20160901	33.105788,-117.114064	33.105788	-117.114064	Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA	20160901	USA	1	201609	Escondido
+Carlsbad|20160101|USA|1	Carlsbad Primer A Site 3 20160101	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160101	USA	3	201601	Carlsbad
+Carlsbad|20160901|USA|1	Carlsbad Primer A Site 3 20160901	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160901	USA	3	201609	Carlsbad
+San_Marcos|20160101|USA|1	San_Marcos Primer A Site 4 20160101	33.144526,-117.178849	33.144526	-117.178849	Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069	20160101	USA	4	201601	San Marcos
+Carlsbad|20161101|USA|1	Carlsbad Primer A Site 3 20161101	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20161101	USA	3	201611	Carlsbad
+Carlsbad|20160815|USA|1	Carlsbad Primer A Site 3 20160301	33.116202,-117.321597	33.116202	-117.321597	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011	20160815	USA	3	201608	Carlsbad
+Encinitas|20160301|USA|1	Cardiff Primer A Site 2 20160301	33.016467,-117.273686	33.016467	-117.273686	San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077	20160301	USA	2	201603	Encinitas
+Escondido|20161101|USA|1	Escondido Primer A Site 1 20161101	33.105788,-117.114064	33.105788	-117.114064	Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA	20161101	USA	1	201611	Escondido
+Encinitas|20160901|USA|1	Cardiff Primer A Site 2 20160901	33.016467,-117.273686	33.016467	-117.273686	San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077	20160901	USA	2	201609	Encinitas
+Escondido|20160101|USA|1	Escondido Primer A Site 1 20160101	33.105788,-117.114064	33.105788	-117.114064	Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA	20160101	USA	1	201601	Escondido
