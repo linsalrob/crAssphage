@@ -43,7 +43,7 @@ This project would not be successful without our great global collaborators. Thi
 > Department of Pediatrics,
 > Charles University in Prague,
 > Prague
-> Czech Republic 
+> Czech_Republic 
 
 
 ## [Qimron Lab](http://www.tau.ac.il/~ehudq/)

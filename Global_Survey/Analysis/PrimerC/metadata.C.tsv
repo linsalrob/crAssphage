@@ -3,19 +3,19 @@ Zerdab|20030925|Azerbaijan|1	Cinek lab sample 323 C 20030925	20030925		40.143105
 Lisboa|20160225|Portugal|5	Santos PrimerC33	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
 Warszawa|20160303|Poland|5	Decewicz Dziewit Primer C Warsaw 20160303	20160303		52.351351,20.959269	52.351351	20.959269	Warszawa	Poland		Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03-054 Warsaw, Poland									
 Bogota|20160412|Colombia|2	Maria Zambrano Primer C 20160412	20160412		4.6500014,-74.0589398	4.6500014	-74.0589398	Bogota	Colombia		CorpoGen, Cra. 5 #66A-34, Bogota, Colombia 									
-Prague|20151201|Czech_Republic|1	Mazankova primerC sample 23 20151201	20151201		50.0751514,14.3406075	50.0751514	14.3406075	Prague	Czech Republic				326	Brno - Modrice	pre-sewage treatment plant					
+Prague|20151201|Czech_Republic|1	Mazankova primerC sample 23 20151201	20151201		50.0751514,14.3406075	50.0751514	14.3406075	Prague	Czech_Republic				326	Brno - Modrice	pre-sewage treatment plant					
 Shanghai|20160320|China|18	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
 Baki|20170421|Azerbaijan|3	Mazankova primer C sample 337 20170421	20170421		40.4093,49.8671	40.4093	49.8671	Baki	Azerbaijan				337							
 Carlsbad|20150901|USA|1	Carlsbad Primer A Site 3 20150901	20150901		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201509		
 Escondido|20151209|USA|1	Edwards Primer C Site 1 20151209	20151209		33.105788,-117.114064	33.105788	-117.114064	Escondido	USA		Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA									
 Shanghai|20160320|China|15	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
 Amman|20170421|Jordan|1	Mazankova primer C sample 217 20170421	20170421		31.9454,35.9284	31.9454	35.9284	Amman	Jordan				217							
-Ostrava|20151201|Czech_Republic|2	Mazankova primerC sample 5 20151201	20151201		49.8346453,18.2820442	49.8346453	18.2820442	Ostrava	Czech Republic				479	Ceske Budejovice	pre-sewage treatment plant					
+Ostrava|20151201|Czech_Republic|2	Mazankova primerC sample 5 20151201	20151201		49.8346453,18.2820442	49.8346453	18.2820442	Ostrava	Czech_Republic				479	Ceske Budejovice	pre-sewage treatment plant					
 Carlsbad|20160301|USA|2	Carlsbad Primer A Site 3 20160301	20160301		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201603		
 Tampere|20151120|Finland|3	Cinek lab sample bin12 primer C 20151120	20151120		61.505,23.815	61.505	23.815	Tampere	Finland	coordinates are hospital location										
 Lodz|20160303|Poland|3	Decewicz Dziewit Primer C Lodz 20160303	20160303		51.727940,19.347618	51.727940	19.347618	Lodz	Poland		Group Wastewater Treatment Plant, Sanitariuszek 66, 91-867 Lodz, Poland									
 Gava|20151001|Spain|2	Muniesa E2 Gava primer C Raw Sewage	20151001		41.3037013,1.9858569	41.3037013	1.9858569	Gava	Spain										Raw sewage	
-Zastavka|20151201|Czech_Republic|2	Mazankova primerC sample 2 20151201	20151201		49.1879958,16.3630967	49.1879958	16.3630967	Zastavka	Czech Republic				427	Plzen	pre-sewage treatment plant					
+Zastavka|20151201|Czech_Republic|2	Mazankova primerC sample 2 20151201	20151201		49.1879958,16.3630967	49.1879958	16.3630967	Zastavka	Czech_Republic				427	Plzen	pre-sewage treatment plant					
 Warszawa|20160303|Poland|2	Decewicz Dziewit Primer C Warsaw 20160303	20160303		52.351351,20.959269	52.351351	20.959269	Warszawa	Poland		Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03-054 Warsaw, Poland									
 Rybienko_Stare|20160126|Poland|2	Decewicz Dziewit Primer C Wyszkow 20160126	20160126		52.577948,21.429024	52.577948	21.429024	Rybienko Stare	Poland		Municipal Wastewater Treatment Plant, Rybienko Stare, 07-200 Wyszkow, Poland									
 Oswiecim|20160126|Poland|1	Decewicz Dziewit Primer C Oswiecim 20160126	20160126		50.038062,19.321854	50.038062	19.321854	Oswiecim	Poland		Municipal and Industrial Wastewater Treatment Plant, Nadwislanska 46, 32-642 Oswiecim, Poland									
@@ -25,7 +25,7 @@ Escondido|20160601|USA|1	Escondido Primer C Site 1 20160601	20160601		33.105788,
 Encinitas|20160301|USA|2	Cardiff Primer C1 Site 2 20160301	20160301		33.016467,-117.273686	33.016467	-117.273686	Encinitas	USA		San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077						2	201603		
 Shanghai|20160320|China|16	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
 Gava|20131101|Spain|1	Muniesa E4 Gava primer C Raw Sewage	20131101		41.3037013,1.9858569	41.3037013	1.9858569	Gava	Spain										Raw Sewage	
-Pilsen|20151201|Czech_Republic|1	Mazankova primerC sample 1 20151201	20151201		49.7477831,13.3783489	49.7477831	13.3783489	Pilsen	Czech Republic				456	Ceske Budejovice	pre-sewage treatment plant					
+Pilsen|20151201|Czech_Republic|1	Mazankova primerC sample 1 20151201	20151201		49.7477831,13.3783489	49.7477831	13.3783489	Pilsen	Czech_Republic				456	Ceske Budejovice	pre-sewage treatment plant					
 Lisboa|20160225|Portugal|3	Santos PrimerC30	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
 Abuja|20170421|Nigeria|2	Mazankova primer C sample 195 20170421	20170421		9.0765,7.3986	9.0765	7.3986	Abuja	Nigeria				195							
 Herent|20160412|Belgium|1	Jeroen Wagemans Primer C	20160412		50.884089,4.6353904	50.884089	4.6353904	Herent	Belgium		Oude Markt 13, 3000 Leuven, Belgium									
@@ -33,7 +33,7 @@ Lodz|20160303|Poland|5	Decewicz Dziewit Primer C Lodz 20160303	20160303		51.7279
 Gava|20140501|Spain|1	Muniesa E13 Gava primer C Raw Sewage	20140501		41.3037013,1.9858569	41.3037013	1.9858569	Gava	Spain										Raw Sewage	
 Jericho|20151202|Israel|1	Qimron lab primer C 20151202	20151202		31.85,35.45	31.85	35.45	Jericho	Israel	Collected in Jericho										
 Rybienko_Stare|20160303|Poland|5	Decewicz Dziewit Primer C Wyszkow 20160303	20160303		52.577948,21.429024	52.577948	21.429024	Rybienko Stare	Poland		Municipal Wastewater Treatment Plant, Rybienko Stare, 07-200 Wyszkow, Poland									
-Kostelec_nad_Orlici|20151201|Czech_Republic|1	Mazankova primerC sample 7 20151201	20151201		50.1226675,16.2131856	50.1226675	16.2131856	Kostelec nad Orlici	Czech Republic				318	Plzen	pre-sewage treatment plant					
+Kostelec_nad_Orlici|20151201|Czech_Republic|1	Mazankova primerC sample 7 20151201	20151201		50.1226675,16.2131856	50.1226675	16.2131856	Kostelec nad Orlici	Czech_Republic				318	Plzen	pre-sewage treatment plant					
 Zerdab|20050203|Azerbaijan|1	Cinek lab sample 356 C 20050203	20050203		40.143105,47.576927	40.143105	47.576927	Zerdab	Azerbaijan	Assembly of 4 reads: 356_C_intR.ab1 (reversed), 356_C_f.ab1, 356_C_r.ab1 (reversed), 356_C_intF.ab1						f				
 North_Kurdufan|00000000|Sudan|4	Cinek lab sample 298 C unknown	unknown		12.862807,30.217636	12.862807	30.217636	North Kurdufan	Sudan	Assembly of 3 reads: 298_C_intF.ab1 (reversed), 298_C_r.ab1, 298_C_intR.ab1						m				
 Aliso_Viejo|20170403|USA|1	BibbyS4_20170403	20170403	C	33.552967,-117.7218447	33.552967	-117.7218447	Aliso Viejo	USA		Coastal Treatment Plant, 28303 Alicia Pkwy, Laguna Niguel, CA 92677									
@@ -66,9 +66,9 @@ Tampere|20151120|Finland|6	Cinek lab sample bin15 primer C 20151120	20151120		61
 Lisboa|20160225|Portugal|2	Santos Primer C27	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
 AlJafr|20020904|Jordan|1	Cinek lab sample 240 C 20020904	20020904		30.585164,36.238414	30.585164	36.238414	Al-Jafr	Jordan	Assembly of 4 reads: 240_C_intF.ab1 (reversed), 240_C_r.ab1, 240_C_f.ab1 (reversed), 240_C_intR.ab1						f				
 Carlsbad|20151209|USA|1	Edwards Primer C Site 3 20151209	20151209		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011									
-Modfice|20151201|Czech_Republic|1	Mazankova primerC sample 22 20151201	20151201		49.1278897,16.6144122	49.1278897	16.6144122	Modfice	Czech Republic				265	Praha	pre-sewage treatment plant					
+Modfice|20151201|Czech_Republic|1	Mazankova primerC sample 22 20151201	20151201		49.1278897,16.6144122	49.1278897	16.6144122	Modfice	Czech_Republic				265	Praha	pre-sewage treatment plant					
 Carlsbad|20161101|USA|1	Carlsbad Primer C Site 3 20161101	20161101		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201611		
-Prague|20151201|Czech_Republic|2	Mazankova primerC sample 9 20151201	20151201		50.0835494,14.4341414	50.0835494	14.4341414	Prague	Czech Republic				298	Usti n. Labem	pre-sewage treatment plant					
+Prague|20151201|Czech_Republic|2	Mazankova primerC sample 9 20151201	20151201		50.0835494,14.4341414	50.0835494	14.4341414	Prague	Czech_Republic				298	Usti n. Labem	pre-sewage treatment plant					
 Tampere|20151120|Finland|1	Cinek lab sample bin08 primer C 20151120	20151120		61.505,23.815	61.505	23.815	Tampere	Finland	coordinates are hospital location										
 Encinitas|20160101|USA|1	Cardiff Primer C Site 2 20160101	20160101		33.016467,-117.273686	33.016467	-117.273686	Encinitas	USA		San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077						2	201601		
 Gava|20151001|Spain|3	Muniesa 1.1 Gava primer C Primary Treatment	20151001		41.3037013,1.9858569	41.3037013	1.9858569	Gava	Spain										Primary Treatment	
@@ -89,12 +89,12 @@ Novosibirskiy_rayon|20160301|Russia|2	Tyakht Nov_287_C primer C	20160301		55.03,
 Lisboa|20160225|Portugal|1	Santos PrimerC25	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
 Khartoum|20170421|Sudan|9	Mazankova primer C sample 260 20170421	20170421		15.5007,32.5599	15.5007	32.5599	Khartoum	Sudan				260							20160303
 Rybienko_Stare|20160303|Poland|2	Decewicz Dziewit Primer C Wyszkow 20160303	20160303		52.577948,21.429024	52.577948	21.429024	Rybienko Stare	Poland		Municipal Wastewater Treatment Plant, Rybienko Stare, 07-200 Wyszkow, Poland									
-Ostrava|20151201|Czech_Republic|1	Mazankova primerC sample 18 20151201	20151201		49.8346453,18.2820442	49.8346453	18.2820442	Ostrava	Czech Republic				352	Usti n. Labem	pre-sewage treatment plant					
+Ostrava|20151201|Czech_Republic|1	Mazankova primerC sample 18 20151201	20151201		49.8346453,18.2820442	49.8346453	18.2820442	Ostrava	Czech_Republic				352	Usti n. Labem	pre-sewage treatment plant					
 Lodz|20160126|Poland|1	Decewicz Dziewit Primer C Lodz 20160126	20160126		51.727940,19.347618	51.727940	19.347618	Lodz	Poland		Group Wastewater Treatment Plant, Sanitariuszek 66, 91-867 Lodz, Poland									
 Greymouth|20160317|New_Zealand|1	Fineran Primer C	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New Zealand		105 Tainui St, Greymouth 7805, New Zealand									
 Calera_Chica|20160516|Mexico|1	Vinuesa lab primer C 20160516	20160516		18.8310669,-99.2214482	18.8310669	-99.2214482	Calera Chica	Mexico	Collected in Morelos, Canal Paraiso										
 Shanghai|20160320|China|5	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
-Pilsen|20151201|Czech_Republic|2	Mazankova primerC sample 6 20151201	20151201		49.7477831,13.3783489	49.7477831	13.3783489	Pilsen	Czech Republic				414	Ostrava	pre-sewage treatment plant					
+Pilsen|20151201|Czech_Republic|2	Mazankova primerC sample 6 20151201	20151201		49.7477831,13.3783489	49.7477831	13.3783489	Pilsen	Czech_Republic				414	Ostrava	pre-sewage treatment plant					
 Tampere|20151120|Finland|9	Cinek lab sample bin56 primer C 20151120	20151120		61.505,23.815	61.505	23.815	Tampere	Finland	coordinates are hospital location										
 Gatchinskiy_rayon|20160301|Russia|3	Tyakht Spb_105_45P_C primer C	20160301		59.57,30.18	59.57	30.18	Gatchinskiy rayon	Russia		Saint-Petersburg, Russia									
 Carlsbad|20160101|USA|1	Carlsbad Primer C Site 3 20160101	20160101		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201601		
@@ -132,9 +132,9 @@ Karlsruhe|20160208|Germany|1	Gyu-Sung Cho Primer C 20160208	20160208		49.0151676
 Lodz|20160303|Poland|2	Decewicz Dziewit Primer C Lodz 20160303	20160303		51.727940,19.347618	51.727940	19.347618	Lodz	Poland		Group Wastewater Treatment Plant, Sanitariuszek 66, 91-867 Lodz, Poland									
 New_York|20141214|USA|1	DiazMunoz_NYC_C	20141214		40.7128,-74.0059	40.7128	-74.0059	New York	USA			10.453m								
 Carlsbad|20160601|USA|1	Carlsbad Primer C Site 3 20160601	20160601		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201606		
-Kostelec_nad_Orlici|20151201|Czech_Republic|2	Mazankova primerC sample 20 20151201	20151201		50.1226675,16.2131856	50.1226675	16.2131856	Kostelec nad Orlici	Czech Republic				375	Zastavka u Brna	post-STP, refugee camp					
+Kostelec_nad_Orlici|20151201|Czech_Republic|2	Mazankova primerC sample 20 20151201	20151201		50.1226675,16.2131856	50.1226675	16.2131856	Kostelec nad Orlici	Czech_Republic				375	Zastavka u Brna	post-STP, refugee camp					
 Shanghai|20160320|China|2	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
-Zastavka|20151201|Czech_Republic|1	Mazankova primerC sample 19 20151201	20151201		49.1874756,16.3586742	49.1874756	16.3586742	Zastavka	Czech Republic				343	Ostrava	pre-sewage treatment plant					
+Zastavka|20151201|Czech_Republic|1	Mazankova primerC sample 19 20151201	20151201		49.1874756,16.3586742	49.1874756	16.3586742	Zastavka	Czech_Republic				343	Ostrava	pre-sewage treatment plant					
 Shanghai|20160320|China|8	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
 North_Fremantle|20170816|Australia|1	Barr Monash Sample5 PrimerC 20170816	20170816		-32.0397544,115.6806686	-32.0397544	115.6806686	North Fremantle	Australia				5	WWTP, Western Australia, Australia	WWTP					
 Ramallah|20151202|Israel|1	Qimron lab primer C 20151202	20151202		31.9,35.19	31.9	35.19	Ramallah	Israel	Collected in Ramallah										
@@ -170,7 +170,7 @@ Laguna_Niguel|20170403|USA|1	BibbyS3_20170403	20170403	C	33.5408776,-117.7063134
 Rybienko_Stare|20160303|Poland|4	Decewicz Dziewit Primer C Wyszkow 20160303	20160303		52.577948,21.429024	52.577948	21.429024	Rybienko Stare	Poland		Municipal Wastewater Treatment Plant, Rybienko Stare, 07-200 Wyszkow, Poland									
 Encinitas|20160301|USA|1	Cardiff Primer C Site 2 20160301	20160301		33.016467,-117.273686	33.016467	-117.273686	Encinitas	USA		San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077						2	201603		
 Abuja|20170421|Nigeria|1	Mazankova primer C sample 200 20170421	20170421		9.0765,7.3986	9.0765	7.3986	Abuja	Nigeria				200							
-Usti_nad_Labem|20151201|Czech_Republic|1	Mazankova primerC sample 17 20151201	20151201		50.6604875,14.0406928	50.6604875	14.0406928	Usti nad Labem	Czech Republic				368	Jezova	post-STP, refugee camp					
+Usti_nad_Labem|20151201|Czech_Republic|1	Mazankova primerC sample 17 20151201	20151201		50.6604875,14.0406928	50.6604875	14.0406928	Usti nad Labem	Czech_Republic				368	Jezova	post-STP, refugee camp					
 Carlsbad|20160901|USA|1	Carlsbad Primer C Site 3 20160901	20160901		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201609		
 Wamba|20010901|Nigeria|1	Cinek lab sample 198 C 20010901	20010901		9.081999,8.675277	9.081999	8.675277	Wamba	Nigeria	Assembly of 4 reads: 198_C_intF.ab1 (reversed), 198_C_r.ab1, 198_C_f.ab1 (reversed), 198_C_intR.ab1										
 Tampere|20151120|Finland|7	Cinek lab sample bin16 primer C 20151120	20151120		61.505,23.815	61.505	23.815	Tampere	Finland	coordinates are hospital location										
@@ -197,7 +197,7 @@ Oswiecim|20160303|Poland|5	Decewicz Dziewit Primer C Oswiecim 20160303	20160303	
 Shanghai|20160320|China|7	Quan Primer C	20160320		31.2974197,121.5014291	31.2974197	121.5014291	Shanghai	China		220 Handan Rd, Yangpu, Shanghai, China									
 Encinitas|20160901|USA|1	Cardiff Primer C Site 2 20160901	20160901		33.016467,-117.273686	33.016467	-117.273686	Encinitas	USA		San Elijo Joint Powers Authority, 2695 Manchester Avenue, Cardiff by the Sea, California 920077077						2	201609		
 Gava|20140601|Spain|1	Muniesa E23 Gava primer C Raw Sewage	20140601		41.3037013,1.9858569	41.3037013	1.9858569	Gava	Spain										Raw Sewage	
-Ceske_Budejovice|20151201|Czech_Republic|1	Mazankova primerC sample 4 20151201	20151201		48.9744694,14.4743417	48.9744694	14.4743417	Ceske Budejovice	Czech Republic				466	Usti nad Labem	pre-sewage treatment plant					
+Ceske_Budejovice|20151201|Czech_Republic|1	Mazankova primerC sample 4 20151201	20151201		48.9744694,14.4743417	48.9744694	14.4743417	Ceske Budejovice	Czech_Republic				466	Usti nad Labem	pre-sewage treatment plant					
 Carlsbad|20151101|USA|1	Carlsbad Primer A Site 3 20151101	20151101		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201511		
 Waianae|20161212|USA|1	Hawaii C Waianae Waste Water Treatment Plant Dec 12 2016	20161212		21.4467837,-158.1928871	21.4467837	-158.1928871	Waianae	USA		Waianae, HI 96792									
 Lisboa|20160225|Portugal|6	Santos PrimerC35	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
