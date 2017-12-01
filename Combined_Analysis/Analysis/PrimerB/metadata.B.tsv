@@ -946,7 +946,7 @@ Montreal|20100325|Canada|96	SRA Sample SRR2566056 96	20100325		45.50,-73.63	45.5
 Montreal|20101118|Canada|12	SRA Sample SRR2565925 12	20101118		45.50,-73.63	45.50	-73.63	Montreal	Canada																haplotype called by gretel version 0.0.8	45.50 N 73.63 W
 Roma|20130101|Italy|246	SRA Sample SRR4074260 240	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|766	SRA Sample ERR589824 20	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Dunedin|20160317|New_Zealand|1	Fineran Primer B	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New Zealand		10 Tahuna Rd, Otago 9013, New Zealand															
+Dunedin|20160317|New_Zealand|1	Fineran Primer B	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New_Zealand		10 Tahuna Rd, Otago 9013, New_Zealand															
 Lanzhou_Shi|20110101|China|1035	SRA Sample ERR527210 6	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|199	SRA Sample ERR527107 188	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20140101|China|58	SRA Sample ERR1190648 3	20140101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -4093,7 +4093,7 @@ Lanzhou_Shi|20110101|China|283	SRA Sample ERR527107 272	20110101		35.86166,104.1
 Houston|20130101|USA|21	SRA Sample SRR4032583 2	20130101		29.77152983140312,-95.2212444414063	29.77152983140312	-95.2212444414063	Houston	USA																haplotype called by gretel version 0.0.8	29.77152983140312 N 95.22124444140627 W
 Sergelen|20130601|Mongolia|1	SRA Sample SRR3992984 1	20130601		47.55,106.79	47.55	106.79	Sergelen	Mongolia																haplotype called by gretel version 0.0.8	47.55 N 106.79 E
 Niederdorla|20100201|Germany|41	SRA Sample SRR2155368 40	20100201		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
-Greymouth|20160317|New_Zealand|1	Fineran Primer B	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New Zealand		105 Tainui St, Greymouth 7805, New Zealand															
+Greymouth|20160317|New_Zealand|1	Fineran Primer B	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New_Zealand		105 Tainui St, Greymouth 7805, New_Zealand															
 Atlanta_GA|20160202|USA|1	74.USA.Atlanta_GA.02-02-2016	20160202		33.7489954,-84.3879824	33.7489954	-84.3879824	Atlanta_GA	USA														crAssphage_B 1-1354 (100%) aligns to NODE_23_length_37397_cov_19.892 10357-11710 with 98.227% identity			
 Roma|20130101|Italy|40	SRA Sample SRR4074260 34	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|452	SRA Sample ERR527107 441	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	

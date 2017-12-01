@@ -433,7 +433,7 @@ Roma|20130101|Italy|92	SRA Sample SRR4074260 90	20130101		41.87194,12.56738	41.8
 Roma|20130101|Italy|625	SRA Sample SRR4074260 623	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Division_No_18|20101001|Canada|11	SRA Sample SRR1554403 11	20101001		56.130366,-106.346771	56.130366	-106.346771	Division No. 18	Canada																haplotype called by gretel version 0.0.8	
 Houston|20130101|USA|12	SRA Sample SRR4032482 1	20130101		29.77152983140312,-95.2212444414063	29.77152983140312	-95.2212444414063	Houston	USA																haplotype called by gretel version 0.0.8	29.77152983140312 N 95.22124444140627 W
-Dunedin|20160317|New_Zealand|1	Fineran Primer A	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New Zealand	10 Tahuna Rd, Otago 9013, New Zealand																
+Dunedin|20160317|New_Zealand|1	Fineran Primer A	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New_Zealand	10 Tahuna Rd, Otago 9013, New_Zealand																
 Modfice|20151201|Czech_Republic|2	Mazankova primer A sample 12 20151201	20151201		49.1278897,16.6144122	49.1278897	16.6144122	Modfice	Czech_Republic			476	Ostrava	pre-sewage treatment plant												
 Lanzhou_Shi|20110101|China|100	SRA Sample ERR527107 90	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|220	SRA Sample ERR1018206 156	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -1653,7 +1653,7 @@ Lanzhou_Shi|20110101|China|620	SRA Sample ERR527135 82	20110101		35.86166,104.19
 Niederdorla|20091101|Germany|27	SRA Sample SRR2155356 27	20091101		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20140101|China|157	SRA Sample ERR1190838 1	20140101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|156	SRA Sample SRR4074260 154	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
-Greymouth|20160317|New_Zealand|1	Fineran Primer A	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New Zealand	105 Tainui St, Greymouth 7805, New Zealand																
+Greymouth|20160317|New_Zealand|1	Fineran Primer A	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New_Zealand	105 Tainui St, Greymouth 7805, New_Zealand																
 Niederdorla|20101101|Germany|11	SRA Sample SRR2155309 11	20101101		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Aliso_Viejo|20170403|USA|1	BibbyS4_20170403	20170403	A	33.552967,-117.7218447	33.552967	-117.7218447	Aliso Viejo	USA	Coastal Treatment Plant, 28303 Alicia Pkwy, Laguna Niguel, CA 92677																
 Kjellerup|20090101|Denmark|395	SRA Sample ERR414263 7	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	

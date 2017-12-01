@@ -152,7 +152,7 @@ Note: No sequences found in Chile
 > Department of Microbiology and Immunology
 > University of Otago
 > 362 Leith St, North Dunedin
-> Dunedin 9016, New Zealand
+> Dunedin 9016, New_Zealand
 
 ## Quan Lab
   * Zhe-Xue Quan

@@ -3,7 +3,7 @@ Dana_Point|20170403|USA|1	BibbyS5_20170403	20170403	A	33.4669069,-117.6872511	33
 Prague|20151201|Czech_Republic|1	Mazankova primer A sample 23 20151201	20151201		50.0751514,14.3406075	50.0751514	14.3406075	Prague	Czech_Republic			326	Brno-Modrice	pre-sewage treatment plant						
 Victorville|20170403|USA|1	BibbyS2_20170403	20170403	A	34.6147109,-117.357345	34.6147109	-117.357345	Victorville	USA	Victor Valley Wastewater Reclamation Authority, 20111 Shay Rd. Victorville, CA 92394										
 Escondido|20161101|USA|1	Escondido Primer A Site 1 20161101	20161101		33.105788,-117.114064	33.105788	-117.114064	Escondido	USA	Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA							1	201611		
-Greymouth|20160317|New_Zealand|1	Fineran Primer A	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New Zealand	105 Tainui St, Greymouth 7805, New Zealand										
+Greymouth|20160317|New_Zealand|1	Fineran Primer A	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New_Zealand	105 Tainui St, Greymouth 7805, New_Zealand										
 Khartoum|20170421|Sudan|9	Mazankova primer A sample 300 20170421	20170421		15.5007,32.5599	15.5007	32.5599	Khartoum	Sudan			300								20160210
 Zastavka|20151201|Czech_Republic|2	Mazankova primer A sample 2 20151201	20151201		49.1879958,16.3630967	49.1879958	16.3630967	Zastavka	Czech_Republic			427	Plzen	pre-sewage treatment plant						
 Pakenham|20161213|Australia|1	Barr Monash Sample1 PrimerA 20161213	20161213		-38.1122141,145.4864454	-38.1122141	145.4864454	Pakenham	Australia			1	Pakenham WWTP, Victoria, Australia	WWTP						
@@ -56,7 +56,7 @@ Gava|20140101|Spain|1	Muniesa E7 Gava primer A Raw Sewage	20140101		41.3037013,1
 Warszawa|20160126|Poland|4	Decewicz Dziewit Primer A Warsaw 20160126	20160126		52.351351,20.959269	52.351351	20.959269	Warszawa	Poland	Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03054 Warsaw, Poland										
 Warszawa|20160126|Poland|3	Decewicz Dziewit Primer A Warsaw 20160126	20160126		52.351351,20.959269	52.351351	20.959269	Warszawa	Poland	Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03054 Warsaw, Poland										
 Warszawa|20160126|Poland|8	Decewicz Dziewit Primer A Warsaw 20160126	20160126		52.351351,20.959269	52.351351	20.959269	Warszawa	Poland	Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03054 Warsaw, Poland										
-Dunedin|20160317|New_Zealand|1	Fineran Primer A	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New Zealand	10 Tahuna Rd, Otago 9013, New Zealand										
+Dunedin|20160317|New_Zealand|1	Fineran Primer A	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New_Zealand	10 Tahuna Rd, Otago 9013, New_Zealand										
 Lodz|20160303|Poland|1	Decewicz Dziewit Primer A Lodz 20160303	20160303		51.727940,19.347618	51.727940	19.347618	Lodz	Poland	Group Wastewater Treatment Plant, Sanitariuszek 66, 91867 Lodz, Poland										
 San_Marcos|20151209|USA|1	Edwards Primer A Site 4 20151209	20151209		33.144526,-117.178849	33.144526	-117.178849	San Marcos	USA	Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069										
 Carlsbad|20160908|USA|1	Carlsbad Primer A Site 3 20160301	20160908		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011							3	201609		

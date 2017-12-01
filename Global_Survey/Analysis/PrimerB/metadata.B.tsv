@@ -31,7 +31,7 @@ Zerdab|20030629|Azerbaijan|1	Cinek lab sample 321 B 20030629	20030629		40.143105
 Ostrava|20151201|Czech_Republic|1	Mazankova primer B sample 5 20151201	20151201		49.8346453,18.2820442	49.8346453	18.2820442	Ostrava	Czech_Republic				479	Ceske Budejovice	pre-sewage treatment plant					
 Escondido|20161101|USA|1	Escondido Primer B Site 1 20161101	20161101		33.105788,-117.114064	33.105788	-117.114064	Escondido	USA		Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA						1	201611		
 Carlsbad|20160915|USA|1	Carlsbad Primer A Site 3 20160915	20160915		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201609		
-Greymouth|20160317|New_Zealand|1	Fineran Primer B	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New Zealand		105 Tainui St, Greymouth 7805, New Zealand									
+Greymouth|20160317|New_Zealand|1	Fineran Primer B	20160317		-42.4921908,171.1071795	-42.4921908	171.1071795	Greymouth	New_Zealand		105 Tainui St, Greymouth 7805, New_Zealand									
 Carlsbad|20160301|USA|1	Carlsbad Primer B Site 3 20160301	20160301		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011						3	201603		
 Ralsko|20151201|Czech_Republic|1	Mazankova primer B sample 16 20151201	20151201		50.5583072,14.8217867	50.5583072	14.8217867	Ralsko	Czech_Republic				275	Zastavka u Brna	post-STP, refugee camp					
 Engelsskiy_rayon|20160301|Russia|1	Tyakht SAR_275_B primer B	20160301		51.32,46.00	51.32	46.00	Engelsskiy rayon	Russia		Saratov, Russia									
@@ -81,7 +81,7 @@ North_Fremantle|20170816|Australia|1	Barr Monash Sample5 PrimerB 20170816	201708
 Prague|20151201|Czech_Republic|2	Mazankova primer B sample 23 20151201	20151201		50.0751514,14.3406075	50.0751514	14.3406075	Prague	Czech_Republic				326	Brno - Modrice	pre-sewage treatment plant					
 Amman|20170421|Jordan|4	Mazankova primer B sample 236 20170421	20170421		31.9454,35.9284	31.9454	35.9284	Amman	Jordan				236							
 Pilsen|20151201|Czech_Republic|3	Mazankova primer B sample 1 20151201	20151201		49.7477831,13.3783489	49.7477831	13.3783489	Pilsen	Czech_Republic				456	Ceske Budejovice	pre-sewage treatment plant					
-Dunedin|20160317|New_Zealand|1	Fineran Primer B	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New Zealand		10 Tahuna Rd, Otago 9013, New Zealand									
+Dunedin|20160317|New_Zealand|1	Fineran Primer B	20160317		-45.9062333,170.4858516	-45.9062333	170.4858516	Dunedin	New_Zealand		10 Tahuna Rd, Otago 9013, New_Zealand									
 Tampere|20151120|Finland|6	Cinek lab sample bin57 primer B 20151120	20151120		61.505,23.815	61.505	23.815	Tampere	Finland	coordinates are hospital location										
 Modfice|20151201|Czech_Republic|1	Mazankova primer B sample 12 20151201	20151201		49.1278897,16.6144122	49.1278897	16.6144122	Modfice	Czech_Republic				476	Ostrava	pre-sewage treatment plant					
 Lisboa|20160225|Portugal|1	Santos Primer B13	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal		Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049-001 Lisboa									
