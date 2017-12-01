@@ -877,7 +877,7 @@ Kjellerup|20090101|Denmark|406	SRA Sample ERR414263 18	20090101		56.26392,9.5017
 Roma|20130101|Italy|586	SRA Sample SRR4074260 584	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|332	SRA Sample ERR527107 322	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|147	SRA Sample ERR527107 137	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|2	SRA Sample SRR2043640 2	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|2	SRA Sample SRR2043640 2	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20110101|China|516	SRA Sample ERR527104 5	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|1022	SRA Sample ERR527135 484	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|648	SRA Sample ERR589770 14	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -901,7 +901,7 @@ Kjellerup|20090101|Denmark|169	SRA Sample ERR321523 2	20090101		56.26392,9.50178
 Madrid|20090101|Spain|54	SRA Sample ERR209793 1	20090101		40.463667,-3.74922	40.463667	-3.74922	Madrid	Spain																haplotype called by gretel version 0.0.8	
 Baltimore|20140623|USA|56	SRA Sample SRR4435731 56	20140623		39.288462639338995,-76.6259459406137	39.288462639338995	-76.6259459406137	Baltimore	USA																haplotype called by gretel version 0.0.8	39.288462639338995 N 76.62594594061375 W
 Dallas|20140616|USA|88	SRA Sample SRR3160438 88	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
-Zhuhai_Shi|20140401|Hong_Kong|11	SRA Sample SRR2043641 9	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|11	SRA Sample SRR2043641 9	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Zerdab|20050412|Azerbaijan|1	Cinek lab sample 354 A 20050412	20050412		40.143105,47.576927	40.143105	47.576927	Zerdab	Azerbaijan						Assembly of 4 reads: 354_A_intf.ab1 (reversed), 354_A_r.ab1, 354_A_intr.ab1, 354_A_f.ab1 (reversed)	f										
 Houston|20130101|USA|16	SRA Sample SRR4032470 2	20130101		29.77152983140313,-95.2212444414063	29.77152983140313	-95.2212444414063	Houston	USA																haplotype called by gretel version 0.0.8	29.77152983140313 N 95.22124444140628 W
 Roma|20130101|Italy|474	SRA Sample SRR4074260 472	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
@@ -1438,7 +1438,7 @@ Lanzhou_Shi|20120101|China|97	SRA Sample ERR1018206 33	20120101		35.86166,104.19
 Lanzhou_Shi|20110101|China|1064	SRA Sample ERR527135 526	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|1110	SRA Sample ERR527135 572	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Baltimore|20140623|USA|14	SRA Sample SRR4435731 14	20140623		39.288462639338995,-76.6259459406137	39.288462639338995	-76.6259459406137	Baltimore	USA																haplotype called by gretel version 0.0.8	39.288462639338995 N 76.62594594061375 W
-Zhuhai_Shi|20140401|Hong_Kong|5	SRA Sample SRR2043641 3	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|5	SRA Sample SRR2043641 3	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20110101|China|1019	SRA Sample ERR527135 481	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|326	SRA Sample ERR527107 316	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|880	SRA Sample ERR527135 342	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -1589,7 +1589,7 @@ Lanzhou_Shi|20110101|China|945	SRA Sample ERR527135 407	20110101		35.86166,104.1
 Lanzhou_Shi|20110101|China|1122	SRA Sample ERR527135 584	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Carlsbad|20160908|USA|1	Carlsbad Primer A Site 3 20160301	20160908		33.116202,-117.321597	33.116202	-117.321597	Carlsbad	USA	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011							3	201609								
 Lanzhou_Shi|20110101|China|476	SRA Sample ERR527107 466	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|12	SRA Sample SRR2043641 10	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|12	SRA Sample SRR2043641 10	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Roma|20130101|Italy|639	SRA Sample SRR4074260 637	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|596	SRA Sample ERR527135 58	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|172	SRA Sample ERR321523 5	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
@@ -1889,7 +1889,7 @@ Lanzhou_Shi|20110101|China|1106	SRA Sample ERR527135 568	20110101		35.86166,104.
 Niederdorla|20100201|Germany|19	SRA Sample SRR2155368 17	20100201		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|263	SRA Sample ERR321165 2	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
 Courtaboeuf_Cedex|20050101|France|70	SRA Sample ERR480747 2	20050101		46.227638,2.213749	46.227638	2.213749	Courtaboeuf Cedex	France																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|14	SRA Sample SRR2043641 12	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|14	SRA Sample SRR2043641 12	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20120101|China|303	SRA Sample ERR1018206 239	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|383	SRA Sample SRR4074260 381	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 North_Kurdufan|00000000|Sudan|1	Cinek lab sample 285 A unknown	unknown		12.862807,30.217636	12.862807	30.217636	North Kurdufan	Sudan						Assembly of 4 reads: 285_A_intf.ab1 (reversed), 285_A_r.ab1, 285_A_intr.ab1, 285_A_f.ab1 (reversed)	f										
@@ -2254,7 +2254,7 @@ Kjellerup|20090101|Denmark|416	SRA Sample ERR414263 28	20090101		56.26392,9.5017
 Lanzhou_Shi|20110101|China|222	SRA Sample ERR527107 212	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|259	SRA Sample ERR1018206 195	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|713	SRA Sample ERR527135 175	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|1	SRA Sample SRR2043640 1	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|1	SRA Sample SRR2043640 1	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Kjellerup|20090101|Denmark|285	SRA Sample ERR525801 1	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
 New_York|20141214|USA|1	DiazMunoz_NYC_A	20141214		40.7128,-74.0059	40.7128	-74.0059	New York	USA		10.453m															
 Lanzhou_Shi|20130101|China|25	SRA Sample ERR1578622 17	20130101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -2483,7 +2483,7 @@ Baltimore|20140602|USA|14	SRA Sample SRR4435733 13	20140602		39.288462639338995,
 Roma|20130101|Italy|212	SRA Sample SRR4074260 210	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|758	SRA Sample SRR4074332 28	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|374	SRA Sample ERR321574 10	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|9	SRA Sample SRR2043641 7	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|9	SRA Sample SRR2043641 7	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20110101|China|623	SRA Sample ERR527135 85	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Ghan|20120101|Australia|33	SRA Sample ERR505106 32	20120101		-25.274398,133.775136	-25.274398	133.775136	Ghan	Australia																haplotype called by gretel version 0.0.8	
 Lisboa|20160225|Portugal|1	Santos Primer A10	20160225		38.7348396,-9.1863262	38.7348396	-9.1863262	Lisboa	Portugal	Instituto Superior Tecnico, Laboratorio de Analises, Av. Rovisco Pais, 1049001 Lisboa																
@@ -2751,7 +2751,7 @@ Lanzhou_Shi|20110101|China|684	SRA Sample ERR527135 146	20110101		35.86166,104.1
 Roma|20130101|Italy|514	SRA Sample SRR4074260 512	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|919	SRA Sample ERR527135 381	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Dallas|20140616|USA|149	SRA Sample SRR3160438 149	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
-Zhuhai_Shi|20140401|Hong_Kong|10	SRA Sample SRR2043641 8	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|10	SRA Sample SRR2043641 8	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20110101|China|616	SRA Sample ERR527135 78	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Baltimore|20140602|USA|9	SRA Sample SRR4435733 8	20140602		39.288462639338995,-76.6259459406137	39.288462639338995	-76.6259459406137	Baltimore	USA																haplotype called by gretel version 0.0.8	39.288462639338995 N 76.62594594061375 W
 Division_No_18|20101001|Canada|149	SRA Sample SRR1554402 75	20101001		56.130366,-106.346771	56.130366	-106.346771	Division No. 18	Canada																haplotype called by gretel version 0.0.8	
@@ -3152,7 +3152,7 @@ Dallas|20140616|USA|124	SRA Sample SRR3160438 124	20140616		32.8094,-96.8365	32.
 Ghan|20120101|Australia|31	SRA Sample ERR505106 30	20120101		-25.274398,133.775136	-25.274398	133.775136	Ghan	Australia																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|671	SRA Sample SRR4074260 669	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|52	SRA Sample ERR527107 42	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|6	SRA Sample SRR2043641 4	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|6	SRA Sample SRR2043641 4	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20110101|China|1133	SRA Sample ERR527135 595	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|657	SRA Sample SRR4074260 655	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|773	SRA Sample ERR527135 235	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -3377,7 +3377,7 @@ Montreal|20100416|Canada|2	SRA Sample SRR2566059 2	20100416		45.50,-73.63	45.50	
 Lanzhou_Shi|20110101|China|16	SRA Sample ERR527107 6	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Madrid|20090101|Spain|47	SRA Sample ERR209824 36	20090101		40.463667,-3.74922	40.463667	-3.74922	Madrid	Spain																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|28	SRA Sample SRR4074260 26	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|3	SRA Sample SRR2043641 1	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|3	SRA Sample SRR2043641 1	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Niederdorla|20101101|Germany|1	SRA Sample SRR2155309 1	20101101		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|307	SRA Sample ERR321572 20	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|389	SRA Sample ERR414263 1	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
@@ -3828,7 +3828,7 @@ Dallas|20140616|USA|166	SRA Sample SRR3160438 166	20140616		32.8094,-96.8365	32.
 Lanzhou_Shi|20140101|China|119	SRA Sample ERR1190619 53	20140101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Dallas|20140616|USA|217	SRA Sample SRR3160438 217	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
 Madrid|20090101|Spain|88	SRA Sample ERR209793 35	20090101		40.463667,-3.74922	40.463667	-3.74922	Madrid	Spain																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|8	SRA Sample SRR2043641 6	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|8	SRA Sample SRR2043641 6	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Dallas|20140616|USA|103	SRA Sample SRR3160438 103	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
 Roma|20130101|Italy|336	SRA Sample SRR4074260 334	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|223	SRA Sample SRR4074260 221	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
@@ -4026,7 +4026,7 @@ Lanzhou_Shi|20110101|China|531	SRA Sample ERR527073 3	20110101		35.86166,104.195
 Lanzhou_Shi|20110101|China|1119	SRA Sample ERR527135 581	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Niederdorla|20120101|Germany|15	SRA Sample ERR479474 1	20120101		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|876	SRA Sample SRR4074332 146	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|13	SRA Sample SRR2043641 11	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|13	SRA Sample SRR2043641 11	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Lanzhou_Shi|20120101|China|311	SRA Sample ERR1018206 247	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|536	SRA Sample SRR4074260 534	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Dallas|20140616|USA|11	SRA Sample SRR3160438 11	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
@@ -4415,7 +4415,7 @@ Lanzhou_Shi|20120101|China|277	SRA Sample ERR1018206 213	20120101		35.86166,104.
 Roma|20130101|Italy|346	SRA Sample SRR4074260 344	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|210	SRA Sample ERR1018206 146	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|421	SRA Sample ERR527107 411	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|7	SRA Sample SRR2043641 5	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|7	SRA Sample SRR2043641 5	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Division_No_18|20101001|Canada|135	SRA Sample SRR1554402 61	20101001		56.130366,-106.346771	56.130366	-106.346771	Division No. 18	Canada																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20130101|China|21	SRA Sample ERR1578622 13	20130101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|230	SRA Sample ERR1018206 166	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -4697,7 +4697,7 @@ Lanzhou_Shi|20120101|China|295	SRA Sample ERR1018206 231	20120101		35.86166,104.
 Atlanta_GA|20160202|USA|1	74.USA.Atlanta_GA.02-02-2016	20160202		33.7489954,-84.3879824	33.7489954	-84.3879824	Atlanta_GA	USA														crAssphage_A 1-1331 (100%) aligns to NODE_23_length_37397_cov_19.892 3074-4404 with 97.821% identity			
 Roma|20130101|Italy|342	SRA Sample SRR4074260 340	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20120101|China|583	SRA Sample ERR589826 3	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Zhuhai_Shi|20140401|Hong_Kong|4	SRA Sample SRR2043641 2	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
+Zhuhai_Shi|20140401|Hong_Kong|4	SRA Sample SRR2043641 2	20140401		22.15,114.10	22.15	114.10	Zhuhai Shi	Hong_Kong																haplotype called by gretel version 0.0.8	22.15 N 114.10 E
 Kjellerup|20090101|Denmark|99	SRA Sample ERR321483 19	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
 Ghan|20120101|Australia|29	SRA Sample ERR505106 28	20120101		-25.274398,133.775136	-25.274398	133.775136	Ghan	Australia																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|285	SRA Sample ERR527107 275	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
