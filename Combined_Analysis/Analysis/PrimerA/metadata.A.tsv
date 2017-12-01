@@ -2815,7 +2815,7 @@ Roma|20130101|Italy|542	SRA Sample SRR4074260 540	20130101		41.87194,12.56738	41
 Lanzhou_Shi|20120101|China|56	SRA Sample ERR1018221 2	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|1141	SRA Sample ERR527135 603	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Kjellerup|20090101|Denmark|295	SRA Sample ERR321572 8	20090101		56.26392,9.501785	56.26392	9.501785	Kjellerup	Denmark																haplotype called by gretel version 0.0.8	
-Amsterdam|20160127|Netherlands|1	43.Netherlands.Amsterdam.27-01-2016	20160127		52.3702157,4.895167900000001	52.3702157	4.895167900000001	Amsterdam	Netherlands														crAssphage_A 1-1331 (100%) aligns to NODE_3576_length_7800_cov_3.74061 3187-4517 with 97.446% identity			
+Amsterdam|20160127|The_Netherlands|1	43.The_Netherlands.Amsterdam.27-01-2016	20160127		52.3702157,4.895167900000001	52.3702157	4.895167900000001	Amsterdam	The_Netherlands														crAssphage_A 1-1331 (100%) aligns to NODE_3576_length_7800_cov_3.74061 3187-4517 with 97.446% identity			
 Roma|20130101|Italy|295	SRA Sample SRR4074260 293	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Roma|20130101|Italy|718	SRA Sample SRR4074260 716	20130101		41.87194,12.56738	41.87194	12.56738	Roma	Italy																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|621	SRA Sample ERR527135 83	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
@@ -2998,7 +2998,7 @@ Lanzhou_Shi|20120101|China|110	SRA Sample ERR1018206 46	20120101		35.86166,104.1
 Lanzhou_Shi|20110101|China|1185	SRA Sample ERR527082 2	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 Madrid|20090101|Spain|142	SRA Sample ERR209823 13	20090101		40.463667,-3.74922	40.463667	-3.74922	Madrid	Spain																haplotype called by gretel version 0.0.8	
 Lanzhou_Shi|20110101|China|1054	SRA Sample ERR527135 516	20110101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
-Apeldoorn|20151106|The_Netherlands|1	Brouns lab primer A 20151106	20151106		52.180646,5.9478529	52.180646	5.9478529	Apeldoorn	The Netherlands	Albert Schweitzerlaan 31, 7334 DZ Apeldoorn, Netherlands	36m															
+Apeldoorn|20151106|The_The_Netherlands|1	Brouns lab primer A 20151106	20151106		52.180646,5.9478529	52.180646	5.9478529	Apeldoorn	The_Netherlands	Albert Schweitzerlaan 31, 7334 DZ Apeldoorn, The_Netherlands	36m															
 Calgary|20160201|Canada|1	22a.Canada.Calgary.01-02-2016	20160201		51.0486151,-114.0708459	51.0486151	-114.0708459	Calgary	Canada														crAssphage_A 1-1331 (100%) aligns to NODE_3579_length_6943_cov_48.0544 3758-2428 with 97.370% identity			
 Niederdorla|20100501|Germany|16	SRA Sample SRR2155386 16	20100501		51.165691,10.451526	51.165691	10.451526	Niederdorla	Germany																haplotype called by gretel version 0.0.8	
 Madrid|20090101|Spain|52	SRA Sample ERR414388 2	20090101		40.463667,-3.74922	40.463667	-3.74922	Madrid	Spain																haplotype called by gretel version 0.0.8	

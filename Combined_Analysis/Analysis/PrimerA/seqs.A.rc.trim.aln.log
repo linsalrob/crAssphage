@@ -382,7 +382,7 @@ Madrid|20090101|Spain|67 -> Madrid_20090101_Spain_67
 Kjellerup|20090101|Denmark|420 -> Kjellerup_20090101_Denmark_420
 Madrid|20090101|Spain|65 -> Madrid_20090101_Spain_65
 Madrid|20090101|Spain|64 -> Madrid_20090101_Spain_64
-Amsterdam|20160127|Netherlands|1 -> Amsterdam_20160127_Netherlands_1
+Amsterdam|20160127|The_Netherlands|1 -> Amsterdam_20160127_The_Netherlands_1
 Madrid|20090101|Spain|62 -> Madrid_20090101_Spain_62
 Madrid|20090101|Spain|61 -> Madrid_20090101_Spain_61
 Kjellerup|20090101|Denmark|426 -> Kjellerup_20090101_Denmark_426
@@ -1008,7 +1008,7 @@ Evrange|20120921|Luxembourg|2 -> Evrange_20120921_Luxembourg_2
 Evrange|20120921|Luxembourg|3 -> Evrange_20120921_Luxembourg_3
 Division_No_18|20101001|Canada|75 -> Division_No_18_20101001_Canada_75
 Lanzhou_Shi|20110101|China|903 -> Lanzhou_Shi_20110101_China_903
-Apeldoorn|20151106|The_Netherlands|1 -> Apeldoorn_20151106_The_Netherlands_1
+Apeldoorn|20151106|The_The_Netherlands|1 -> Apeldoorn_20151106_The_The_Netherlands_1
 Ghan|20120101|Australia|10 -> Ghan_20120101_Australia_10
 Ghan|20120101|Australia|11 -> Ghan_20120101_Australia_11
 Ghan|20120101|Australia|12 -> Ghan_20120101_Australia_12
@@ -3249,7 +3249,7 @@ Roma|20130101|Italy|899 -> Roma_20130101_Italy_899
  368  Kjellerup_20090101_Denmark_420                       0.00%    passed      6.41%
  369  Madrid_20090101_Spain_65                             0.00%    passed     13.84%
  370  Madrid_20090101_Spain_64                             7.52%    failed      0.00%
- 371  Amsterdam_20160127_Netherlands_1                     0.10%    passed     11.14%
+ 371  Amsterdam_20160127_The_Netherlands_1                     0.10%    passed     11.14%
  372  Madrid_20090101_Spain_62                             7.52%    failed      0.00%
  373  Madrid_20090101_Spain_61                             0.00%    passed     16.38%
  374  Kjellerup_20090101_Denmark_426                       0.00%    failed      3.84%
@@ -3875,7 +3875,7 @@ Roma|20130101|Italy|899 -> Roma_20130101_Italy_899
  994  Evrange_20120921_Luxembourg_3                        0.00%    passed      6.14%
  995  Division_No_18_20101001_Canada_75                    1.05%    passed     48.44%
  996  Lanzhou_Shi_20110101_China_903                      16.65%    failed      0.00%
- 997  Apeldoorn_20151106_The_Netherlands_1                 2.85%    passed     11.88%
+ 997  Apeldoorn_20151106_The_The_Netherlands_1                 2.85%    passed     11.88%
  998  Ghan_20120101_Australia_10                           0.00%    failed      3.61%
  999  Ghan_20120101_Australia_11                           0.00%    failed      4.24%
 1000  Ghan_20120101_Australia_12                           0.00%    failed      4.36%

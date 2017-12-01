@@ -399,7 +399,7 @@ North_Fremantle|20170816|Australia|1	Barr Monash Sample5 PrimerC 20170816	201708
 Lanzhou_Shi|20120101|China|165	SRA Sample ERR1018195 32	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	
 San_Diego|20170713|USA|1	VolunteerE_20170713	20170713	C	32.777199,-117.070971	32.777199	-117.070971	San Diego	USA	base called by phred, consensus by merger										E	Daily	DE9				
 Courtaboeuf_Cedex|20050101|France|39	SRA Sample ERR479395 26	20050101		46.227638,2.213749	46.227638	2.213749	Courtaboeuf Cedex	France																haplotype called by gretel version 0.0.8	
-Apeldoorn|20151106|The_Netherlands|1	Brouns lab primer C 20151106	20151106		52.180646,5.9478529	52.180646	5.9478529	Apeldoorn	The Netherlands		Albert Schweitzerlaan 31, 7334 DZ Apeldoorn, Netherlands	36m														
+Apeldoorn|20151106|The_The_Netherlands|1	Brouns lab primer C 20151106	20151106		52.180646,5.9478529	52.180646	5.9478529	Apeldoorn	The_Netherlands		Albert Schweitzerlaan 31, 7334 DZ Apeldoorn, The_Netherlands	36m														
 Dallas|20140616|USA|201	SRA Sample SRR3160438 201	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
 Dallas|20140616|USA|129	SRA Sample SRR3160438 129	20140616		32.8094,-96.8365	32.8094	-96.8365	Dallas	USA																haplotype called by gretel version 0.0.8	32.8094 N 96.8365 W
 Lanzhou_Shi|20120101|China|192	SRA Sample ERR1018191 9	20120101		35.86166,104.195397	35.86166	104.195397	Lanzhou Shi	China																haplotype called by gretel version 0.0.8	

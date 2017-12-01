@@ -23,7 +23,7 @@ This project would not be successful without our great global collaborators. Thi
 > Utrecht University,
 > 3584 CH,
 > Utrecht,
-> The Netherlands
+> The_Netherlands
 
 ## [Brouns lab](http://www.wageningenur.nl/en/Expertise-Services/Chair-groups/Agrotechnology-and-Food-Sciences/Laboratory-of-Microbiology/Research/Themes-Microbe-Bacteriophage-interactions.htm)
 *The first group to generate sequences*
@@ -34,7 +34,7 @@ This project would not be successful without our great global collaborators. Thi
 > Wageningen University
 > Dreijenplein 10 (building 316), Office 046,
 > 6703 HB Wageningen,
-> The Netherlands
+> The_Netherlands
 
 ## Cinek Lab
    * Ondrej Cinek

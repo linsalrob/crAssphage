@@ -22,7 +22,7 @@ REFERENCE   2  (bases 1 to 97065)
   TITLE     Direct Submission
   JOURNAL   Submitted (29-APR-2012) Centre for Molecular and Biomolecular
             Informatics, Nijmegen Centre for Molecular Life Sciences, Geert
-            Grooteplein 28, Nijmegen, Gelderland 6525 GA, The Netherlands
+            Grooteplein 28, Nijmegen, Gelderland 6525 GA, The_Netherlands
 COMMENT     ##Assembly-Data-START##
             Assembly Method       :: CLCBio v. 6.0.4
             Coverage              :: 230x
