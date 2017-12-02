@@ -68,7 +68,7 @@ def latlon2distance(lat1, long1, lat2, long2, miles=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Make a (geographic) distance matrix from the id.map file')
-    parser.add_argument('-i', help='id.map output file from the renumbering code (default: id.map)', default='id.map')
+    parser.add_argument('-i', help='id.map output file from the renumbering code', required=True)
     parser.add_argument('-o', help='output file', required=True)
     args = parser.parse_args()
 
