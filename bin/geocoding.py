@@ -27,6 +27,7 @@ with open(keyfile, 'r') as f:
 
 
 localitydb = os.path.join(basepath, "data/localities.db")
+sys.stderr.write("Reading database: {}\n".format(localitydb))
 if not os.path.exists(localitydb):
     localitydb = '../data/localities.db'
     if not os.path.exists(localitydb):
