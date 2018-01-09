@@ -124,12 +124,16 @@ def latlon_to_place(lat, lon, verbose=False, force_api=False):
         if "locality" in c['types']:
             locality = c['long_name']
 
+    if None == locality:
+        sys.stderr.write("ERROR: There was no locality available for |{}| |{}|\n".format(lat, lon))
+        sys.exit(-1)
+
     asciiloc = locality.encode('ascii', 'ignore').decode()
     if asciiloc != locality:
-        asciiloc = ""
+        sys.stderr.write("WARNING: We can not ascii-fy {} properly. You may need to add it to the database manually\n".format(locality))
     asciicountry = country.encode('ascii', 'ignore').decode()
     if asciicountry != country:
-        asciicountry = ""
+        sys.stderr.write("WARNING: We can not ascii-fy {} properly. You may need to add it to the database manually\n".format(country))
 
     ldb.save_location(lat, lon, locality, country, asciiloc, asciicountry)
     return locality, country
