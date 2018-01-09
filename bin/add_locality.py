@@ -31,6 +31,7 @@ def parse_fasta(fafile, outfile):
                 m = re.search('latlon=(.*?)\]', l)
                 lat, lon = m.groups()[0].split(',')
                 locality, country = geocoding.latlon_to_place(lat, lon)
+
                 newline = l.rstrip()
                 if locality and 'locality' not in l:
                     newline = newline + " [locality={}]".format(locality)
