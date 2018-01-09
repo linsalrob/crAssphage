@@ -1,0 +1,65 @@
+
+mkdir fasta
+phred -id ab1 -st fasta -sd fasta/ -qt fasta -qd fasta
+# check the blast results of those:
+cat fasta/*seq > all.seq
+blastn -query all.seq -db ~/Dropbox/Phage/crAssphage/JQ995537.fna -out all.seq.crassphage.blastn -outfmt '6 std'
+
+
+GA_055_AHawaii3R_R3_G07.ab1	JQ995537	95.842	986	24	17	8	992	26930	25961	0.0	1578
+GA_050_AHawaii4F_F3_B07.ab1	JQ995537	81.510	384	49	22	562	926	26215	26595	6.52e-82	296
+GA_056_AHawaii4R_R3_H07.ab1	JQ995537	93.322	1138	49	22	15	1151	26931	25820	0.0	1655
+GA_051_AHawaii8F_F11_C07.ab1	JQ995537	91.400	1186	85	17	7	1180	33744	34924	0.0	1609
+GA_057_AHawaii8R_R11_A08.ab1	JQ995537	91.128	1082	79	17	18	1097	35021	33955	0.0	1450
+GA_052_AHawaii9F_F11_D07.ab1	JQ995537	91.682	1070	69	19	9	1073	33745	34799	0.0	1465
+GA_058_AHawaii9R_R11_B08.ab1	JQ995537	89.089	1054	97	18	27	1076	35012	33973	0.0	1293
+GA_053_AHawaii13F_F12_E07.ab1	JQ995537	93.165	1068	58	15	13	1075	43858	44915	0.0	1554
+GA_059_AHawaii13R_R12_C08.ab1	JQ995537	90.800	1087	74	26	9	1075	45022	43942	0.0	1430
+GA_059_AHawaii13R_R12_C08.ab1	JQ995537	100.000	31	0	0	26	56	95797	95767	3.55e-10	58.4
+GA_054_AHawaii14F_F12_F07.ab1	JQ995537	88.526	1072	110	13	11	1078	43855	44917	0.0	1286
+GA_060_AHawaii14R_R12_D08.ab1	JQ995537	86.175	1179	120	42	11	1156	45021	43853	0.0	1234
+
+
+# note that 3F doesn't match crassphage. This is also really low quality sequence, so we make 3R a singleton
+cp fasta/GA_055_AHawaii3R_R3_G07.ab1.seq final/SandIslandA.fasta
+
+# make them fastq files for merger
+mkdir fastq
+for F in $(ls fasta/ | grep seq | sed -e 's/.seq//'); do fasta2fastq.pl -f fasta/$F.seq -q fasta/$F.qual -o fastq/$F.fastq; done
+# run merger on the sequences
+merger -asequence fastq/GA_050_AHawaii4F_F3_B07.ab1.fastq -bsequence fastq/GA_056_AHawaii4R_R3_H07.ab1.fastq -sreverse2 -outfile WaianaeA.merger -outseq final/WaianaeA.fasta -sformat1 fastq-sanger -sformat2 fastq-sanger
+merger -asequence fastq/GA_051_AHawaii8F_F11_C07.ab1.fastq -bsequence fastq/GA_057_AHawaii8R_R11_A08.ab1.fastq -sreverse2 -outfile SandIslandB.merger -outseq final/SandIslandB.fasta -sformat1 fastq-sanger -sformat2 fastq-sanger
+merger -asequence fastq/GA_052_AHawaii9F_F11_D07.ab1.fastq -bsequence fastq/GA_058_AHawaii9R_R11_B08.ab1.fastq -sreverse2 -outfile WaianaeB.merger -outseq final/WaianaeB.fasta -sformat1 fastq-sanger -sformat2 fastq-sanger
+merger -asequence fastq/GA_053_AHawaii13F_F12_E07.ab1.fastq -bsequence fastq/GA_059_AHawaii13R_R12_C08.ab1.fastq -sreverse2 -outfile SandIslandC.merger -outseq final/SandIslandC.fasta -sformat1 fastq-sanger -sformat2 fastq-sanger
+merger -asequence fastq/GA_054_AHawaii14F_F12_F07.ab1.fastq -bsequence fastq/GA_060_AHawaii14R_R12_D08.ab1.fastq -sreverse2 -outfile WaianaeC.merger -outseq final/WaianaeC.fasta  -sformat1 fastq-sanger -sformat2 fastq-sanger
+
+# edit the final sequences and add correct fasta labels
+
+perl ~/Dropbox/GitHubs/EdwardsLab/bin/average_quality_scores.pl -l fasta/*qual | sort -t$'\t' -n -k 2 
+cat final/*seq > all.fasta
+blastn -query all.fasta -db ~/Dropbox/Phage/crAssphage/JQ995537.fna -out all.crassphage.blastn -outfmt '6 std'
+cp all.fasta Nigro.fasta
+
+for P in A B C; do echo $P; cat final/SandIsland$P.fasta final/Waianae$P.fasta > Nigro_$P.fasta; done
+# now add location
+
+for P in A B C; do  python3 /home/redwards/Dropbox/GitHubs/crAssphage/bin/add_locality.py -f Nigro_$P.fasta -o Nigro_$P.location.fasta; done
+
+
+Key for the samples
+
+3	Sand Island Waste Water Treatment Plant
+4	Waianae Waste Water Treatment Plant
+8	Sand Island Waste Water Treatment Plant
+9	Waianae Waste Water Treatment Plant
+13	Sand Island Waste Water Treatment Plant
+14	Waianae Waste Water Treatment Plant
+
+--
+As always primer:
+3 is A
+11 is B
+12 is C
+
+
+
