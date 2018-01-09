@@ -80,6 +80,7 @@ This project would not be successful without our great global collaborators. Thi
 
 
 ## [Nilsson group](http://www.su.se/mbw/research/research-groups/infection-and-immunobiology/group-nilsson)
+   * Anders Nilsson
    * Mohammadali Khan Mirzaei
 
 > Department of Molecular Biosciences,
