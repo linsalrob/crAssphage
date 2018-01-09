@@ -132,8 +132,10 @@ Note: No sequences found in Chile
 > Miecznikowa 1, 406A
 > 02-096, Warsaw, Poland
 
-## Gyu-Sung Cho Lab
+## Max Rubner-Institut
   * Gyu-Sung Cho
+  * Horst Neve
+  * Charles Franz
 
 > Max Rubner-Institut
 > Microbiology and Biotechnology
