@@ -1,4 +1,4 @@
->Reyes_C.20160412.1 [name=Maria Reyes Primer C 20160412] [primer=C] [sample=1] [latlon=4.6500014,-74.0589398] [latitude=4.6500014] [longitude=-74.0589398] [address=CorpoGen, Cra. 5 #66A-34, Bogota, Colombia ] [date=20160412] [country=Colombia] [locality=Bogota]
+>Reyes_C.20160412.1 [name=Maria Reyes Primer C 20160412] [primer=C] [sample=1] [latlon=4.6500014,-74.0589398] [latitude=4.6500014] [longitude=-74.0589398] [address=CorpoGen, Cra. 5 #66A-34, Bogota, Colombia ] [date=20160412] [country=Colombia] [locality=Bogota] [contact=Alejandro Reyes] [university=Universidad de los Andes]
 GGGAGACATTAGGTAACGAGATATCAATGAGATAATAGATTAACAAGTTC
 TTCTTGTGTAACTTCTTCTTTAACAGCAAGTTCATATAAATGACCAATAA
 ATTCTTCGTCAAATCTATCACCATCAAGAATACTAATTAAAGCGTCTTTA
@@ -27,7 +27,7 @@ TTTTTTAATTTTTCTTTTAAAATCTTGGGTAATATAAAAAGAGAGAAAAA
 AAAATTATTGTTGGCTAAACAAAAAATGTAAATGTTCGATATGTAAAGCC
 TAAATAATCGTAAACCCCATCAAATCCAATACCTATACCTATACAATTTT
 ATCTTTACTAT
->Reyes_C.20160412.2 [name=Maria Reyes Primer C 20160412] [primer=C] [sample=2] [latlon=4.6500014,-74.0589398] [latitude=4.6500014] [longitude=-74.0589398] [address=CorpoGen, Cra. 5 #66A-34, Bogota, Colombia ] [date=20160412] [country=Colombia] [locality=Bogota]
+>Reyes_C.20160412.2 [name=Maria Reyes Primer C 20160412] [primer=C] [sample=2] [latlon=4.6500014,-74.0589398] [latitude=4.6500014] [longitude=-74.0589398] [address=CorpoGen, Cra. 5 #66A-34, Bogota, Colombia ] [date=20160412] [country=Colombia] [locality=Bogota] [contact=Alejandro Reyes] [university=Universidad de los Andes]
 NAGAGATAAGGATATCTAGATATCATTGAGCAAATAGATTAACAAGTTCT
 TCTTGTGTAACTTCTTCTTTAACAGCAAGTTCATATAAATGACCAATAAA
 TTCTTCGTCAAATCTATCACCATCAAGAATACTAATTAAAGCGTCTTTAA

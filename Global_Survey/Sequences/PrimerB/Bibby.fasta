@@ -1,4 +1,4 @@
->BibbyS1_20170313_PrimerB [name=BibbyS1_20170313] [date=20170313] [primer=C] [latlon=40.013333,-89.306667] [latitude=40.013333] [longitude=-89.306667] [locality=Mount Pulaski] [country=USA] [note=This location is approximate. The acutal sample site is unknown, but is in Illinois. The location is the geographic center of Illinois]
+>BibbyS1_20170313_PrimerB [name=BibbyS1_20170313] [date=20170313] [primer=C] [latlon=40.013333,-89.306667] [latitude=40.013333] [longitude=-89.306667] [locality=Mount Pulaski] [country=USA] [note=This location is approximate. The acutal sample site is unknown, but is in Illinois. The location is the geographic center of Illinois] [contact=Kyle Bibby] [university=Notre Dame]
 attctagtacaacttatataattacggattagtagtgcgtaattgaatccatctttcaaa
 ccaatcttttctagcagaatgtacagtagtatTaGaatCaaCttGAttAACTaAtttttG
 AaTCTTtCtAAtAttCtCTTtAGttttATCATCaagatttgTaCtAtcaaTAtCAATttC
@@ -21,7 +21,7 @@ TaAaATaAcattAAAAaGCCttcctCcattTtTCTTaAttAAttTCcTaAATTTaACCaA
 aGAaTTTTCCTtGGACCCaTtTAaaAAGTAAAAaAAaAACCCCCCtTttCtTTTtTtaAa
 aAAaTATAaattTaaaTtTttTtaaAtTtAaTTaaTaaaaCCAATtAAtCttCaacatta
 tcttatcaacaaaaccatagctataataccttgaacgtaagggttngtt
->BibbyS3_20170403_PrimerB [name=BibbyS3_20170403] [date=20170403] [primer=B] [latlon=33.5408776,-117.7063134] [latitude=33.5408776] [longitude=-117.7063134] [locality=Laguna Niguel] [country=USA] [address=Regional Treatment Plant, 29201 La Paz Rd, Laguna Niguel, CA 92629]
+>BibbyS3_20170403_PrimerB [name=BibbyS3_20170403] [date=20170403] [primer=B] [latlon=33.5408776,-117.7063134] [latitude=33.5408776] [longitude=-117.7063134] [locality=Laguna Niguel] [country=USA] [address=Regional Treatment Plant, 29201 La Paz Rd, Laguna Niguel, CA 92629] [contact=Kyle Bibby] [university=Notre Dame]
 attttaagaacaacttatataattaaggattagtagtacgtaattgaatccatctttcaa
 accaatcttttctagcagaacgtatagtagtattagaatcaacttgattaactaattttt
 gaatctttctaatattctcttTaGTTTtAtCAtCAAGAttTGTaCtAtCaatAtCAATtt
@@ -45,7 +45,7 @@ AaccattTTAAAAAGaaaaAAaaAaaCCccCTttctttttTTaAAaAaaAAaaAtttaAA
 TttTTtTTTtTAttAaaaAAAaAaGctTTTTTTaAAaaGGGGaAAaAaaAAGTTACgaaT
 aaaaCCAaTTattcttcaacattatcttatcactaaaaccatagtataatctgaagcgta
 gttattacaaaaaagattgtg
->BibbyS4_20170403_PrimerB [name=BibbyS4_20170403] [date=20170403] [primer=B] [latlon=33.552967,-117.7218447] [latitude=33.552967] [longitude=-117.7218447] [locality=Aliso Viejo] [country=USA] [address=Coastal Treatment Plant, 28303 Alicia Pkwy, Laguna Niguel, CA 92677]
+>BibbyS4_20170403_PrimerB [name=BibbyS4_20170403] [date=20170403] [primer=B] [latlon=33.552967,-117.7218447] [latitude=33.552967] [longitude=-117.7218447] [locality=Aliso Viejo] [country=USA] [address=Coastal Treatment Plant, 28303 Alicia Pkwy, Laguna Niguel, CA 92677] [contact=Kyle Bibby] [university=Notre Dame]
 aattttagaacacttatantaattaggattagtagtacgtaattgaatccatctttcaaa
 ccaatcttttctagcagaatgtatagtagtattagaatcaacttgattaactaatttttg
 aatctttctaatattctCtTtAGTTTTatCAtCAAGAtttGtaCTaTCAaTatCAAtTTC
@@ -68,7 +68,7 @@ tAAAAaacaTTCCcCcTTttCTttatAatCcctaATttatTaaAGAtttTTCCTtGACcc
 TttaaaaAGaaAaaAaATCcCCcttttCTTTTtTtaaACaatAAAattTAAaTtTTTATt
 tAAaTTAAAaAaaAGCCCTTTTttTaaaGGGGtataaAAACtaGgGGGaaaaAAaTttTa
 AAAAAaaCAttAtCtTATCaaCAAAAccatagctataatcctggaatggagggnnngtt
->BibbyS5_20170403_PrimerB [name=BibbyS5_20170403] [date=20170403] [primer=B] [latlon=33.4669069,-117.6872511] [latitude=33.4669069] [longitude=-117.6872511] [locality=Dana Point] [country=USA] [address=J. B. Latham Plant, 34156 Del Obispo, Dana Pt., CA 92629]
+>BibbyS5_20170403_PrimerB [name=BibbyS5_20170403] [date=20170403] [primer=B] [latlon=33.4669069,-117.6872511] [latitude=33.4669069] [longitude=-117.6872511] [locality=Dana Point] [country=USA] [address=J. B. Latham Plant, 34156 Del Obispo, Dana Pt., CA 92629] [contact=Kyle Bibby] [university=Notre Dame]
 aattcaggacacttatataaattaggattagtagtacgtaattgaatccatctttcaaac
 caatcttttctagcagaatgtacagtagtattagaatcaacttgattaactAAtttttGA
 aTCtttCtAAtAttCTCtttAGttTtAtcaTCAaGAtttgtactAtCaaTatCAAttTCg
