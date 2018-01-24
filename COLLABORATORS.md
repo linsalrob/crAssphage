@@ -18,6 +18,7 @@ This project would not be successful without our great global collaborators. Thi
 ## [Dutilh lab](http://tbb.bio.uu.nl/dutilh)
 *Who actually did all the bioinformatics!*
   * Bas Dutilh
+  * Patrick de Jonge
 
 > Theoretical Biology and Bioinformatics,
 > Utrecht University,
@@ -193,6 +194,8 @@ Note: No sequences found in Chile
   * Kristen Gulino
   * Alan Twaddle
   * Elodie Ghedin
+  * Jane M. Carlton
+  * Julia Maritz
 
 >Center for Genomics and Systems Biology, Department of Biology, New York University
 >12 Waverly Pl, New York
