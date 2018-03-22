@@ -1,0 +1,44 @@
+BLASTN 2.6.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: ../JQ995537.fna
+           1 sequences; 97,092 total letters
+
+
+
+Query= Lavigne.PrimerB.20160126 [name=Lavigne Primer B 20160126]
+[latitude=50.9598476] [longitude=4.6350655] [date=20160126]
+[country=Belgium]
+
+Length=926
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 88143192
+
+
+  Database: ../JQ995537.fna
+    Posted date:  Aug 20, 2015  11:26 AM
+  Number of letters in database: 97,092
+  Number of sequences in database:  1
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
