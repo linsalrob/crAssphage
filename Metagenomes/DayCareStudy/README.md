@@ -49,9 +49,9 @@ mv gretel/gretel.crumbs gretel/gretel.C.crumbs
 
 This results in the three files:
 
-# gretel_strains_pcrA.fasta
-# gretel_strains_pcrB.fasta
-# gretel_strains_pcrC.fasta
+1. gretel_strains_pcrA.fasta
+2. gretel_strains_pcrB.fasta
+3. gretel_strains_pcrC.fasta
 
 
 
