@@ -1,6 +1,6 @@
 # Day Care Study
 
-We are grateful to Aaron J. Prussin II, Pedro J. Torres, John Shimashita, Steven R. Head, Scott T. Kelley, and Linsey C. Marr for allowing us to include this data prior to publication of their paper.
+We are grateful to Aaron J. Prussin II, Pedro J. Torres, John Shimashita, Steven R. Head, Scott T. Kelley, and Linsey C. Marr for allowing us to include this data prior to publication of their paper, *Seasonal Dynamics of DNA and RNA Viral Bioaerosol Communities in a Daycare Setting* that is in review.
 
 This data comes from their study looking at the microbiome of the built environment, specifically a day care nursery that has a lot of crAssphage flying around!
 
