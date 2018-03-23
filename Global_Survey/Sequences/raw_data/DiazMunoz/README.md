@@ -68,4 +68,4 @@ Index those bam files:
 samtools index nyc_a_remapped.bam
 ```
 
-Finally, we use gretel to identify sequence variants when possible. The gretel code is [described elsewhere](../../../../Metagenomes/IdentifyingStrains/README.md) and we ran that for each of the three isolates.
+We tried to use [gretel](../../../../Metagenomes/IdentifyingStrains/README.md) to identify the strains from the sequences, as we have done with other metagenomes, but unfortunately there is just not enough sequence coverage in these metagenomes to extract meaningful variants from the data.
