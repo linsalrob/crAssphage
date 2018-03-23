@@ -1,0 +1,58 @@
+NOTE: Master Mix Below refers to Apex RED Taq DNA Polymerase Master Mix, 2.0X,  Cat No. 42-138, Genesee Scientific, San Diego CA
+
+Primer sequences:
+Primer A:
+	Fwd: CTGATAGTATGATTGGTAAT
+	Rev: ATAAGTTCTCCAACTATCTT
+
+Primer B:
+	Fwd: CCAGTATCTCCATAAGCATC
+	Rev: GTGAGGGCGGAATAGCTA
+
+Primer C:
+	Fwd: GCAACAGGAGTAGTAAAATCTC
+	Rev: GCTCCTGTTAATCCTGATGTTA
+
+
+
+To prepare the DNA template, we take raw sewage influent (the stuff coming into the sewage plant), centrifuge it briefly to remove the solids, and pass it through a 0.2 or 0.22 µm filter. We just use that in the reaction with no further treatment.
+
+PCR mixture:
+
+Reagent	Volume
+DNA template		7.0 µl
+2x Master Mix		25.0 µl
+Forward primer (10µm)	2.0 µl
+Reverse primer (10µm)	2.0 µl
+DNAse free water 	14.0 µl
+Total volume		50.0 µl
+
+
+
+Amplification protocols:
+
+Primer A:
+Denture 95¼C for 3 minutes.
+
+Then 30 cycles of:
+	Denature 95¼C for 45 seconds
+	Annealing 42.6¼C for 30 seconds
+	Extension 68¼C for 90 seconds
+
+Final extension	68¼C for 5 minutes
+
+
+Primers B & C:
+Denture 95¼C for 3 minutes.
+
+Then 30 cycles of:
+	Denature 95¼C for 45 seconds
+	Annealing 50¼C for 30 seconds
+	Extension 68¼C for 90 seconds
+
+Final extension	68¼C for 5 minutes
+
+
+
+
+

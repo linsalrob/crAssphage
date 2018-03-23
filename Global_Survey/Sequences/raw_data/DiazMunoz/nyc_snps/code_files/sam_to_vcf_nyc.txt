@@ -1,0 +1,30 @@
+#RUN *after* running sam_to_bam.sh on the directory of .sam files
+
+module load samtools/intel/1.2
+module load bcftools/intel/1.2
+
+#First Primer A
+#Create samtools FASTA index
+samtools faidx DiazMunoz_NYC_A.fasta
+#Create pileup
+samtools mpileup -u -f DiazMunoz_NYC_A.fasta nyc_a_very_sensitive.sorted.bam > nyc_a.bcf
+#Call and create VCF
+bcftools call -c -v nyc_a.bcf > nyc_a.vcf
+
+
+#Now Primer B
+#Create samtools FASTA index
+samtools faidx DiazMunoz_NYC_B.fasta
+#Create pileup
+samtools mpileup -u -f DiazMunoz_NYC_B.fasta nyc_b_very_sensitive.sorted.bam > nyc_b.bcf
+#Call and create VCF
+bcftools call -c -v nyc_b.bcf > nyc_b.vcf
+
+
+#Now Primer C
+#Create samtools FASTA index
+samtools faidx DiazMunoz_NYC_C.fasta
+#Create pileup
+samtools mpileup -u -f DiazMunoz_NYC_C.fasta nyc_c_very_sensitive.sorted.bam > nyc_c.bcf
+#Call and create VCF
+bcftools call -c -v nyc_c.bcf > nyc_c.vcf

@@ -1,0 +1,49 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##samtoolsVersion=1.2+htslib-1.2.1
+##samtoolsCommand=samtools mpileup -u -f DiazMunoz_NYC_B.fasta nyc_b_very_sensitive.sorted.bam
+##reference=file://DiazMunoz_NYC_B.fasta
+##contig=<ID=DiazMunoz_NYC_B,length=1156>
+##ALT=<ID=X,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Mann-Whitney U test of Read Position Bias (bigger is better)">
+##INFO=<ID=MQB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality Bias (bigger is better)">
+##INFO=<ID=BQB,Number=1,Type=Float,Description="Mann-Whitney U test of Base Quality Bias (bigger is better)">
+##INFO=<ID=MQSB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality vs Strand Bias (bigger is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AF2,Number=1,Type=Float,Description="Max-likelihood estimate of the first and second group ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##bcftools_callVersion=1.2+htslib-1.2.1
+##bcftools_callCommand=call -c -v nyc_b.bcf
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	nyc_b_very_sensitive.sorted.bam
+DiazMunoz_NYC_B	742	.	C	A	37.0079	.	DP=12;VDB=0.00835905;SGB=-0.556411;RPB=0.913799;MQB=0.444281;BQB=0.94394;MQ0F=0;AF1=0.5;AC1=1;DP4=8,0,4,0;MQ=30;FQ=40.0147;PV4=1,0.355696,1,1	GT:PL	0/1:67,0,104
+DiazMunoz_NYC_B	746	.	T	C	8.64466	.	DP=15;VDB=0.0330887;SGB=-0.511536;RPB=0.809825;MQB=0.846482;BQB=0.0959671;MQ0F=0;AF1=0.49996;AC1=1;DP4=12,0,3,0;MQ=29;FQ=11.3457;PV4=1,1,1,0.358348	GT:PL	0/1:38,0,111
+DiazMunoz_NYC_B	747	.	C	T	27.0155	.	DP=15;VDB=0.00835905;SGB=-0.556411;RPB=0.872525;MQB=0.390772;BQB=0.211556;MQ0F=0;AF1=0.499999;AC1=1;DP4=11,0,4,0;MQ=29;FQ=30.0193;PV4=1,0.130698,1,1	GT:PL	0/1:57,0,113
+DiazMunoz_NYC_B	749	.	A	G	10.42	.	DP=15;VDB=0.00981221;SGB=-0.590765;RPB=0.129785;MQB=0.692463;BQB=0.618783;MQ0F=0;AF1=0.499975;AC1=1;DP4=10,0,5,0;MQ=29;FQ=13.2265;PV4=1,1,1,1	GT:PL	0/1:40,0,105
+DiazMunoz_NYC_B	755	.	T	A	9.52088	.	DP=16;VDB=0.0127498;SGB=-0.556411;RPB=0.166643;MQB=0.293091;BQB=0.77274;MQ0F=0;AF1=0.499969;AC1=1;DP4=11,0,4,0;MQ=29;FQ=12.2797;PV4=1,0.293532,0.0926527,1	GT:PL	0/1:39,0,127
+DiazMunoz_NYC_B	756	.	C	T	9.52088	.	DP=16;VDB=0.01126;SGB=-0.556411;RPB=0.166643;MQB=0.293091;BQB=0.966484;MQ0F=0;AF1=0.499969;AC1=1;DP4=11,0,4,0;MQ=29;FQ=12.2797;PV4=1,0.284118,0.0926527,1	GT:PL	0/1:39,0,127
+DiazMunoz_NYC_B	758	.	T	A	9.52088	.	DP=16;VDB=0.01126;SGB=-0.556411;RPB=0.166643;MQB=0.293091;BQB=0.658617;MQ0F=0;AF1=0.499969;AC1=1;DP4=11,0,4,0;MQ=29;FQ=12.2797;PV4=1,0.256428,0.0926527,1	GT:PL	0/1:39,0,127
+DiazMunoz_NYC_B	765	.	C	T	6.19834	.	DP=20;VDB=0.0681597;SGB=-0.511536;RPB=0.907354;MQB=0.880748;BQB=0.751477;MQ0F=0;AF1=0.499921;AC1=1;DP4=14,0,3,0;MQ=29;FQ=8.65167;PV4=1,1,1,1	GT:PL	0/1:35,0,116
+DiazMunoz_NYC_B	767	.	T	A	6.19834	.	DP=20;VDB=0.074936;SGB=-0.511536;RPB=0.931063;MQB=0.880748;BQB=0.968753;MQ0F=0;AF1=0.499921;AC1=1;DP4=14,0,3,0;MQ=29;FQ=8.65167;PV4=1,1,1,1	GT:PL	0/1:35,0,116
+DiazMunoz_NYC_B	773	.	T	A	14.176	.	DP=25;VDB=0.00835905;SGB=-0.556411;RPB=0.21699;MQB=0.668378;MQSB=1;BQB=0.126994;MQ0F=0;AF1=0.49999;AC1=1;DP4=15,1,4,0;MQ=30;FQ=17.1004;PV4=1,0.0751192,1,1	GT:PL	0/1:44,0,156
+DiazMunoz_NYC_B	816	.	T	A	3.5427	.	DP=12;VDB=0.02;SGB=-0.453602;RPB=0.4;MQB=0.4;MQSB=0.4;BQB=0.6;MQ0F=0;AF1=0.499801;AC1=1;DP4=3,2,2,0;MQ=34;FQ=5.46595;PV4=1,1,0.113167,0.0583466	GT:PL	0/1:31,0,126
+DiazMunoz_NYC_B	903	.	G	A	26.0177	.	DP=5;VDB=0.0221621;SGB=-0.511536;RPB=0;MQB=0;MQSB=1;BQB=0.666667;MQ0F=0;AF1=0.499999;AC1=1;DP4=1,1,0,3;MQ=34;FQ=28.5062;PV4=0.4,0.247513,0,1	GT:PL	0/1:56,0,65
+DiazMunoz_NYC_B	905	.	C	T	35.0083	.	DP=5;VDB=0.32;SGB=-0.453602;RPB=0;MQB=0;MQSB=1;BQB=0.666667;MQ0F=0;AF1=0.500001;AC1=1;DP4=0,3,1,1;MQ=34;FQ=28.5062;PV4=0.4,1,1,0.0960628	GT:PL	0/1:65,0,56
+DiazMunoz_NYC_B	926	.	C	T	104.008	.	DP=10;VDB=0.816179;SGB=-0.651104;RPB=0;MQB=0.5625;MQSB=0.125;BQB=0.375;MQ0F=0;AF1=0.500063;AC1=1;DP4=1,1,1,7;MQ=31;FQ=9.5281;PV4=0.377778,1,0.222125,1	GT:PL	0/1:134,0,36
+DiazMunoz_NYC_B	927	.	G	A	4.76875	.	DP=10;VDB=0.0221621;SGB=-0.511536;RPB=0.916482;MQB=0.0916482;MQSB=0.125;BQB=0.916482;MQ0F=0;AF1=0.499875;AC1=1;DP4=2,5,0,3;MQ=31;FQ=6.98503;PV4=1,1,0.0250443,1	GT:PL	0/1:33,0,135
+DiazMunoz_NYC_B	937	.	T	C	11.3381	.	DP=7;VDB=0.0221621;SGB=-0.511536;RPB=0.607698;MQB=0.202566;MQSB=0.2;BQB=0.810265;MQ0F=0;AF1=0.49998;AC1=1;DP4=2,2,0,3;MQ=33;FQ=14.1838;PV4=0.428571,1,0.007974,1	GT:PL	0/1:41,0,109
+DiazMunoz_NYC_B	998	.	T	C	144.032	.	DP=10;VDB=0.000149869;SGB=-0.651104;MQSB=0.25;MQ0F=0;AF1=1;AC1=2;DP4=0,0,2,6;MQ=32;FQ=-50.986	GT:PL	1/1:177,24,0
