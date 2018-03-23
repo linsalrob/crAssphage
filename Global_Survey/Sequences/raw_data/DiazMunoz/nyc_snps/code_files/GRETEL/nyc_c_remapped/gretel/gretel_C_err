@@ -1,0 +1,38 @@
+[219]
+[200]
+[197]
+[196]
+[144]
+[137]
+[134]
+[133]
+[131]
+[111]
+[99]
+[98]
+[93]
+[67]
+[65]
+[63]
+[61]
+[60]
+[57]
+[56]
+[55]
+[45]
+[43]
+[42]
+[39]
+[34]
+[20]
+[18]
+[10]
+[1]
+[None]
+[NOTE] Setting Gretel.L to 11
+*** ESTABLISH ***
+[FAIL] Unable to select next branch from 7 to 8
+/usr/lib64/python2.7/site-packages/numpy/core/_methods.py:59: RuntimeWarning: Mean of empty slice.
+  warnings.warn("Mean of empty slice.", RuntimeWarning)
+/usr/lib64/python2.7/site-packages/numpy/core/_methods.py:71: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
