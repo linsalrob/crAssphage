@@ -26,7 +26,7 @@ Hello, these are the sequences Karla Mazankova just finished; some additional po
 
 # Data
 
-These data are in the repository currently as [Cinek_Africa_Asia.fasta](../../../PrimerA/Cinek_Africa_Asia.fasta), [Cinek_Africa_Asia.fasta](../../../PrimerB/Cinek_Africa_Asia.fasta), and [Cinek_Africa_Asia.fasta](../../../PrimerC/Cinek_Africa_Asia.fasta),   
+These data are in the repository currently as Cinek_Africa_Asia.primerA.fasta, Cinek_Africa_Asia.primerB.fasta, and Cinek_Africa_Asia.primerC.fasta.
 
 The data were not processed any further other than the three fasta alignment files mentioned in (a) above.
 
