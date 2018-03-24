@@ -9,7 +9,7 @@ We are looking forward to your answer.
 
 # Sequences
 
-These sequences are included in [CZ_A.20151201.fasta](../../../PrimerA/CZ_A.20151201.fasta),  [CZ_B.20151201.fasta](../../../PrimerB/CZ_B.20151201.fasta), and [CZ_C.20151201.fasta](../../../PrimerC/CZ_C.20151201.fasta) 
+These sequences are included in Cinek_Czech_sewage_primerA.fasta, Cinek_Czech_sewage_primerB.fasta, and Cinek_Czech_sewage_primerC.fasta
 
 # Short sequences
 
