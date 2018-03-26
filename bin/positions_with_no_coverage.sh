@@ -12,9 +12,9 @@ B=$(samtools depth -a -r "JQ995537:33708-35062" $1  | grep -e '\s0$' | wc -l);
 C=$(samtools depth -a -r "JQ995537:43819-45057" $1  | grep -e '\s0$' | wc -l);
 
 
-Aav=$(samtools depth -a -r "JQ995537:25633-26964" $1  | awk '{s+=$3}END{print "Average:",s/NR}')
-Bav=$(samtools depth -a -r "JQ995537:33708-35062" $1  | awk '{s+=$3}END{print "Average:",s/NR}')
-Cav=$(samtools depth -a -r "JQ995537:43819-45057" $1  | awk '{s+=$3}END{print "Average:",s/NR}')
+Aav=$(samtools depth -a -r "JQ995537:25633-26964" $1  | awk '{s+=$3}END{print s/NR}')
+Bav=$(samtools depth -a -r "JQ995537:33708-35062" $1  | awk '{s+=$3}END{print s/NR}')
+Cav=$(samtools depth -a -r "JQ995537:43819-45057" $1  | awk '{s+=$3}END{print s/NR}')
 
 
 
