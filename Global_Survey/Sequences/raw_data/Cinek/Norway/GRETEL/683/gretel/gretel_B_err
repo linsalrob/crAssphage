@@ -1,0 +1,22 @@
+[133]
+[130]
+[118]
+[116]
+[115]
+[109]
+[108]
+[102]
+[95]
+[74]
+[63]
+[59]
+[55]
+Process Process-1:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/usr/lib64/python2.7/multiprocessing/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python2.7/site-packages/gretel/util.py", line 238, in bam_worker
+    hansel[__symbol_num(snp_a), __symbol_num(snp_b), i+rank+1, j+rank+1] += 1
+IndexError: index 48 is out of bounds for axis 3 with size 48

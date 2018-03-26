@@ -1,0 +1,11 @@
+[None]
+Traceback (most recent call last):
+  File "/usr/bin/gretel", line 11, in <module>
+    sys.exit(main())
+  File "/usr/lib/python2.7/site-packages/gretel/cmd.py", line 30, in main
+    BAM_h = gretel.process_bam(VCF_h, ARGS.bam, ARGS.contig, ARGS.start, ARGS.end, ARGS.lorder, ARGS.sentinels, ARGS.threads)
+  File "/usr/lib/python2.7/site-packages/gretel/gretel.py", line 179, in process_bam
+    meta = util.load_from_bam(bam_path, contig_name, start_pos, end_pos, vcf_handler, use_end_sentinels, n_threads)
+  File "/usr/lib/python2.7/site-packages/gretel/util.py", line 285, in load_from_bam
+    meta["L"] = int(ceil(float(total_covered_snps.value)/n_reads.value))
+ZeroDivisionError: float division by zero

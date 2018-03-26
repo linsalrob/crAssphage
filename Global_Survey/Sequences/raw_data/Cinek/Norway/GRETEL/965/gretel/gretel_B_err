@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/usr/bin/gretel", line 11, in <module>
+    sys.exit(main())
+  File "/usr/lib/python2.7/site-packages/gretel/cmd.py", line 29, in main
+    VCF_h = gretel.process_vcf(ARGS.vcf, ARGS.contig, ARGS.start, ARGS.end)
+  File "/usr/lib/python2.7/site-packages/gretel/gretel.py", line 102, in process_vcf
+    vcf_records = vcf.Reader(open(vcf_path))
+  File "/usr/lib/python2.7/site-packages/vcf/parser.py", line 300, in __init__
+    self._parse_metainfo()
+  File "/usr/lib/python2.7/site-packages/vcf/parser.py", line 350, in _parse_metainfo
+    line = next(self.reader)
+StopIteration
