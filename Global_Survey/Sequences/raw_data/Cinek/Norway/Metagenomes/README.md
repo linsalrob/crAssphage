@@ -13,8 +13,6 @@ This is from a limited set of viromes of children longitudinally followed for th
 And - thanks to the efforts of our kind collaborators from Nigeria and Jordan - we have some 50 samples from these non-Europoid populations sitting in our freezers. Will try soon whether there is any CrAssphage.
 
 
-
-
 individual ID code | sex | date of birth | date of sample | age at sample yrs | bin_id | crassph reads per 100,000 | sample | sample_processing
 --- | --- | --- | --- | --- | --- | --- | --- | ---
 2848 | F | 10/10/02 | 10/04/03 | 0.50 | 110 | 25643 | 683 | filtering + pelleting + enzymes
@@ -29,4 +27,18 @@ individual ID code | sex | date of birth | date of sample | age at sample yrs | 
 20685 | F | 19/01/06 | 29/07/07 | 1.52 | 163 | 721 | 17467 | only filtering
 20685 | F | 19/01/06 | 29/07/07 | 1.52 | 183 | 3497 | 17467 | filtering + pelleting + enzymes
 20685 | F | 19/01/06 | 30/09/07 | 1.69 | 184 | 207 | 18603 | filtering + pelleting + enzymes
+
+
+
+Email from 12/15/17
+
+
+We have discussed the disappeared set of Norwegian samples - it seemed that these data have been filtered out at some point of the protocol. We have therefore manually curated all electrophoreograms, and now I am attaching a final set of fasta sequences that belong the the A, B and C amplicons of CrAssphage from Norway. I hope these are of better quality, and will not succumb to filtering :-)
+
+There are some deletions in the B or C amplicons, and also a short run of Ns in several of the A amplicons (suspicious of an inversion). All have been checked manually, and yes, they are really there; probably dual infections, cannot be resolved without NGS or subcloning.  
+
+All samples are anonymous stool specimens. We tested testing of ~180 stools from healthy children aged 3-36 months, and got these positivities. If you need GPS co-ordinates, please enter those of Oslo.
+
+These samples are included in norwegian_sanger_sequencing_crass_A_B_C.fasta
+
 
