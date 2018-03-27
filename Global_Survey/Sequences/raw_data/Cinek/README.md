@@ -16,4 +16,4 @@ These samples are included in the SRA analysis from project PRJNA275568.
 
 ### [Norway](Norway)
 
-These samples were analyzed using our metagenome pipeline and included as amplicons.
+There are two different samples here, [amplicon](Norway/Amplicon) data setst that were included in our regular pipeline, and [metagenome](Norway/Metagenome) data sets that were analysed with our regular [strain identification pipeline](https://github.com/linsalrob/crAssphage/tree/master/Metagenomes/IdentifyingStrains)
