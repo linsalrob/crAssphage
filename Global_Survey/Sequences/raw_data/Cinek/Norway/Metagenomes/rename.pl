@@ -17,7 +17,7 @@ my $count=0;
 foreach my $sample (grep {$_ !~ /^\./} readdir(DIR)) {
 	unless ($data{$sample}) {print STDERR "No metadata for $sample\n"; next}
 	foreach my $primer (qw[A B C]) {
-		open(PCR, ">>pcr$primer.fasta") || die "can't append to pcr$primer.fasta";
+		open(PCR, ">>Cinek_Norway_MG_$primer.fasta") || die "can't append to Cinek_Norway_MG_$primer.fasta";
 		if (-e "GRETEL/$sample/gretel/pcr$primer.fasta") {
 			open(FA, "GRETEL/$sample/gretel/pcr$primer.fasta") || die "$! GRETEL/$sample/gretel/pcr$primer.fasta";
 			while (<FA>) {
