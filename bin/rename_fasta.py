@@ -77,7 +77,20 @@ def rename(fafile, idmapfile, outputfa, labels):
                     fatal_error = True
 
 
-                if 'date' in l:
+                if '[sample_date' in l:
+                    m = re.search('\[sample_date=(.*?)\]', l)
+                    if not m:
+                        sys.stderr.write("Even though its there, can't parse sample_date in {}\n".format(l))
+                        fatal_error = True
+                    dt = m.groups()[0]
+                    if re.search('\D', dt):
+                        sys.stderr.write("WARNING: the sample_date in {} has non-digit entries\n".format(l))
+                        dt = re.sub('\D', '', dt)
+                    if not re.match('\d{8}', dt):
+                        sys.stderr.write("WARNING the sample_date in {} is not correct\n".format(l))
+                        while not re.match('\d{8}', dt):
+                            dt += '0'
+                elif '[date' in l:
                     m = re.search('\[date=(.*?)\]', l)
                     if not m:
                         sys.stderr.write("Even though its there, can't parse date in {}\n".format(l))
