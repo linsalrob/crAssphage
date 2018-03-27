@@ -80,7 +80,7 @@ def rename(fafile, idmapfile, outputfa, labels):
                 if 'date' in l:
                     m = re.search('\[date=(.*?)\]', l)
                     if not m:
-                        sys.stderr.write("Even though its there, can't parse country in {}\n".format(l))
+                        sys.stderr.write("Even though its there, can't parse date in {}\n".format(l))
                         fatal_error = True
                     dt = m.groups()[0]
                     if re.search('\D', dt):
