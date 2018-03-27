@@ -97,7 +97,7 @@ def rename(fafile, idmapfile, outputfa, labels):
                         if t in l:
                             m = re.search('\[{}=(.*?)\]'.format(t), l)
                             if not m:
-                                sys.stderr.write("Even though its there, can't parse country in {}\n".format(l))
+                                sys.stderr.write("Even though its there, can't parse {} in {}\n".format(t, l))
                                 fatal_error = True
                             tags[t] = stripout(m.groups()[0])
                         else:
