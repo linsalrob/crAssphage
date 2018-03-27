@@ -2,817 +2,885 @@ IQ-TREE multicore version 1.5.5 for Linux 64-bit built Jun  2 2017
 Copyright (c) 2011-2017 by Bui Quang Minh, Nguyen Lam Tung,
 Olga Chernomor, Heiko Schmidt, and Arndt von Haeseler.
 
-Host:    Galago (AVX2, FMA3, 15 GB RAM)
+Host:    rambox (SSE4.2, 189 GB RAM)
 Command: iq-tree -nt AUTO -s seqs.B.rc.trim.aln
-Seed:    704303 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Sat Nov 25 14:12:11 2017
-Kernel:  AVX+FMA - auto-detect threads (8 CPU cores detected)
+Seed:    846613 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Mar 27 15:35:45 2018
+Kernel:  SSE2 - auto-detect threads (24 CPU cores detected)
 
 Reading alignment file seqs.B.rc.trim.aln ... Fasta format detected
 Alignment most likely contains DNA/RNA sequences
-Alignment has 144 sequences with 976 columns and 769 patterns (420 informative sites, 321 constant sites)
+Alignment has 162 sequences with 1074 columns and 975 patterns (659 informative sites, 123 constant sites)
 WARNING: Some sequence names are changed as follows:
-Escondido|20160901|USA|1 -> Escondido_20160901_USA_1
-Carlsbad|20160901|USA|1 -> Carlsbad_20160901_USA_1
-Encinitas|20160901|USA|1 -> Encinitas_20160901_USA_1
-Carlsbad|20160718|USA|1 -> Carlsbad_20160718_USA_1
-Carlsbad|20160815|USA|1 -> Carlsbad_20160815_USA_1
-Carlsbad|20160901|USA|2 -> Carlsbad_20160901_USA_2
-Encinitas|20160601|USA|1 -> Encinitas_20160601_USA_1
-Zerdab|20060505|Azerbaijan|1 -> Zerdab_20060505_Azerbaijan_1
 Carlsbad|20160601|USA|1 -> Carlsbad_20160601_USA_1
-Tampere|20151120|Finland|1 -> Tampere_20151120_Finland_1
-Escondido|20160601|USA|1 -> Escondido_20160601_USA_1
-Carlsbad|20160915|USA|1 -> Carlsbad_20160915_USA_1
-Waianae|20161212|USA|1 -> Waianae_20161212_USA_1
-Carlsbad|20160725|USA|1 -> Carlsbad_20160725_USA_1
-Carlsbad|20160908|USA|1 -> Carlsbad_20160908_USA_1
-Carlsbad|20160101|USA|1 -> Carlsbad_20160101_USA_1
-Escondido|20161101|USA|1 -> Escondido_20161101_USA_1
-Baki|20170421|Azerbaijan|1 -> Baki_20170421_Azerbaijan_1
+Vysni_Lhoty|20151201|Czech_Republic|1 -> Vysni_Lhoty_20151201_Czech_Republic_1
+Lisboa|20160225|Portugal|3 -> Lisboa_20160225_Portugal_3
+San_Marcos|20151026|USA|1 -> San_Marcos_20151026_USA_1
+Escondido|20160901|USA|1 -> Escondido_20160901_USA_1
+Rybienko_Stare|20160303|Poland|4 -> Rybienko_Stare_20160303_Poland_4
+North_Kurdufan|00000000|Sudan|4 -> North_Kurdufan_00000000_Sudan_4
+Amman|20170421|Jordan|1 -> Amman_20170421_Jordan_1
+Zerdab|19990507|Azerbaijan|1 -> Zerdab_19990507_Azerbaijan_1
+Zerdab|20060505|Azerbaijan|1 -> Zerdab_20060505_Azerbaijan_1
+Usti_nad_Labem|20151201|Czech_Republic|1 -> Usti_nad_Labem_20151201_Czech_Republic_1
 Encinitas|20160101|USA|1 -> Encinitas_20160101_USA_1
-Amman|20170421|Jordan|2 -> Amman_20170421_Jordan_2
-Khartoum|20170421|Sudan|1 -> Khartoum_20170421_Sudan_1
-AlJafr|20050402|Jordan|1 -> AlJafr_20050402_Jordan_1
-Lisboa|20160225|Portugal|1 -> Lisboa_20160225_Portugal_1
+Greymouth|20160317|New_Zealand|1 -> Greymouth_20160317_New_Zealand_1
+Oswiecim|20160126|Poland|1 -> Oswiecim_20160126_Poland_1
+Escondido|20160601|USA|1 -> Escondido_20160601_USA_1
+Khartoum|20160305|Sudan|1 -> Khartoum_20160305_Sudan_1
+Zastavka|20151201|Czech_Republic|3 -> Zastavka_20151201_Czech_Republic_3
+Encinitas|20160301|USA|1 -> Encinitas_20160301_USA_1
+Waianae|20161212|USA|1 -> Waianae_20161212_USA_1
+Carlsbad|20160908|USA|1 -> Carlsbad_20160908_USA_1
+Baki|20170421|Azerbaijan|3 -> Baki_20170421_Azerbaijan_3
+Khartoum|20160302|Sudan|1 -> Khartoum_20160302_Sudan_1
+Gava|20131101|Spain|1 -> Gava_20131101_Spain_1
+Ceske_Budejovice|20151201|Czech_Republic|2 -> Ceske_Budejovice_20151201_Czech_Republic_2
+Oslo|20060129|Norway|2 -> Oslo_20060129_Norway_2
+Amman|20170421|Jordan|5 -> Amman_20170421_Jordan_5
+Gava|20151001|Spain|3 -> Gava_20151001_Spain_3
+Southbank|20170824|Australia|1 -> Southbank_20170824_Australia_1
+Novosibirskiy_rayon|20160301|Russia|1 -> Novosibirskiy_rayon_20160301_Russia_1
+Oslo|20070729|Norway|2 -> Oslo_20070729_Norway_2
+Escondido|20160101|USA|1 -> Escondido_20160101_USA_1
+Mount_Pulaski|20170313|USA|1 -> Mount_Pulaski_20170313_USA_1
+Pilsen|20151201|Czech_Republic|3 -> Pilsen_20151201_Czech_Republic_3
+Jericho|20151202|Israel|1 -> Jericho_20151202_Israel_1
 Honolulu|20161212|USA|1 -> Honolulu_20161212_USA_1
 San_Marcos|20160101|USA|1 -> San_Marcos_20160101_USA_1
-Zerdab|20031114|Azerbaijan|1 -> Zerdab_20031114_Azerbaijan_1
-Zerdab|20050412|Azerbaijan|1 -> Zerdab_20050412_Azerbaijan_1
-Pilsen|20151201|Czech_Republic|3 -> Pilsen_20151201_Czech_Republic_3
-North_Kurdufan|00000000|Sudan|2 -> North_Kurdufan_00000000_Sudan_2
-Rybienko_Stare|20160126|Poland|1 -> Rybienko_Stare_20160126_Poland_1
-Rybienko_Stare|20160303|Poland|1 -> Rybienko_Stare_20160303_Poland_1
-Zerdab|20030629|Azerbaijan|1 -> Zerdab_20030629_Azerbaijan_1
-Marseille|20151217|France|1 -> Marseille_20151217_France_1
-North_Kurdufan|00000000|Sudan|4 -> North_Kurdufan_00000000_Sudan_4
-Buenos_Aires|20160414|Argentina|1 -> Buenos_Aires_20160414_Argentina_1
-Novosibirskiy_rayon|20160301|Russia|1 -> Novosibirskiy_rayon_20160301_Russia_1
-Wamba|20010901|Nigeria|1 -> Wamba_20010901_Nigeria_1
-Rybienko_Stare|20160126|Poland|4 -> Rybienko_Stare_20160126_Poland_4
-Rybienko_Stare|20160303|Poland|4 -> Rybienko_Stare_20160303_Poland_4
-Lodz|20160303|Poland|4 -> Lodz_20160303_Poland_4
-Oswiecim|20160126|Poland|1 -> Oswiecim_20160126_Poland_1
-Oswiecim|20160303|Poland|1 -> Oswiecim_20160303_Poland_1
-San_Marcos|20160901|USA|1 -> San_Marcos_20160901_USA_1
-Tampere|20151120|Finland|4 -> Tampere_20151120_Finland_4
-Baki|20170421|Azerbaijan|3 -> Baki_20170421_Azerbaijan_3
-Baki|20170421|Azerbaijan|2 -> Baki_20170421_Azerbaijan_2
-Bogota|20160412|Colombia|1 -> Bogota_20160412_Colombia_1
-Oswiecim|20160126|Poland|3 -> Oswiecim_20160126_Poland_3
-Oswiecim|20160303|Poland|4 -> Oswiecim_20160303_Poland_4
-Oswiecim|20160126|Poland|4 -> Oswiecim_20160126_Poland_4
-Oswiecim|20160303|Poland|5 -> Oswiecim_20160303_Poland_5
-Rybienko_Stare|20160126|Poland|3 -> Rybienko_Stare_20160126_Poland_3
-Rybienko_Stare|20160303|Poland|3 -> Rybienko_Stare_20160303_Poland_3
-Escondido|20151209|USA|1 -> Escondido_20151209_USA_1
-Apeldoorn|20151106|The_The_Netherlands|1 -> Apeldoorn_20151106_The_The_Netherlands_1
-Oswiecim|20160126|Poland|2 -> Oswiecim_20160126_Poland_2
-Oswiecim|20160303|Poland|3 -> Oswiecim_20160303_Poland_3
-Lodz|20160126|Poland|1 -> Lodz_20160126_Poland_1
-Lodz|20160303|Poland|2 -> Lodz_20160303_Poland_2
-Lodz|20160303|Poland|1 -> Lodz_20160303_Poland_1
-St_Louis|20140724|crAssphage_B|1 -> St_Louis_20140724_crAssphage_B_1
-Usti_nad_Labem|20151201|Czech_Republic|1 -> Usti_nad_Labem_20151201_Czech_Republic_1
-Escondido|20160101|USA|1 -> Escondido_20160101_USA_1
-Salfit|20151202|Israel|1 -> Salfit_20151202_Israel_1
-Warszawa|20160126|Poland|1 -> Warszawa_20160126_Poland_1
-Warszawa|20160126|Poland|2 -> Warszawa_20160126_Poland_2
-Warszawa|20160126|Poland|3 -> Warszawa_20160126_Poland_3
-Barcelona|20150501|Spain|1 -> Barcelona_20150501_Spain_1
-Oswiecim|20160303|Poland|2 -> Oswiecim_20160303_Poland_2
-Encinitas|20161101|USA|1 -> Encinitas_20161101_USA_1
+Gava|20140501|Spain|1 -> Gava_20140501_Spain_1
+Encinitas|20160901|USA|1 -> Encinitas_20160901_USA_1
+Carlsbad|20160901|USA|2 -> Carlsbad_20160901_USA_2
+Oslo|20060206|Norway|1 -> Oslo_20060206_Norway_1
+Oslo|20060505|Norway|1 -> Oslo_20060505_Norway_1
+AlJafr|20050402|Jordan|1 -> AlJafr_20050402_Jordan_1
 AlJafr|20020904|Jordan|1 -> AlJafr_20020904_Jordan_1
-Rybienko_Stare|20160126|Poland|2 -> Rybienko_Stare_20160126_Poland_2
-Rybienko_Stare|20160303|Poland|2 -> Rybienko_Stare_20160303_Poland_2
-Lodz|20160303|Poland|3 -> Lodz_20160303_Poland_3
-Lodz|20160303|Poland|5 -> Lodz_20160303_Poland_5
-Novosibirskiy_rayon|20160301|Russia|2 -> Novosibirskiy_rayon_20160301_Russia_2
-Engelsskiy_rayon|20160301|Russia|1 -> Engelsskiy_rayon_20160301_Russia_1
-Warszawa|20160126|Poland|4 -> Warszawa_20160126_Poland_4
-Cork|20151215|Ireland|1 -> Cork_20151215_Ireland_1
-San_Marcos|20160301|USA|1 -> San_Marcos_20160301_USA_1
-San_Marcos|20161101|USA|1 -> San_Marcos_20161101_USA_1
-Zerdab|20031229|Azerbaijan|1 -> Zerdab_20031229_Azerbaijan_1
-Pakenham|20161213|Australia|1 -> Pakenham_20161213_Australia_1
-Southbank|20170824|Australia|1 -> Southbank_20170824_Australia_1
-Laguna_Niguel|20170403|USA|1 -> Laguna_Niguel_20170403_USA_1
-Encinitas|20151026|USA|1 -> Encinitas_20151026_USA_1
-Mount_Pulaski|20170313|USA|1 -> Mount_Pulaski_20170313_USA_1
-Rybienko_Stare|20160126|Poland|5 -> Rybienko_Stare_20160126_Poland_5
-Rybienko_Stare|20160303|Poland|5 -> Rybienko_Stare_20160303_Poland_5
+Amman|20170421|Jordan|3 -> Amman_20170421_Jordan_3
+Amman|20170421|Jordan|2 -> Amman_20170421_Jordan_2
 Aliso_Viejo|20170403|USA|1 -> Aliso_Viejo_20170403_USA_1
-Novosibirskiy_rayon|20160301|Russia|3 -> Novosibirskiy_rayon_20160301_Russia_3
-Encinitas|20160301|USA|1 -> Encinitas_20160301_USA_1
-Carlsbad|20151012|USA|1 -> Carlsbad_20151012_USA_1
-Dana_Point|20170403|USA|1 -> Dana_Point_20170403_USA_1
-Mascot|20170816|Australia|1 -> Mascot_20170816_Australia_1
-Escondido|20151026|USA|1 -> Escondido_20151026_USA_1
-San_Marcos|20151026|USA|1 -> San_Marcos_20151026_USA_1
-Escondido|20160301|USA|1 -> Escondido_20160301_USA_1
-Carlsbad|20160301|USA|1 -> Carlsbad_20160301_USA_1
+Oslo|20050926|Norway|2 -> Oslo_20050926_Norway_2
+Oswiecim|20160303|Poland|3 -> Oswiecim_20160303_Poland_3
+Marseille|20151217|France|1 -> Marseille_20151217_France_1
+Oslo|20050630|Norway|1 -> Oslo_20050630_Norway_1
+Sherbakulskiy_rayon|20160301|Russia|1 -> Sherbakulskiy_rayon_20160301_Russia_1
+Davis|20160421|United_States|1 -> Davis_20160421_United_States_1
 Qalqilya|20151202|Israel|1 -> Qalqilya_20151202_Israel_1
 Pinkenba|20170822|Australia|1 -> Pinkenba_20170822_Australia_1
-North_Fremantle|20170816|Australia|1 -> North_Fremantle_20170816_Australia_1
-Zerdab|19990507|Azerbaijan|1 -> Zerdab_19990507_Azerbaijan_1
-Amman|20170421|Jordan|5 -> Amman_20170421_Jordan_5
-Sherbakulskiy_rayon|20160301|Russia|1 -> Sherbakulskiy_rayon_20160301_Russia_1
-Zerdab|20050203|Azerbaijan|1 -> Zerdab_20050203_Azerbaijan_1
-North_Kurdufan|00000000|Sudan|1 -> North_Kurdufan_00000000_Sudan_1
-Khartoum|20170421|Sudan|5 -> Khartoum_20170421_Sudan_5
-Khartoum|20170421|Sudan|3 -> Khartoum_20170421_Sudan_3
-Khartoum|20170421|Sudan|2 -> Khartoum_20170421_Sudan_2
-Khartoum|20170421|Sudan|6 -> Khartoum_20170421_Sudan_6
-Amman|20170421|Jordan|1 -> Amman_20170421_Jordan_1
-AlJafr|20070813|Jordan|1 -> AlJafr_20070813_Jordan_1
-Amman|20170421|Jordan|3 -> Amman_20170421_Jordan_3
-Carlsbad|20161101|USA|1 -> Carlsbad_20161101_USA_1
-Khartoum|20170421|Sudan|7 -> Khartoum_20170421_Sudan_7
-North_Kurdufan|00000000|Sudan|3 -> North_Kurdufan_00000000_Sudan_3
-Dunedin|20160317|New_Zealand|1 -> Dunedin_20160317_New_Zealand_1
-Pilsen|20151201|Czech_Republic|1 -> Pilsen_20151201_Czech_Republic_1
-Ramallah|20151202|Israel|1 -> Ramallah_20151202_Israel_1
-Jericho|20151202|Israel|1 -> Jericho_20151202_Israel_1
-Greymouth|20160317|New_Zealand|1 -> Greymouth_20160317_New_Zealand_1
-Zastavka|20151201|Czech_Republic|3 -> Zastavka_20151201_Czech_Republic_3
-Ceske_Budejovice|20151201|Czech_Republic|2 -> Ceske_Budejovice_20151201_Czech_Republic_2
-Zastavka|20151201|Czech_Republic|1 -> Zastavka_20151201_Czech_Republic_1
-Prague|20151201|Czech_Republic|1 -> Prague_20151201_Czech_Republic_1
-Davis|20160421|USA|2 -> Davis_20160421_USA_2
-Davis|20160421|USA|1 -> Davis_20160421_USA_1
-New_York|20141214|USA|1 -> New_York_20141214_USA_1
-Vysni_Lhoty|20151201|Czech_Republic|1 -> Vysni_Lhoty_20151201_Czech_Republic_1
-Ostrava|20151201|Czech_Republic|1 -> Ostrava_20151201_Czech_Republic_1
-Gava|20140601|Spain|1 -> Gava_20140601_Spain_1
-Gava|20151001|Spain|3 -> Gava_20151001_Spain_3
-Gava|20151001|Spain|1 -> Gava_20151001_Spain_1
 Gava|20151001|Spain|2 -> Gava_20151001_Spain_2
-Gava|20140101|Spain|1 -> Gava_20140101_Spain_1
-Gava|20131101|Spain|1 -> Gava_20131101_Spain_1
-El_Prat_de_Llobregat|20140501|Spain|1 -> El_Prat_de_Llobregat_20140501_Spain_1
-El_Prat_de_Llobregat|20140101|Spain|1 -> El_Prat_de_Llobregat_20140101_Spain_1
-Gava|20140501|Spain|1 -> Gava_20140501_Spain_1
-Zastavka|20151201|Czech_Republic|2 -> Zastavka_20151201_Czech_Republic_2
-Pilsen|20151201|Czech_Republic|2 -> Pilsen_20151201_Czech_Republic_2
-Modfice|20151201|Czech_Republic|1 -> Modfice_20151201_Czech_Republic_1
+Carlsbad|20151012|USA|1 -> Carlsbad_20151012_USA_1
+San_Miguel_de_Tucuman|20160414|Argentina|3 -> San_Miguel_de_Tucuman_20160414_Argentina_3
+Salfit|20151202|Israel|1 -> Salfit_20151202_Israel_1
+Carlsbad|20160915|USA|1 -> Carlsbad_20160915_USA_1
+Encinitas|20161101|USA|1 -> Encinitas_20161101_USA_1
+New_York|20141214|United_States|1 -> New_York_20141214_United_States_1
+San_Miguel_de_Tucuman|20160414|Argentina|2 -> San_Miguel_de_Tucuman_20160414_Argentina_2
+Encinitas|20160601|USA|1 -> Encinitas_20160601_USA_1
+Lodz|20160303|Poland|3 -> Lodz_20160303_Poland_3
+Rybienko_Stare|20160126|Poland|5 -> Rybienko_Stare_20160126_Poland_5
+Zastavka|20151201|Czech_Republic|1 -> Zastavka_20151201_Czech_Republic_1
+Dunedin|20160317|New_Zealand|1 -> Dunedin_20160317_New_Zealand_1
+Escondido|20160301|USA|1 -> Escondido_20160301_USA_1
+Barcelona|20150501|Spain|1 -> Barcelona_20150501_Spain_1
+Laguna_Niguel|20170403|USA|1 -> Laguna_Niguel_20170403_USA_1
+Rybienko_Stare|20160126|Poland|3 -> Rybienko_Stare_20160126_Poland_3
+Baki|20170421|Azerbaijan|2 -> Baki_20170421_Azerbaijan_2
+Zerdab|20050412|Azerbaijan|1 -> Zerdab_20050412_Azerbaijan_1
+North_Kurdufan|00000000|Sudan|3 -> North_Kurdufan_00000000_Sudan_3
+Carlsbad|20160815|USA|1 -> Carlsbad_20160815_USA_1
+Apeldoorn|20151106|The_Netherlands|1 -> Apeldoorn_20151106_The_Netherlands_1
+Gava|20140601|Spain|1 -> Gava_20140601_Spain_1
+Rybienko_Stare|20160303|Poland|1 -> Rybienko_Stare_20160303_Poland_1
+Davis|20160421|United_States|2 -> Davis_20160421_United_States_2
+Novosibirskiy_rayon|20160301|Russia|2 -> Novosibirskiy_rayon_20160301_Russia_2
+Khartoum|20160311|Sudan|1 -> Khartoum_20160311_Sudan_1
+Zerdab|20031229|Azerbaijan|1 -> Zerdab_20031229_Azerbaijan_1
+Oswiecim|20160126|Poland|3 -> Oswiecim_20160126_Poland_3
+St_Louis|20140724|crAssphage_B|1 -> St_Louis_20140724_crAssphage_B_1
+San_Marcos|20161101|USA|1 -> San_Marcos_20161101_USA_1
+Lodz|20160303|Poland|1 -> Lodz_20160303_Poland_1
+Carlsbad|20160901|USA|1 -> Carlsbad_20160901_USA_1
+Rybienko_Stare|20160126|Poland|4 -> Rybienko_Stare_20160126_Poland_4
 Ceske_Budejovice|20151201|Czech_Republic|1 -> Ceske_Budejovice_20151201_Czech_Republic_1
+Ramallah|20151202|Israel|1 -> Ramallah_20151202_Israel_1
+Oslo|20060129|Norway|1 -> Oslo_20060129_Norway_1
+Rybienko_Stare|20160303|Poland|5 -> Rybienko_Stare_20160303_Poland_5
+Oslo|20050926|Norway|1 -> Oslo_20050926_Norway_1
+Lodz|20160303|Poland|5 -> Lodz_20160303_Poland_5
+El_Prat_de_Llobregat|20140501|Spain|1 -> El_Prat_de_Llobregat_20140501_Spain_1
+San_Marcos|20160301|USA|1 -> San_Marcos_20160301_USA_1
+Rybienko_Stare|20160126|Poland|1 -> Rybienko_Stare_20160126_Poland_1
+Oslo|20060504|Norway|1 -> Oslo_20060504_Norway_1
+Escondido|20161101|USA|1 -> Escondido_20161101_USA_1
+Gava|20151001|Spain|1 -> Gava_20151001_Spain_1
+Oslo|20060201|Norway|2 -> Oslo_20060201_Norway_2
+Engelsskiy_rayon|20160301|Russia|1 -> Engelsskiy_rayon_20160301_Russia_1
+Khartoum|20160303|Sudan|1 -> Khartoum_20160303_Sudan_1
+Carlsbad|20160718|USA|1 -> Carlsbad_20160718_USA_1
+Bogota|20160412|Colombia|1 -> Bogota_20160412_Colombia_1
+Zerdab|20050203|Azerbaijan|1 -> Zerdab_20050203_Azerbaijan_1
+San_Miguel_de_Tucuman|20160414|Argentina|1 -> San_Miguel_de_Tucuman_20160414_Argentina_1
+Oswiecim|20160303|Poland|1 -> Oswiecim_20160303_Poland_1
+Bogota|20160412|Colombia|2 -> Bogota_20160412_Colombia_2
+Oslo|20060501|Norway|1 -> Oslo_20060501_Norway_1
+Prague|20151201|Czech_Republic|1 -> Prague_20151201_Czech_Republic_1
+Novosibirskiy_rayon|20160301|Russia|3 -> Novosibirskiy_rayon_20160301_Russia_3
+Warszawa|20160126|Poland|2 -> Warszawa_20160126_Poland_2
+Pakenham|20161213|Australia|1 -> Pakenham_20161213_Australia_1
+Carlsbad|20161101|USA|1 -> Carlsbad_20161101_USA_1
+Khartoum|20160210|Sudan|1 -> Khartoum_20160210_Sudan_1
+Pilsen|20151201|Czech_Republic|2 -> Pilsen_20151201_Czech_Republic_2
+Pilsen|20151201|Czech_Republic|1 -> Pilsen_20151201_Czech_Republic_1
+Oswiecim|20160303|Poland|5 -> Oswiecim_20160303_Poland_5
+Ostrava|20151201|Czech_Republic|1 -> Ostrava_20151201_Czech_Republic_1
+Baki|20170421|Azerbaijan|1 -> Baki_20170421_Azerbaijan_1
+Cork|20151215|Ireland|1 -> Cork_20151215_Ireland_1
+Carlsbad|20160725|USA|1 -> Carlsbad_20160725_USA_1
+Oslo|20060201|Norway|1 -> Oslo_20060201_Norway_1
+Lodz|20160303|Poland|2 -> Lodz_20160303_Poland_2
+Warszawa|20160126|Poland|1 -> Warszawa_20160126_Poland_1
+Lisboa|20160225|Portugal|2 -> Lisboa_20160225_Portugal_2
+Escondido|20151026|USA|1 -> Escondido_20151026_USA_1
+Oswiecim|20160303|Poland|4 -> Oswiecim_20160303_Poland_4
+Oslo|20060131|Norway|1 -> Oslo_20060131_Norway_1
+Rybienko_Stare|20160303|Poland|2 -> Rybienko_Stare_20160303_Poland_2
+Wamba|20010901|Nigeria|1 -> Wamba_20010901_Nigeria_1
+Warszawa|20160126|Poland|3 -> Warszawa_20160126_Poland_3
+Khartoum|20160203|Sudan|1 -> Khartoum_20160203_Sudan_1
+Lodz|20160126|Poland|1 -> Lodz_20160126_Poland_1
+Zerdab|20030629|Azerbaijan|1 -> Zerdab_20030629_Azerbaijan_1
+El_Prat_de_Llobregat|20140101|Spain|1 -> El_Prat_de_Llobregat_20140101_Spain_1
+St_Louis|20140724|crAssphage_B|2 -> St_Louis_20140724_crAssphage_B_2
+Lodz|20160303|Poland|4 -> Lodz_20160303_Poland_4
+Zerdab|20031114|Azerbaijan|1 -> Zerdab_20031114_Azerbaijan_1
+North_Kurdufan|00000000|Sudan|1 -> North_Kurdufan_00000000_Sudan_1
+Dana_Point|20170403|USA|1 -> Dana_Point_20170403_USA_1
+Gava|20140101|Spain|1 -> Gava_20140101_Spain_1
+Oswiecim|20160126|Poland|4 -> Oswiecim_20160126_Poland_4
+Mascot|20170816|Australia|1 -> Mascot_20170816_Australia_1
+Modfice|20151201|Czech_Republic|1 -> Modfice_20151201_Czech_Republic_1
+Warszawa|20160126|Poland|4 -> Warszawa_20160126_Poland_4
+Oswiecim|20160126|Poland|2 -> Oswiecim_20160126_Poland_2
+North_Fremantle|20170816|Australia|1 -> North_Fremantle_20170816_Australia_1
+Oslo|20070729|Norway|1 -> Oslo_20070729_Norway_1
+Zastavka|20151201|Czech_Republic|2 -> Zastavka_20151201_Czech_Republic_2
+Carlsbad|20160301|USA|1 -> Carlsbad_20160301_USA_1
+Rybienko_Stare|20160126|Poland|2 -> Rybienko_Stare_20160126_Poland_2
+San_Marcos|20160901|USA|1 -> San_Marcos_20160901_USA_1
+North_Kurdufan|00000000|Sudan|2 -> North_Kurdufan_00000000_Sudan_2
+Oswiecim|20160303|Poland|2 -> Oswiecim_20160303_Poland_2
+AlJafr|20070813|Jordan|1 -> AlJafr_20070813_Jordan_1
+Carlsbad|20160101|USA|1 -> Carlsbad_20160101_USA_1
+Lisboa|20160225|Portugal|1 -> Lisboa_20160225_Portugal_1
+San_Miguel_de_Tucuman|20160414|Argentina|4 -> San_Miguel_de_Tucuman_20160414_Argentina_4
+Rybienko_Stare|20160303|Poland|3 -> Rybienko_Stare_20160303_Poland_3
+Encinitas|20151026|USA|1 -> Encinitas_20151026_USA_1
 
                                             Gap/Ambiguity  Composition  p-value
-   1  Escondido_20160901_USA_1                      5.94%    failed      0.00%
-   2  Carlsbad_20160901_USA_1                       6.45%    failed      0.00%
-   3  Encinitas_20160901_USA_1                      3.79%    failed      0.06%
-   4  Carlsbad_20160718_USA_1                      12.09%    failed      1.89%
-   5  Carlsbad_20160815_USA_1                       8.09%    passed     12.96%
-   6  Carlsbad_20160901_USA_2                      10.25%    passed     38.53%
-   7  Encinitas_20160601_USA_1                      9.84%    passed     99.27%
-   8  Zerdab_20060505_Azerbaijan_1                 14.86%    passed     98.41%
-   9  Carlsbad_20160601_USA_1                      10.96%    passed     91.18%
-  10  Tampere_20151120_Finland_1                    4.10%    passed     97.32%
-  11  Escondido_20160601_USA_1                     12.40%    passed     90.12%
-  12  Carlsbad_20160915_USA_1                       5.12%    passed     65.70%
-  13  Waianae_20161212_USA_1                        5.64%    passed     91.50%
-  14  Carlsbad_20160725_USA_1                       7.27%    passed     69.68%
-  15  Carlsbad_20160908_USA_1                       4.71%    passed     79.37%
-  16  Carlsbad_20160101_USA_1                       6.25%    passed     90.17%
-  17  Escondido_20161101_USA_1                      4.82%    passed      8.55%
-  18  Baki_20170421_Azerbaijan_1                    1.43%    passed     96.93%
-  19  Encinitas_20160101_USA_1                      0.00%    passed     84.99%
-  20  Amman_20170421_Jordan_2                       0.20%    passed     93.46%
-  21  Khartoum_20170421_Sudan_1                     1.43%    passed     95.81%
-  22  AlJafr_20050402_Jordan_1                      0.31%    passed     99.45%
-  23  Lisboa_20160225_Portugal_1                    0.00%    passed     56.79%
-  24  Honolulu_20161212_USA_1                       2.15%    passed     97.87%
-  25  San_Marcos_20160101_USA_1                     0.00%    passed     93.80%
-  26  Zerdab_20031114_Azerbaijan_1                  0.51%    passed     97.24%
-  27  Zerdab_20050412_Azerbaijan_1                  0.00%    passed     97.51%
-  28  Pilsen_20151201_Czech_Republic_3              3.18%    passed     86.16%
-  29  North_Kurdufan_00000000_Sudan_2               0.10%    passed     97.82%
-  30  Rybienko_Stare_20160126_Poland_1              0.00%    passed     97.21%
-  31  Rybienko_Stare_20160303_Poland_1              0.00%    passed     97.21%
-  32  Zerdab_20030629_Azerbaijan_1                  0.72%    passed     98.52%
-  33  Marseille_20151217_France_1                   0.82%    passed     96.80%
-  34  North_Kurdufan_00000000_Sudan_4              16.09%    passed     95.37%
-  35  Buenos_Aires_20160414_Argentina_1             0.31%    passed     97.23%
-  36  Novosibirskiy_rayon_20160301_Russia_1         0.41%    passed     97.62%
-  37  Wamba_20010901_Nigeria_1                      0.10%    passed     93.29%
-  38  Rybienko_Stare_20160126_Poland_4              0.00%    passed     95.11%
-  39  Rybienko_Stare_20160303_Poland_4              0.00%    passed     95.11%
-  40  Lodz_20160303_Poland_4                        0.00%    passed     89.70%
-  41  Oswiecim_20160126_Poland_1                    0.00%    passed     97.60%
-  42  Oswiecim_20160303_Poland_1                    0.00%    passed     97.60%
-  43  San_Marcos_20160901_USA_1                     0.10%    passed     23.19%
-  44  Tampere_20151120_Finland_4                    0.00%    passed     99.86%
-  45  Baki_20170421_Azerbaijan_3                    0.10%    passed     97.34%
-  46  Baki_20170421_Azerbaijan_2                    1.02%    passed     99.72%
-  47  Bogota_20160412_Colombia_1                    5.43%    passed     97.10%
-  48  Oswiecim_20160126_Poland_3                    0.00%    passed     98.64%
-  49  Oswiecim_20160303_Poland_4                    0.00%    passed     98.64%
-  50  Oswiecim_20160126_Poland_4                    0.00%    passed     99.79%
-  51  Oswiecim_20160303_Poland_5                    0.00%    passed     99.79%
-  52  Rybienko_Stare_20160126_Poland_3              0.00%    passed     98.66%
-  53  Rybienko_Stare_20160303_Poland_3              0.00%    passed     98.66%
-  54  Escondido_20151209_USA_1                     17.62%    passed     73.47%
-  55  Apeldoorn_20151106_The_The_Netherlands_1          0.10%    passed     96.02%
-  56  Oswiecim_20160126_Poland_2                    0.00%    passed     97.39%
-  57  Oswiecim_20160303_Poland_3                    0.00%    passed     97.39%
-  58  Lodz_20160126_Poland_1                        0.00%    passed     90.21%
-  59  Lodz_20160303_Poland_2                        0.00%    passed     90.21%
-  60  Lodz_20160303_Poland_1                        0.00%    passed     92.55%
-  61  St_Louis_20140724_crAssphage_B_1              0.00%    passed     96.79%
-  62  Usti_nad_Labem_20151201_Czech_Republic_1      2.56%    passed     98.23%
-  63  Escondido_20160101_USA_1                      0.00%    passed     96.41%
-  64  Salfit_20151202_Israel_1                      0.31%    passed     99.69%
-  65  Warszawa_20160126_Poland_1                    0.00%    passed     96.73%
-  66  Warszawa_20160126_Poland_2                    0.00%    passed     96.73%
-  67  Warszawa_20160126_Poland_3                    0.00%    passed     96.73%
-  68  Barcelona_20150501_Spain_1                    0.61%    passed     98.98%
-  69  Oswiecim_20160303_Poland_2                    0.00%    passed     99.49%
-  70  Encinitas_20161101_USA_1                      0.00%    passed     46.42%
-  71  AlJafr_20020904_Jordan_1                      0.51%    passed     96.34%
-  72  Rybienko_Stare_20160126_Poland_2              0.00%    passed     99.20%
-  73  Rybienko_Stare_20160303_Poland_2              0.00%    passed     99.20%
-  74  Lodz_20160303_Poland_3                        0.00%    passed     98.19%
-  75  Lodz_20160303_Poland_5                        0.00%    passed     98.19%
-  76  Novosibirskiy_rayon_20160301_Russia_2         3.38%    passed     85.66%
-  77  Engelsskiy_rayon_20160301_Russia_1            0.00%    passed     94.02%
-  78  Warszawa_20160126_Poland_4                    0.00%    passed     96.96%
-  79  Cork_20151215_Ireland_1                       0.00%    passed     96.57%
-  80  San_Marcos_20160301_USA_1                     0.00%    passed     97.98%
-  81  San_Marcos_20161101_USA_1                     2.15%    passed     38.94%
-  82  Zerdab_20031229_Azerbaijan_1                  0.82%    passed     99.37%
-  83  Pakenham_20161213_Australia_1                 0.00%    passed     99.56%
-  84  Southbank_20170824_Australia_1                0.00%    passed     99.41%
-  85  Laguna_Niguel_20170403_USA_1                  0.10%    passed     95.75%
-  86  Encinitas_20151026_USA_1                      0.61%    passed     90.92%
-  87  Mount_Pulaski_20170313_USA_1                  0.00%    passed     93.87%
-  88  Rybienko_Stare_20160126_Poland_5              0.00%    passed     85.16%
-  89  Rybienko_Stare_20160303_Poland_5              0.00%    passed     85.16%
-  90  Aliso_Viejo_20170403_USA_1                    0.00%    passed     94.68%
-  91  Novosibirskiy_rayon_20160301_Russia_3         4.51%    passed     98.59%
-  92  Encinitas_20160301_USA_1                      0.00%    passed     97.12%
-  93  Carlsbad_20151012_USA_1                       0.72%    passed     82.11%
-  94  Dana_Point_20170403_USA_1                     0.41%    passed     99.67%
-  95  Mascot_20170816_Australia_1                   0.00%    passed     97.22%
-  96  Escondido_20151026_USA_1                      0.72%    passed     99.63%
-  97  San_Marcos_20151026_USA_1                     0.20%    passed     99.77%
-  98  Escondido_20160301_USA_1                      0.00%    passed     98.95%
-  99  Carlsbad_20160301_USA_1                       0.00%    passed     97.57%
- 100  Qalqilya_20151202_Israel_1                    0.00%    passed     99.44%
- 101  Pinkenba_20170822_Australia_1                 0.00%    passed     95.81%
- 102  North_Fremantle_20170816_Australia_1          0.00%    passed     99.18%
- 103  Zerdab_19990507_Azerbaijan_1                  0.51%    passed     99.73%
- 104  Amman_20170421_Jordan_5                       1.74%    passed     85.18%
- 105  Sherbakulskiy_rayon_20160301_Russia_1         2.56%    passed     94.23%
- 106  Zerdab_20050203_Azerbaijan_1                  0.41%    passed     96.35%
- 107  North_Kurdufan_00000000_Sudan_1               0.72%    passed     89.30%
- 108  Khartoum_20170421_Sudan_5                     0.31%    passed     95.31%
- 109  Khartoum_20170421_Sudan_3                     0.10%    passed     99.06%
- 110  Khartoum_20170421_Sudan_2                     0.51%    passed     98.80%
- 111  Khartoum_20170421_Sudan_6                     0.10%    passed     99.06%
- 112  Amman_20170421_Jordan_1                       0.31%    passed     99.45%
- 113  AlJafr_20070813_Jordan_1                      1.54%    passed     99.59%
- 114  Amman_20170421_Jordan_3                       0.31%    passed     97.64%
- 115  Carlsbad_20161101_USA_1                       4.30%    passed     28.06%
- 116  Khartoum_20170421_Sudan_7                     7.38%    passed     97.04%
- 117  North_Kurdufan_00000000_Sudan_3               0.61%    passed     96.92%
- 118  Dunedin_20160317_New_Zealand_1                2.46%    passed     98.93%
- 119  Pilsen_20151201_Czech_Republic_1              2.36%    passed     94.29%
- 120  Ramallah_20151202_Israel_1                    0.20%    passed     91.35%
- 121  Jericho_20151202_Israel_1                     0.61%    passed     87.75%
- 122  Greymouth_20160317_New_Zealand_1              2.25%    passed     96.46%
- 123  Zastavka_20151201_Czech_Republic_3            1.95%    passed     92.52%
- 124  Ceske_Budejovice_20151201_Czech_Republic_2    4.61%    passed     88.10%
- 125  Zastavka_20151201_Czech_Republic_1            2.46%    passed     93.89%
- 126  Prague_20151201_Czech_Republic_1              1.74%    passed     98.28%
- 127  Davis_20160421_USA_2                          0.92%    passed     99.85%
- 128  Davis_20160421_USA_1                          0.82%    passed     98.98%
- 129  New_York_20141214_USA_1                       1.43%    passed     98.91%
- 130  Vysni_Lhoty_20151201_Czech_Republic_1         2.77%    passed     99.21%
- 131  Ostrava_20151201_Czech_Republic_1            20.90%    passed     99.22%
- 132  Gava_20140601_Spain_1                         1.43%    passed     99.61%
- 133  Gava_20151001_Spain_3                         1.54%    passed     98.91%
- 134  Gava_20151001_Spain_1                         1.95%    passed     96.97%
- 135  Gava_20151001_Spain_2                         1.54%    passed     98.33%
- 136  Gava_20140101_Spain_1                         1.84%    passed     98.92%
- 137  Gava_20131101_Spain_1                         1.74%    passed     99.45%
- 138  El_Prat_de_Llobregat_20140501_Spain_1         1.95%    passed     98.88%
- 139  El_Prat_de_Llobregat_20140101_Spain_1         1.64%    passed     98.24%
- 140  Gava_20140501_Spain_1                         1.95%    passed     98.92%
- 141  Zastavka_20151201_Czech_Republic_2            1.64%    passed     96.27%
- 142  Pilsen_20151201_Czech_Republic_2              2.15%    passed     89.31%
- 143  Modfice_20151201_Czech_Republic_1            19.57%    passed     88.68%
- 144  Ceske_Budejovice_20151201_Czech_Republic_1    2.97%    passed     92.34%
-****  TOTAL                                         2.16%  4 sequences failed composition chi2 test (p-value<5%; df=3)
-NOTE: Rybienko_Stare_20160303_Poland_1 is identical to Rybienko_Stare_20160126_Poland_1 but kept for subsequent analysis
-NOTE: Rybienko_Stare_20160303_Poland_4 is identical to Rybienko_Stare_20160126_Poland_4 but kept for subsequent analysis
+   1  Carlsbad_20160601_USA_1                      14.90%    passed     70.03%
+   2  Vysni_Lhoty_20151201_Czech_Republic_1         5.77%    passed     99.70%
+   3  Lisboa_20160225_Portugal_3                    8.19%    failed      2.94%
+   4  San_Marcos_20151026_USA_1                     2.98%    passed     97.57%
+   5  Escondido_20160901_USA_1                      6.15%    failed      0.00%
+   6  Rybienko_Stare_20160303_Poland_4              0.00%    passed     95.55%
+   7  North_Kurdufan_00000000_Sudan_4              15.64%    passed     92.02%
+   8  Amman_20170421_Jordan_1                       0.28%    passed     99.12%
+   9  Zerdab_19990507_Azerbaijan_1                  0.56%    passed     99.57%
+  10  Zerdab_20060505_Azerbaijan_1                 14.90%    passed     98.36%
+  11  Usti_nad_Labem_20151201_Czech_Republic_1     10.43%    passed     90.81%
+  12  Encinitas_20160101_USA_1                      0.00%    passed     73.63%
+  13  Greymouth_20160317_New_Zealand_1              2.33%    passed     97.19%
+  14  Oswiecim_20160126_Poland_1                    0.00%    passed     97.76%
+  15  Escondido_20160601_USA_1                     19.93%    passed     63.48%
+  16  Khartoum_20160305_Sudan_1                     0.47%    passed     99.37%
+  17  Zastavka_20151201_Czech_Republic_3            1.86%    passed     93.74%
+  18  Encinitas_20160301_USA_1                      0.00%    passed     98.64%
+  19  Waianae_20161212_USA_1                        0.09%    passed     18.81%
+  20  Carlsbad_20160908_USA_1                       7.08%    passed     39.48%
+  21  Baki_20170421_Azerbaijan_3                    0.09%    passed     96.79%
+  22  Khartoum_20160302_Sudan_1                     7.73%    passed     96.98%
+  23  Gava_20131101_Spain_1                         1.58%    passed     99.77%
+  24  Ceske_Budejovice_20151201_Czech_Republic_2    4.19%    passed     91.50%
+  25  Oslo_20060129_Norway_2                        0.00%    passed     97.96%
+  26  Amman_20170421_Jordan_5                       2.23%    passed     88.20%
+  27  Gava_20151001_Spain_3                         7.82%    passed     93.87%
+  28  Southbank_20170824_Australia_1                0.00%    passed     98.81%
+  29  Novosibirskiy_rayon_20160301_Russia_1         0.37%    passed     97.62%
+  30  Oslo_20070729_Norway_2                        0.00%    passed     95.85%
+  31  Escondido_20160101_USA_1                      0.00%    passed     92.01%
+  32  Mount_Pulaski_20170313_USA_1                  0.00%    passed     96.54%
+  33  Pilsen_20151201_Czech_Republic_3              3.07%    passed     86.93%
+  34  Jericho_20151202_Israel_1                     0.56%    passed     88.22%
+  35  Honolulu_20161212_USA_1                       0.65%    passed     78.12%
+  36  San_Marcos_20160101_USA_1                     0.00%    passed     85.94%
+  37  Gava_20140501_Spain_1                         1.77%    passed     99.40%
+  38  Encinitas_20160901_USA_1                      4.19%    failed      0.02%
+  39  Carlsbad_20160901_USA_2                      12.66%    passed      5.19%
+  40  Oslo_20060206_Norway_1                        0.00%    passed     94.38%
+  41  Oslo_20060505_Norway_1                        0.00%    passed     98.66%
+  42  AlJafr_20050402_Jordan_1                      0.56%    passed     98.42%
+  43  AlJafr_20020904_Jordan_1                      0.56%    passed     96.12%
+  44  Amman_20170421_Jordan_3                       0.28%    passed     98.45%
+  45  Amman_20170421_Jordan_2                       0.47%    passed     92.38%
+  46  Aliso_Viejo_20170403_USA_1                    0.00%    passed     89.27%
+  47  Oslo_20050926_Norway_2                        0.00%    passed     97.96%
+  48  Oswiecim_20160303_Poland_3                    0.00%    passed     97.62%
+  49  Marseille_20151217_France_1                   0.74%    passed     97.33%
+  50  Oslo_20050630_Norway_1                        0.00%    passed     95.31%
+  51  Sherbakulskiy_rayon_20160301_Russia_1         3.26%    passed     95.09%
+  52  Davis_20160421_United_States_1                0.74%    passed     99.06%
+  53  Qalqilya_20151202_Israel_1                    0.00%    passed     99.58%
+  54  Pinkenba_20170822_Australia_1                 0.00%    passed     96.91%
+  55  Gava_20151001_Spain_2                         1.40%    passed     99.01%
+  56  Carlsbad_20151012_USA_1                       3.72%    passed     62.65%
+  57  San_Miguel_de_Tucuman_20160414_Argentina_3    5.49%    passed     16.60%
+  58  Salfit_20151202_Israel_1                      0.28%    passed     99.67%
+  59  Carlsbad_20160915_USA_1                       8.66%    passed     60.35%
+  60  Encinitas_20161101_USA_1                      0.19%    passed      5.31%
+  61  New_York_20141214_United_States_1             1.30%    passed     99.26%
+  62  San_Miguel_de_Tucuman_20160414_Argentina_2    1.96%    failed      0.77%
+  63  Encinitas_20160601_USA_1                     12.29%    passed     91.27%
+  64  Lodz_20160303_Poland_3                        0.00%    passed     97.46%
+  65  Rybienko_Stare_20160126_Poland_5              0.00%    passed     88.89%
+  66  Zastavka_20151201_Czech_Republic_1            2.33%    passed     94.77%
+  67  Dunedin_20160317_New_Zealand_1                2.51%    passed     99.24%
+  68  Escondido_20160301_USA_1                      0.00%    passed     99.38%
+  69  Barcelona_20150501_Spain_1                    0.56%    passed     99.32%
+  70  Laguna_Niguel_20170403_USA_1                  0.09%    passed     96.04%
+  71  Rybienko_Stare_20160126_Poland_3              0.00%    passed     98.42%
+  72  Baki_20170421_Azerbaijan_2                    1.21%    passed     99.18%
+  73  Zerdab_20050412_Azerbaijan_1                  0.00%    passed     97.67%
+  74  North_Kurdufan_00000000_Sudan_3               0.56%    passed     97.10%
+  75  Carlsbad_20160815_USA_1                      10.06%    passed      6.30%
+  76  Apeldoorn_20151106_The_Netherlands_1          0.09%    passed     97.84%
+  77  Gava_20140601_Spain_1                         1.30%    passed     99.73%
+  78  Rybienko_Stare_20160303_Poland_1              0.00%    passed     98.72%
+  79  Davis_20160421_United_States_2                0.84%    passed     99.91%
+  80  Novosibirskiy_rayon_20160301_Russia_2         4.10%    passed     88.55%
+  81  Khartoum_20160311_Sudan_1                     0.19%    passed     97.45%
+  82  Zerdab_20031229_Azerbaijan_1                  0.74%    passed     99.44%
+  83  Oswiecim_20160126_Poland_3                    0.00%    passed     97.81%
+  84  St_Louis_20140724_crAssphage_B_1              0.00%    passed     96.83%
+  85  San_Marcos_20161101_USA_1                     3.26%    passed     15.98%
+  86  Lodz_20160303_Poland_1                        0.00%    passed     92.58%
+  87  Carlsbad_20160901_USA_1                       6.80%    failed      0.00%
+  88  Rybienko_Stare_20160126_Poland_4              0.00%    passed     95.55%
+  89  Ceske_Budejovice_20151201_Czech_Republic_1    2.79%    passed     92.79%
+  90  Ramallah_20151202_Israel_1                    0.19%    passed     90.27%
+  91  Oslo_20060129_Norway_1                        0.00%    passed     97.96%
+  92  Rybienko_Stare_20160303_Poland_5              0.00%    passed     88.89%
+  93  Oslo_20050926_Norway_1                        0.00%    passed     91.97%
+  94  Lodz_20160303_Poland_5                        0.00%    passed     97.46%
+  95  El_Prat_de_Llobregat_20140501_Spain_1         1.77%    passed     99.31%
+  96  San_Marcos_20160301_USA_1                     0.00%    passed     99.07%
+  97  Rybienko_Stare_20160126_Poland_1              0.00%    passed     98.72%
+  98  Oslo_20060504_Norway_1                        0.00%    passed     94.38%
+  99  Escondido_20161101_USA_1                      3.82%    failed      2.88%
+ 100  Gava_20151001_Spain_1                         1.77%    passed     98.04%
+ 101  Oslo_20060201_Norway_2                        0.00%    passed     95.90%
+ 102  Engelsskiy_rayon_20160301_Russia_1            0.00%    passed     93.12%
+ 103  Khartoum_20160303_Sudan_1                     0.47%    passed     95.89%
+ 104  Carlsbad_20160718_USA_1                      12.66%    failed      0.08%
+ 105  Bogota_20160412_Colombia_1                    0.00%    passed     89.09%
+ 106  Zerdab_20050203_Azerbaijan_1                  0.37%    passed     95.74%
+ 107  San_Miguel_de_Tucuman_20160414_Argentina_1    5.77%    failed      0.00%
+ 108  Oswiecim_20160303_Poland_1                    0.00%    passed     97.76%
+ 109  Bogota_20160412_Colombia_2                    2.61%    failed      0.00%
+ 110  Oslo_20060501_Norway_1                        0.00%    passed     95.90%
+ 111  Prague_20151201_Czech_Republic_1              1.58%    passed     98.60%
+ 112  Novosibirskiy_rayon_20160301_Russia_3         5.12%    passed     99.47%
+ 113  Warszawa_20160126_Poland_2                    0.00%    passed     96.69%
+ 114  Pakenham_20161213_Australia_1                 0.00%    passed     99.15%
+ 115  Carlsbad_20161101_USA_1                       4.28%    passed     24.25%
+ 116  Khartoum_20160210_Sudan_1                     0.09%    passed     99.86%
+ 117  Pilsen_20151201_Czech_Republic_2              1.96%    passed     90.42%
+ 118  Pilsen_20151201_Czech_Republic_1              2.23%    passed     94.12%
+ 119  Oswiecim_20160303_Poland_5                    0.00%    passed     99.84%
+ 120  Ostrava_20151201_Czech_Republic_1            18.90%    passed     98.84%
+ 121  Baki_20170421_Azerbaijan_1                    1.86%    passed     95.98%
+ 122  Cork_20151215_Ireland_1                       0.00%    passed     96.91%
+ 123  Carlsbad_20160725_USA_1                       8.94%    passed     56.80%
+ 124  Oslo_20060201_Norway_1                        0.00%    passed     95.39%
+ 125  Lodz_20160303_Poland_2                        0.00%    passed     91.45%
+ 126  Warszawa_20160126_Poland_1                    0.00%    passed     96.69%
+ 127  Lisboa_20160225_Portugal_2                    2.14%    failed      0.01%
+ 128  Escondido_20151026_USA_1                      1.40%    passed     99.59%
+ 129  Oswiecim_20160303_Poland_4                    0.00%    passed     97.81%
+ 130  Oslo_20060131_Norway_1                        0.00%    passed     96.84%
+ 131  Rybienko_Stare_20160303_Poland_2              0.00%    passed     98.66%
+ 132  Wamba_20010901_Nigeria_1                      0.09%    passed     93.71%
+ 133  Warszawa_20160126_Poland_3                    0.00%    passed     96.69%
+ 134  Khartoum_20160203_Sudan_1                     1.86%    passed     97.39%
+ 135  Lodz_20160126_Poland_1                        0.00%    passed     91.45%
+ 136  Zerdab_20030629_Azerbaijan_1                  1.12%    passed     99.29%
+ 137  El_Prat_de_Llobregat_20140101_Spain_1         1.49%    passed     98.99%
+ 138  St_Louis_20140724_crAssphage_B_2              0.00%    passed     96.83%
+ 139  Lodz_20160303_Poland_4                        0.00%    passed     89.96%
+ 140  Zerdab_20031114_Azerbaijan_1                  0.84%    passed     99.46%
+ 141  North_Kurdufan_00000000_Sudan_1               0.93%    passed     94.13%
+ 142  Dana_Point_20170403_USA_1                     0.37%    passed     97.92%
+ 143  Gava_20140101_Spain_1                         1.68%    passed     99.52%
+ 144  Oswiecim_20160126_Poland_4                    0.00%    passed     99.84%
+ 145  Mascot_20170816_Australia_1                   0.00%    passed     97.49%
+ 146  Modfice_20151201_Czech_Republic_1            17.97%    passed     90.59%
+ 147  Warszawa_20160126_Poland_4                    0.00%    passed     97.69%
+ 148  Oswiecim_20160126_Poland_2                    0.00%    passed     97.62%
+ 149  North_Fremantle_20170816_Australia_1          0.00%    passed     99.48%
+ 150  Oslo_20070729_Norway_1                        0.00%    passed     96.83%
+ 151  Zastavka_20151201_Czech_Republic_2            1.58%    passed     96.62%
+ 152  Carlsbad_20160301_USA_1                       0.00%    passed     98.23%
+ 153  Rybienko_Stare_20160126_Poland_2              0.00%    passed     98.66%
+ 154  San_Marcos_20160901_USA_1                     1.02%    failed      4.28%
+ 155  North_Kurdufan_00000000_Sudan_2               0.56%    passed     99.19%
+ 156  Oswiecim_20160303_Poland_2                    0.00%    passed     99.17%
+ 157  AlJafr_20070813_Jordan_1                      1.49%    passed     99.57%
+ 158  Carlsbad_20160101_USA_1                       6.61%    passed     81.61%
+ 159  Lisboa_20160225_Portugal_1                    0.09%    passed     11.52%
+ 160  San_Miguel_de_Tucuman_20160414_Argentina_4    0.09%    passed     75.23%
+ 161  Rybienko_Stare_20160303_Poland_3              0.00%    passed     98.42%
+ 162  Encinitas_20151026_USA_1                      1.12%    passed     83.36%
+****  TOTAL                                         2.19%  11 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Rybienko_Stare_20160126_Poland_4 is identical to Rybienko_Stare_20160303_Poland_4 but kept for subsequent analysis
 NOTE: Oswiecim_20160303_Poland_1 is identical to Oswiecim_20160126_Poland_1 but kept for subsequent analysis
-NOTE: Oswiecim_20160303_Poland_4 is identical to Oswiecim_20160126_Poland_3 but kept for subsequent analysis
-NOTE: Oswiecim_20160303_Poland_5 is identical to Oswiecim_20160126_Poland_4 but kept for subsequent analysis
-NOTE: Rybienko_Stare_20160303_Poland_3 is identical to Rybienko_Stare_20160126_Poland_3 but kept for subsequent analysis
-NOTE: Oswiecim_20160303_Poland_3 is identical to Oswiecim_20160126_Poland_2 but kept for subsequent analysis
-NOTE: Lodz_20160303_Poland_2 is identical to Lodz_20160126_Poland_1 but kept for subsequent analysis
-NOTE: Warszawa_20160126_Poland_2 is identical to Warszawa_20160126_Poland_1 but kept for subsequent analysis
-NOTE: Rybienko_Stare_20160303_Poland_2 is identical to Rybienko_Stare_20160126_Poland_2 but kept for subsequent analysis
+NOTE: Oslo_20050926_Norway_2 is identical to Oslo_20060129_Norway_2 but kept for subsequent analysis
+NOTE: Oslo_20060504_Norway_1 is identical to Oslo_20060206_Norway_1 but kept for subsequent analysis
+NOTE: Oswiecim_20160126_Poland_2 is identical to Oswiecim_20160303_Poland_3 but kept for subsequent analysis
 NOTE: Lodz_20160303_Poland_5 is identical to Lodz_20160303_Poland_3 but kept for subsequent analysis
 NOTE: Rybienko_Stare_20160303_Poland_5 is identical to Rybienko_Stare_20160126_Poland_5 but kept for subsequent analysis
-NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
-NOTE: Warszawa_20160126_Poland_3 (identical to Warszawa_20160126_Poland_1) is ignored but added at the end
+NOTE: Rybienko_Stare_20160303_Poland_3 is identical to Rybienko_Stare_20160126_Poland_3 but kept for subsequent analysis
+NOTE: Rybienko_Stare_20160126_Poland_1 is identical to Rybienko_Stare_20160303_Poland_1 but kept for subsequent analysis
+NOTE: Oswiecim_20160303_Poland_4 is identical to Oswiecim_20160126_Poland_3 but kept for subsequent analysis
+NOTE: St_Louis_20140724_crAssphage_B_2 is identical to St_Louis_20140724_crAssphage_B_1 but kept for subsequent analysis
+NOTE: Oslo_20060501_Norway_1 is identical to Oslo_20060201_Norway_2 but kept for subsequent analysis
+NOTE: Warszawa_20160126_Poland_1 is identical to Warszawa_20160126_Poland_2 but kept for subsequent analysis
+NOTE: Oswiecim_20160126_Poland_4 is identical to Oswiecim_20160303_Poland_5 but kept for subsequent analysis
+NOTE: Lodz_20160126_Poland_1 is identical to Lodz_20160303_Poland_2 but kept for subsequent analysis
+NOTE: Rybienko_Stare_20160126_Poland_2 is identical to Rybienko_Stare_20160303_Poland_2 but kept for subsequent analysis
+NOTE: 3 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Oslo_20060129_Norway_1 (identical to Oslo_20060129_Norway_2) is ignored but added at the end
+NOTE: Oslo_20070729_Norway_1 (identical to St_Louis_20140724_crAssphage_B_1) is ignored but added at the end
+NOTE: Warszawa_20160126_Poland_3 (identical to Warszawa_20160126_Poland_2) is ignored but added at the end
 
 For your convenience alignment with unique sequences printed to seqs.B.rc.trim.aln.uniqueseq.phy
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.013 seconds
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.041 seconds
 
-NOTE: ModelFinder requires 35 MB RAM!
-ModelFinder will test 286 DNA models (sample size: 976) ...
+NOTE: ModelFinder requires 50 MB RAM!
+ModelFinder will test 286 DNA models (sample size: 1074) ...
  No. Model         -LnL         df  AIC          AICc         BIC
-Measuring multi-threading efficiency up to 8 CPU cores
+Measuring multi-threading efficiency up to 24 CPU cores
 Increase to 10 rounds for branch lengths
-117 trees examined
-Threads: 1 / Time: 8.008 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -17766
-Threads: 2 / Time: 5.832 sec / Speedup: 1.373 / Efficiency: 69% / LogL: -17766
-Threads: 3 / Time: 5.059 sec / Speedup: 1.583 / Efficiency: 53% / LogL: -17766
-Threads: 4 / Time: 4.877 sec / Speedup: 1.642 / Efficiency: 41% / LogL: -17766
+119 trees examined
+Threads: 1 / Time: 24.063 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -26558
+Threads: 2 / Time: 15.843 sec / Speedup: 1.519 / Efficiency: 76% / LogL: -26558
+Threads: 3 / Time: 13.055 sec / Speedup: 1.843 / Efficiency: 61% / LogL: -26558
+Threads: 4 / Time: 12.301 sec / Speedup: 1.956 / Efficiency: 49% / LogL: -26558
 BEST NUMBER OF THREADS: 3
 
-  1  JC            12648.873    283 25863.746    26096.035    27245.766
-  2  JC+I          12438.148    284 25444.296    25678.565    26831.199
-  3  JC+G4         12109.509    284 24787.018    25021.287    26173.922
-  4  JC+I+G4       12109.183    285 24788.367    25024.628    26180.154
-  5  JC+R2         11985.802    285 24541.604    24777.865    25933.391
-  6  JC+R3         11925.710    287 24425.420    24665.699    25826.974
-  7  JC+R4         11913.385    289 24404.770    24649.115    25816.091
-  8  JC+R5         11913.311    291 24408.622    24657.079    25829.710
+  1  JC            19822.457    315 40274.913    40537.552    41843.344
+  2  JC+I          19726.963    316 40085.927    40350.582    41659.336
+  3  JC+G4         19217.315    316 39066.629    39331.284    40640.039
+  4  JC+I+G4       19217.355    317 39068.710    39335.392    40647.099
+  5  JC+R2         19089.149    317 38812.298    39078.981    40390.687
+  6  JC+R3         18983.371    319 38604.742    38875.511    40193.089
+  7  JC+R4         18978.789    321 38599.578    38874.477    40197.883
+  8  JC+R5         Skipped 
   9  JC+R6         Skipped 
  10  JC+R7         Skipped 
  11  JC+R8         Skipped 
  12  JC+R9         Skipped 
  13  JC+R10        Skipped 
- 14  F81           12476.456    286 25524.912    25763.176    26921.582
- 15  F81+I         12269.399    287 25112.797    25353.076    26514.351
- 16  F81+G4        11932.422    287 24438.844    24679.124    25840.398
- 17  F81+I+G4      11932.252    288 24440.503    24682.809    25846.940
- 18  F81+R2        11804.766    288 24185.532    24427.838    25591.969
- 19  F81+R3        11742.337    290 24064.674    24311.068    25480.878
- 20  F81+R4        11729.675    292 24043.351    24293.881    25469.322
- 21  F81+R5        11729.539    294 24047.079    24301.792    25482.817
+ 14  F81           19531.945    318 39699.890    39968.610    41283.258
+ 15  F81+I         19449.029    319 39536.057    39806.826    41124.404
+ 16  F81+G4        18925.308    319 38488.616    38759.385    40076.963
+ 17  F81+I+G4      18925.322    320 38490.644    38763.473    40083.971
+ 18  F81+R2        18785.738    320 38211.477    38484.306    39804.803
+ 19  F81+R3        18684.589    322 38013.177    38290.158    39616.462
+ 20  F81+R4        18676.697    324 38001.394    38282.569    39614.637
+ 21  F81+R5        18676.654    326 38005.307    38290.721    39628.509
  22  F81+R6        Skipped 
  23  F81+R7        Skipped 
  24  F81+R8        Skipped 
  25  F81+R9        Skipped 
  26  F81+R10       Skipped 
- 27  K2P           12525.111    284 25618.221    25852.491    27005.125
- 28  K2P+I         12312.323    285 25194.647    25430.908    26586.433
- 29  K2P+G4        11980.398    285 24530.795    24767.056    25922.582
- 30  K2P+I+G4      11980.017    286 24532.033    24770.298    25928.704
- 31  K2P+R2        11856.489    286 24284.978    24523.242    25681.649
- 32  K2P+R3        11793.928    288 24163.857    24406.163    25570.294
- 33  K2P+R4        11781.483    290 24142.966    24389.360    25559.170
- 34  K2P+R5        11781.467    292 24146.934    24397.464    25572.905
+ 27  K2P           19641.545    316 39915.089    40179.744    41488.499
+ 28  K2P+I         19544.104    317 39722.208    39988.891    41300.597
+ 29  K2P+G4        19029.043    317 38692.086    38958.768    40270.475
+ 30  K2P+I+G4      19029.053    318 38694.107    38962.827    40277.475
+ 31  K2P+R2        18903.188    318 38442.375    38711.096    40025.744
+ 32  K2P+R3        18796.723    320 38233.446    38506.274    39826.772
+ 33  K2P+R4        18791.421    322 38226.842    38503.822    39830.126
+ 34  K2P+R5        Skipped 
  35  K2P+R6        Skipped 
  36  K2P+R7        Skipped 
  37  K2P+R8        Skipped 
  38  K2P+R9        Skipped 
  39  K2P+R10       Skipped 
- 40  HKY           12277.460    287 25128.919    25369.198    26530.473
- 41  HKY+I         12070.024    288 24716.049    24958.354    26122.486
- 42  HKY+G4        11702.723    288 23981.445    24223.751    25387.883
- 43  HKY+I+G4      11702.371    289 23982.742    24227.086    25394.062
- 44  HKY+R2        11583.831    289 23745.663    23990.007    25156.983
- 45  HKY+R3        11514.226    291 23610.453    23858.909    25031.540
- 46  HKY+R4        11502.961    293 23591.923    23844.538    25022.777
- 47  HKY+R5        11502.952    295 23595.903    23852.727    25036.525
+ 40  HKY           19203.263    319 39044.527    39315.296    40632.874
+ 41  HKY+I         19133.385    320 38906.770    39179.599    40500.096
+ 42  HKY+G4        18572.737    320 37785.474    38058.303    39378.801
+ 43  HKY+I+G4      18572.705    321 37787.409    38062.308    39385.715
+ 44  HKY+R2        18448.517    321 37539.034    37813.933    39137.340
+ 45  HKY+R3        18347.994    323 37341.989    37621.061    38950.253
+ 46  HKY+R4        18331.998    325 37313.996    37597.285    38932.218
+ 47  HKY+R5        18331.995    327 37317.989    37605.539    38946.170
  48  HKY+R6        Skipped 
  49  HKY+R7        Skipped 
  50  HKY+R8        Skipped 
  51  HKY+R9        Skipped 
  52  HKY+R10       Skipped 
- 53  TNe           12524.992    285 25619.984    25856.245    27011.771
- 54  TNe+I         12311.978    286 25195.957    25434.221    26592.627
- 55  TNe+G4        11980.397    286 24532.794    24771.059    25929.465
- 56  TNe+I+G4      11979.977    287 24533.953    24774.233    25935.507
- 57  TNe+R2        11856.491    287 24286.981    24527.260    25688.535
- 58  TNe+R3        11793.299    289 24164.598    24408.942    25575.919
- 59  TNe+R4        11781.079    291 24144.158    24392.614    25565.246
- 60  TNe+R5        11781.060    293 24148.120    24400.736    25578.975
+ 53  TNe           19638.901    317 39911.802    40178.484    41490.191
+ 54  TNe+I         19541.754    318 39719.507    39988.228    41302.876
+ 55  TNe+G4        19027.815    318 38691.629    38960.350    40274.997
+ 56  TNe+I+G4      19027.819    319 38693.637    38964.407    40281.985
+ 57  TNe+R2        18902.384    319 38442.767    38713.537    40031.115
+ 58  TNe+R3        18795.949    321 38233.897    38508.796    39832.203
+ 59  TNe+R4        18790.510    323 38227.020    38506.092    39835.284
+ 60  TNe+R5        Skipped 
  61  TNe+R6        Skipped 
  62  TNe+R7        Skipped 
  63  TNe+R8        Skipped 
  64  TNe+R9        Skipped 
  65  TNe+R10       Skipped 
- 66  TN            12277.402    288 25130.804    25373.109    26537.241
- 67  TN+I          12069.660    289 24717.319    24961.663    26128.640
- 68  TN+G4         11701.357    289 23980.713    24225.057    25392.034
- 69  TN+I+G4       11701.304    290 23982.607    24229.001    25398.811
- 70  TN+R2         11583.643    290 23747.286    23993.680    25163.490
- 71  TN+R3         11514.205    292 23612.409    23862.939    25038.380
- 72  TN+R4         11502.891    294 23593.783    23848.496    25029.521
- 73  TN+R5         11502.952    296 23597.903    23856.849    25043.408
+ 66  TN            19203.068    320 39046.135    39318.964    40639.462
+ 67  TN+I          19133.073    321 38908.146    39183.045    40506.451
+ 68  TN+G4         18572.913    321 37787.826    38062.725    39386.131
+ 69  TN+I+G4       18572.705    322 37789.410    38066.390    39392.695
+ 70  TN+R2         18446.756    322 37537.513    37814.493    39140.798
+ 71  TN+R3         18347.222    324 37342.443    37623.618    38955.687
+ 72  TN+R4         18331.819    326 37315.637    37601.051    38938.838
+ 73  TN+R5         18331.217    328 37318.434    37608.131    38951.594
  74  TN+R6         Skipped 
  75  TN+R7         Skipped 
  76  TN+R8         Skipped 
  77  TN+R9         Skipped 
  78  TN+R10        Skipped 
- 79  K3P           12499.117    285 25568.235    25804.495    26960.021
- 80  K3P+I         12286.332    286 25144.663    25382.928    26541.334
- 81  K3P+G4        11953.997    286 24479.993    24718.257    25876.663
- 82  K3P+I+G4      11953.574    287 24481.148    24721.427    25882.701
- 83  K3P+R2        11830.206    287 24234.412    24474.691    25635.966
- 84  K3P+R3        11767.877    289 24113.753    24358.097    25525.074
- 85  K3P+R4        11755.709    291 24093.419    24341.875    25514.506
- 86  K3P+R5        11755.638    293 24097.276    24349.892    25528.131
+ 79  K3P           19603.045    317 39840.090    40106.773    41418.479
+ 80  K3P+I         19505.641    318 39647.282    39916.002    41230.650
+ 81  K3P+G4        18988.229    318 38612.458    38881.178    40195.826
+ 82  K3P+I+G4      18988.229    319 38614.457    38885.227    40202.805
+ 83  K3P+R2        18862.263    319 38362.527    38633.296    39950.874
+ 84  K3P+R3        18756.899    321 38155.797    38430.696    39754.103
+ 85  K3P+R4        18751.299    323 38148.599    38427.671    39756.863
+ 86  K3P+R5        Skipped 
  87  K3P+R6        Skipped 
  88  K3P+R7        Skipped 
  89  K3P+R8        Skipped 
  90  K3P+R9        Skipped 
  91  K3P+R10       Skipped 
- 92  K3Pu          12276.847    288 25129.695    25372.001    26536.132
- 93  K3Pu+I        12069.320    289 24716.640    24960.984    26127.960
- 94  K3Pu+G4       11701.598    289 23981.197    24225.541    25392.517
- 95  K3Pu+I+G4     11701.463    290 23982.927    24229.321    25399.131
- 96  K3Pu+R2       11583.768    290 23747.536    23993.931    25163.741
- 97  K3Pu+R3       11514.201    292 23612.402    23862.932    25038.374
- 98  K3Pu+R4       11502.959    294 23593.918    23848.632    25029.656
- 99  K3Pu+R5       11502.946    296 23597.892    23856.837    25043.397
+ 92  K3Pu          19202.572    320 39045.143    39317.972    40638.470
+ 93  K3Pu+I        19133.395    321 38908.791    39183.690    40507.096
+ 94  K3Pu+G4       18567.820    321 37777.641    38052.540    39375.947
+ 95  K3Pu+I+G4     18567.772    322 37779.544    38056.524    39382.828
+ 96  K3Pu+R2       18447.702    322 37539.404    37816.384    39142.689
+ 97  K3Pu+R3       18346.540    324 37341.081    37622.256    38954.324
+ 98  K3Pu+R4       18329.567    326 37311.135    37596.549    38934.336
+ 99  K3Pu+R5       18329.475    328 37314.949    37604.646    38948.109
 100  K3Pu+R6       Skipped 
 101  K3Pu+R7       Skipped 
 102  K3Pu+R8       Skipped 
 103  K3Pu+R9       Skipped 
 104  K3Pu+R10      Skipped 
-105  TPM2          12275.817    288 25127.633    25369.939    26534.071
-106  TPM2+I        12068.310    289 24714.621    24958.965    26125.942
-107  TPM2+G4       11691.713    289 23961.425    24205.769    25372.746
-108  TPM2+I+G4     11691.500    290 23963.001    24209.395    25379.205
-109  TPM2+R2       11582.239    290 23744.477    23990.871    25160.681
-110  TPM2+R3       11512.688    292 23609.377    23859.907    25035.348
-111  TPM2+R4       11501.523    294 23591.045    23845.759    25026.783
-112  TPM2+R5       11496.301    296 23584.603    23843.548    25030.107
+105  TPM2          19201.622    320 39043.243    39316.072    40636.570
+106  TPM2+I        19133.339    321 38908.679    39183.578    40506.984
+107  TPM2+G4       18560.310    321 37762.620    38037.519    39360.926
+108  TPM2+I+G4     18560.285    322 37764.569    38041.549    39367.854
+109  TPM2+R2       18446.405    322 37536.810    37813.790    39140.095
+110  TPM2+R3       18347.040    324 37342.080    37623.254    38955.323
+111  TPM2+R4       18328.308    326 37308.616    37594.030    38931.817
+112  TPM2+R5       18328.235    328 37312.471    37602.167    38945.630
 113  TPM2+R6       Skipped 
 114  TPM2+R7       Skipped 
 115  TPM2+R8       Skipped 
 116  TPM2+R9       Skipped 
 117  TPM2+R10      Skipped 
-118  TPM2u         12275.807    288 25127.614    25369.920    26534.051
-119  TPM2u+I       12068.304    289 24714.608    24958.952    26125.929
-120  TPM2u+G4      11691.708    289 23961.416    24205.760    25372.737
-121  TPM2u+I+G4    11691.488    290 23962.977    24209.371    25379.181
-122  TPM2u+R2      11582.236    290 23744.472    23990.867    25160.677
-123  TPM2u+R3      11512.673    292 23609.346    23859.877    25035.318
-124  TPM2u+R4      11501.513    294 23591.025    23845.739    25026.763
-125  TPM2u+R5      11496.265    296 23584.531    23843.476    25030.036
+118  TPM2u         19201.639    320 39043.279    39316.107    40636.605
+119  TPM2u+I       19133.349    321 38908.699    39183.598    40507.004
+120  TPM2u+G4      18560.312    321 37762.624    38037.523    39360.929
+121  TPM2u+I+G4    18560.285    322 37764.571    38041.551    39367.855
+122  TPM2u+R2      18446.410    322 37536.819    37813.799    39140.104
+123  TPM2u+R3      18347.045    324 37342.090    37623.265    38955.333
+124  TPM2u+R4      18328.290    326 37308.581    37593.994    38931.782
+125  TPM2u+R5      18328.227    328 37312.453    37602.150    38945.613
 126  TPM2u+R6      Skipped 
 127  TPM2u+R7      Skipped 
 128  TPM2u+R8      Skipped 
 129  TPM2u+R9      Skipped 
 130  TPM2u+R10     Skipped 
-131  TPM3          12266.065    288 25108.130    25350.435    26514.567
-132  TPM3+I        12056.963    289 24691.927    24936.271    26103.247
-133  TPM3+G4       11702.316    289 23982.632    24226.976    25393.953
-134  TPM3+I+G4     11702.135    290 23984.270    24230.664    25400.474
-135  TPM3+R2       11580.959    290 23741.917    23988.312    25158.122
-136  TPM3+R3       11512.977    292 23609.954    23860.484    25035.925
-137  TPM3+R4       11501.697    294 23591.393    23846.107    25027.131
-138  TPM3+R5       11496.684    296 23585.369    23844.314    25030.873
+131  TPM3          19201.561    320 39043.122    39315.951    40636.449
+132  TPM3+I        19129.828    321 38901.656    39176.555    40499.962
+133  TPM3+G4       18571.650    321 37785.299    38060.198    39383.605
+134  TPM3+I+G4     18571.582    322 37787.164    38064.144    39390.449
+135  TPM3+R2       18448.385    322 37540.770    37817.750    39144.055
+136  TPM3+R3       18347.821    324 37343.641    37624.816    38956.884
+137  TPM3+R4       18331.668    326 37315.336    37600.749    38938.537
+138  TPM3+R5       18331.639    328 37319.278    37608.975    38952.438
 139  TPM3+R6       Skipped 
 140  TPM3+R7       Skipped 
 141  TPM3+R8       Skipped 
 142  TPM3+R9       Skipped 
 143  TPM3+R10      Skipped 
-144  TPM3u         12266.012    288 25108.024    25350.330    26514.462
-145  TPM3u+I       12056.963    289 24691.925    24936.269    26103.246
-146  TPM3u+G4      11702.317    289 23982.635    24226.979    25393.955
-147  TPM3u+I+G4    11702.131    290 23984.261    24230.655    25400.465
-148  TPM3u+R2      11580.962    290 23741.923    23988.317    25158.127
-149  TPM3u+R3      11512.975    292 23609.949    23860.479    25035.920
-150  TPM3u+R4      11501.694    294 23591.388    23846.101    25027.126
-151  TPM3u+R5      11496.686    296 23585.371    23844.317    25030.876
+144  TPM3u         19201.566    320 39043.133    39315.961    40636.459
+145  TPM3u+I       19129.830    321 38901.661    39176.560    40499.967
+146  TPM3u+G4      18571.652    321 37785.304    38060.203    39383.609
+147  TPM3u+I+G4    18571.584    322 37787.169    38064.149    39390.454
+148  TPM3u+R2      18448.386    322 37540.772    37817.752    39144.056
+149  TPM3u+R3      18347.827    324 37343.654    37624.829    38956.897
+150  TPM3u+R4      18331.655    326 37315.311    37600.725    38938.512
+151  TPM3u+R5      18331.616    328 37319.233    37608.929    38952.392
 152  TPM3u+R6      Skipped 
 153  TPM3u+R7      Skipped 
 154  TPM3u+R8      Skipped 
 155  TPM3u+R9      Skipped 
 156  TPM3u+R10     Skipped 
-157  TIMe          12499.001    286 25570.003    25808.267    26966.673
-158  TIMe+I        12285.996    287 25145.992    25386.271    26547.546
-159  TIMe+G4       11953.999    287 24481.997    24722.276    25883.551
-160  TIMe+I+G4     11953.566    288 24483.132    24725.438    25889.569
-161  TIMe+R2       11830.204    288 24236.408    24478.713    25642.845
-162  TIMe+R3       11767.260    290 24114.520    24360.915    25530.724
-163  TIMe+R4       11755.312    292 24094.624    24345.154    25520.596
-164  TIMe+R5       11749.166    294 24086.333    24341.046    25522.071
+157  TIMe          19600.358    318 39836.716    40105.437    41420.084
+158  TIMe+I        19503.283    319 39644.567    39915.336    41232.914
+159  TIMe+G4       18986.988    319 38611.977    38882.746    40200.324
+160  TIMe+I+G4     18986.988    320 38613.975    38886.804    40207.302
+161  TIMe+R2       18861.516    320 38363.033    38635.861    39956.359
+162  TIMe+R3       18756.108    322 38156.216    38433.196    39759.500
+163  TIMe+R4       18750.452    324 38148.904    38430.078    39762.147
+164  TIMe+R5       Skipped 
 165  TIMe+R6       Skipped 
 166  TIMe+R7       Skipped 
 167  TIMe+R8       Skipped 
 168  TIMe+R9       Skipped 
 169  TIMe+R10      Skipped 
-170  TIM           12276.806    289 25131.613    25375.957    26542.933
-171  TIM+I         12068.966    290 24717.932    24964.326    26134.136
-172  TIM+G4        11700.449    290 23980.897    24227.292    25397.102
-173  TIM+I+G4      11700.309    291 23982.618    24231.075    25403.706
-174  TIM+R2        11583.782    291 23749.564    23998.020    25170.652
-175  TIM+R3        11514.231    293 23614.462    23867.078    25045.317
-176  TIM+R4        11502.894    295 23595.787    23852.611    25036.409
-177  TIM+R5        11497.639    297 23589.278    23850.358    25039.666
+170  TIM           19202.347    321 39046.694    39321.593    40644.999
+171  TIM+I         19133.096    322 38910.191    39187.171    40513.476
+172  TIM+G4        18568.559    322 37781.117    38058.097    39384.402
+173  TIM+I+G4      18567.777    323 37781.554    38060.626    39389.818
+174  TIM+R2        18445.915    323 37537.830    37816.902    39146.094
+175  TIM+R3        18345.798    325 37341.596    37624.884    38959.818
+176  TIM+R4        18329.242    327 37312.483    37600.033    38940.664
+177  TIM+R5        18328.310    329 37314.620    37606.475    38952.758
 178  TIM+R6        Skipped 
 179  TIM+R7        Skipped 
 180  TIM+R8        Skipped 
 181  TIM+R9        Skipped 
 182  TIM+R10       Skipped 
-183  TIM2e         12513.850    286 25599.701    25837.965    26996.371
-184  TIM2e+I       12298.821    287 25171.642    25411.921    26573.196
-185  TIM2e+G4      11960.636    287 24495.273    24735.552    25896.827
-186  TIM2e+I+G4    11960.242    288 24496.483    24738.789    25902.921
-187  TIM2e+R2      11836.505    288 24249.010    24491.315    25655.447
-188  TIM2e+R3      11770.844    290 24121.689    24368.083    25537.893
-189  TIM2e+R4      11758.286    292 24100.573    24351.103    25526.544
-190  TIM2e+R5      11751.102    294 24090.204    24344.917    25525.942
-191  TIM2e+R6      11750.981    296 24093.963    24352.908    25539.468
+183  TIM2e         19597.831    318 39831.662    40100.383    41415.030
+184  TIM2e+I       19492.469    319 39622.939    39893.708    41211.286
+185  TIM2e+G4      18954.044    319 38546.088    38816.857    40134.436
+186  TIM2e+I+G4    18954.044    320 38548.088    38820.916    40141.414
+187  TIM2e+R2      18834.361    320 38308.721    38581.550    39902.048
+188  TIM2e+R3      18728.450    322 38100.900    38377.880    39704.185
+189  TIM2e+R4      18719.346    324 38086.693    38367.868    39699.936
+190  TIM2e+R5      18719.046    326 38090.092    38375.505    39713.293
+191  TIM2e+R6      Skipped 
 192  TIM2e+R7      Skipped 
 193  TIM2e+R8      Skipped 
 194  TIM2e+R9      Skipped 
 195  TIM2e+R10     Skipped 
-196  TIM2          12275.631    289 25129.261    25373.605    26540.582
-197  TIM2+I        12067.739    290 24715.478    24961.872    26131.682
-198  TIM2+G4       11691.358    290 23962.716    24209.110    25378.920
-199  TIM2+I+G4     11691.151    291 23964.303    24212.759    25385.391
-200  TIM2+R2       11582.104    291 23746.209    23994.665    25167.296
-201  TIM2+R3       11512.650    293 23611.300    23863.916    25042.154
-202  TIM2+R4       11500.877    295 23591.754    23848.577    25032.375
-203  TIM2+R5       11495.930    297 23585.860    23846.940    25036.248
+196  TIM2          19201.536    321 39045.072    39319.971    40643.378
+197  TIM2+I        19133.066    322 38910.132    39187.112    40513.417
+198  TIM2+G4       18559.690    322 37763.380    38040.360    39366.665
+199  TIM2+I+G4     18559.538    323 37765.077    38044.149    39373.341
+200  TIM2+R2       18444.078    323 37534.156    37813.228    39142.420
+201  TIM2+R3       18346.571    325 37343.142    37626.431    38961.364
+202  TIM2+R4       18325.474    327 37304.948    37592.497    38933.128
+203  TIM2+R5       18325.500    329 37309.000    37600.855    38947.139
 204  TIM2+R6       Skipped 
 205  TIM2+R7       Skipped 
 206  TIM2+R8       Skipped 
 207  TIM2+R9       Skipped 
 208  TIM2+R10      Skipped 
-209  TIM3e         12464.210    286 25500.419    25738.684    26897.090
-210  TIM3e+I       12244.409    287 25062.818    25303.097    26464.372
-211  TIM3e+G4      11903.957    287 24381.913    24622.192    25783.467
-212  TIM3e+I+G4    11903.408    288 24382.817    24625.122    25789.254
-213  TIM3e+R2      11796.685    288 24169.370    24411.676    25575.807
-214  TIM3e+R3      11729.203    290 24038.407    24284.801    25454.611
-215  TIM3e+R4      11716.557    292 24017.113    24267.643    25443.084
-216  TIM3e+R5      11709.910    294 24007.820    24262.534    25443.558
+209  TIM3e         19588.180    318 39812.360    40081.081    41395.728
+210  TIM3e+I       19482.919    319 39603.839    39874.608    41192.186
+211  TIM3e+G4      18942.383    319 38522.766    38793.535    40111.113
+212  TIM3e+I+G4    18942.377    320 38524.755    38797.584    40118.081
+213  TIM3e+R2      18836.907    320 38313.814    38586.642    39907.140
+214  TIM3e+R3      18718.321    322 38080.642    38357.622    39683.927
+215  TIM3e+R4      18712.626    324 38073.252    38354.427    39686.495
+216  TIM3e+R5      Skipped 
 217  TIM3e+R6      Skipped 
 218  TIM3e+R7      Skipped 
 219  TIM3e+R8      Skipped 
 220  TIM3e+R9      Skipped 
 221  TIM3e+R10     Skipped 
-222  TIM3          12265.742    289 25109.483    25353.827    26520.804
-223  TIM3+I        12056.277    290 24692.555    24938.949    26108.759
-224  TIM3+G4       11701.246    290 23982.491    24228.885    25398.695
-225  TIM3+I+G4     11701.076    291 23984.153    24232.609    25405.241
-226  TIM3+R2       11580.832    291 23743.664    23992.121    25164.752
-227  TIM3+R3       11512.920    293 23611.840    23864.456    25042.694
-228  TIM3+R4       11501.843    295 23593.687    23850.511    25034.308
-229  TIM3+R5       11496.432    297 23586.865    23847.944    25037.253
+222  TIM3          19201.427    321 39044.853    39319.752    40643.159
+223  TIM3+I        19129.616    322 38903.232    39180.212    40506.517
+224  TIM3+G4       18571.702    322 37787.403    38064.383    39390.688
+225  TIM3+I+G4     18571.596    323 37789.192    38068.264    39397.456
+226  TIM3+R2       18446.611    323 37539.221    37818.293    39147.485
+227  TIM3+R3       18346.938    325 37343.876    37627.165    38962.098
+228  TIM3+R4       18331.666    327 37317.331    37604.881    38945.512
+229  TIM3+R5       18330.944    329 37319.887    37611.742    38958.026
 230  TIM3+R6       Skipped 
 231  TIM3+R7       Skipped 
 232  TIM3+R8       Skipped 
 233  TIM3+R9       Skipped 
 234  TIM3+R10      Skipped 
-235  TVMe          12448.042    287 25470.085    25710.364    26871.639
-236  TVMe+I        12226.998    288 25029.996    25272.301    26436.433
-237  TVMe+G4       11881.678    288 24339.356    24581.662    25745.793
-238  TVMe+I+G4     11881.183    289 24340.366    24584.710    25751.687
-239  TVMe+R2       11772.165    289 24122.330    24366.674    25533.651
-240  TVMe+R3       11704.076    291 23990.152    24238.608    25411.240
-241  TVMe+R4       11689.603    293 23965.205    24217.821    25396.060
-242  TVMe+R5       11684.239    295 23958.477    24215.301    25399.099
+235  TVMe          19541.081    319 39720.163    39990.932    41308.510
+236  TVMe+I        19428.099    320 39496.199    39769.028    41089.525
+237  TVMe+G4       18865.797    320 38371.595    38644.423    39964.921
+238  TVMe+I+G4     18865.791    321 38373.582    38648.481    39971.888
+239  TVMe+R2       18760.868    321 38163.735    38438.634    39762.041
+240  TVMe+R3       18643.785    323 37933.570    38212.642    39541.834
+241  TVMe+R4       18636.788    325 37923.577    38206.865    39541.799
+242  TVMe+R5       18636.417    327 37926.833    38214.383    39555.014
 243  TVMe+R6       Skipped 
 244  TVMe+R7       Skipped 
 245  TVMe+R8       Skipped 
 246  TVMe+R9       Skipped 
 247  TVMe+R10      Skipped 
-248  TVM           12264.382    290 25108.764    25355.159    26524.969
-249  TVM+I         12055.275    291 24692.550    24941.006    26113.637
-250  TVM+G4        11691.589    291 23965.178    24213.634    25386.266
-251  TVM+I+G4      11691.351    292 23966.702    24217.232    25392.673
-252  TVM+R2        11579.299    292 23742.597    23993.127    25168.568
-253  TVM+R3        11511.434    294 23610.868    23865.582    25046.606
-254  TVM+R4        11500.071    296 23592.141    23851.087    25037.646
-255  TVM+R5        11495.194    298 23586.387    23849.613    25041.659
+248  TVM           19199.426    322 39042.853    39319.833    40646.138
+249  TVM+I         19129.014    323 38904.029    39183.101    40512.293
+250  TVM+G4        18558.327    323 37762.654    38041.726    39370.918
+251  TVM+I+G4      18558.671    324 37765.342    38046.517    39378.585
+252  TVM+R2        18445.771    324 37539.543    37820.717    39152.786
+253  TVM+R3        18346.226    326 37344.453    37629.866    38967.654
+254  TVM+R4        18327.355    328 37310.710    37600.406    38943.869
+255  TVM+R5        18324.072    330 37308.143    37602.168    38951.261
 256  TVM+R6        Skipped 
 257  TVM+R7        Skipped 
 258  TVM+R8        Skipped 
 259  TVM+R9        Skipped 
 260  TVM+R10       Skipped 
-261  SYM           12447.899    288 25471.797    25714.103    26878.235
-262  SYM+I         12226.705    289 25031.411    25275.755    26442.732
-263  SYM+G4        11881.678    289 24341.357    24585.701    25752.677
-264  SYM+I+G4      11881.174    290 24342.348    24588.742    25758.552
-265  SYM+R2        11772.188    290 24124.376    24370.771    25540.581
-266  SYM+R3        11703.746    292 23991.493    24242.023    25417.464
-267  SYM+R4        11689.125    294 23966.250    24220.963    25401.988
-268  SYM+R5        11683.575    296 23959.150    24218.095    25404.655
-269  SYM+R6        Skipped 
+261  SYM           19538.176    320 39716.352    39989.181    41309.679
+262  SYM+I         19425.561    321 39493.122    39768.021    41091.428
+263  SYM+G4        18864.446    321 38370.892    38645.791    39969.198
+264  SYM+I+G4      18864.444    322 38372.888    38649.868    39976.173
+265  SYM+R2        18759.719    322 38163.439    38440.419    39766.724
+266  SYM+R3        18643.024    324 37934.048    38215.223    39547.291
+267  SYM+R4        18635.979    326 37923.957    38209.371    39547.159
+268  SYM+R5        18628.266    328 37912.531    38202.228    39545.691
+269  SYM+R6        18628.001    330 37916.001    38210.025    39559.119
 270  SYM+R7        Skipped 
 271  SYM+R8        Skipped 
 272  SYM+R9        Skipped 
 273  SYM+R10       Skipped 
-274  GTR           12263.969    291 25109.939    25358.395    26531.026
-275  GTR+I         12054.394    292 24692.788    24943.318    26118.759
-276  GTR+G4        11691.074    292 23966.147    24216.677    25392.118
-277  GTR+I+G4      11690.935    293 23967.869    24220.485    25398.724
-278  GTR+R2        11579.225    293 23744.451    23997.067    25175.305
-279  GTR+R3        11511.372    295 23612.744    23869.568    25053.366
-280  GTR+R4        11499.147    297 23592.294    23853.374    25042.683
-281  GTR+R5        11494.666    299 23587.332    23852.716    25047.487
+274  GTR           19199.396    323 39044.792    39323.864    40653.056
+275  GTR+I         19128.762    324 38905.523    39186.698    40518.766
+276  GTR+G4        18557.902    324 37763.803    38044.978    39377.047
+277  GTR+I+G4      18557.831    325 37765.662    38048.951    39383.885
+278  GTR+R2        18443.398    325 37536.797    37820.085    39155.019
+279  GTR+R3        18345.581    327 37345.161    37632.711    38973.342
+280  GTR+R4        18325.379    329 37308.758    37600.613    38946.897
+281  GTR+R5        18323.288    331 37308.576    37604.781    38956.673
 282  GTR+R6        Skipped 
 283  GTR+R7        Skipped 
 284  GTR+R8        Skipped 
 285  GTR+R9        Skipped 
 286  GTR+R10       Skipped 
-Akaike Information Criterion:           TPM2u+R5
-Corrected Akaike Information Criterion: TPM2u+R5
-Bayesian Information Criterion:         HKY+R4
-Best-fit model: HKY+R4 chosen according to BIC
+Akaike Information Criterion:           TIM2+R4
+Corrected Akaike Information Criterion: TIM2+R4
+Bayesian Information Criterion:         TPM2u+R4
+Best-fit model: TPM2u+R4 chosen according to BIC
 
 All model information printed to seqs.B.rc.trim.aln.model
-CPU time for ModelFinder: 480.221 seconds (0h:8m:0s)
-Wall-clock time for ModelFinder: 165.966 seconds (0h:2m:45s)
+CPU time for ModelFinder: 2008.998 seconds (0h:33m:28s)
+Wall-clock time for ModelFinder: 690.058 seconds (0h:11m:30s)
 
-NOTE: 14 MB RAM (0 GB) is required!
+NOTE: 20 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.100)
-1. Initial log-likelihood: -12054.474
-2. Current log-likelihood: -11747.217
-3. Current log-likelihood: -11539.560
-4. Current log-likelihood: -11537.474
-5. Current log-likelihood: -11536.659
-6. Current log-likelihood: -11535.956
-7. Current log-likelihood: -11535.279
-8. Current log-likelihood: -11534.600
-9. Current log-likelihood: -11533.918
-10. Current log-likelihood: -11533.239
-11. Current log-likelihood: -11532.574
-12. Current log-likelihood: -11531.942
-13. Current log-likelihood: -11531.360
-14. Current log-likelihood: -11530.842
-15. Current log-likelihood: -11530.399
-16. Current log-likelihood: -11530.033
-17. Current log-likelihood: -11529.740
-18. Current log-likelihood: -11529.513
-19. Current log-likelihood: -11529.341
-20. Current log-likelihood: -11529.213
-Optimal log-likelihood: -11529.115
-Rate parameters:  A-C: 1.000  A-G: 3.180  A-T: 1.000  C-G: 1.000  C-T: 3.180  G-T: 1.000
-Base frequencies:   A: 0.368  C: 0.141  G: 0.111  T: 0.379
-Site proportion and rates:  (0.333,0.148) (0.559,0.720) (0.072,2.635) (0.037,9.855)
-Parameters optimization took 20 rounds (3.018 sec)
-Computing ML distances based on estimated model parameters... 0.261 sec
+1. Initial log-likelihood: -19032.746
+2. Current log-likelihood: -18455.588
+3. Current log-likelihood: -18371.953
+4. Current log-likelihood: -18364.968
+5. Current log-likelihood: -18361.797
+6. Current log-likelihood: -18358.745
+7. Current log-likelihood: -18355.262
+8. Current log-likelihood: -18351.414
+9. Current log-likelihood: -18347.471
+10. Current log-likelihood: -18344.173
+11. Current log-likelihood: -18341.943
+12. Current log-likelihood: -18340.773
+13. Current log-likelihood: -18340.218
+14. Current log-likelihood: -18339.805
+15. Current log-likelihood: -18339.453
+16. Current log-likelihood: -18339.146
+17. Current log-likelihood: -18338.870
+18. Current log-likelihood: -18338.629
+19. Current log-likelihood: -18338.419
+20. Current log-likelihood: -18338.238
+21. Current log-likelihood: -18338.082
+22. Current log-likelihood: -18337.949
+23. Current log-likelihood: -18337.834
+Optimal log-likelihood: -18337.727
+Rate parameters:  A-C: 0.676  A-G: 2.322  A-T: 0.676  C-G: 1.000  C-T: 2.322  G-T: 1.000
+Base frequencies:   A: 0.367  C: 0.143  G: 0.106  T: 0.384
+Site proportion and rates:  (0.567,0.347) (0.334,0.966) (0.078,3.248) (0.020,11.049)
+Parameters optimization took 23 rounds (14.440 sec)
+Computing ML distances based on estimated model parameters... 0.737 sec
 Computing BIONJ tree...
-0.014 seconds
-Log-likelihood of BIONJ tree: -11667.070
+0.038 seconds
+Log-likelihood of BIONJ tree: -18631.535
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 1.728 second
-Computing log-likelihood of 98 initial trees ... 2.709 seconds
-Current best score: -11440.652
+Generating 98 parsimony trees... 3.995 second
+Computing log-likelihood of 98 initial trees ... 9.312 seconds
+Current best score: -18308.016
 
 Do NNI search on 20 best initial trees
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 1: -11413.808
+BETTER TREE FOUND at iteration 1: -18289.057
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 3: -11411.572
+BETTER TREE FOUND at iteration 2: -18287.517
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 5: -11403.546
-Iteration 10 / LogL: -11468.140 / Time: 0h:2m:59s
-Iteration 20 / LogL: -11447.392 / Time: 0h:3m:2s
+BETTER TREE FOUND at iteration 7: -18277.029
+Iteration 10 / LogL: -18309.289 / Time: 0h:12m:15s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 17: -18264.056
+Iteration 20 / LogL: -18317.859 / Time: 0h:12m:29s
 Finish initializing candidate tree set (20)
-Current best tree score: -11403.546 / CPU time: 13.672
+Current best tree score: -18264.056 / CPU time: 43.574
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 27: -11403.072
-Iteration 30 / LogL: -11409.360 / Time: 0h:3m:6s (0h:1m:9s left)
+BETTER TREE FOUND at iteration 25: -18260.371
+Iteration 30 / LogL: -18275.455 / Time: 0h:12m:45s (0h:4m:6s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 37: -11398.732
+BETTER TREE FOUND at iteration 33: -18258.230
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 39: -11390.692
-Iteration 40 / LogL: -11402.947 / Time: 0h:3m:11s (0h:1m:4s left)
+BETTER TREE FOUND at iteration 38: -18257.644
+Iteration 40 / LogL: -18263.062 / Time: 0h:12m:57s (0h:3m:40s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 47: -11389.566
-Iteration 50 / LogL: -11398.868 / Time: 0h:3m:15s (0h:0m:58s left)
+BETTER TREE FOUND at iteration 41: -18256.127
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 57: -11389.097
+BETTER TREE FOUND at iteration 46: -18255.946
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 58: -11388.384
-Iteration 60 / LogL: -11389.762 / Time: 0h:3m:19s (0h:0m:55s left)
+BETTER TREE FOUND at iteration 48: -18252.790
+Iteration 50 / LogL: -18267.503 / Time: 0h:13m:11s (0h:3m:23s left)
+Iteration 60 / LogL: -18255.401 / Time: 0h:13m:24s (0h:2m:50s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 69: -11383.423
-Iteration 70 / LogL: -11389.467 / Time: 0h:3m:23s (0h:0m:54s left)
+BETTER TREE FOUND at iteration 69: -18249.967
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 75: -11383.206
-BETTER TREE FOUND at iteration 78: -11383.200
+BETTER TREE FOUND at iteration 70: -18244.280
+Iteration 70 / LogL: -18244.280 / Time: 0h:13m:38s (0h:3m:6s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 79: -11382.292
-Iteration 80 / LogL: -11386.269 / Time: 0h:3m:27s (0h:0m:51s left)
+BETTER TREE FOUND at iteration 79: -18242.401
+Iteration 80 / LogL: -18262.951 / Time: 0h:13m:52s (0h:2m:58s left)
+Iteration 90 / LogL: -18242.408 / Time: 0h:14m:6s (0h:2m:35s left)
+Iteration 100 / LogL: -18259.292 / Time: 0h:14m:18s (0h:2m:14s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 82: -11382.281
+BETTER TREE FOUND at iteration 105: -18240.669
+Iteration 110 / LogL: -18271.585 / Time: 0h:14m:30s (0h:2m:37s left)
+Iteration 120 / LogL: -18244.331 / Time: 0h:14m:44s (0h:2m:18s left)
+Iteration 130 / LogL: -18241.756 / Time: 0h:14m:55s (0h:1m:59s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 87: -11381.743
-Iteration 90 / LogL: -11388.662 / Time: 0h:3m:30s (0h:0m:48s left)
-Iteration 100 / LogL: -11390.370 / Time: 0h:3m:33s (0h:0m:42s left)
+BETTER TREE FOUND at iteration 131: -18240.353
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 106: -11381.343
-Iteration 110 / LogL: -11392.236 / Time: 0h:3m:37s (0h:0m:45s left)
-Iteration 120 / LogL: -11417.514 / Time: 0h:3m:40s (0h:0m:39s left)
-Iteration 130 / LogL: -11382.166 / Time: 0h:3m:43s (0h:0m:34s left)
-BETTER TREE FOUND at iteration 132: -11381.340
+BETTER TREE FOUND at iteration 138: -18239.303
+Iteration 140 / LogL: -18250.887 / Time: 0h:15m:10s (0h:2m:35s left)
+Iteration 150 / LogL: -18307.831 / Time: 0h:15m:22s (0h:2m:17s left)
+BETTER TREE FOUND at iteration 155: -18239.300
+Iteration 160 / LogL: -18239.313 / Time: 0h:15m:33s (0h:2m:25s left)
+Iteration 170 / LogL: -18245.777 / Time: 0h:15m:46s (0h:2m:9s left)
+Iteration 180 / LogL: -18256.901 / Time: 0h:15m:59s (0h:1m:52s left)
+Iteration 190 / LogL: -18243.014 / Time: 0h:16m:11s (0h:1m:36s left)
+Iteration 200 / LogL: -18244.314 / Time: 0h:16m:23s (0h:1m:21s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 133: -11379.919
-Iteration 140 / LogL: -11381.849 / Time: 0h:3m:47s (0h:0m:41s left)
-Iteration 150 / LogL: -11397.332 / Time: 0h:3m:50s (0h:0m:36s left)
+BETTER TREE FOUND at iteration 202: -18239.271
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 155: -11378.420
-Iteration 160 / LogL: -11386.133 / Time: 0h:3m:54s (0h:0m:40s left)
-Iteration 170 / LogL: -11405.694 / Time: 0h:3m:58s (0h:0m:36s left)
-Iteration 180 / LogL: -11387.305 / Time: 0h:4m:1s (0h:0m:31s left)
+BETTER TREE FOUND at iteration 205: -18237.124
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 181: -11378.295
+BETTER TREE FOUND at iteration 208: -18236.084
+Iteration 210 / LogL: -18240.207 / Time: 0h:16m:38s (0h:2m:24s left)
+Iteration 220 / LogL: -18241.163 / Time: 0h:16m:50s (0h:2m:8s left)
+Iteration 230 / LogL: -18303.745 / Time: 0h:17m:3s (0h:1m:53s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 184: -11378.001
+BETTER TREE FOUND at iteration 237: -18235.812
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 187: -11371.768
-Iteration 190 / LogL: -11378.418 / Time: 0h:4m:7s (0h:0m:41s left)
-Iteration 200 / LogL: -11378.086 / Time: 0h:4m:12s (0h:0m:37s left)
-Iteration 210 / LogL: -11388.742 / Time: 0h:4m:17s (0h:0m:33s left)
-Iteration 220 / LogL: -11383.265 / Time: 0h:4m:22s (0h:0m:29s left)
-Iteration 230 / LogL: -11375.244 / Time: 0h:4m:27s (0h:0m:25s left)
+BETTER TREE FOUND at iteration 240: -18234.217
+Iteration 240 / LogL: -18234.217 / Time: 0h:17m:17s (0h:2m:25s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 237: -11371.712
-Iteration 240 / LogL: -11372.762 / Time: 0h:4m:31s (0h:0m:42s left)
+BETTER TREE FOUND at iteration 246: -18233.969
+Iteration 250 / LogL: -18244.239 / Time: 0h:17m:30s (0h:2m:18s left)
+Iteration 260 / LogL: -18234.211 / Time: 0h:17m:42s (0h:2m:3s left)
+Iteration 270 / LogL: -18238.635 / Time: 0h:17m:53s (0h:1m:48s left)
+Iteration 280 / LogL: -18246.093 / Time: 0h:18m:6s (0h:1m:33s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 241: -11371.394
+BETTER TREE FOUND at iteration 284: -18231.828
+Iteration 290 / LogL: -18233.982 / Time: 0h:18m:19s (0h:2m:13s left)
+Iteration 300 / LogL: -18239.015 / Time: 0h:18m:32s (0h:1m:58s left)
+Iteration 310 / LogL: -18235.317 / Time: 0h:18m:45s (0h:1m:44s left)
+Iteration 320 / LogL: -18245.249 / Time: 0h:18m:57s (0h:1m:29s left)
+Iteration 330 / LogL: -18233.068 / Time: 0h:19m:10s (0h:1m:15s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 247: -11368.806
-Iteration 250 / LogL: -11378.801 / Time: 0h:4m:35s (0h:0m:42s left)
-Iteration 260 / LogL: -11376.660 / Time: 0h:4m:38s (0h:0m:37s left)
+BETTER TREE FOUND at iteration 331: -18231.589
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 261: -11368.472
+BETTER TREE FOUND at iteration 337: -18230.959
+Iteration 340 / LogL: -18252.915 / Time: 0h:19m:23s (0h:2m:15s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 268: -11368.011
-Iteration 270 / LogL: -11378.700 / Time: 0h:4m:45s (0h:0m:43s left)
+BETTER TREE FOUND at iteration 346: -18230.120
+Iteration 350 / LogL: -18231.029 / Time: 0h:19m:36s (0h:2m:13s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 276: -11366.515
-Iteration 280 / LogL: -11409.760 / Time: 0h:4m:50s (0h:0m:42s left)
-Iteration 290 / LogL: -11372.317 / Time: 0h:4m:54s (0h:0m:38s left)
+BETTER TREE FOUND at iteration 355: -18229.715
+Iteration 360 / LogL: -18244.295 / Time: 0h:19m:50s (0h:2m:12s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 294: -11366.397
-Iteration 300 / LogL: -11366.769 / Time: 0h:4m:58s (0h:0m:41s left)
-Iteration 310 / LogL: -11418.012 / Time: 0h:5m:2s (0h:0m:36s left)
+BETTER TREE FOUND at iteration 370: -18229.618
+Iteration 370 / LogL: -18229.618 / Time: 0h:20m:4s (0h:2m:19s left)
+Iteration 380 / LogL: -18232.208 / Time: 0h:20m:17s (0h:2m:5s left)
+Iteration 390 / LogL: -18247.363 / Time: 0h:20m:30s (0h:1m:51s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 317: -11365.874
-Iteration 320 / LogL: -11366.518 / Time: 0h:5m:5s (0h:0m:42s left)
-Iteration 330 / LogL: -11371.772 / Time: 0h:5m:9s (0h:0m:37s left)
+BETTER TREE FOUND at iteration 394: -18229.554
+Iteration 400 / LogL: -18254.016 / Time: 0h:20m:43s (0h:2m:10s left)
+Iteration 410 / LogL: -18234.367 / Time: 0h:20m:55s (0h:1m:56s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 338: -11365.326
-Iteration 340 / LogL: -11370.671 / Time: 0h:5m:13s (0h:0m:42s left)
+BETTER TREE FOUND at iteration 419: -18229.376
+Iteration 420 / LogL: -18253.554 / Time: 0h:21m:8s (0h:2m:16s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 343: -11364.742
-Iteration 350 / LogL: -11381.392 / Time: 0h:5m:17s (0h:0m:40s left)
-BETTER TREE FOUND at iteration 359: -11364.736
-Iteration 360 / LogL: -11365.370 / Time: 0h:5m:20s (0h:0m:42s left)
+BETTER TREE FOUND at iteration 424: -18228.788
+Iteration 430 / LogL: -18231.353 / Time: 0h:21m:21s (0h:2m:9s left)
+Iteration 440 / LogL: -18279.529 / Time: 0h:21m:32s (0h:1m:55s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 367: -11363.659
-Iteration 370 / LogL: -11377.873 / Time: 0h:5m:24s (0h:0m:41s left)
-Iteration 380 / LogL: -11372.464 / Time: 0h:5m:27s (0h:0m:37s left)
+BETTER TREE FOUND at iteration 441: -18226.241
+Iteration 450 / LogL: -18238.208 / Time: 0h:21m:45s (0h:2m:4s left)
+Iteration 460 / LogL: -18233.114 / Time: 0h:21m:57s (0h:1m:50s left)
+Iteration 470 / LogL: -18238.314 / Time: 0h:22m:9s (0h:1m:36s left)
+Iteration 480 / LogL: -18227.229 / Time: 0h:22m:21s (0h:1m:22s left)
+Iteration 490 / LogL: -18257.924 / Time: 0h:22m:33s (0h:1m:9s left)
+BETTER TREE FOUND at iteration 496: -18226.237
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 382: -11363.570
-Iteration 390 / LogL: -11370.072 / Time: 0h:5m:31s (0h:0m:39s left)
+BETTER TREE FOUND at iteration 497: -18226.165
+Iteration 500 / LogL: -18233.455 / Time: 0h:22m:45s (0h:2m:11s left)
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 396: -11363.438
-Iteration 400 / LogL: -11376.357 / Time: 0h:5m:36s (0h:0m:41s left)
-Iteration 410 / LogL: -11380.509 / Time: 0h:5m:40s (0h:0m:36s left)
-Iteration 420 / LogL: -11364.498 / Time: 0h:5m:44s (0h:0m:32s left)
-Iteration 430 / LogL: -11388.245 / Time: 0h:5m:47s (0h:0m:27s left)
-Iteration 440 / LogL: -11375.746 / Time: 0h:5m:50s (0h:0m:23s left)
-Iteration 450 / LogL: -11363.550 / Time: 0h:5m:53s (0h:0m:19s left)
-Iteration 460 / LogL: -11363.767 / Time: 0h:5m:57s (0h:0m:14s left)
-Iteration 470 / LogL: -11363.866 / Time: 0h:6m:0s (0h:0m:10s left)
-Iteration 480 / LogL: -11369.154 / Time: 0h:6m:3s (0h:0m:6s left)
-Iteration 490 / LogL: -11363.817 / Time: 0h:6m:7s (0h:0m:2s left)
-TREE SEARCH COMPLETED AFTER 497 ITERATIONS / Time: 0h:6m:9s
+BETTER TREE FOUND at iteration 507: -18226.068
+Iteration 510 / LogL: -18226.238 / Time: 0h:22m:57s (0h:2m:11s left)
+Iteration 520 / LogL: -18242.611 / Time: 0h:23m:9s (0h:1m:57s left)
+Iteration 530 / LogL: -18228.453 / Time: 0h:23m:22s (0h:1m:43s left)
+Iteration 540 / LogL: -18246.798 / Time: 0h:23m:32s (0h:1m:29s left)
+Iteration 550 / LogL: -18230.070 / Time: 0h:23m:46s (0h:1m:16s left)
+Iteration 560 / LogL: -18243.112 / Time: 0h:23m:59s (0h:1m:2s left)
+Iteration 570 / LogL: -18231.447 / Time: 0h:24m:11s (0h:0m:49s left)
+Iteration 580 / LogL: -18230.239 / Time: 0h:24m:22s (0h:0m:36s left)
+Iteration 590 / LogL: -18229.352 / Time: 0h:24m:33s (0h:0m:22s left)
+Iteration 600 / LogL: -18265.111 / Time: 0h:24m:45s (0h:0m:9s left)
+BETTER TREE FOUND at iteration 607: -18226.063
+Iteration 610 / LogL: -18227.392 / Time: 0h:24m:58s (0h:2m:8s left)
+Iteration 620 / LogL: -18226.621 / Time: 0h:25m:11s (0h:1m:55s left)
+Iteration 630 / LogL: -18238.619 / Time: 0h:25m:22s (0h:1m:41s left)
+Iteration 640 / LogL: -18228.901 / Time: 0h:25m:34s (0h:1m:28s left)
+Iteration 650 / LogL: -18244.509 / Time: 0h:25m:44s (0h:1m:15s left)
+Iteration 660 / LogL: -18226.066 / Time: 0h:25m:54s (0h:1m:1s left)
+Iteration 670 / LogL: -18226.088 / Time: 0h:26m:5s (0h:0m:48s left)
+Iteration 680 / LogL: -18240.710 / Time: 0h:26m:15s (0h:0m:35s left)
+Iteration 690 / LogL: -18226.067 / Time: 0h:26m:27s (0h:0m:22s left)
+Iteration 700 / LogL: -18233.960 / Time: 0h:26m:36s (0h:0m:9s left)
+TREE SEARCH COMPLETED AFTER 708 ITERATIONS / Time: 0h:26m:46s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
 --------------------------------------------------------------------
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.010)
-1. Initial log-likelihood: -11363.438
-Optimal log-likelihood: -11363.433
-Rate parameters:  A-C: 1.000  A-G: 3.292  A-T: 1.000  C-G: 1.000  C-T: 3.292  G-T: 1.000
-Base frequencies:   A: 0.368  C: 0.141  G: 0.111  T: 0.379
-Site proportion and rates:  (0.429,0.187) (0.502,0.869) (0.038,3.797) (0.030,11.209)
-Parameters optimization took 1 rounds (0.143 sec)
-BEST SCORE FOUND : -11363.433
-Total tree length: 2.573
+1. Initial log-likelihood: -18226.063
+Optimal log-likelihood: -18226.061
+Rate parameters:  A-C: 0.697  A-G: 2.375  A-T: 0.697  C-G: 1.000  C-T: 2.375  G-T: 1.000
+Base frequencies:   A: 0.367  C: 0.143  G: 0.106  T: 0.384
+Site proportion and rates:  (0.612,0.361) (0.296,1.011) (0.071,3.282) (0.021,11.946)
+Parameters optimization took 1 rounds (0.420 sec)
+BEST SCORE FOUND : -18226.061
+Total tree length: 5.211
 
-Total number of iterations: 497
-CPU time used for tree search: 595.342 sec (0h:9m:55s)
-Wall-clock time used for tree search: 200.401 sec (0h:3m:20s)
-Total CPU time used: 1085.530 sec (0h:18m:5s)
-Total wall-clock time used: 369.720 sec (0h:6m:9s)
+Total number of iterations: 708
+CPU time used for tree search: 2680.167 sec (0h:44m:40s)
+Wall-clock time used for tree search: 900.183 sec (0h:15m:0s)
+Total CPU time used: 4737.210 sec (1h:18m:57s)
+Total wall-clock time used: 1606.575 sec (0h:26m:46s)
 
 Analysis results written to: 
   IQ-TREE report:                seqs.B.rc.trim.aln.iqtree
@@ -820,4 +888,4 @@ Analysis results written to:
   Likelihood distances:          seqs.B.rc.trim.aln.mldist
   Screen log file:               seqs.B.rc.trim.aln.log
 
-Date and Time: Sat Nov 25 14:18:21 2017
+Date and Time: Tue Mar 27 16:02:32 2018
