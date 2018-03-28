@@ -6,9 +6,14 @@ import os
 import sys
 import argparse
 
+import gzip
+
 import matplotlib.pyplot as plt
+# set the figure size. This should be in inches?
+plt.rcParams["figure.figsize"] = (22,16)
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
+from matplotlib.patches import Circle
 
 import math
 
@@ -118,20 +123,38 @@ def closest_dna_dist(matrixfile):
     if verbose:
         sys.stderr.write("Getting closest distances\n")
     distances = {}
-    with open(matrixfile, 'r') as f:
-        l = f.readline()
-        ids = l.rstrip().split("\t")
-        for i,name in enumerate(ids):
-            if i == 0:
-                continue
-            distances[name] = {}
-        for l in f:
-            data = l.rstrip().split("\t")
-            for i,dist in enumerate(data):
+
+    if matrixfile.endswith('.gz'):
+        with gzip.open(matrixfile, 'rt') as f:
+            l = f.readline()
+            ids = l.rstrip().split("\t")
+            for i,name in enumerate(ids):
                 if i == 0:
                     continue
-                distances[data[0]][ids[i]] = float(dist)
-                distances[ids[i]][data[0]] = float(dist)
+                distances[name] = {}
+            for l in f:
+                data = l.rstrip().split("\t")
+                for i,dist in enumerate(data):
+                    if i == 0:
+                        continue
+                    distances[data[0]][ids[i]] = float(dist)
+                    distances[ids[i]][data[0]] = float(dist)
+    else:
+        with open(matrixfile, 'r') as f:
+            l = f.readline()
+            ids = l.rstrip().split("\t")
+            for i,name in enumerate(ids):
+                if i == 0:
+                    continue
+                distances[name] = {}
+            for l in f:
+                data = l.rstrip().split("\t")
+                for i,dist in enumerate(data):
+                    if i == 0:
+                        continue
+                    distances[data[0]][ids[i]] = float(dist)
+                    distances[ids[i]][data[0]] = float(dist)
+
 
     closest = {}
     for d in distances:
@@ -146,7 +169,7 @@ def closest_dna_dist(matrixfile):
         sys.stderr.write("Done\n")
     return closest
 
-def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=3):
+def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -185,8 +208,9 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=3):
 
     # plot the circles for each sample site
     # markerfacecolor="None",
+    alpha = 0.3
     for lonlat in ll.values():
-        plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=0.25, markersize=4, transform=ccrs.PlateCarree())
+        plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
 
     for idx1 in dd:
         for idx2 in dd[idx1]:
@@ -204,18 +228,26 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=3):
             linewidth = dd[idx1][idx2]
             linewidth = linewidth/maxdist * maxlinewidth
             #colorVal = scalarMap.to_rgba(dd[idx1][idx2])
-            plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color='Red', linewidth=linewidth, alpha=0.1, transform=ccrs.Geodetic())
 
             if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
                 if verbose:
                     sys.stderr.write("Adding a circle for {} and {}\n".format(ll[idx1][0], ll[idx1][1]))
-                plt.plot(ll[idx1][0], ll[idx1][1], 'o', color='Red', alpha=0.1, markersize=2,
-                         transform=ccrs.PlateCarree())
+                # add a red circle for this object.
+                # we need to use some simple trig to find the center of the circle whose point on the circumference
+                # is at our lat lon
+                radius = 3
+                circlon = ll[idx1][0] - (radius * math.sin(2 * math.pi))
+                circlat = ll[idx1][1] - (radius * math.cos(2 * math.pi))
 
+                circ = Circle((circlon, circlat), transform=ccrs.Geodetic(), radius=radius,
+                                     linewidth=linewidth, alpha=alpha, color='red', fill=False)
+                ax.add_artist(circ)
+            else:
+                # plot a red line between two points
+                plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color='Red', linewidth=linewidth,
+                         alpha=alpha, transform=ccrs.Geodetic())
 
-
-
-#    plt.colorbar(CS3)
+    #    plt.colorbar(CS3)
 
     #plt.show()
     plt.savefig(outputfile)
@@ -226,6 +258,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
     parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
+    parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 25W75N,25E35N')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
