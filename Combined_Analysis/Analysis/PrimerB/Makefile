@@ -77,3 +77,5 @@ clean:
 	rm -f seqs.$(PRIMER).rc.trim.fasttree
 	rm -f seqs.$(PRIMER).rc.trim.aln.bionj seqs.$(PRIMER).rc.trim.aln.iqtree seqs.$(PRIMER).rc.trim.aln.mldist seqs.$(PRIMER).rc.trim.aln.treefile seqs.$(PRIMER).rc.trim.aln.ckp.gz
 	rm -f seqs.$(PRIMER).rc.trim.aln.log seqs.$(PRIMER).rc.trim.aln.model seqs.$(PRIMER).rc.trim.aln.uniqueseq.phy sgeout iqout iqerr sgeerr
+	rm -f Primer$(PRIMER)_map.png  Primer$(PRIMER)_map.svg metadata.$(PRIMER).txt seqs.$(PRIMER).rc.trim.aln.mldist.gz  seqs.$(PRIMER).rc.trim.matrix.gz
+
