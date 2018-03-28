@@ -47,9 +47,17 @@ def get_lon_lat(idf, maxtoget=50000):
                 continue
             lon = s.group(1)
             p=l.split("\t")
-            lonlat[p[0]] = (float(lon), float(lat))
+
+            try:
+                lat = float(lat)
+                lon = float(lon)
+            except:
+                sys.stderr.write("There was an error parsing the latitude and longitude from {}\n".format(l))
+                continue
+
+            lonlat[p[0]] = (lon, lat)
             newname = p[0].replace('|', '_')
-            lonlat[newname] = (float(lon), float(lat))
+            lonlat[newname] = (lon, lat)
     return lonlat
 
 def latlon2distance(lat1, long1, lat2, long2, miles=False):
@@ -169,12 +177,13 @@ def closest_dna_dist(matrixfile):
         sys.stderr.write("Done\n")
     return closest
 
-def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
+def plotmap(ll, dd, outputfile, bounds=None, maxdist=1, maxlinewidth=6):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
     :param dd: The distances to use
     :param outputfile: The file name to write the image to
+    :param bounds: the boundary for the lat long as a 4-ple array
     :param maxdist: The maximum distance that we will scale to be maxlinewidth
     :return:
     """
@@ -184,7 +193,8 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
 
     # make the map global rather than have it zoom in to
     # the extents of any plotted data
-    ax.set_global()
+    if not bounds:
+        ax.set_global()
 
     ax.stock_img()
     ax.coastlines()
@@ -210,6 +220,12 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
     # markerfacecolor="None",
     alpha = 0.3
     for lonlat in ll.values():
+        if bounds and ((lonlat[1] < bounds[0] or lonlat[1] > bounds[2]) or (lonlat[0] < bounds[1] or lonlat[0] > bounds[3])):
+            if verbose:
+                sys.stderr.write("Not in bounding box: {}\n".format(lonlat))
+            continue
+        if verbose:
+            print("Kept location: {}".format(lonlat))
         plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
 
     for idx1 in dd:
@@ -225,6 +241,12 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
             if verbose:
                 sys.stderr.write("Distance between {} and {}: {}\n".format(idx1, idx2, latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0])))
 
+            if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
+                continue
+
+            if bounds and ((ll[idx2][1] < bounds[0] or ll[idx2][1] > bounds[2]) or (ll[idx2][0] < bounds[1] or ll[idx2][0] > bounds[3])):
+                continue
+
             linewidth = dd[idx1][idx2]
             linewidth = linewidth/maxdist * maxlinewidth
             #colorVal = scalarMap.to_rgba(dd[idx1][idx2])
@@ -236,6 +258,8 @@ def plotmap(ll, dd, outputfile, maxdist=1, maxlinewidth=6):
                 # we need to use some simple trig to find the center of the circle whose point on the circumference
                 # is at our lat lon
                 radius = 3
+                if bounds:
+                    radius = 1.5
                 circlon = ll[idx1][0] - (radius * math.sin(2 * math.pi))
                 circlat = ll[idx1][1] - (radius * math.cos(2 * math.pi))
 
@@ -258,7 +282,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
     parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
-    parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 25W75N,25E35N')
+    parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
@@ -267,7 +291,22 @@ if __name__ == '__main__':
     if args.v:
         verbose = True
 
+    bounds = None
+    if args.b:
+        ll = args.b.split(":")
+        topleft = ll[0].split(",")
+        bottomright = ll[1].split(",")
+        try:
+            bounds=[int(topleft[0]), int(topleft[1]), int(bottomright[0]), int(bottomright[1])]
+            if bounds[0] > bounds[2]:
+                (bounds[0], bounds[2])=(bounds[2], bounds[0])
+            if bounds[1] > bounds[3]:
+                (bounds[1], bounds[3])=(bounds[3], bounds[1])
+        except:
+            sys.stderr.write("There was an error parsing integers from {}. Please do not include N/E/S/W, just +/- ints\n".format(args.b))
+            sys.exit()
+
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
-    plotmap(lonlat, dist, args.o)
+    plotmap(lonlat, dist, args.o, bounds=bounds)
