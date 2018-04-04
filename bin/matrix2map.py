@@ -177,7 +177,7 @@ def closest_dna_dist(matrixfile):
         sys.stderr.write("Done\n")
     return closest
 
-def plotmap(ll, dd, outputfile, bounds=None, maxdist=1, maxlinewidth=6):
+def plotmap(ll, dd, outputfile, alpha, bounds=None, maxdist=1, maxlinewidth=6):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -218,7 +218,7 @@ def plotmap(ll, dd, outputfile, bounds=None, maxdist=1, maxlinewidth=6):
 
     # plot the circles for each sample site
     # markerfacecolor="None",
-    alpha = 0.3
+
     for lonlat in ll.values():
         if bounds and ((lonlat[1] < bounds[0] or lonlat[1] > bounds[2]) or (lonlat[0] < bounds[1] or lonlat[0] > bounds[3])):
             if verbose:
@@ -282,6 +282,7 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
     parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
+    parser.add_argument('-a', help='alpha level for lines. Default=0.25', type=float, default=0.25)
     parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
@@ -309,4 +310,4 @@ if __name__ == '__main__':
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
-    plotmap(lonlat, dist, args.o, bounds=bounds)
+    plotmap(lonlat, dist, args.o, args.a, bounds=bounds)
