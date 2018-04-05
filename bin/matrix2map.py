@@ -10,7 +10,7 @@ import gzip
 
 import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
-plt.rcParams["figure.figsize"] = (22,16)
+plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle
@@ -172,12 +172,18 @@ def closest_dna_dist(matrixfile):
                 continue
             closest[d][k] = distances[d][k]
             break
+    if verbose:
+        sys.stderr.write("From\tTo\tDistance\n")
+        for d in distances:
+            for k in closest[d]:
+                sys.stderr.write("{}\t{}\t{}\n".format(d, k, closest[d][k]))
+
 
     if verbose:
-        sys.stderr.write("Done\n")
+        sys.stderr.write("\n\n\nDone\n")
     return closest
 
-def plotmap(ll, dd, outputfile, alpha, bounds=None, maxdist=1, maxlinewidth=6):
+def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -225,7 +231,7 @@ def plotmap(ll, dd, outputfile, alpha, bounds=None, maxdist=1, maxlinewidth=6):
                 sys.stderr.write("Not in bounding box: {}\n".format(lonlat))
             continue
         if verbose:
-            print("Kept location: {}".format(lonlat))
+            sys.stderr.write("Kept location: {}\n".format(lonlat))
         plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
 
     for idx1 in dd:
@@ -238,17 +244,26 @@ def plotmap(ll, dd, outputfile, alpha, bounds=None, maxdist=1, maxlinewidth=6):
                 sys.stderr.write("NO Lat/Lon for {}\n".format(idx2))
                 continue
 
-            if verbose:
-                sys.stderr.write("Distance between {} and {}: {}\n".format(idx1, idx2, latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0])))
 
             if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
+                if verbose:
+                    sys.stderr.write("{} out of bounds. Skipped\n".format(idx1))
                 continue
 
             if bounds and ((ll[idx2][1] < bounds[0] or ll[idx2][1] > bounds[2]) or (ll[idx2][0] < bounds[1] or ll[idx2][0] > bounds[3])):
+                if verbose:
+                    sys.stderr.write("{} out of bounds. Skipped\n".format(idx2))
                 continue
 
-            linewidth = dd[idx1][idx2]
-            linewidth = linewidth/maxdist * maxlinewidth
+            if linewidth == 0:
+                linewidth = dd[idx1][idx2]
+                linewidth = (linewidth/maxdist) * maxlinewidth
+
+            if verbose:
+                sys.stderr.write("{} to {}: distance: {} km. Genetic distance {}. Line width {}\n".format(
+                    idx1, idx2, latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]), dd[idx1][idx2], linewidth))
+
+
             #colorVal = scalarMap.to_rgba(dd[idx1][idx2])
 
             if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
@@ -283,6 +298,7 @@ if __name__ == '__main__':
     parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
     parser.add_argument('-a', help='alpha level for lines. Default=0.25', type=float, default=0.25)
+    parser.add_argument('-l', help='linewidth for the red lines connecting similar sites', default=1, type=float)
     parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
@@ -310,4 +326,4 @@ if __name__ == '__main__':
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
-    plotmap(lonlat, dist, args.o, args.a, bounds=bounds)
+    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds)
