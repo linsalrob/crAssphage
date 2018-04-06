@@ -97,7 +97,7 @@ Zhongshan_Shi|20110101|China|8	SRA Sample SRR1535306 8	20110101	22.55,113.24		22
 Kjellerup|20090101|Denmark|9	SRA Sample ERR321506 9	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Montreal|20100430|Canada|1	SRA Sample SRR2565543 1	20100430	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Zhongshan_Shi|20110101|China|3	SRA Sample SRR1535306 3	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
-Ostrava|20151201|Czech_Republic|1	Cinek primerC sample 18 20151201	20151201	49.8346453,18.2820442	B	49.8346453	18.2820442	352	Usti n. Labem	pre-sewage treatment plant	Czech_Republic	Ostrava				Ondrej Cinek	Univerzita Karlova															
+Ostrava|20151201|Czech_Republic|1	Cinek primerC sample 18 20151201	20151201	49.8346453,18.2820442	C	49.8346453	18.2820442	352	Usti n. Labem	pre-sewage treatment plant	Czech_Republic	Ostrava				Ondrej Cinek	Univerzita Karlova															
 Zhongshan_Shi|20110101|China|1	SRA Sample SRR1535306 1	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
 Zhongshan_Shi|20110101|China|7	SRA Sample SRR1535306 7	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
 Zhongshan_Shi|20110101|China|6	SRA Sample SRR1535306 6	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
@@ -193,7 +193,7 @@ Dallas|20140616|USA|81	SRA Sample SRR3160438 81	20140616	32.8094,-96.8365		32.80
 Dallas|20140616|USA|80	SRA Sample SRR3160438 80	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|89	SRA Sample SRR3160438 89	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|88	SRA Sample SRR3160438 88	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
-Zerdab|20050203|Azerbaijan|1	Cinek lab sample 356 C 20050203	20050203	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 356_C_intR.ab1 (reversed), 356_C_f.ab1, 356_C_r.ab1 (reversed), 356_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		f													
+Zerdab|20050203|Azerbaijan|1	Cinek lab sample 356 C 20050203	20050203	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 356_C_intR.ab1 (reversed), 356_C_f.ab1, 356_C_r.ab1 (reversed), 356_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		f													
 San_Marcos|20151209|USA|1	Edwards Primer C Site 4 20151209	20151209	33.144526,-117.178849	C	33.144526	-117.178849				USA	San Marcos		Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069		Rob Edwards	San Diego State University															
 Kjellerup|20090101|Denmark|298	SRA Sample ERR321621 35	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|83	SRA Sample ERR525802 6	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
@@ -288,7 +288,7 @@ Kjellerup|20090101|Denmark|135	SRA Sample ERR525863 2	20090101	56.26392,9.501785
 Kjellerup|20090101|Denmark|136	SRA Sample ERR525801 1	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|137	SRA Sample ERR321572 1	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Escondido|20160301|USA|1	Escondido Primer C Site 1 20160301	20160301	33.105788,-117.114064	C	33.105788	-117.114064				USA	Escondido		Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA		Rob Edwards	San Diego State University			201603						1						
-AlJafr|20070813|Jordan|1	Cinek lab sample 215 C 20070813	20070813	30.585164,36.238414	B	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 215_C_intF.ab1 (reversed), 215_C_r.ab1, 215_C_f.ab1 (reversed), 215_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+AlJafr|20070813|Jordan|1	Cinek lab sample 215 C 20070813	20070813	30.585164,36.238414	C	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 215_C_intF.ab1 (reversed), 215_C_r.ab1, 215_C_f.ab1 (reversed), 215_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Engelsskiy_rayon|20160301|Russia|1	Tyakht SAR_275_C primer C	20160301	51.32,46.00	C	51.32	46.00				Russia	Engelsskiy rayon		Saratov, Russia		Alexander Tyakht	Federal Research and Clinical Center of Physical-Chemical Medicine															
 Abidjan|20160125|Cote_dIvoire|1	13.Cote_dIvoire.Abidjan.25-01-2016	20160125	5.3599517,-4.0082563		5.3599517	-4.0082563				Cote_dIvoire	Abidjan																			crAssphage_C 1-1238 (100%) aligns to NODE_530_length_24086_cov_8.75815 8328-7091 with 98.788% identity	
 Houston|20130101|USA|29	SRA Sample SRR4032471 3	20130101	29.77152983140312,-95.2212444414063		29.77152983140312	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140312 N 95.22124444140627 W
@@ -359,7 +359,7 @@ Lanzhou_Shi|20120101|China|140	SRA Sample ERR589770 6	20120101	35.86166,104.1953
 Lanzhou_Shi|20120101|China|141	SRA Sample ERR589770 7	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|142	SRA Sample ERR589770 8	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Courtaboeuf_Cedex|20050101|France|41	SRA Sample ERR479111 1	20050101	46.227638,2.213749		46.227638	2.213749				France	Courtaboeuf Cedex									haplotype called by gretel version 0.0.8											
-Khartoum|20160309|Sudan|1	Cinek primer C sample 274 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	274			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160309														
+Khartoum|20160309|Sudan|1	Cinek primer C sample 274 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	274			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160309														
 El_Prat_de_Llobregat|20140501|Spain|1	Muniesa E14 El Prat de Llobregat primer C Raw Sewage	20140501	41.3224312,2.0828713	C	41.3224312	2.0828713				Spain	El Prat de Llobregat				Maite Muniesa	Universitat de Barcelona										Raw Sewage					
 Lanzhou_Shi|20120101|China|126	SRA Sample ERR1018191 2	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|127	SRA Sample ERR1018191 3	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -485,8 +485,8 @@ Dallas|20140616|USA|144	SRA Sample SRR3160438 144	20140616	32.8094,-96.8365		32.
 Dallas|20140616|USA|147	SRA Sample SRR3160438 147	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|146	SRA Sample SRR3160438 146	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Montreal|20100419|Canada|1	SRA Sample SRR2566063 1	20100419	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
-Prague|20151201|Czech_Republic|1	Cinek primerC sample 23 20151201	20151201	50.0751514,14.3406075	B	50.0751514	14.3406075	326	Brno - Modrice	pre-sewage treatment plant	Czech_Republic	Prague				Ondrej Cinek	Univerzita Karlova															
-Prague|20151201|Czech_Republic|2	Cinek primerC sample 9 20151201	20151201	50.0835494,14.4341414	B	50.0835494	14.4341414	298	Usti n. Labem	pre-sewage treatment plant	Czech_Republic	Prague				Ondrej Cinek	Univerzita Karlova															
+Prague|20151201|Czech_Republic|1	Cinek primerC sample 23 20151201	20151201	50.0751514,14.3406075	C	50.0751514	14.3406075	326	Brno - Modrice	pre-sewage treatment plant	Czech_Republic	Prague				Ondrej Cinek	Univerzita Karlova															
+Prague|20151201|Czech_Republic|2	Cinek primerC sample 9 20151201	20151201	50.0835494,14.4341414	C	50.0835494	14.4341414	298	Usti n. Labem	pre-sewage treatment plant	Czech_Republic	Prague				Ondrej Cinek	Univerzita Karlova															
 San_Diego|20170729|USA|1	VolunteerD_20170729	20170729	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															D	Weekly	WD7		
 Lanzhou_Shi|20130101|China|14	SRA Sample ERR1578622 2	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20130101|China|15	SRA Sample ERR1578641 1	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -571,8 +571,8 @@ Evrange|20121018|Luxembourg|21	SRA Sample SRR3313045 21	20121018	49.5,6.2		49.5	
 Evrange|20121018|Luxembourg|28	SRA Sample SRR3313045 28	20121018	49.5,6.2		49.5	6.2				Luxembourg	Evrange									haplotype called by gretel version 0.0.8											49.5 N 6.2 E
 Evrange|20121018|Luxembourg|29	SRA Sample SRR3313045 29	20121018	49.5,6.2		49.5	6.2				Luxembourg	Evrange									haplotype called by gretel version 0.0.8											49.5 N 6.2 E
 Greymouth|20160317|New_Zealand|1	Fineran Primer C	20160317	-42.4921908,171.1071795	C	-42.4921908	171.1071795				New_Zealand	Greymouth		105 Tainui St, Greymouth 7805, New_Zealand		Peter Fineran	University of Otago															
-Pilsen|20151201|Czech_Republic|2	Cinek primerC sample 6 20151201	20151201	49.7477831,13.3783489	B	49.7477831	13.3783489	414	Ostrava	pre-sewage treatment plant	Czech_Republic	Pilsen				Ondrej Cinek	Univerzita Karlova															
-Pilsen|20151201|Czech_Republic|1	Cinek primerC sample 1 20151201	20151201	49.7477831,13.3783489	B	49.7477831	13.3783489	456	Ceske Budejovice	pre-sewage treatment plant	Czech_Republic	Pilsen				Ondrej Cinek	Univerzita Karlova															
+Pilsen|20151201|Czech_Republic|2	Cinek primerC sample 6 20151201	20151201	49.7477831,13.3783489	C	49.7477831	13.3783489	414	Ostrava	pre-sewage treatment plant	Czech_Republic	Pilsen				Ondrej Cinek	Univerzita Karlova															
+Pilsen|20151201|Czech_Republic|1	Cinek primerC sample 1 20151201	20151201	49.7477831,13.3783489	C	49.7477831	13.3783489	456	Ceske Budejovice	pre-sewage treatment plant	Czech_Republic	Pilsen				Ondrej Cinek	Univerzita Karlova															
 Dallas|20140616|USA|158	SRA Sample SRR3160438 158	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|159	SRA Sample SRR3160438 159	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|152	SRA Sample SRR3160438 152	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
@@ -618,7 +618,7 @@ Evrange|20121018|Luxembourg|8	SRA Sample SRR3313045 8	20121018	49.5,6.2		49.5	6.
 Carlsbad|20160601|USA|1	Carlsbad Primer C Site 3 20160601	20160601	33.116202,-117.321597	C	33.116202	-117.321597				USA	Carlsbad		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011		Rob Edwards	San Diego State University			201606						3						
 Karlsruhe|20160208|Germany|1	Gyu-Sung Cho Primer C 20160208	20160208	49.0151676,8.4008814	C	49.0151676	8.4008814				Germany	Karlsruhe		Max Rubner-Institut, Karlsruhe, Haid-und-Neu-StraBe 9, 76131		Gyu-Sung Cho	Max Rubner-Institut															
 San_Diego|20170629|USA|2	VolunteerE_20170629	20170629	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															E	Weekly	WE5		
-Zerdab|20060505|Azerbaijan|1	Cinek lab sample 351 C 20060505	20060505	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 351_C_intF.ab1 (reversed), 351_C_r.ab1, 351_C_f.ab1 (reversed), 351_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|20060505|Azerbaijan|1	Cinek lab sample 351 C 20060505	20060505	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 351_C_intF.ab1 (reversed), 351_C_r.ab1, 351_C_f.ab1 (reversed), 351_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Kjellerup|20090101|Denmark|102	SRA Sample ERR321275 9	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Lima|20160204|Peru|1	35.Peru.Lima.04-02-2016	20160204	-12.0463731,-77.042754		-12.0463731	-77.042754				Peru	Lima																			crAssphage_C 1-1238 (100%) aligns to NODE_88_length_39543_cov_12.2741 18285-17048 with 97.011% identity	
 Lanzhou_Shi|20120101|China|35	SRA Sample ERR1018196 3	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -633,7 +633,7 @@ Lanzhou_Shi|20120101|China|39	SRA Sample ERR1018196 7	20120101	35.86166,104.1953
 Lanzhou_Shi|20120101|China|38	SRA Sample ERR1018196 6	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Carlsbad|20161101|USA|1	Carlsbad Primer C Site 3 20161101	20161101	33.116202,-117.321597	C	33.116202	-117.321597				USA	Carlsbad		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011		Rob Edwards	San Diego State University			201611						3						
 Southbank|20170824|Australia|1	Barr Monash Sample4 PrimerC 20170824	20170824	-37.8274851,144.9527136	C	-37.8274851	144.9527136	4	Melbourne, Victoria, Australia	WWTP	Australia	Southbank																				
-Ostrava|20151201|Czech_Republic|2	Cinek primerC sample 5 20151201	20151201	49.8346453,18.2820442	B	49.8346453	18.2820442	479	Ceske Budejovice	pre-sewage treatment plant	Czech_Republic	Ostrava				Ondrej Cinek	Univerzita Karlova															
+Ostrava|20151201|Czech_Republic|2	Cinek primerC sample 5 20151201	20151201	49.8346453,18.2820442	C	49.8346453	18.2820442	479	Ceske Budejovice	pre-sewage treatment plant	Czech_Republic	Ostrava				Ondrej Cinek	Univerzita Karlova															
 Division_No_18|20101001|Canada|100	SRA Sample SRR1554402 52	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20090101|China|6	SRA Sample ERR504978 6	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20090101|China|5	SRA Sample ERR504978 5	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -641,20 +641,20 @@ Lanzhou_Shi|20090101|China|4	SRA Sample ERR504978 4	20090101	35.86166,104.195397
 Lanzhou_Shi|20090101|China|3	SRA Sample ERR504978 3	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20090101|China|2	SRA Sample ERR504978 2	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20090101|China|1	SRA Sample ERR504978 1	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-Baki|20170421|Azerbaijan|1	Cinek primer C sample 362 20170421	20170421	40.4093,49.8671	B	40.4093	49.8671	362			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
-Baki|20170421|Azerbaijan|2	Cinek primer C sample 363 20170421	20170421	40.4093,49.8671	B	40.4093	49.8671	363			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
-Baki|20170421|Azerbaijan|3	Cinek primer C sample 337 20170421	20170421	40.4093,49.8671	B	40.4093	49.8671	337			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
-Baki|20170421|Azerbaijan|4	Cinek primer C sample 335 20170421	20170421	40.4093,49.8671	B	40.4093	49.8671	335			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
-Baki|20170421|Azerbaijan|5	Cinek primer C sample 353 20170421	20170421	40.4093,49.8671	B	40.4093	49.8671	353			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
+Baki|20170421|Azerbaijan|1	Cinek primer C sample 362 20170421	20170421	40.4093,49.8671	C	40.4093	49.8671	362			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
+Baki|20170421|Azerbaijan|2	Cinek primer C sample 363 20170421	20170421	40.4093,49.8671	C	40.4093	49.8671	363			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
+Baki|20170421|Azerbaijan|3	Cinek primer C sample 337 20170421	20170421	40.4093,49.8671	C	40.4093	49.8671	337			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
+Baki|20170421|Azerbaijan|4	Cinek primer C sample 335 20170421	20170421	40.4093,49.8671	C	40.4093	49.8671	335			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
+Baki|20170421|Azerbaijan|5	Cinek primer C sample 353 20170421	20170421	40.4093,49.8671	C	40.4093	49.8671	353			Azerbaijan	Baki				Ondrej Cinek	Univerzita Karlova															
 Jericho|20151202|Israel|1	Qimron lab primer C 20151202	20151202	31.85,35.45	C	31.85	35.45				Israel	Jericho	Collected in Jericho			Udi Qimron	Tel Aviv University															
-Amman|20170421|Jordan|3	Cinek primer C sample 236 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	236			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
-Amman|20170421|Jordan|2	Cinek primer C sample 223 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	223			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
-Amman|20170421|Jordan|1	Cinek primer C sample 217 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	217			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|3	Cinek primer C sample 236 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	236			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|2	Cinek primer C sample 223 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	223			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|1	Cinek primer C sample 217 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	217			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
 Independence|20120705|USA|9	SRA Sample SRR2940946 2	20120705	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
-Amman|20170421|Jordan|7	Cinek primer C sample 242 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	242			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
-Amman|20170421|Jordan|6	Cinek primer C sample 244 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	244			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
-Amman|20170421|Jordan|5	Cinek primer C sample 222 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	222			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
-Amman|20170421|Jordan|4	Cinek primer C sample 237 20170421	20170421	31.9454,35.9284	B	31.9454	35.9284	237			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|7	Cinek primer C sample 242 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	242			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|6	Cinek primer C sample 244 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	244			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|5	Cinek primer C sample 222 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	222			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
+Amman|20170421|Jordan|4	Cinek primer C sample 237 20170421	20170421	31.9454,35.9284	C	31.9454	35.9284	237			Jordan	Amman				Ondrej Cinek	Univerzita Karlova															
 Independence|20120705|USA|2	SRA Sample SRR2940947 2	20120705	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
 Independence|20120705|USA|3	SRA Sample SRR2940947 3	20120705	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
 Independence|20120705|USA|1	SRA Sample SRR2940947 1	20120705	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
@@ -747,7 +747,7 @@ Houston|20130101|USA|12	SRA Sample SRR4032583 1	20130101	29.77152983140312,-95.2
 Houston|20130101|USA|13	SRA Sample SRR4032470 1	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
 Houston|20130101|USA|18	SRA Sample SRR4032470 6	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
 Houston|20130101|USA|19	SRA Sample SRR4032470 7	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
-Modfice|20151201|Czech_Republic|1	Cinek primerC sample 22 20151201	20151201	49.1278897,16.6144122	B	49.1278897	16.6144122	265	Praha	pre-sewage treatment plant	Czech_Republic	Modfice				Ondrej Cinek	Univerzita Karlova															
+Modfice|20151201|Czech_Republic|1	Cinek primerC sample 22 20151201	20151201	49.1278897,16.6144122	C	49.1278897	16.6144122	265	Praha	pre-sewage treatment plant	Czech_Republic	Modfice				Ondrej Cinek	Univerzita Karlova															
 San_Diego|20170714|USA|1	VolunteerE_20170714	20170714	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															E	Daily	DE10		
 Independence|20060105|USA|4	SRA Sample ERR318688 1	20060105	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
 Courtaboeuf_Cedex|20050101|France|19	SRA Sample ERR479386 7	20050101	46.227638,2.213749		46.227638	2.213749				France	Courtaboeuf Cedex									haplotype called by gretel version 0.0.8											
@@ -802,7 +802,7 @@ Valby|20160203|Denmark|1	71_RD.Denmark.Valby.03-02-2016	20160203	55.661658499999
 El_Paso_TX|20160223|USA|2	74g.USA.El_Paso_TX.23-02-2016	20160223	31.7618778,-106.4850217		31.7618778	-106.4850217				USA	El_Paso_TX																			crAssphage_C 1-836 (68%) aligns to NODE_736_length_15333_cov_68.6454 836-1 with 98.325% identity	
 San_Diego|20170421|USA|1	VolunteerD_20170421	20170421	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, single read															D	Pre	D1		
 San_Diego|20170421|USA|2	VolunteerE_20170421	20170421	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, single read															E	Pre	E1		
-Zerdab|20030201|Azerbaijan|1	Cinek lab sample 348 C 20030201	20030201	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 2 reads: 348_C_f.ab1, 348_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|20030201|Azerbaijan|1	Cinek lab sample 348 C 20030201	20030201	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 2 reads: 348_C_f.ab1, 348_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Montreal|20091117|Canada|4	SRA Sample SRR2566037 4	20091117	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20091117|Canada|5	SRA Sample SRR2566037 5	20091117	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20091117|Canada|1	SRA Sample SRR2566037 1	20091117	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
@@ -850,8 +850,8 @@ Evrange|20121018|Luxembourg|42	SRA Sample SRR3313045 42	20121018	49.5,6.2		49.5	
 Evrange|20121018|Luxembourg|43	SRA Sample SRR3313045 43	20121018	49.5,6.2		49.5	6.2				Luxembourg	Evrange									haplotype called by gretel version 0.0.8											49.5 N 6.2 E
 Mount_Pulaski|20170313|USA|1	BibbyS1_20170313	20170313	40.013333,-89.306667	C	40.013333	-89.306667				USA	Mount Pulaski	This location is approximate. The acutal sample site is unknown, but is in Illinois. The location is the geographic center of Illinois																			
 Kjellerup|20090101|Denmark|167	SRA Sample ERR525890 24	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
-Kostelec_nad_Orlici|20151201|Czech_Republic|2	Cinek primerC sample 20 20151201	20151201	50.1226675,16.2131856	B	50.1226675	16.2131856	375	Zastavka u Brna	post-STP, refugee camp	Czech_Republic	Kostelec nad Orlici				Ondrej Cinek	Univerzita Karlova															
-Kostelec_nad_Orlici|20151201|Czech_Republic|1	Cinek primerC sample 7 20151201	20151201	50.1226675,16.2131856	B	50.1226675	16.2131856	318	Plzen	pre-sewage treatment plant	Czech_Republic	Kostelec nad Orlici				Ondrej Cinek	Univerzita Karlova															
+Kostelec_nad_Orlici|20151201|Czech_Republic|2	Cinek primerC sample 20 20151201	20151201	50.1226675,16.2131856	C	50.1226675	16.2131856	375	Zastavka u Brna	post-STP, refugee camp	Czech_Republic	Kostelec nad Orlici				Ondrej Cinek	Univerzita Karlova															
+Kostelec_nad_Orlici|20151201|Czech_Republic|1	Cinek primerC sample 7 20151201	20151201	50.1226675,16.2131856	C	50.1226675	16.2131856	318	Plzen	pre-sewage treatment plant	Czech_Republic	Kostelec nad Orlici				Ondrej Cinek	Univerzita Karlova															
 Kjellerup|20090101|Denmark|164	SRA Sample ERR525890 21	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|163	SRA Sample ERR525890 20	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|162	SRA Sample ERR525890 19	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
@@ -859,9 +859,9 @@ Kjellerup|20090101|Denmark|161	SRA Sample ERR525890 18	20090101	56.26392,9.50178
 Kjellerup|20090101|Denmark|160	SRA Sample ERR525890 17	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|169	SRA Sample ERR525890 26	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|168	SRA Sample ERR525890 25	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
-Zerdab|20070126|Azerbaijan|1	Cinek lab sample 344 C 20070126	20070126	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 344_C_intF.ab1 (reversed), 344_C_r.ab1, 344_C_f.ab1 (reversed), 344_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|20070126|Azerbaijan|1	Cinek lab sample 344 C 20070126	20070126	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 344_C_intF.ab1 (reversed), 344_C_r.ab1, 344_C_f.ab1 (reversed), 344_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 San_Diego|20170712|USA|1	VolunteerE_20170712	20170712	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															E	Daily	DE8		
-Zerdab|20031229|Azerbaijan|1	Cinek lab sample 326 C 20031229	20031229	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 326_C_intF.ab1 (reversed), 326_C_r.ab1, 326_C_f.ab1 (reversed), 326_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+Zerdab|20031229|Azerbaijan|1	Cinek lab sample 326 C 20031229	20031229	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 326_C_intF.ab1 (reversed), 326_C_r.ab1, 326_C_f.ab1 (reversed), 326_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 San_Diego|20170608|USA|1	VolunteerD_20170608	20170608	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															D	Weekly	WD2		
 Waianae|20161212|USA|1	Hawaii C Waianae Waste Water Treatment Plant Dec 12 2016	20161212	21.4467837,-158.1928871	C	21.4467837	-158.1928871				USA	Waianae		Waianae, HI 96792		Olivia Nigro	Hawai'i Pacific University															
 San_Marcos|20160101|USA|1	San_Marcos Primer C Site 4 20160101	20160101	33.144526,-117.178849	C	33.144526	-117.178849				USA	San Marcos		Vallecitos Water District, 201 Vallecitos De Oro, San Marcos, CA 92069		Rob Edwards	San Diego State University			201601						4						
@@ -876,10 +876,10 @@ Dallas|20140616|USA|65	SRA Sample SRR3160438 65	20140616	32.8094,-96.8365		32.80
 Dallas|20140616|USA|64	SRA Sample SRR3160438 64	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|67	SRA Sample SRR3160438 67	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|66	SRA Sample SRR3160438 66	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
-Zastavka|20151201|Czech_Republic|1	Cinek primerC sample 19 20151201	20151201	49.1874756,16.3586742	B	49.1874756	16.3586742	343	Ostrava	pre-sewage treatment plant	Czech_Republic	Zastavka				Ondrej Cinek	Univerzita Karlova															
-Zastavka|20151201|Czech_Republic|2	Cinek primerC sample 2 20151201	20151201	49.1879958,16.3630967	B	49.1879958	16.3630967	427	Plzen	pre-sewage treatment plant	Czech_Republic	Zastavka				Ondrej Cinek	Univerzita Karlova															
-Khartoum|20160303|Sudan|2	Cinek primer C sample 260 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	260			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160303														
-Khartoum|20160303|Sudan|1	Cinek primer C sample 252 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	252			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160303														
+Zastavka|20151201|Czech_Republic|1	Cinek primerC sample 19 20151201	20151201	49.1874756,16.3586742	C	49.1874756	16.3586742	343	Ostrava	pre-sewage treatment plant	Czech_Republic	Zastavka				Ondrej Cinek	Univerzita Karlova															
+Zastavka|20151201|Czech_Republic|2	Cinek primerC sample 2 20151201	20151201	49.1879958,16.3630967	C	49.1879958	16.3630967	427	Plzen	pre-sewage treatment plant	Czech_Republic	Zastavka				Ondrej Cinek	Univerzita Karlova															
+Khartoum|20160303|Sudan|2	Cinek primer C sample 260 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	260			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160303														
+Khartoum|20160303|Sudan|1	Cinek primer C sample 252 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	252			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160303														
 Novosibirskiy_rayon|20160301|Russia|2	Tyakht Nov_287_C primer C	20160301	55.03,82.57	C	55.03	82.57				Russia	Novosibirskiy rayon		Novosibirsk, Russia		Alexander Tyakht	Federal Research and Clinical Center of Physical-Chemical Medicine															
 Novosibirskiy_rayon|20160301|Russia|1	Tyakht Nov_282_C primer C	20160301	55.03,82.57	C	55.03	82.57				Russia	Novosibirskiy rayon		Novosibirsk, Russia		Alexander Tyakht	Federal Research and Clinical Center of Physical-Chemical Medicine															
 Evrange|20120907|Luxembourg|8	SRA Sample SRR3313044 8	20120907	49.5,6.2		49.5	6.2				Luxembourg	Evrange									haplotype called by gretel version 0.0.8											49.5 N 6.2 E
@@ -934,7 +934,7 @@ Division_No_18|20101001|Canada|68	SRA Sample SRR1554402 20	20101001	56.130366,-1
 Division_No_18|20101001|Canada|59	SRA Sample SRR1554402 11	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Carlsbad|20150901|USA|1	Carlsbad Primer A Site 3 20150901	20150901	33.116202,-117.321597	C	33.116202	-117.321597				USA	Carlsbad		Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011		Rob Edwards	San Diego State University			201509						3						
 Division_No_18|20101001|Canada|58	SRA Sample SRR1554402 10	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
-Zerdab|20071016|Azerbaijan|1	Cinek lab sample 343 C 20071016	20071016	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 343_C_intF.ab1 (reversed), 343_C_r.ab1, 343_C_f.ab1 (reversed), 343_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+Zerdab|20071016|Azerbaijan|1	Cinek lab sample 343 C 20071016	20071016	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 343_C_intF.ab1 (reversed), 343_C_r.ab1, 343_C_f.ab1 (reversed), 343_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Kjellerup|20090101|Denmark|301	SRA Sample ERR321621 38	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Oslo|20060131|Norway|1	Cinek.Norway.amplicons.T9717_C_partial	20060131	59.9138688,10.7522454	C	59.9138688	10.7522454				Norway	Oslo						20060131		200601	Sanger											
 Division_No_18|20101001|Canada|51	SRA Sample SRR1554402 3	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
@@ -943,7 +943,7 @@ Addis_Ababa|20160201|Ethiopia|1	24.Ethiopia.Addis_Ababa.01-02-2016	20160201	8.98
 Davis|20160421|United_States|1	DiazMunoz_Davis1_C	20160421	38.590894,-121.666779	C	38.590894	-121.666779				United States	Davis		City of Davis WWTP, 45452 Co Rd 28H, California 95776, USA	8.659m																	
 Division_No_18|20101001|Canada|54	SRA Sample SRR1554402 6	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Escondido|20160901|USA|1	Escondido Primer C Site 1 20160901	20160901	33.105788,-117.114064	C	33.105788	-117.114064				USA	Escondido		Water Quality Testing, 1521 S. Hale Avenue Escondido, CA 92029, USA		Rob Edwards	San Diego State University			201609						1						
-Ceske_Budejovice|20151201|Czech_Republic|1	Cinek primerC sample 4 20151201	20151201	48.9744694,14.4743417	B	48.9744694	14.4743417	466	Usti nad Labem	pre-sewage treatment plant	Czech_Republic	Ceske Budejovice				Ondrej Cinek	Univerzita Karlova															
+Ceske_Budejovice|20151201|Czech_Republic|1	Cinek primerC sample 4 20151201	20151201	48.9744694,14.4743417	C	48.9744694	14.4743417	466	Usti nad Labem	pre-sewage treatment plant	Czech_Republic	Ceske Budejovice				Ondrej Cinek	Univerzita Karlova															
 Montreal|20100721|Canada|1	SRA Sample SRR2583973 1	20100721	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20100721|Canada|2	SRA Sample SRR2583973 2	20100721	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Dallas|20140616|USA|18	SRA Sample SRR3160438 18	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
@@ -967,7 +967,7 @@ Independence|20060105|USA|3	SRA Sample ERR318680 2	20060105	37.09024,-95.712891	
 Independence|20060105|USA|2	SRA Sample ERR318680 1	20060105	37.09024,-95.712891		37.09024	-95.712891				USA	Independence									haplotype called by gretel version 0.0.8											
 Madrid|20090101|Spain|13	SRA Sample ERR414463 9	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
 Madrid|20090101|Spain|12	SRA Sample ERR414463 8	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
-AlJafr|20050402|Jordan|1	Cinek lab sample 232 C 20050402	20050402	30.585164,36.238414	B	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 232_C_intF.ab1 (reversed), 232_C_r.ab1, 232_C_f.ab1 (reversed), 232_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+AlJafr|20050402|Jordan|1	Cinek lab sample 232 C 20050402	20050402	30.585164,36.238414	C	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 232_C_intF.ab1 (reversed), 232_C_r.ab1, 232_C_f.ab1 (reversed), 232_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Rome|20160202|Italy|1	30.Italy.Rome.02-02-2016	20160202	41.9027835,12.4963655		41.9027835	12.4963655				Italy	Rome																			crAssphage_C 1-1238 (100%) aligns to NODE_335_length_22835_cov_15.07 14510-15747 with 96.365% identity	
 Lanzhou_Shi|20120101|China|49	SRA Sample ERR589750 2	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|44	SRA Sample ERR1018255 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -978,7 +978,7 @@ Lanzhou_Shi|20120101|China|40	SRA Sample ERR1018196 8	20120101	35.86166,104.1953
 Lanzhou_Shi|20120101|China|41	SRA Sample ERR1018196 9	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|42	SRA Sample ERR1018196 10	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|43	SRA Sample ERR1018196 11	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-Zerdab|20031114|Azerbaijan|1	Cinek lab sample 325 C 20031114	20031114	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 325_C_intF.ab1 (reversed), 325_C_r.ab1, 325_C_f.ab1 (reversed), 325_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+Zerdab|20031114|Azerbaijan|1	Cinek lab sample 325 C 20031114	20031114	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 325_C_intF.ab1 (reversed), 325_C_r.ab1, 325_C_f.ab1 (reversed), 325_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Bogota|20160412|Colombia|1	Maria Reyes Primer C 20160412	20160412	4.6500014,-74.0589398	C	4.6500014	-74.0589398				Colombia	Bogota		CorpoGen, Cra. 5 #66A-34, Bogota, Colombia 		Alejandro Reyes	Universidad de los Andes					1										
 Bogota|20160412|Colombia|2	Maria Reyes Primer C 20160412	20160412	4.6500014,-74.0589398	C	4.6500014	-74.0589398				Colombia	Bogota		CorpoGen, Cra. 5 #66A-34, Bogota, Colombia 		Alejandro Reyes	Universidad de los Andes					2										
 Dallas|20140616|USA|113	SRA Sample SRR3160438 113	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
@@ -1018,7 +1018,7 @@ Xilinguole_Meng|20101001|China|10	SRA Sample SRR3993056 10	20101001	43.95,116.35
 Xilinguole_Meng|20101001|China|14	SRA Sample SRR3992959 3	20101001	43.95,116.16		43.95	116.16				China	Xilinguole Meng									haplotype called by gretel version 0.0.8											43.95 N 116.16 E
 San_Diego|20170707|USA|1	VolunteerD_20170707	20170707	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															D	Daily	DD10		
 Dallas|20140616|USA|116	SRA Sample SRR3160438 116	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
-Usti_nad_Labem|20151201|Czech_Republic|1	Cinek primerC sample 17 20151201	20151201	50.6604875,14.0406928	B	50.6604875	14.0406928	368	Jezova	post-STP, refugee camp	Czech_Republic	Usti nad Labem				Ondrej Cinek	Univerzita Karlova															
+Usti_nad_Labem|20151201|Czech_Republic|1	Cinek primerC sample 17 20151201	20151201	50.6604875,14.0406928	C	50.6604875	14.0406928	368	Jezova	post-STP, refugee camp	Czech_Republic	Usti nad Labem				Ondrej Cinek	Univerzita Karlova															
 Dallas|20140616|USA|117	SRA Sample SRR3160438 117	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|114	SRA Sample SRR3160438 114	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|112	SRA Sample SRR3160438 112	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
@@ -1067,7 +1067,7 @@ Lanzhou_Shi|20120101|China|76	SRA Sample ERR1018235 4	20120101	35.86166,104.1953
 Lanzhou_Shi|20120101|China|79	SRA Sample ERR1018235 7	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|78	SRA Sample ERR1018235 6	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Warszawa|20160126|Poland|1	Decewicz Dziewit Primer C Warsaw 20160126	20160126	52.351351,20.959269	C	52.351351	20.959269				Poland	Warszawa		Municipal Wastewater Treatment Plant Czajka, Czajki 4/6, Warsaw, 03-054 Warsaw, Poland		Lukasz Dziewit	University of Warsaw															
-Zerdab|20020517|Azerbaijan|1	Cinek lab sample 364 C 20020517	20020517	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 364_C_intF.ab1 (reversed), 364_C_r.ab1, 364_C_f.ab1 (reversed), 364_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|20020517|Azerbaijan|1	Cinek lab sample 364 C 20020517	20020517	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 364_C_intF.ab1 (reversed), 364_C_r.ab1, 364_C_f.ab1 (reversed), 364_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Kjellerup|20090101|Denmark|270	SRA Sample ERR321621 7	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 San_Diego|20170704|USA|1	VolunteerD_20170704	20170704	32.777199,-117.070971	C	32.777199	-117.070971				USA	San Diego	base called by phred, consensus by merger															D	Daily	DD7		
 Montreal|20101118|Canada|28	SRA Sample SRR2565925 28	20101118	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
@@ -1080,9 +1080,9 @@ Montreal|20101118|Canada|26	SRA Sample SRR2565925 26	20101118	45.50,-73.63		45.5
 Montreal|20101118|Canada|27	SRA Sample SRR2565925 27	20101118	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20101118|Canada|24	SRA Sample SRR2565925 24	20101118	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20101118|Canada|25	SRA Sample SRR2565925 25	20101118	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
-Khartoum|20160311|Sudan|2	Cinek primer C sample 256 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	256			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160311														
+Khartoum|20160311|Sudan|2	Cinek primer C sample 256 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	256			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160311														
 Lanzhou_Shi|20140101|China|98	SRA Sample ERR1190640 1	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-Khartoum|20160311|Sudan|1	Cinek primer C sample 290 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	290			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160311														
+Khartoum|20160311|Sudan|1	Cinek primer C sample 290 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	290			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160311														
 Kjellerup|20090101|Denmark|302	SRA Sample ERR321399 1	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|91	SRA Sample ERR1190678 1	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|90	SRA Sample ERR1190532 1	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -1177,7 +1177,7 @@ Jyvaskyla|20040602|Finland|1	SRA Sample SRR2297851 1	20040602	61.92411,25.748151
 Jyvaskyla|20040602|Finland|3	SRA Sample SRR2297851 3	20040602	61.92411,25.748151		61.92411	25.748151				Finland	Jyvaskyla									haplotype called by gretel version 0.0.8											
 Jyvaskyla|20040602|Finland|2	SRA Sample SRR2297851 2	20040602	61.92411,25.748151		61.92411	25.748151				Finland	Jyvaskyla									haplotype called by gretel version 0.0.8											
 Montreal|20100327|Canada|1	SRA Sample SRR2566057 1	20100327	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
-Khartoum|20160203|Sudan|1	Cinek primer C sample 249 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	249			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160203														
+Khartoum|20160203|Sudan|1	Cinek primer C sample 249 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	249			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160203														
 Honolulu|20161212|USA|1	Hawaii C Sand Island Waste Water Treatment Plant Dec 12 2016	20161212	21.307735,-157.8824584	C	21.307735	-157.8824584				USA	Honolulu		1350 Sand Island Parkway # 3A, Honolulu, HI 96819		Olivia Nigro	Hawai'i Pacific University															
 Kjellerup|20090101|Denmark|196	SRA Sample ERR525890 53	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|197	SRA Sample ERR525890 54	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
@@ -1190,7 +1190,7 @@ Kjellerup|20090101|Denmark|191	SRA Sample ERR525890 48	20090101	56.26392,9.50178
 Kjellerup|20090101|Denmark|198	SRA Sample ERR525890 55	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|199	SRA Sample ERR525890 56	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|292	SRA Sample ERR321621 29	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
-Khartoum|20160302|Sudan|1	Cinek primer C sample 267 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	267			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160302														
+Khartoum|20160302|Sudan|1	Cinek primer C sample 267 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	267			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160302														
 Lanzhou_Shi|20130101|China|8	SRA Sample ERR1578694 8	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20130101|China|9	SRA Sample ERR1578694 9	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20130101|China|6	SRA Sample ERR1578694 6	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -1212,10 +1212,10 @@ Kjellerup|20090101|Denmark|288	SRA Sample ERR321621 25	20090101	56.26392,9.50178
 Kjellerup|20090101|Denmark|289	SRA Sample ERR321621 26	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kitwe|20160112|Zambia|1	49b.Zambia.Kitwe.12-01-2016	20160112	-12.8231947,28.2175744		-12.8231947	28.2175744				Zambia	Kitwe																			crAssphage_C 1-791 (64%) aligns to NODE_3261_length_15250_cov_73.4166 791-1 with 98.357% identity	
 Montreal|20100325|Canada|1	SRA Sample SRR2566056 1	20100325	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
-North_Kurdufan|00000000|Sudan|4	Cinek lab sample 298 C unknown	unknown	12.862807,30.217636	B	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 3 reads: 298_C_intF.ab1 (reversed), 298_C_r.ab1, 298_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
-North_Kurdufan|00000000|Sudan|3	Cinek lab sample 291 C unknown	unknown	12.862807,30.217636	B	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 3 reads: 291_C_f.ab1, 291_C_r.ab1 (reversed), 291_C_intF.ab1			Ondrej Cinek	Univerzita Karlova															
-North_Kurdufan|00000000|Sudan|2	Cinek lab sample 259 C unknown	unknown	12.862807,30.217636	B	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 4 reads: 259_C_intF.ab1 (reversed), 259_C_r.ab1, 259_C_f.ab1 (reversed), 259_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
-North_Kurdufan|00000000|Sudan|1	Cinek lab sample 285 C unknown	unknown	12.862807,30.217636	B	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 4 reads: 285_C_intF.ab1 (reversed), 285_C_r.ab1, 285_C_f.ab1 (reversed), 285_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+North_Kurdufan|00000000|Sudan|4	Cinek lab sample 298 C unknown	unknown	12.862807,30.217636	C	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 3 reads: 298_C_intF.ab1 (reversed), 298_C_r.ab1, 298_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+North_Kurdufan|00000000|Sudan|3	Cinek lab sample 291 C unknown	unknown	12.862807,30.217636	C	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 3 reads: 291_C_f.ab1, 291_C_r.ab1 (reversed), 291_C_intF.ab1			Ondrej Cinek	Univerzita Karlova															
+North_Kurdufan|00000000|Sudan|2	Cinek lab sample 259 C unknown	unknown	12.862807,30.217636	C	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 4 reads: 259_C_intF.ab1 (reversed), 259_C_r.ab1, 259_C_f.ab1 (reversed), 259_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+North_Kurdufan|00000000|Sudan|1	Cinek lab sample 285 C unknown	unknown	12.862807,30.217636	C	12.862807	30.217636				Sudan	North Kurdufan	Assembly of 4 reads: 285_C_intF.ab1 (reversed), 285_C_r.ab1, 285_C_f.ab1 (reversed), 285_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Xghajra|20160201|Malta|1	63.Malta.Xghajra.01-02-2016	20160201	35.8868282,14.5472391		35.8868282	14.5472391				Malta	Xghajra																			crAssphage_C 1-1238 (100%) aligns to NODE_102_length_36318_cov_24.7916 15202-13965 with 96.931% identity	
 Dallas|20140616|USA|32	SRA Sample SRR3160438 32	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|33	SRA Sample SRR3160438 33	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
@@ -1291,7 +1291,7 @@ Division_No_18|20101001|Canada|93	SRA Sample SRR1554402 45	20101001	56.130366,-1
 Division_No_18|20101001|Canada|92	SRA Sample SRR1554402 44	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Division_No_18|20101001|Canada|99	SRA Sample SRR1554402 51	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Division_No_18|20101001|Canada|98	SRA Sample SRR1554402 50	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
-Zerdab|19990507|Azerbaijan|1	Cinek lab sample 365 C 19990507	19990507	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 365_C_intF.ab1 (reversed), 365_C_r.ab1, 365_C_f.ab1 (reversed), 365_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|19990507|Azerbaijan|1	Cinek lab sample 365 C 19990507	19990507	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 365_C_intF.ab1 (reversed), 365_C_r.ab1, 365_C_f.ab1 (reversed), 365_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Montreal|20110217|Canada|1	SRA Sample SRR2583974 1	20110217	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20110217|Canada|2	SRA Sample SRR2583974 2	20110217	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20100309|Canada|2	SRA Sample SRR2566043 2	20100309	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
@@ -1326,7 +1326,7 @@ Montreal|20100308|Canada|1	SRA Sample SRR2566042 1	20100308	45.50,-73.63		45.50	
 Montreal|20100308|Canada|3	SRA Sample SRR2566042 3	20100308	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Montreal|20100308|Canada|2	SRA Sample SRR2566042 2	20100308	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Calera_Chica|20160516|Mexico|1	Vinuesa lab primer C 20160516	20160516	18.8310669,-99.2214482	C	18.8310669	-99.2214482				Mexico	Calera Chica	Collected in Morelos, Canal Paraiso			Pablo Vinuesa	Universidad Nacional Autonoma de Mexico															
-Zerdab|20120810|Azerbaijan|1	Cinek lab sample 328 C 20120810	20120810	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 328_C_intF.ab1 (reversed), 328_C_r.ab1, 328_C_f.ab1 (reversed), 328_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
+Zerdab|20120810|Azerbaijan|1	Cinek lab sample 328 C 20120810	20120810	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 328_C_intF.ab1 (reversed), 328_C_r.ab1, 328_C_f.ab1 (reversed), 328_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		m													
 Blacksburg|20140804|USA|1	Daycare study sample AP-DNA-8	20140804	37.2284, -80.4234		37.2284	-80.4234				USA	Blacksburg		Virginia Polytechnic Institute, Blacksburg, VA 24061, USA							haplotype called by gretel version 0.0.8											
 Blacksburg|20140804|USA|2	Daycare study sample AP-DNA-8	20140804	37.2284, -80.4234		37.2284	-80.4234				USA	Blacksburg		Virginia Polytechnic Institute, Blacksburg, VA 24061, USA							haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|295	SRA Sample ERR321621 32	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
@@ -1357,7 +1357,7 @@ Dallas|20140616|USA|21	SRA Sample SRR3160438 21	20140616	32.8094,-96.8365		32.80
 Dallas|20140616|USA|20	SRA Sample SRR3160438 20	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|23	SRA Sample SRR3160438 23	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Dallas|20140616|USA|22	SRA Sample SRR3160438 22	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
-Wamba|20010901|Nigeria|1	Cinek lab sample 198 C 20010901	20010901	9.081999,8.675277	B	9.081999	8.675277				Nigeria	Wamba	Assembly of 4 reads: 198_C_intF.ab1 (reversed), 198_C_r.ab1, 198_C_f.ab1 (reversed), 198_C_intR.ab1			Ondrej Cinek	Univerzita Karlova															
+Wamba|20010901|Nigeria|1	Cinek lab sample 198 C 20010901	20010901	9.081999,8.675277	C	9.081999	8.675277				Nigeria	Wamba	Assembly of 4 reads: 198_C_intF.ab1 (reversed), 198_C_r.ab1, 198_C_f.ab1 (reversed), 198_C_intR.ab1			Ondrej Cinek	Univerzita Karlova															
 Dallas|20140616|USA|28	SRA Sample SRR3160438 28	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Zhongshan_Shi|20110101|China|39	SRA Sample SRR1535303 4	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
 Zhongshan_Shi|20110101|China|38	SRA Sample SRR1535303 3	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
@@ -1438,9 +1438,9 @@ Division_No_18|20101001|Canada|85	SRA Sample SRR1554402 37	20101001	56.130366,-1
 Division_No_18|20101001|Canada|88	SRA Sample SRR1554402 40	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Division_No_18|20101001|Canada|89	SRA Sample SRR1554402 41	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|73	SRA Sample ERR1018235 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-Zerdab|20030925|Azerbaijan|1	Cinek lab sample 323 C 20030925	20030925	40.143105,47.576927	B	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 323_C_intR.ab1 (reversed), 323_C_f.ab1, 323_C_r.ab1 (reversed), 323_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		f													
+Zerdab|20030925|Azerbaijan|1	Cinek lab sample 323 C 20030925	20030925	40.143105,47.576927	C	40.143105	47.576927				Azerbaijan	Zerdab	Assembly of 4 reads: 323_C_intR.ab1 (reversed), 323_C_f.ab1, 323_C_r.ab1 (reversed), 323_C_intF.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Madrid|20090101|Spain|10	SRA Sample ERR414463 6	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
-Khartoum|20160305|Sudan|1	Cinek primer C sample 296 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	296			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160305														
+Khartoum|20160305|Sudan|1	Cinek primer C sample 296 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	296			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160305														
 Kjellerup|20090101|Denmark|189	SRA Sample ERR525890 46	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|188	SRA Sample ERR525890 45	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|181	SRA Sample ERR525890 38	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
@@ -1460,7 +1460,7 @@ Houston|20130101|USA|3	SRA Sample SRR4032472 3	20130101	29.77152983140313,-95.22
 Houston|20130101|USA|1	SRA Sample SRR4032472 1	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
 Houston|20130101|USA|8	SRA Sample SRR4032584 1	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
 Houston|20130101|USA|9	SRA Sample SRR4032495 1	20130101	29.77152983140312,-95.2212444414063		29.77152983140312	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140312 N 95.22124444140627 W
-Khartoum|20160304|Sudan|1	Cinek primer C sample 288 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	288			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160304														
+Khartoum|20160304|Sudan|1	Cinek primer C sample 288 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	288			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160304														
 Zhongshan_Shi|20110101|China|28	SRA Sample SRR1535306 28	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
 Zhongshan_Shi|20110101|China|29	SRA Sample SRR1535306 29	20110101	22.55,113.24		22.55	113.24				China	Zhongshan Shi									haplotype called by gretel version 0.0.8											22.55 N 113.24 E
 Regina|20160126|Canada|1	22.Canada.Regina.26-01-2016	20160126	50.4452112,-104.6188943		50.4452112	-104.6188943				Canada	Regina																			crAssphage_C 1-1238 (100%) aligns to NODE_173_length_21577_cov_60.8762 7079-5842 with 96.365% identity	
@@ -1504,7 +1504,7 @@ Lanzhou_Shi|20120101|China|84	SRA Sample ERR1018235 12	20120101	35.86166,104.195
 Lanzhou_Shi|20120101|China|85	SRA Sample ERR1018235 13	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|86	SRA Sample ERR1018235 14	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|87	SRA Sample ERR1018235 15	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-Khartoum|20160210|Sudan|1	Cinek primer C sample 300 20170421	20170421	15.5007,32.5599	B	15.5007	32.5599	300			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160210														
+Khartoum|20160210|Sudan|1	Cinek primer C sample 300 20170421	20170421	15.5007,32.5599	C	15.5007	32.5599	300			Sudan	Khartoum				Ondrej Cinek	Univerzita Karlova	20160210														
 Jyvaskyla|20010514|Finland|2	SRA Sample SRR2298568 2	20010514	61.92411,25.748151		61.92411	25.748151				Finland	Jyvaskyla									haplotype called by gretel version 0.0.8											
 Division_No_18|20101001|Canada|69	SRA Sample SRR1554402 21	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
 Jyvaskyla|20010514|Finland|1	SRA Sample SRR2298568 1	20010514	61.92411,25.748151		61.92411	25.748151				Finland	Jyvaskyla									haplotype called by gretel version 0.0.8											
@@ -1542,9 +1542,9 @@ Division_No_18|20101001|Canada|40	SRA Sample SRR1554403 40	20101001	56.130366,-1
 Lanzhou_Shi|20120101|China|114	SRA Sample ERR589824 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Helsinki|20160126|Finland|1	25.Finland.Helsinki.26-01-2016	20160126	60.16985569999999,24.9383791		60.16985569999999	24.9383791				Finland	Helsinki																			crAssphage_C 1-1238 (100%) aligns to NODE_174_length_22452_cov_44.7808 4848-3611 with 98.384% identity	
 Zagreb|20160201|Croatia|1	68.Croatia.Zagreb.01-02-2016	20160201	45.8150108,15.9819189		45.8150108	15.9819189				Croatia	Zagreb																			crAssphage_C 1-1238 (100%) aligns to NODE_166_length_27821_cov_32.3395 7331-6094 with 96.607% identity	
-Abuja|20170421|Nigeria|2	Cinek primer C sample 195 20170421	20170421	9.0765,7.3986	B	9.0765	7.3986	195			Nigeria	Abuja				Ondrej Cinek	Univerzita Karlova															
+Abuja|20170421|Nigeria|2	Cinek primer C sample 195 20170421	20170421	9.0765,7.3986	C	9.0765	7.3986	195			Nigeria	Abuja				Ondrej Cinek	Univerzita Karlova															
 Kjellerup|20090101|Denmark|8	SRA Sample ERR321506 8	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
-Abuja|20170421|Nigeria|1	Cinek primer C sample 200 20170421	20170421	9.0765,7.3986	B	9.0765	7.3986	200			Nigeria	Abuja				Ondrej Cinek	Univerzita Karlova															
+Abuja|20170421|Nigeria|1	Cinek primer C sample 200 20170421	20170421	9.0765,7.3986	C	9.0765	7.3986	200			Nigeria	Abuja				Ondrej Cinek	Univerzita Karlova															
 Kjellerup|20090101|Denmark|2	SRA Sample ERR321506 2	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|3	SRA Sample ERR321506 3	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Lusaka|20160125|Zambia|1	49.Zambia.Lusaka.25-01-2016	20160125	-15.3875259,28.3228165		-15.3875259	28.3228165				Zambia	Lusaka																			crAssphage_C 1-1035 (84%) aligns to NODE_26_length_40435_cov_10.5536 21020-22054 with 97.681% identity	
@@ -1757,7 +1757,7 @@ Lanzhou_Shi|20140101|China|33	SRA Sample ERR1190555 7	20140101	35.86166,104.1953
 Lanzhou_Shi|20140101|China|32	SRA Sample ERR1190555 6	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|31	SRA Sample ERR1190555 5	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|30	SRA Sample ERR1190555 4	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-AlJafr|20020904|Jordan|1	Cinek lab sample 240 C 20020904	20020904	30.585164,36.238414	B	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 240_C_intF.ab1 (reversed), 240_C_r.ab1, 240_C_f.ab1 (reversed), 240_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
+AlJafr|20020904|Jordan|1	Cinek lab sample 240 C 20020904	20020904	30.585164,36.238414	C	30.585164	36.238414				Jordan	Al-Jafr	Assembly of 4 reads: 240_C_intF.ab1 (reversed), 240_C_r.ab1, 240_C_f.ab1 (reversed), 240_C_intR.ab1			Ondrej Cinek	Univerzita Karlova		f													
 Ramallah|20151202|Israel|1	Qimron lab primer C 20151202	20151202	31.9,35.19	C	31.9	35.19				Israel	Ramallah	Collected in Ramallah			Udi Qimron	Tel Aviv University															
 Bogota|20160127|Colombia|1	2.Colombia.Bogota.27-01-2016	20160127	4.710988599999999,-74.072092		4.710988599999999	-74.072092				Colombia	Bogota																			crAssphage_C 1-1238 (100%) aligns to NODE_25_length_59693_cov_16.6043 40818-42055 with 99.031% identity	
 Shanghai|20160320|China|18	Quan Clone 18 PrimerC 20160320	20160320	31.34,121.51	C	31.34	121.51	18	Shanghai, China	WWTP	China	Shanghai				Zhe-Xue Quan	Fundan University															
