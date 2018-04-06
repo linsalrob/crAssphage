@@ -1,4 +1,4 @@
->BibbyS1_20170313_PrimerB [name=BibbyS1_20170313] [date=20170313] [primer=C] [latlon=40.013333,-89.306667] [latitude=40.013333] [longitude=-89.306667] [locality=Mount Pulaski] [country=USA] [note=This location is approximate. The acutal sample site is unknown, but is in Illinois. The location is the geographic center of Illinois]
+>BibbyS1_20170313_PrimerB [name=BibbyS1_20170313] [date=20170313] [primer=B] [latlon=40.013333,-89.306667] [latitude=40.013333] [longitude=-89.306667] [locality=Mount Pulaski] [country=USA] [note=This location is approximate. The acutal sample site is unknown, but is in Illinois. The location is the geographic center of Illinois]
 attctagtacaacttatataattacggattagtagtgcgtaattgaatccatctttcaaa
 ccaatcttttctagcagaatgtacagtagtatTaGaatCaaCttGAttAACTaAtttttG
 AaTCTTtCtAAtAttCtCTTtAGttttATCATCaagatttgTaCtAtcaaTAtCAATttC
@@ -21,7 +21,7 @@ TaAaATaAcattAAAAaGCCttcctCcattTtTCTTaAttAAttTCcTaAATTTaACCaA
 aGAaTTTTCCTtGGACCCaTtTAaaAAGTAAAAaAAaAACCCCCCtTttCtTTTtTtaAa
 aAAaTATAaattTaaaTtTttTtaaAtTtAaTTaaTaaaaCCAATtAAtCttCaacatta
 tcttatcaacaaaaccatagctataataccttgaacgtaagggttngtt
->BibbyS3_20170403_PrimerC [name=BibbyS3_20170403] [date=20170403] [primer=C] [latlon=33.5408776,-117.7063134] [latitude=33.5408776] [longitude=-117.7063134] [locality=Laguna Niguel] [country=USA] [address=Regional Treatment Plant, 29201 La Paz Rd, Laguna Niguel, CA 92629]
+>BibbyS3_20170403_PrimerB [name=BibbyS3_20170403] [date=20170403] [primer=B] [latlon=33.5408776,-117.7063134] [latitude=33.5408776] [longitude=-117.7063134] [locality=Laguna Niguel] [country=USA] [address=Regional Treatment Plant, 29201 La Paz Rd, Laguna Niguel, CA 92629]
 attttaagaacaacttatataattaaggattagtagtacgtaattgaatccatctttcaa
 accaatcttttctagcagaacgtatagtagtattagaatcaacttgattaactaattttt
 gaatctttctaatattctcttTaGTTTtAtCAtCAAGAttTGTaCtAtCaatAtCAATtt
