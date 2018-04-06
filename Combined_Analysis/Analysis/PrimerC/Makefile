@@ -83,8 +83,11 @@ seqs.$(PRIMER).renum.rc.fa: metadata.$(PRIMER).tsv
 	blastn -task blastn -db ../../../data/JQ995537.fna -query seqs.$(PRIMER).renum.fa -out seqs.$(PRIMER).crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
 	python3 ../../../bin/reverse_complement.py -f seqs.$(PRIMER).renum.fa -b seqs.$(PRIMER).crassphage.blastn -o seqs.$(PRIMER).renum.rc.fa
 
+metadata: metadata.$(PRIMER).tsv
+
 metadata.$(PRIMER).tsv: id.$(PRIMER).map
 	python3 ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
+	python3 ../../../bin/tabulate_sequences.py -i seqs.$(PRIEMR).fa -o metadata.$(PRIMER).sequences.tsv
 
 renum: id.$(PRIMER).map
 

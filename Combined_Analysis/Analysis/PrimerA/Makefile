@@ -62,6 +62,7 @@ metadata: metadata.$(PRIMER).tsv
 
 metadata.$(PRIMER).tsv: id.$(PRIMER).map
 	python3 ../../../bin/metadata.py -i id.$(PRIMER).map -o metadata.$(PRIMER).tsv
+	python3 ../../../bin/tabulate_sequences.py -i seqs.$(PRIEMR).fa -o metadata.$(PRIMER).sequences.tsv
 
 renum: id.$(PRIMER).map
 
