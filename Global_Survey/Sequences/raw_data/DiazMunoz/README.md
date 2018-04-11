@@ -68,4 +68,18 @@ Index those bam files:
 samtools index nyc_a_remapped.bam
 ```
 
-We tried to use [gretel](../../../../Metagenomes/IdentifyingStrains/README.md) to identify the strains from the sequences, as we have done with other metagenomes, but unfortunately there is just not enough sequence coverage in these metagenomes to extract meaningful variants from the data.
+Unfortunately, when we map these reads back, we don't have complete coverage of each of the PCR regions, as shown by the following coverage plots. These were created using [tablet](https://ics.hutton.ac.uk/tablet/), and you can view the [bam files here](nyc_snps/code_files/bam)
+
+### PrimerA
+![Primer A pileup viewed in tablet. Note there are some regions with no coverage](images/PrimerA_Pileup.png)
+
+### PrimerB
+![Primer B pileup viewed in tablet. Note there are some regions with no coverage](images/PrimerB_Pileup.png)
+
+### PrimerC
+![Primer C pileup viewed in tablet. Note there are some regions with no coverage](images/PrimerC_Pileup.png)
+
+
+### Gretel
+
+Despite these gaps we tried to use [gretel to identify strains](../../../../Metagenomes/IdentifyingStrains/README.md) from the sequences, as we have done with other metagenomes, but unfortunately there is just not enough sequence coverage in these metagenomes to extract meaningful variants from the data.
