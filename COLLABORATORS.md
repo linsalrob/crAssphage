@@ -189,7 +189,7 @@ Note: No sequences found in Chile
 > MB 9, RM 9118
 > Chicago, IL  60637 USA
 
-## Diaz Muñoz Lab
+## New York University
   * Samuel L. Díaz Muñoz
   * Kristen Gulino
   * Alan Twaddle
