@@ -28,13 +28,14 @@ def stripout(txt):
     return re.sub('\W', '', txt)
 
 
-def rename(fafile, idmapfile, outputfa, labels):
+def rename(fafile, idmapfile, outputfa, labels, ignorelocation=False):
     """
     Rename the sequences
     :param fafile: input fasta file
     :param idmapfile: output id.map file with new name and original name
     :param outputfa: output fasta file
     :param labels: the optional list of labels to use for the identifier
+    :param ignorelocation: ignore the location information
     :return: None
     """
 
@@ -62,6 +63,8 @@ def rename(fafile, idmapfile, outputfa, labels):
                         sys.stderr.write("Even though its there, can't parse locality in {}\n".format(l))
                         fatal_error = True
                     lcl = stripout(m.groups()[0])
+                elif ignorelocation:
+                    lcl = 'Unknown'
                 else:
                     sys.stderr.write("FATAL ERROR: Locality was not found in {}\n".format(l))
                     fatal_error = True
@@ -72,6 +75,8 @@ def rename(fafile, idmapfile, outputfa, labels):
                         sys.stderr.write("Even though its there, can't parse country in {}\n".format(l))
                         fatal_error = True
                     cnt = stripout(m.groups()[0])
+                elif ignorelocation:
+                    cnt = 'Unknown'
                 else:
                     sys.stderr.write("FATAL ERRROR: Country was not found in {}\n".format(l))
                     fatal_error = True
@@ -144,7 +149,8 @@ if __name__ == '__main__':
     parser.add_argument('-o', help='output fasta file', required=True)
     parser.add_argument('-i', help='output id.map file that has the original information and the new information', required=True)
     parser.add_argument('-t', help='tags to use for the label. You can supply multiple -t options and they will be used in order. Default: locality, date, country', action='append')
+    parser.add_argument('-l', help='ignore location information. Without this flag the code will exit with an error if metadata is missing location information', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
-    rename(args.f, args.i, args.o, args.t)
+    rename(args.f, args.i, args.o, args.t, args.l)
