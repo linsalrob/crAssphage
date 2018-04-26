@@ -1,5 +1,5 @@
 iq-tree >= 1.6.3
-blastn >= 2.7.0
+blast+ >= 2.7.0
 python3 >= 3.4.5
 muscle >= 3.8.31
 FastTreeDbl >= 2.1.10
