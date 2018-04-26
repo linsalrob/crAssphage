@@ -22,7 +22,7 @@ def print_leaves(treefile):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Count tree leaves not tea leaves")
-    parser.add_argument('-f', help='Tree to count leaves in')
+    parser.add_argument('-f', help='Tree to count leaves in', required=True)
     parser.add_argument('-v', help='verbose output', action="store_true")
     args = parser.parse_args()
 
