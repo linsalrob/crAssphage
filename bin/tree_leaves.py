@@ -15,7 +15,7 @@ def print_leaves(treefile):
     """
 
     count=0
-    tree = Tree(args.t)
+    tree = Tree(treefile)
     for leaf in tree:
         count+=1
     print("{} : {} leaves".format(treefile, count))
