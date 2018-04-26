@@ -7,4 +7,5 @@ mafft >= 7.310
 clustalw >= 2.1
 phred >= 0.071220.b
 EMBOSS >= 6.5.7.0
-
+samtools >= 1.5
+htslib >= 1.5
