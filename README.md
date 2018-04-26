@@ -40,6 +40,10 @@ We have used the awesome Hansel and Gretel to extract haplotypes from metagenome
 
 Our awesome volunteers have provided samples time and again for us to test to see if they have crAssphage.
 
+## Software for the analysis
+
+We have included a list of all the software we used to analyze these sequences in [requirements.txt](requirements.txt).
+
 ## Git LFS
 
 We use Git Large File Storage to store some of the large files. You will need to [install Git LFS](https://git-lfs.github.com/) for that to work properly. Its easy to do, and you only need to do it once.
