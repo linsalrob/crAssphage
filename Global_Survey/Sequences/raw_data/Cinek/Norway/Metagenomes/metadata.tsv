@@ -1,4 +1,4 @@
-sample	sample_date	bin_id	latlon	latitude	longitude	sex	sample_processing	locality	country	yearmonth	method
+sample	date	bin_id	latlon	latitude	longitude	sex	sample_processing	locality	country	yearmonth	method
 683	20030410	110	59.9138688,10.7522454	59.9138688	10.7522454	F	filtering + pelleting + enzymes	Oslo	Norway	200304	metagenome
 965	20030710	108	59.9138688,10.7522454	59.9138688	10.7522454	F	only filtering	Oslo	Norway	200307	metagenome
 965	20030710	112	59.9138688,10.7522454	59.9138688	10.7522454	F	filtering + pelleting + enzymes	Oslo	Norway	200307	metagenome
