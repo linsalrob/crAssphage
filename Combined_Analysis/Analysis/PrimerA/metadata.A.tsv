@@ -433,7 +433,7 @@ Budapest|20160202|Hungary|1	61.Hungary.Budapest.02-02-2016	20160202	47.497912,19
 Carlsbad|20160301|USA|1	Carlsbad Primer A Site 3 20160301	20160301	33.116202,-117.321597	A	33.116202	-117.321597				USA	Carlsbad	Encina Wastewater Authority, 6200 Avenida Encinas, Carlsbad, CA 92011		Rob Edwards	San Diego State University				201603						3						
 Gava|20140501|Spain|1	Muniesa E13 Gava primer A Raw Sewage	20140501	41.3037013,1.9858569	A	41.3037013	1.9858569				Spain	Gava			Maite Muniesa	Universitat de Barcelona											Raw Sewage					
 Division_No_18|20101001|Canada|70	SRA Sample SRR1554402 13	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
-North_Kurdufan|00000000|Sudan|3	Cinek lab sample 259 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		f	Assembly of 4 reads: 259_A_intf.ab1 (reversed), 259_A_r.ab1, 259_A_f.ab1 (reversed), 259_A_intr.ab1													
+North_Kurdufan|20170421|Sudan|3	Cinek lab sample 259 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		f	Assembly of 4 reads: 259_A_intf.ab1 (reversed), 259_A_r.ab1, 259_A_f.ab1 (reversed), 259_A_intr.ab1													
 Khartoum|20160302|Sudan|1	Cinek primer A sample 267 20170421	20170421	15.5007,32.5599	A	15.5007	32.5599	267			Sudan	Khartoum			Ondrej Cinek	Univerzita Karlova	20160302															
 Lanzhou_Shi|20120101|China|669	SRA Sample ERR589826 4	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|721	SRA Sample ERR589770 5	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -1159,7 +1159,7 @@ Lanzhou_Shi|20120101|China|33	SRA Sample ERR1018206 7	20120101	35.86166,104.1953
 Montreal|20100725|Canada|1	SRA Sample SRR2565742 1	20100725	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Madrid|20090101|Spain|35	SRA Sample ERR209793 3	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
 Ghan|20120101|Australia|39	SRA Sample ERR505106 38	20120101	-25.274398,133.775136		-25.274398	133.775136				Australia	Ghan									haplotype called by gretel version 0.0.8											
-San_Diego|00000000|USA|3	VolunteerM_Unknown1	Unknown	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									M	Pre	M1		
+San_Diego|20170518|USA|3	VolunteerM_201705181	20170518	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									M	Pre	M1		
 Houston|20130101|USA|20	SRA Sample SRR4032470 4	20130101	29.77152983140313,-95.2212444414063		29.77152983140313	-95.2212444414063				USA	Houston									haplotype called by gretel version 0.0.8											29.77152983140313 N 95.22124444140628 W
 Courtaboeuf_Cedex|20050101|France|37	SRA Sample ERR479111 4	20050101	46.227638,2.213749		46.227638	2.213749				France	Courtaboeuf Cedex									haplotype called by gretel version 0.0.8											
 Rybienko_Stare|20160126|Poland|1	Decewicz Dziewit Primer A Wyszkow 20160126	20160126	52.577948,21.429024	A	52.577948	21.429024				Poland	Rybienko Stare	Municipal Wastewater Treatment Plant, Rybienko Stare, 07200 Wyszkow, Poland		Lukasz Dziewit	University of Warsaw																
@@ -1566,7 +1566,7 @@ Escondido|20160301|USA|1	Escondido Primer A Site 1 20160301	20160301	33.105788,-
 Kjellerup|20090101|Denmark|239	SRA Sample ERR209389 2	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Dallas|20140616|USA|26	SRA Sample SRR3160438 26	20140616	32.8094,-96.8365		32.8094	-96.8365				USA	Dallas									haplotype called by gretel version 0.0.8											32.8094 N 96.8365 W
 Jyvaskyla|20040503|Finland|7	SRA Sample SRR2298559 7	20040503	61.92411,25.748151		61.92411	25.748151				Finland	Jyvaskyla									haplotype called by gretel version 0.0.8											
-San_Diego|00000000|USA|2	VolunteerL_Unknown1	Unknown	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									L	Pre	L1		
+San_Diego|20170518|USA|2	VolunteerL_201705181	20170518	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									L	Pre	L1		
 Lanzhou_Shi|20090101|China|2	SRA Sample ERR504978 2	20090101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Kjellerup|20090101|Denmark|71	SRA Sample ERR414235 38	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Division_No_18|20101001|Canada|34	SRA Sample SRR1554403 34	20101001	56.130366,-106.346771		56.130366	-106.346771				Canada	Division No. 18									haplotype called by gretel version 0.0.8											
@@ -1706,7 +1706,7 @@ Madrid|20090101|Spain|66	SRA Sample ERR209607 7	20090101	40.463667,-3.74922		40.
 Kjellerup|20090101|Denmark|159	SRA Sample ERR414263 6	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|17	SRA Sample ERR589811 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|8	SRA Sample ERR1190711 1	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-North_Kurdufan|00000000|Sudan|2	Cinek lab sample 291 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova			Assembly of 4 reads: 291_A_intf.ab1 (reversed), 291_A_r.ab1, 291_A_intr.ab1, 291_A_f.ab1 (reversed)													
+North_Kurdufan|20170421|Sudan|2	Cinek lab sample 291 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova			Assembly of 4 reads: 291_A_intf.ab1 (reversed), 291_A_r.ab1, 291_A_intr.ab1, 291_A_f.ab1 (reversed)													
 Niederdorla|20120601|Germany|6	SRA Sample ERR748478 1	20120601	51.165691,10.451526		51.165691	10.451526				Germany	Niederdorla									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|8	SRA Sample ERR1018201 5	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Madrid|20090101|Spain|53	SRA Sample ERR209793 21	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
@@ -2171,7 +2171,7 @@ Kuala_Lumpur|20160204|Malaysia|1	54.Malaysia.Kuala_Lumpur.04-02-2016	20160204	3.
 Lanzhou_Shi|20120101|China|137	SRA Sample ERR1018206 111	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Montreal|20100205|Canada|9	SRA Sample SRR2566018 9	20100205	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Zhuhai_Shi|20140401|Hong_Kong|2	SRA Sample SRR2043640 2	20140401	22.15,114.10		22.15	114.10				Hong Kong	Zhuhai Shi									haplotype called by gretel version 0.0.8											22.15 N 114.10 E
-San_Diego|00000000|USA|1	VolunteerI_Unknown2	Unknown	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									I	Pre	I1		
+San_Diego|20170518|USA|1	VolunteerI_201705182	20170518	32.777199,-117.070971	A	32.777199	-117.070971				USA	San Diego							base called by phred, single read									I	Pre	I1		
 Kjellerup|20090101|Denmark|129	SRA Sample ERR525801 1	20090101	56.26392,9.501785		56.26392	9.501785				Denmark	Kjellerup									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|108	SRA Sample ERR1190619 57	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Madrid|20090101|Spain|23	SRA Sample ERR209824 18	20090101	40.463667,-3.74922		40.463667	-3.74922				Spain	Madrid									haplotype called by gretel version 0.0.8											
@@ -2253,7 +2253,7 @@ Laguna_Niguel|20170403|USA|1	BibbyS3_20170403	20170403	33.5408776,-117.7063134	A
 Zhuhai_Shi|20140401|Hong_Kong|9	SRA Sample SRR2043641 7	20140401	22.15,114.10		22.15	114.10				Hong Kong	Zhuhai Shi									haplotype called by gretel version 0.0.8											22.15 N 114.10 E
 Rybienko_Stare|20160303|Poland|4	Decewicz Dziewit Primer A Wyszkow 20160303	20160303	52.577948,21.429024	A	52.577948	21.429024				Poland	Rybienko Stare	Municipal Wastewater Treatment Plant, Rybienko Stare, 07200 Wyszkow, Poland		Lukasz Dziewit	University of Warsaw																
 Lanzhou_Shi|20130101|China|11	SRA Sample ERR1578622 5	20130101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
-North_Kurdufan|00000000|Sudan|4	Cinek lab sample 298 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		m	Assembly of 4 reads: 298_A_intf.ab1 (reversed), 298_A_r.ab1, 298_A_intr.ab1, 298_A_f.ab1 (reversed)													
+North_Kurdufan|20170421|Sudan|4	Cinek lab sample 298 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		m	Assembly of 4 reads: 298_A_intf.ab1 (reversed), 298_A_r.ab1, 298_A_intr.ab1, 298_A_f.ab1 (reversed)													
 Lanzhou_Shi|20120101|China|609	SRA Sample ERR589824 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Montreal|20100416|Canada|11	SRA Sample SRR2566059 11	20100416	45.50,-73.63		45.50	-73.63				Canada	Montreal									haplotype called by gretel version 0.0.8											45.50 N 73.63 W
 Lanzhou_Shi|20120101|China|696	SRA Sample ERR1018191 22	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
@@ -2370,7 +2370,7 @@ Division_No_18|20101001|Canada|1	SRA Sample SRR1554403 1	20101001	56.130366,-106
 Lanzhou_Shi|20120101|China|589	SRA Sample ERR589821 195	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20120101|China|1	SRA Sample ERR589807 1	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Pulawy|20160202|Poland|1	36.Poland.Pulawy.02-02-2016	20160202	51.4164431,21.969309		51.4164431	21.969309				Poland	Pulawy																			crAssphage_A 1-1331 (100%) aligns to NODE_7043_length_4483_cov_93.6066 1717-387 with 96.995% identity	
-North_Kurdufan|00000000|Sudan|1	Cinek lab sample 285 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		f	Assembly of 4 reads: 285_A_intf.ab1 (reversed), 285_A_r.ab1, 285_A_intr.ab1, 285_A_f.ab1 (reversed)													
+North_Kurdufan|20170421|Sudan|1	Cinek lab sample 285 A 20170421	20170421	12.862807,30.217636	A	12.862807	30.217636				Sudan	North Kurdufan			Ondrej Cinek	Univerzita Karlova		f	Assembly of 4 reads: 285_A_intf.ab1 (reversed), 285_A_r.ab1, 285_A_intr.ab1, 285_A_f.ab1 (reversed)													
 Lanzhou_Shi|20120101|China|280	SRA Sample ERR1018206 254	20120101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Lanzhou_Shi|20140101|China|66	SRA Sample ERR1190619 15	20140101	35.86166,104.195397		35.86166	104.195397				China	Lanzhou Shi									haplotype called by gretel version 0.0.8											
 Novosibirskiy_rayon|20160301|Russia|2	Tyakht Nov_287_A primer A	20160301	55.03,82.57	A	55.03	82.57				Russia	Novosibirskiy rayon	Novosibirsk, Russia		Alexander Tyakht	Federal Research and Clinical Center of Physical-Chemical Medicine																
