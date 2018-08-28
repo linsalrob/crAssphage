@@ -20,7 +20,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if not args.n:
-        args.n = 'id'
+        args.n = ['id']
 
     for n in args.n:
         if n.lower() not in tags:
