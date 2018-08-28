@@ -19,6 +19,9 @@ if __name__ == '__main__':
     parser.add_argument('-n', help='name of the tag to use in the label. You can provide multiple tags and they will be joined with _ Valid tags are {}'.format(tags), action='append')
     args = parser.parse_args()
 
+    if not args.n:
+        args.n = 'id'
+
     for n in args.n:
         if n.lower() not in tags:
             sys.exit('Sorry {} is not a valid tag. It must be one of {} '.format(args.n, tags))
