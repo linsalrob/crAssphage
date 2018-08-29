@@ -6,10 +6,10 @@ PRIMER = A
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "\tsite_date\tcreate a iq-tree and rename the leaves using both the site and date tags"
-	@echo "\tcountry_tree\tcreate a iq-tree and rename the leaves using the country= tag in the fasta def line"
-	@echo "\tsite_tree\tcreate a iq-tree and rename the leaves using the site= tag in the fasta def line"
-	@echo "\tdate_tree\tcreate a iq-tree and rename the leaves using the date= tag in the fasta def line"
+	@echo "\tsite_date\tcreate a iqtree and rename the leaves using both the site and date tags"
+	@echo "\tcountry_tree\tcreate a iqtree and rename the leaves using the country= tag in the fasta def line"
+	@echo "\tsite_tree\tcreate a iqtree and rename the leaves using the site= tag in the fasta def line"
+	@echo "\tdate_tree\tcreate a iqtree and rename the leaves using the date= tag in the fasta def line"
 	@echo "\ttree\t\tmake a tree named with the label of the sequences"
 	@echo "\treverse_complement\tReverse complement sequences as required and filter to only those that match crassphage"
 	@echo "\tblastn\t\tblast all the sequences against crAssphage (e.g. to check orientation)"
@@ -36,7 +36,7 @@ tree: seqs.$(PRIMER).rc.trim.aln.treefile
 	python3 ../../../../bin/rename_trees.py -t seqs.$(PRIMER).rc.trim.aln.treefile -i id.$(PRIMER).map > seqs.$(PRIMER).named.tree
 
 seqs.$(PRIMER).rc.trim.aln.treefile: seqs.$(PRIMER).rc.trim.aln
-	iq-tree -nt AUTO -s seqs.$(PRIMER).rc.trim.aln
+	iqtree -nt AUTO -s seqs.$(PRIMER).rc.trim.aln
 
 blastn: seqs.$(PRIMER).fa
 	blastn -task blastn -db ../../../../data/JQ995537.fna -query seqs.$(PRIMER).fa -out seqs.crassphage.blastn -outfmt '6 std qlen slen' -evalue 0.001
