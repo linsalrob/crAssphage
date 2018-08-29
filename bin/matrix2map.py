@@ -11,6 +11,7 @@ import gzip
 import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
 plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
+#plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle
