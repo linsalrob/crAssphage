@@ -14,12 +14,15 @@ plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 #plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
-from matplotlib.patches import Circle
+from matplotlib.patches import Circle, Rectangle
 
 import math
 
 import cartopy.crs as ccrs
 import re
+
+country2continent = {"Albania" : "Europe", "Australia" : "Oceania", "Azerbaijan" : "Asia", "Belgium" : "Europe", "Brazil" : "South America", "Bulgaria" : "Europe", "Canada" : "North America", "China" : "Asia", "Colombia" : "South America", "Cote_dIvoire" : "Africa", "Croatia" : "Europe", "Czech_Republic" : "Europe", "Denmark" : "Europe", "Ecuador" : "South America", "Ethiopia" : "Africa", "Finland" : "Europe", "France" : "Europe", "Gambia" : "Africa", "Germany" : "Europe", "Hong_Kong" : "Asia", "Hungary" : "Europe", "Iceland" : "Europe", "India" : "Asia", "Iran" : "Asia", "Ireland" : "Europe", "Israel" : "Asia", "Italy" : "Europe", "Japan" : "Asia", "Jordan" : "Asia", "Kazakhstan" : "Asia", "Kenya" : "Africa", "Latvia" : "Europe", "Luxembourg" : "Europe", "Malaysia" : "Asia", "Malta" : "Europe", "Mexico" : "North America", "Moldova" : "Europe", "Mongolia" : "Asia", "Nepal" : "Asia", "New_Zealand" : "Oceania", "Nigeria" : "Africa", "Norway" : "Europe", "Pakistan" : "Asia", "Peru" : "South America", "Poland" : "Europe", "Portugal" : "Europe", "Russia" : "Asia", "Singapore" : "Asia", "South_Africa" : "Africa", "Spain" : "Europe", "Sri_Lanka" : "Asia", "Sudan" : "Africa", "Sweden" : "Europe", "Switzerland" : "Europe", "The_Netherlands" : "Europe", "United_States" : "North America", "USA" : "North America", "Zambia" : "Africa", "crAssphage_A" : "crAssphage_A"}
+
 
 def get_lon_lat(idf, maxtoget=50000):
     """
@@ -184,7 +187,7 @@ def closest_dna_dist(matrixfile):
         sys.stderr.write("\n\n\nDone\n")
     return closest
 
-def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6):
+def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6, colorcontinents=False):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -192,9 +195,13 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     :param outputfile: The file name to write the image to
     :param bounds: the boundary for the lat long as a 4-ple array
     :param maxdist: The maximum distance that we will scale to be maxlinewidth
+    :param colorcontinents: color lines that go to different continents a different color (currently yellow)
     :return:
     """
     global verbose
+
+    if verbose:
+        sys.stderr.write("Plotting the map\n")
 
     ax = plt.axes(projection=ccrs.Robinson())
 
@@ -218,8 +225,6 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 #    plt.clf()
 
 
-
-
     # NOTE: longitude before latitude!!
     # plt.plot([sdlon, brislon], [sdlat, brislat], color='blue', linewidth=2,  transform=ccrs.Geodetic())
 
@@ -235,6 +240,9 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
             sys.stderr.write("Kept location: {}\n".format(lonlat))
         plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
 
+    # how many lines and circles do we draw?
+    circleat = {}
+    lineat   = {}
     for idx1 in dd:
         for idx2 in dd[idx1]:
             # this should only happen when we do best DNA distances
@@ -245,6 +253,17 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 sys.stderr.write("NO Lat/Lon for {}\n".format(idx2))
                 continue
 
+            linecolor = 'red'
+            scaledalpha = alpha
+            if colorcontinents:
+                # figure out if they are from the same continent
+                m = re.search('\d{8}_(\w+)\_\d', idx1)
+                cont1 = country2continent.get(m.groups(0)[0], "unknown")
+                m = re.search('\d{8}_(\w+)\_\d', idx2)
+                cont2 = country2continent.get(m.groups(0)[0], "unknown")
+                if cont1 != cont2:
+                    linecolor = 'yellow'
+                    scaledalpha = alpha * 0.25
 
             if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
                 if verbose:
@@ -280,18 +299,34 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 circlat = ll[idx1][1] - (radius * math.cos(2 * math.pi))
 
                 circ = Circle((circlon, circlat), transform=ccrs.Geodetic(), radius=radius,
-                                     linewidth=linewidth, alpha=alpha, color='red', fill=False)
+                                     linewidth=linewidth, alpha=scaledalpha, color=linecolor, fill=False)
+                circleat[(circlon, circlat)] = circleat.get((circlon, circlat), 0) + 1
                 ax.add_artist(circ)
             else:
                 # plot a red line between two points
-                plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color='Red', linewidth=linewidth,
-                         alpha=alpha, transform=ccrs.Geodetic())
+                plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color=linecolor, linewidth=linewidth,
+                         alpha=scaledalpha, transform=ccrs.Geodetic())
+                lineat[((ll[idx1][0], ll[idx2][0]), (ll[idx1][1], ll[idx2][1]))] = lineat.get(((ll[idx1][0], ll[idx2][0]), (ll[idx1][1], ll[idx2][1])), 0) + 1
 
     #    plt.colorbar(CS3)
+
+    # add a color bar for the lines and circles
+    rect = Rectangle((10, 10), 140, 130, linewidth=5, edgecolor='b', facecolor='none')
+    #plt.legend(handles=[rect])
+
+    #grad = plt.imshow([[0.,1.], [0.,1.]], cmap = plt.cm.Reds, interpolation = 'bicubic')
+    #plt.legend(handles=[grad])
+    #fig = plt.figure()
+    #ax2 = fig.add_axes()
+    #ax2.add_patch(rect)
+
 
     #plt.show()
     plt.savefig(outputfile)
 
+    # sys.stderr.write("We drew a max of {} circles\n".format(max(circleat.values())))
+    # sys.stderr.write("And we drew a max of {} lines\n".format(max(lineat.values())))
+    sys.stderr.write("Circles,{}\nLines,{}".format(",".join(map(str, circleat.values())), ",".join(map(str, lineat.values()))))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Plot a map using ete and lat lon')
@@ -299,7 +334,8 @@ if __name__ == '__main__':
     parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
     parser.add_argument('-a', help='alpha level for lines. Default=0.25', type=float, default=0.25)
-    parser.add_argument('-l', help='linewidth for the red lines connecting similar sites', default=1, type=float)
+    parser.add_argument('-l', help='linewidth for the lines connecting similar sites', default=1, type=float)
+    parser.add_argument('-c', help='color the lines between continents yellow', action='store_true')
     parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
@@ -327,4 +363,4 @@ if __name__ == '__main__':
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
-    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds)
+    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds, colorcontinents=args.c)
