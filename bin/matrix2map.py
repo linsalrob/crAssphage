@@ -14,7 +14,7 @@ plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 #plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
-from matplotlib.patches import Circle
+from matplotlib.patches import Circle, Rectangle
 
 import math
 
@@ -240,6 +240,9 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
             sys.stderr.write("Kept location: {}\n".format(lonlat))
         plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
 
+    # how many lines and circles do we draw?
+    circleat = {}
+    lineat   = {}
     for idx1 in dd:
         for idx2 in dd[idx1]:
             # this should only happen when we do best DNA distances
@@ -259,7 +262,7 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 m = re.search('\d{8}_(\w+)\_\d', idx2)
                 cont2 = country2continent.get(m.groups(0)[0], "unknown")
                 if cont1 != cont2:
-                    linecolor = 'green'
+                    linecolor = 'yellow'
                     scaledalpha = alpha * 0.75
 
             if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
@@ -297,17 +300,33 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 
                 circ = Circle((circlon, circlat), transform=ccrs.Geodetic(), radius=radius,
                                      linewidth=linewidth, alpha=scaledalpha, color=linecolor, fill=False)
+                circleat[(circlon, circlat)] = circleat.get((circlon, circlat), 0) + 1
                 ax.add_artist(circ)
             else:
                 # plot a red line between two points
                 plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color=linecolor, linewidth=linewidth,
                          alpha=scaledalpha, transform=ccrs.Geodetic())
+                lineat[((ll[idx1][0], ll[idx2][0]), (ll[idx1][1], ll[idx2][1]))] = lineat.get(((ll[idx1][0], ll[idx2][0]), (ll[idx1][1], ll[idx2][1])), 0) + 1
 
     #    plt.colorbar(CS3)
+
+    # add a color bar for the lines and circles
+    rect = Rectangle((10, 10), 140, 130, linewidth=5, edgecolor='b', facecolor='none')
+    #plt.legend(handles=[rect])
+
+    #grad = plt.imshow([[0.,1.], [0.,1.]], cmap = plt.cm.Reds, interpolation = 'bicubic')
+    #plt.legend(handles=[grad])
+    fig = plt.figure()
+    ax2 = fig.add_axes()
+    ax2.add_patch(rect)
+
 
     #plt.show()
     plt.savefig(outputfile)
 
+    # sys.stderr.write("We drew a max of {} circles\n".format(max(circleat.values())))
+    # sys.stderr.write("And we drew a max of {} lines\n".format(max(lineat.values())))
+    sys.stderr.write("Circles,{}\nLines,{}".format(",".join(map(str, circleat.values())), ",".join(map(str, lineat.values()))))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Plot a map using ete and lat lon')
