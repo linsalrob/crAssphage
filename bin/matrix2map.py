@@ -263,7 +263,7 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 cont2 = country2continent.get(m.groups(0)[0], "unknown")
                 if cont1 != cont2:
                     linecolor = 'yellow'
-                    scaledalpha = alpha * 0.75
+                    scaledalpha = alpha * 0.25
 
             if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
                 if verbose:
@@ -316,9 +316,9 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 
     #grad = plt.imshow([[0.,1.], [0.,1.]], cmap = plt.cm.Reds, interpolation = 'bicubic')
     #plt.legend(handles=[grad])
-    fig = plt.figure()
-    ax2 = fig.add_axes()
-    ax2.add_patch(rect)
+    #fig = plt.figure()
+    #ax2 = fig.add_axes()
+    #ax2.add_patch(rect)
 
 
     #plt.show()
