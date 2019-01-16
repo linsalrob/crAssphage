@@ -11,8 +11,8 @@ from typing import List, Any
 
 import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
-#plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
-plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
+plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
+#plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
@@ -127,7 +127,7 @@ def get_lon_lat(idf, maxtoget=50000):
                 sys.stderr.write("There was an error parsing the latitude and longitude from {}\n".format(l))
                 continue
 
-            lonlat[p[0]] = (lon, lat)
+            # lonlat[p[0]] = (lon, lat)
             newname = p[0].replace('|', '_')
             lonlat[newname] = (lon, lat)
     return lonlat
@@ -327,7 +327,10 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 
     # note that now we calculate where everything should be and then plot it based on maximum values!
     dotat = {}
-    for lonlat in ll.values():
+    for lid in ll:
+        if lid not in dd:
+            continue
+        lonlat = ll[lid]
         if bounds and ((lonlat[1] < bounds[0] or lonlat[1] > bounds[2]) or (lonlat[0] < bounds[1] or lonlat[0] > bounds[3])):
             if verbose:
                 sys.stderr.write("Not in bounding box: {}\n".format(lonlat))
@@ -646,5 +649,6 @@ if __name__ == '__main__':
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
+
     plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds, colorcontinents=args.c,
             plotintensity=args.n, legendfile=args.g, linewidthbyn=args.s)
