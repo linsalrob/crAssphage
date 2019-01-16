@@ -7,11 +7,12 @@ import sys
 import argparse
 
 import gzip
+from typing import List, Any
 
 import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
-plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
-#plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
+#plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
+plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
@@ -254,7 +255,8 @@ def closest_dna_dist(matrixfile):
         sys.stderr.write("\n\n\nDone\n")
     return closest
 
-def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6, colorcontinents=False, plotintensity=False):
+def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6,
+            colorcontinents=False, plotintensity=False, legendfile=None, linewidthbyn=False):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -264,6 +266,8 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     :param maxdist: The maximum distance that we will scale to be maxlinewidth
     :param colorcontinents: color lines that go to different continents a different color (currently yellow)
     :param plotintensity: plot the colors of the lines by intensity vs. setting each number a color
+    :param legendfile: create a separate file with the legend.
+    :param linewidthbyn: scale the line width by the number of lines drawn
     :return:
     """
     global verbose
@@ -283,6 +287,13 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     # Lines:      10       9     13
     # Dots:     2040    1806    680
     # at most out of these we only have 30 different numbers.
+
+
+    # These numbers adjust the size of the things drawn
+    # markersize is for the black dots
+    markersize = 10  # this was 10 originally, but maybe 50 on a big image
+    # this is the width of the lines.
+    pixelwidth = [1, 2, 4] # may be 2, 10, 20 on a big image
 
 
     ax = plt.axes(projection=ccrs.Robinson())
@@ -333,16 +344,21 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     sys.stderr.write(f"The mean dot density is {meandot}\n")
     print()
     # now we color the dots based on the intensity of each dot!
-    if 0:
-        for tple in dotat:
-            dotalpha = dotat[tple] / maxdot
-            plt.plot(tple[0], tple[1], 'o', color='Black', alpha=dotalpha, markersize=10, transform=ccrs.PlateCarree())
-
-    for tple in dotat:
+    dotlegend = []
+    dotlabels = []
+    dotadded = set()
+    for tple in sorted(dotat, key=dotat.get):
         dotalpha = (dotat[tple] / meandot) * 0.5
         if dotalpha > 1:
             dotalpha = 1
-        plt.plot(tple[0], tple[1], 'o', color='Black', alpha=dotalpha, markersize=10, transform=ccrs.PlateCarree())
+        if dotat[tple] not in dotadded:
+            rect = Rectangle((0, 100), 100, 100, linewidth=5, edgecolor='black', facecolor='black', alpha=dotalpha)
+            dotlegend.append(rect)
+            dotlabels.append(dotat[tple])
+            dotadded.add(dotat[tple])
+        markeredgewidth = markersize // 5
+        plt.plot(tple[0], tple[1], 'o', color='Black', alpha=dotalpha, markersize=markersize, transform=ccrs.PlateCarree())
+        plt.plot(tple[0], tple[1], 'o', color='Black', fillstyle='none', markersize=markersize, mew=markeredgewidth, transform=ccrs.PlateCarree())
 
     # how many lines and circles do we draw?
     circleat = {}
@@ -390,9 +406,6 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 sys.stderr.write("{} to {}: distance: {} km. Genetic distance {}. Line width {}\n".format(
                     idx1, idx2, latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]), dd[idx1][idx2], linewidth))
 
-
-            #colorVal = scalarMap.to_rgba(dd[idx1][idx2])
-
             if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
                 if verbose:
                     sys.stderr.write("Adding a circle for {} and {}\n".format(ll[idx1][0], ll[idx1][1]))
@@ -439,69 +452,151 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 }
 
 
-    # plot the circles
-    circleval = sorted(set(circleat.values()))
-    maxcircle = max(circleval)
-    sys.stderr.write(f"The maximum circle is {maxcircle}\n")
-    sys.stderr.write(f"There are {len(circleval)} circle values\n")
+    # plot the circles and lines
+
+    # now we are considering lines and circles as part of the same set, since they kind of are.
+    # and we use the same color gradiaten for them
+
+    allvals = list(circleat.values()) + list(lineat.values())
+    lmean = np.mean(allvals)
+
+    lvals = set(circleat.values())
+    lvals.update(lineat.values())
+    lvals = sorted(lvals)
+    lmax = max(lvals)
+
+    normalizer = lmax # this could be lmean or lmax or something!
+
+    sys.stderr.write(f"The maximum circle or line is {lmax}. The mean is {lmean}. The normalizer is {normalizer}\n")
+    sys.stderr.write(f"There are {len(lvals)} circle or line values\n")
     # evenly select these colors from the list
-    circlecolors = list(compress(red2blue, evenly_select(len(red2blue), len(circleval))))
+    colorgradient = green2red
+    selcolors = list(compress(colorgradient, evenly_select(len(colorgradient), len(lvals))))
+
+    altcolorgradient = green2yellow
+    altselcolors = list(compress(altcolorgradient, evenly_select(len(altcolorgradient), len(lvals))))
+
+    colorcountsmin = {}
+    colorcountsmax = {}
+    colorvals = {}
+
+    if linewidthbyn:
+        linewidthvals = list(compress(lvals, evenly_select(len(lvals), 3)))
+        # an alternative here is [1,2,3] or so.
+        # if you adjust these, make sure you adjust the dot size
+        for t in lineat:
+            if lineat[t] <= linewidthvals[0]:
+                linedata[t]['linewidth'] = pixelwidth[0]
+            elif lineat[t] <= linewidthvals[1]:
+                linedata[t]['linewidth'] = pixelwidth[1]
+            else:
+                linedata[t]['linewidth'] = pixelwidth[2]
+
+        for t in circleat:
+            if circleat[t] <= linewidthvals[0]:
+                circledata[t]['linewidth'] = pixelwidth[0]
+            elif circleat[t] <= linewidthvals[1]:
+                circledata[t]['linewidth'] = pixelwidth[1]
+            else:
+                circledata[t]['linewidth'] = pixelwidth[2]
+
+
+    # plot the lines first so the circles are on top!
+    for tple in lineat:
+        if plotintensity:
+            idx = int((lineat[tple] / normalizer) * (len(colorgradient)-1))
+            if idx >= len(colorgradient): idx = len(colorgradient) -1
+            if linedata[tple]['samecontinent']:
+                colorline = colorgradient[idx]
+            else:
+                colorline = altcolorgradient[idx]
+        else:
+            idx = lvals.index(lineat[tple])
+            if linedata[tple]['samecontinent']:
+                colorline = selcolors[idx]
+            else:
+                colorline = altselcolors[idx]
+
+        if colorline in colorcountsmin:
+            if colorcountsmin[colorline] > lineat[tple]:
+                colorcountsmin[colorline] = lineat[tple]
+            if colorcountsmax[colorline] < lineat[tple]:
+                colorcountsmax[colorline] = lineat[tple]
+        else:
+            colorcountsmin[colorline] = lineat[tple]
+            colorcountsmax[colorline] = lineat[tple]
+
+        if colorline in colorvals:
+            colorvals[colorline].append(lineat[tple])
+        else:
+            colorvals[colorline] = [lineat[tple]]
+
+        plt.plot(linedata[tple]['x'], linedata[tple]['y'], color=colorline,
+                 linewidth=linedata[tple]['linewidth'], alpha=linedata[tple]['alpha'],
+                 zorder=idx+5, transform=ccrs.Geodetic())
+
 
     # do we want to do this by intensity or by number
     for tple in circleat:
         if plotintensity:
-            idx = int((circleat[tple] / maxcircle) * len(red2blue)) - 1
-            circlecolor = red2blue[idx]
+            idx = int((circleat[tple] / normalizer) * (len(colorgradient) - 1))
+            if idx >= len(colorgradient): idx = len(colorgradient) -1
+            circlecolor = colorgradient[idx]
         else:
-            idx = circleval.index(circleat[tple])
-            circlecolor = circlecolors[idx]
+            idx = lvals.index(circleat[tple])
+            circlecolor = selcolors[idx]
+
+
+        if circlecolor in colorcountsmin:
+            if colorcountsmin[circlecolor] > circleat[tple]:
+                colorcountsmin[circlecolor] = circleat[tple]
+            if colorcountsmax[circlecolor] < circleat[tple]:
+                colorcountsmax[circlecolor] = circleat[tple]
+        else:
+            colorcountsmin[circlecolor] = circleat[tple]
+            colorcountsmax[circlecolor] = circleat[tple]
+
+
+        if circlecolor in colorvals:
+            colorvals[circlecolor].append(circleat[tple])
+        else:
+            colorvals[circlecolor] = [circleat[tple]]
+
 
         circ = Circle((tple[0], tple[1]), transform=ccrs.Geodetic(), radius=circledata[tple]['radius'],
-                             linewidth=circledata[tple]['linewidth'], alpha=circledata[tple]['alpha'], color=circlecolor, fill=circledata[tple]['fill'])
+                      linewidth=circledata[tple]['linewidth'], alpha=circledata[tple]['alpha'],
+                      color=circlecolor, fill=circledata[tple]['fill'],
+                      zorder=100+idx)
         ax.add_artist(circ)
 
-    # plot the lines
-    lineval = sorted(set(lineat.values()))
-    maxline = max(lineval)
-    sys.stderr.write(f"The maximum line is {maxline}\n")
-    sys.stderr.write(f"There are {len(lineval)} line values\n")
-    # evenly select these colors from the list
-    linecolors = list(compress(red2blue, evenly_select(len(red2blue), len(lineval))))
-    green2yellowline = list(compress(green2yellow, evenly_select(len(green2yellow), len(lineval))))
-    for tple in lineat:
-        if plotintensity:
-            idx = int((lineat[tple] / maxline) * len(red2blue)) - 1
-            if linedata[tple]['samecontinent']:
-                colorline = red2blue[idx]
-            else:
-                colorline = green2yellow[idx]
-        else:
-            idx = lineval.index(lineat[tple])
-            if linedata[tple]['samecontinent']:
-                colorline = linecolors[idx]
-            else:
-                colorline = green2yellowline[idx]
-
-        plt.plot(linedata[tple]['x'], linedata[tple]['y'], color=colorline, linewidth=linedata[tple]['linewidth'],
-                 alpha=linedata[tple]['alpha'], transform=ccrs.Geodetic())
-
-
-
-    #    plt.colorbar(CS3)
-
-    # add a color bar for the lines and circles
-    rect = Rectangle((10, 10), 140, 130, linewidth=5, edgecolor='b', facecolor='none')
-    #plt.legend(handles=[rect])
-
-    #grad = plt.imshow([[0.,1.], [0.,1.]], cmap = plt.cm.Reds, interpolation = 'bicubic')
-    #plt.legend(handles=[grad])
-    #fig = plt.figure()
-    #ax2 = fig.add_axes()
-    #ax2.add_patch(rect)
-
-
-    #plt.show()
     plt.savefig(outputfile)
+
+    if legendfile:
+        # create a new figure for the legend
+        plt.figure(1)
+        ax2 = plt.axes()
+        # create the boxes for the colors
+
+        legends = []
+        labels  = []
+        for c in colorgradient:
+            if c in colorcountsmin:
+                # here we create an Artist object but don't need to add it anywhere
+                rect = Rectangle((10, 10), 10, 10, linewidth=5, edgecolor=c, facecolor=c)
+                legends.append(rect)
+                if colorcountsmin[c] == colorcountsmax[c]:
+                    labels.append(f"{colorcountsmin[c]}")
+                else:
+                    labels.append(f"{colorcountsmin[c]}-{colorcountsmax[c]}")
+
+        # combine both legends and labels to make a single legend for this figure
+        alleg = legends + dotlegend
+        allab = labels + dotlabels
+
+        ax2.legend(alleg, allab)
+
+        plt.savefig(legendfile)
+
 
     # sys.stderr.write("We drew a max of {} circles\n".format(max(circleat.values())))
     # sys.stderr.write("And we drew a max of {} lines\n".format(max(lineat.values())))
@@ -523,6 +618,8 @@ if __name__ == '__main__':
     parser.add_argument('-c', help='color the lines between continents yellow', action='store_true')
     parser.add_argument('-n', help='Plot the intensity as a fraction of max value', action='store_true')
     parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
+    parser.add_argument('-g', help="Legend file. This is a simple image with the legend, and is in a separate file")
+    parser.add_argument('-s', help='scale the line width by the number of times the line is drawn', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
@@ -549,4 +646,5 @@ if __name__ == '__main__':
     lonlat = get_lon_lat(args.i)
     # dist = best_dna_dist(get_dna_distance(args.t))
     dist = closest_dna_dist(args.m)
-    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds, colorcontinents=args.c, plotintensity=args.n)
+    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds, colorcontinents=args.c,
+            plotintensity=args.n, legendfile=args.g, linewidthbyn=args.s)
