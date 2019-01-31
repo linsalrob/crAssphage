@@ -8,16 +8,25 @@ Here are the steps that we use, and the commands that were performed to.
 
 ## Map all SRA Runs to crAssphage
 
-We have developed a protocol for separating amplicon, metagenome, and other data sets from the SRA, called [PARTIE](https://github.com/linsalrob/partie). We start with this list of WGS metagenomes, and compare 100,000 reads from each metagenome to crAssphage using bowtie2. Our bowtie command is:
+We have developed a protocol for separating amplicon, metagenome, and other data sets from the SRA, called [PARTIE](https://github.com/linsalrob/partie). We start with this list of WGS metagenomes, and compare 100,000 reads from each metagenome to crAssphage using bowtie2. 
+
+Start by indexing the [crAssphage genome sequence](../data/JQ995537.fna) (download that file and save as `JQ995537.fna`):
 
 ```
-bowtie2 -p 6 -q --no-unal -x $1 -U $SRR | samtools view -bS - | samtools sort - output_dir/$SRR
-samtools index output_dir/$SRR
+curl -Lo JQ995537.fna https://raw.githubusercontent.com/linsalrob/crAssphage/master/data/JQ995537.fna
+bowtie2-build JQ995537.fna JQ995537
 ```
 
-(Note: This is probably incorrect, and we should adjust these as described [by Sam Nicholls](https://samnicholls.net/2016/12/24/bowtie2-metagenomes/))
+And then run bowtie for each metagenome.
 
-Once we have a set of metagenomes where _any_ read in the 100,000 reads matches crAssphage, we go back and remap the whole run to crAssphage. This is a heuristic that allows us to search the whole SRA in a reasonable time frame.
+```
+mkdir output_dir
+bowtie2 -p 6 -q --no-unal -x JQ995537 -U METAGENOME_FILE | samtools view -bS - | samtools sort - output_dir/METAGENOME_crAssphage.bam
+samtools index output_dir/METAGENOME_crAssphage.bam
+```
+
+
+We do this 100,000 reads at a time, but now if you want to search the SRA, you can do that via our [website specifically for searching](http://www.searchsra.org/) - just upload the crAssphage genome as your query! Once we have a set of metagenomes where _any_ read in the 100,000 reads matches crAssphage, we go back and remap the whole run to crAssphage. This is a heuristic that allows us to search the whole SRA in a reasonable time frame.
 
 At the end of this, we have a series of .bam files, one per metagenome. Please note, we do not include these bam files in the repository because they are too large.
 
