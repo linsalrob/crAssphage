@@ -57,7 +57,8 @@ We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The ma
 
 ```
 python3 ../../../bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.aln.treefile > seqs.A.rc.trim.matrix
-python3 ../../../bin/matrix2map.py -i id.A.map -m seqs.A.rc.trim.matrix.gz -o PrimerA_map.alpha0.2.svg -a 0.2 -l 1.0
+# python3 ../../../bin/matrix2map.py -i id.A.map -m seqs.A.rc.trim.matrix.gz -o PrimerA_map.alpha0.2.svg -a 0.2 -l 1.0
+python3 ../../../bin/matrix2map.py -i id.A.map -m seqs.A.rc.trim.matrix.gz -o PrimerA_map.png -s -a 1 -l 1 -g legend.png
 ```
 
 Note to make the map inset we change one of the settings in matrix2map.py (at the top of the code) which makes a really large image (88" x 64") and then use inkscape to edit out just the European portion and make that an inset in the regular image.

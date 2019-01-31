@@ -6,7 +6,8 @@ Instead, we assembled the sequences using [SPAdes](http://cab.spbu.ru/software/s
 
 # Data:
 
-- the Primate genome sequences (length20k.fna)
+- the Primate genome sequences (apes_contigs.fna)
+- the Primate predicted protein sequences (length20k.fna)
 - the muscle-aligned "unambiguous core" protein sequences (present once in every primate) that were concatenated for the primate tree
 - the iq-tree primate tree incl bootstraps
 

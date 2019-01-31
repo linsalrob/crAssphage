@@ -25,14 +25,19 @@ def write_distances(dist, lonlat, outputfile, writeall=False):
     """
     uniqdist = {}
     with open(outputfile, 'w') as out:
-        out.write("km\tGenetic Distance\n")
+        if writeall:
+            out.write("sample 1\tsample 2\tlat/lon 1\tlat/lon 2\tkm\tgenetic distance\n")
+        else:
+            out.write("km\tGenetic Distance\n")
         for i in dist:
             for j in dist[i]:
                 ii = i.replace('|', '_')
                 jj = j.replace('|', '_')
                 km = latlon2distance(lonlat[ii][0], lonlat[ii][1], lonlat[jj][0], lonlat[jj][1])
+                lli = "{},{}".format(lonlat[ii][1], lonlat[ii][0])
+                llj = "{},{}".format(lonlat[jj][1], lonlat[jj][0])
                 if writeall:
-                    out.write("{}\t{}\t{}\t{}\n".format(i, j, km, dist[i][j]))
+                    out.write("{}\t{}\t{}\t{}\t{}\t{}\n".format(i, j, lli, llj, km, dist[i][j]))
                 else:
                     if km not in uniqdist:
                         uniqdist[km] = set()
