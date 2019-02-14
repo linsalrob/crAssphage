@@ -26,56 +26,140 @@ from itertools import compress
 
 from crassphage_maps import closest_dna_dist, get_lon_lat, latlon2distance, country2continent
 from crassphage_maps import green2red, green2yellow, evenly_select, GnBu5
+from roblib import bcolors
+
+def line_color(val, verbose=False):
+    """
+    Return the line color associated with the value.
+
+    :param val: The numeric value, e.g. of the intensity of the line
+    :param verbose: more output
+    :return: the line color in hex
+    """
+
+    # current groups. This should be one less than the number of colors
+    # and then we will use anything > cutoffs[-1] as the most intense color
+    cutoffs = [10, 25, 50, 100]
+
+    # current color scale. This is so we can easily change it
+    colorscale = GnBu5
+
+    for i, j in enumerate(cutoffs):
+        if val <= j:
+            return colorscale[i]
+    return colorscale[-1]
+
+def calculate_lines_dots(ll, dd, verbose=False):
+    """
+    Count the line data and dot data for each of our lines and dots
+    :param ll: the lat lon data
+    :param dd: the distances between samples
+    :param verbose: more output
+    :return:
+    """
+
+    # the data for our lines
+    linedata = {}
+
+    # first we want to make sure we have latitude and longitude for everything
+    missingll = False
+    for idx1 in dd:
+        if idx1 not in ll:
+            if verbose:
+                sys.stderr.write("NO Lat/Lon for {}\n".format(idx1))
+            missingll = True
+    if missingll:
+        sys.stderr.write(f"{bcolors.FATAL}FATAL: We are missing latitudes and longitudes. You should check this{bcolors.ENDC}\n")
+        sys.exit(2)
+
+    # note that now we calculate where everything should be and then plot it based on maximum values!
+    dotdata = {}
+    seen = set()
+    for idx1 in dd:
+        dotdata[idx1] = 1
+        for idx2 in dd[idx1]:
+            # check we only see each pair once
+            linecoordsAB = "\t".join(map(str, [ll[idx1][0], ll[idx2][0], ll[idx1][1], ll[idx2][1]]))
+            linecoordsBA = "\t".join(map(str, [ll[idx1][1], ll[idx2][1], ll[idx1][0], ll[idx2][0]]))
+            if linecoordsAB in seen or linecoordsBA in seen:
+                continue
+            seen.add(linecoordsAB)
+            seen.add(linecoordsBA)
+
+            # if the distance between them is less than 100km merge to a single point, and so we
+            # just use idx1
+            if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
+                # are considered the same location, so we increment dotat[idx1]
+                dotdata[idx1] += 1
+                continue
+
+            samecontinent = True
+            # figure out if they are from the same continent
+            m = re.search(r'\d{8}_(\w+)_\d', idx1)
+            cont1 = country2continent.get(m.groups(0)[0], "unknown")
+            m = re.search(r'\d{8}_(\w+)_\d', idx2)
+            cont2 = country2continent.get(m.groups(0)[0], "unknown")
+            if cont1 != cont2:
+                samecontinent = False
+
+            if linecoordsAB in linedata:
+                linedata[linecoordsAB]['count'] +=1
+            else:
+                linedata[linecoordsAB] = {
+                    'count' : 1,
+                    'x': [ll[idx1][0], ll[idx2][0]],
+                    'y': [ll[idx1][1], ll[idx2][1]],
+                    'samecontinent': samecontinent
+                }
+    return dotdata, linedata
+
+def get_marker_size(val, verbose=False):
+    """
+    Get the size of the marker based on val
+    :param val: the value to test
+    :param verbose: more output
+    :return: the size of the marker in pixels
+    """
+
+    markersizes = [4, 7, 10, 13, 16]
+    # there should be one less maxmakervals than markersizes and then we use markersizes[-1] for anything larger
+    maxmarkervals = [10, 20, 30, 40]
+
+    for i,m in enumerate(maxmarkervals):
+        if val <= m:
+            return markersizes[i]
+    return markersizes[-1]
 
 
-def draw_dots(ll, dd, plt, verbose=False):
+def draw_dots(dotdata, plt, linewidth=2, verbose=False):
     """
     draw just the dots
-    :param ll: the lat lons
-    :param dd: the distance data
+    :param dotdata: the counts of occurrences of the dots
     :param plt: the matplotlib plot
     :param verbose: more output
     :return: the datalegend and the datalabels
     """
 
-    # note that now we calculate where everything should be and then plot it based on maximum values!
-    dotat = {}
-    for lid in ll:
-        if lid not in dd:
-            continue
-        lonlat = ll[lid]
-        dotat[(lonlat[0], lonlat[1])] = dotat.get((lonlat[0], lonlat[1]), 0) + 1
-
     dotlegend = []
     dotlabels = []
     dotsizes = {}
-    markersizes = [4, 7, 10, 13, 16]
 
-    for tple in sorted(dotat, key=dotat.get):
-        markersize = None
-        if dotat[tple] < 10:
-            markersize = markersizes[0]
-        elif dotat[tple] < 20:
-            markersize = markersizes[1]
-        elif dotat[tple] < 30:
-            markersize = markersizes[2]
-        elif dotat[tple] < 40:
-            markersize = markersizes[3]
-        else:
-            markersize = markersizes[-1]
 
+    for tple in sorted(dotdata, key=dotdata.get):
+        markersize = get_marker_size(dotdata[tple], verbose)
+        markercol  = line_color(dotdata[tple], verbose)
+
+        # draw the base marker that is blck
         plt.plot(tple[0], tple[1], 'o', color='Black', markersize=markersize,
                  transform=ccrs.PlateCarree())
-        # linewidth and color are based on values
-        markeredgewidth = 4
-        plt.plot(tple[0], tple[1], 'o', color='#0868ac', fillstyle='none', markersize=markersize,
-                 mew=markeredgewidth, transform=ccrs.PlateCarree())
-
+        # color the line based on the value of dotat
+        plt.plot(tple[0], tple[1], 'o', color=markercol, fillstyle='none', markersize=markersize+1,
+                 mew=linewidth, transform=ccrs.PlateCarree())
 
         dotsizes[tple] = markersize
 
     if verbose:
-        sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotat.values()))))
+        sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotdata.values()))))
 
     return dotsizes
 
@@ -112,108 +196,22 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
     # at most out of these we only have 30 different numbers.
 
     # These numbers adjust the size of the things drawn
-    # markersize is for the black dots
-    markersize = 10  # this was 10 originally, but maybe 50 on a big image
-    # this is the width of the lines.
-    pixelwidth = [1, 2, 4] # may be 2, 10, 20 on a big image
-
     ax = plt.axes(projection=ccrs.Robinson())
 
     # make the map global rather than have it zoom in to
     # the extents of any plotted data
     ax.set_global()
-
+    # convert to a grayscale image. Uncomment stock_img to get color
     ax.background_img(name='grayscale_shaded', resolution='low')
     #ax.stock_img()
     ax.coastlines()
 
-    """
-    # color the lines based on the maximum distance value
-    jet = plt.get_cmap('jet')
-    cNorm = colors.Normalize(vmin=0, vmax=maxdist)
-    scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=jet)
-    """
+    # figure out our dots and lines
+    dotdata, linedata = calculate_lines_dots(ll, dd, verbose=verbose)
 
-    dotsizes = draw_dots(ll, dd, plt, verbose=verbose)
+    dotsizes = draw_dots(dotdata, plt, verbose=verbose)
 
-
-
-    # how many lines and circles do we draw?
-    circleat = {}
-    circledata = {}
-    lineat   = {}
-    linedata = {}
-    for idx1 in dd:
-        for idx2 in dd[idx1]:
-            # this should only happen when we do best DNA distances
-            if idx1 not in ll:
-                sys.stderr.write("NO Lat/Lon for {}\n".format(idx1))
-                continue
-            if idx2 not in ll:
-                sys.stderr.write("NO Lat/Lon for {}\n".format(idx2))
-                continue
-
-            linecolor = 'red'
-            scaledalpha = alpha
-            samecontinent = True
-            if colorcontinents:
-                # figure out if they are from the same continent
-                m = re.search(r'\d{8}_(\w+)_\d', idx1)
-                cont1 = country2continent.get(m.groups(0)[0], "unknown")
-                m = re.search(r'\d{8}_(\w+)_\d', idx2)
-                cont2 = country2continent.get(m.groups(0)[0], "unknown")
-                if cont1 != cont2:
-                    linecolor = 'yellow'
-                    scaledalpha = alpha * 0.25
-                    samecontinent = False
-
-            if linewidth == 0:
-                linewidth = dd[idx1][idx2]
-                linewidth = (linewidth/maxdist) * maxlinewidth
-            if verbose:
-                sys.stderr.write("{} to {}: distance: {} km. Genetic distance {}. Line width {}\n".format(
-                    idx1, idx2, latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]), dd[idx1][idx2], linewidth))
-
-            if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
-                if verbose:
-                    sys.stderr.write("Adding a circle for {} and {}\n".format(ll[idx1][0], ll[idx1][1]))
-                # add a red circle for this object.
-                # we need to use some simple trig to find the center of the circle whose point on the circumference
-                # is at our lat lon
-                radius = 3
-                circlon = ll[idx1][0] - (radius * math.sin(2 * math.pi))
-                circlat = ll[idx1][1] - (radius * math.cos(2 * math.pi))
-
-                #circ = Circle((circlon, circlat), transform=ccrs.Geodetic(), radius=radius,
-                #                     linewidth=linewidth, alpha=scaledalpha, color=linecolor, fill=False)
-                # ax.add_artist(circ)
-
-                circleat[(circlon, circlat)] = circleat.get((circlon, circlat), 0) + 1
-                circledata[(circlon, circlat)] = {
-                    'radius': radius,
-                    'linewidth': linewidth,
-                    'alpha': scaledalpha,
-                    'color': linecolor,
-                    'fill': False
-                }
-            else:
-                # plot a red line between two points
-                #plt.plot([ll[idx1][0], ll[idx2][0]], [ll[idx1][1], ll[idx2][1]], color=linecolor, linewidth=linewidth,
-                #         alpha=scaledalpha, transform=ccrs.Geodetic())
-
-                linecoords = "\t".join(map(str, [ll[idx1][0], ll[idx2][0], ll[idx1][1], ll[idx2][1]]))
-
-                lineat[linecoords] = lineat.get(linecoords, 0) + 1
-
-                linedata[linecoords] = {
-                    'x': [ll[idx1][0], ll[idx2][0]],
-                    'y': [ll[idx1][1], ll[idx2][1]],
-                    'color': linecolor,
-                    'linewidth': linewidth,
-                    'alpha': scaledalpha,
-                    'samecontinent': samecontinent
-                }
-
+zzzzzzzzzz
 
     # plot the circles and lines
 
