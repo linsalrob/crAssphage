@@ -25,7 +25,7 @@ import numpy as np
 from itertools import compress
 
 from crassphage_maps import closest_dna_dist, get_lon_lat, latlon2distance, country2continent
-from crassphage_maps import green2red, green2yellow, evenly_select, GnBu5
+from crassphage_maps import green2red, green2yellow, evenly_select, GnBu5, Blues
 from roblib import bcolors
 
 def line_color(val, verbose=False):
@@ -42,7 +42,7 @@ def line_color(val, verbose=False):
     cutoffs = [10, 25, 50, 100]
 
     # current color scale. This is so we can easily change it
-    colorscale = GnBu5
+    colorscale = Blues
 
     for i, j in enumerate(cutoffs):
         if val <= j:
@@ -76,13 +76,17 @@ def calculate_lines_dots(ll, dd, verbose=False):
     dotdata = {}
     seen = set()
     for idx1 in dd:
-        dotdata[idx1] = 1
+        ll1 = (ll[idx1][0], ll[idx1][1])
+        if ll1 not in dotdata:
+            dotdata[ll1] = 0
         for idx2 in dd[idx1]:
+            dotdata[ll1] += 1
+            ll2 = (ll[idx2][0], ll[idx2][1])
             # check we only see each pair once
             linecoordsAB = "\t".join(map(str, [ll[idx1][0], ll[idx2][0], ll[idx1][1], ll[idx2][1]]))
             linecoordsBA = "\t".join(map(str, [ll[idx1][1], ll[idx2][1], ll[idx1][0], ll[idx2][0]]))
-            if linecoordsAB in seen or linecoordsBA in seen:
-                continue
+            #if linecoordsAB in seen or linecoordsBA in seen:
+            #    continue
             seen.add(linecoordsAB)
             seen.add(linecoordsBA)
 
@@ -90,7 +94,7 @@ def calculate_lines_dots(ll, dd, verbose=False):
             # just use idx1
             if latlon2distance(ll[idx1][1], ll[idx1][0], ll[idx2][1], ll[idx2][0]) < 100:
                 # are considered the same location, so we increment dotat[idx1]
-                dotdata[idx1] += 1
+                dotdata[ll1] += 1
                 continue
 
             samecontinent = True
@@ -109,8 +113,13 @@ def calculate_lines_dots(ll, dd, verbose=False):
                     'count' : 1,
                     'x': [ll[idx1][0], ll[idx2][0]],
                     'y': [ll[idx1][1], ll[idx2][1]],
-                    'samecontinent': samecontinent
+                    'samecontinent': samecontinent,
+                    'linewidth' : 2
                 }
+    if verbose:
+        sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotdata.values()))))
+        l = [linedata[x]['count'] for x in linedata]
+        sys.stderr.write("Lines:{}\n".format(",".join(map(str, l))))
     return dotdata, linedata
 
 def get_marker_size(val, verbose=False):
@@ -131,11 +140,12 @@ def get_marker_size(val, verbose=False):
     return markersizes[-1]
 
 
-def draw_dots(dotdata, plt, linewidth=2, verbose=False):
+def draw_dots(dotdata, plt, linewidth=2, plotsingle=False, verbose=False):
     """
     draw just the dots
     :param dotdata: the counts of occurrences of the dots
     :param plt: the matplotlib plot
+    :param plotsingle: plot dots with only a single sequence
     :param verbose: more output
     :return: the datalegend and the datalabels
     """
@@ -152,19 +162,43 @@ def draw_dots(dotdata, plt, linewidth=2, verbose=False):
         # draw the base marker that is blck
         plt.plot(tple[0], tple[1], 'o', color='Black', markersize=markersize,
                  transform=ccrs.PlateCarree())
-        # color the line based on the value of dotat
-        plt.plot(tple[0], tple[1], 'o', color=markercol, fillstyle='none', markersize=markersize+1,
-                 mew=linewidth, transform=ccrs.PlateCarree())
+        if plotsingle or dotdata[tple] > 1:
+            # color the line based on the value of dotat
+            plt.plot(tple[0], tple[1], 'o', color=markercol, fillstyle='none', markersize=markersize+1,
+                     mew=linewidth, transform=ccrs.PlateCarree())
 
         dotsizes[tple] = markersize
 
-    if verbose:
-        sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotdata.values()))))
-
     return dotsizes
 
-def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
-            colorcontinents=False, plotintensity=False, legendfile=None, linewidthbyn=False, verbose=False):
+def draw_lines(linedata, plt, colorcontinents=False, plotsingle=False, verbose=False):
+    """
+    Draw the lines connecting the dots
+    :param linedata: the line data
+    :param plt: the plot image
+    :param verbose: more output
+    :return:
+    """
+
+    linesizes = []
+    # plot the lines first so the circles are on top!
+    for tple in linedata:
+        if not plotsingle and linedata[tple]['count'] < 2:
+            continue
+
+        lc = line_color(linedata[tple]['count'])
+        if not linedata[tple]['samecontinent'] and colorcontinents:
+            sys.stderr.write("Color by continents is currently disabled. Sorry, Liz\n")
+
+        plt.plot(linedata[tple]['x'], linedata[tple]['y'], color=lc,
+                 linewidth=linedata[tple]['linewidth'],
+                 zorder=linedata[tple]['count'], transform=ccrs.Geodetic())
+        linesizes.append(linedata[tple]['count'])
+
+    return linesizes
+
+
+def plotmap(ll, dd, outputfile, plotsingle=False, legendfile=None, verbose=False):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
@@ -202,132 +236,23 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
     # the extents of any plotted data
     ax.set_global()
     # convert to a grayscale image. Uncomment stock_img to get color
-    ax.background_img(name='grayscale_shaded', resolution='low')
+    # ax.background_img(name='grayscale_shaded', resolution='low')
     #ax.stock_img()
     ax.coastlines()
 
     # figure out our dots and lines
+    t = time.time()
     dotdata, linedata = calculate_lines_dots(ll, dd, verbose=verbose)
+    if verbose:
+        sys.stderr.write(f"Calculating the lines took {time.time() - t} seconds\n")
 
-    dotsizes = draw_dots(dotdata, plt, verbose=verbose)
+    t=time.time()
+    dotsizes = draw_dots(dotdata, plt, plotsingle=plotsingle, verbose=verbose)
+    if verbose:
+        sys.stderr.write(f"Drawing the dots took {time.time() - t} seconds\n")
 
-zzzzzzzzzz
+    linesizes  = draw_lines(linedata, plt, plotsingle=plotsingle, verbose=verbose)
 
-    # plot the circles and lines
-
-    # now we are considering lines and circles as part of the same set, since they kind of are.
-    # and we use the same color gradiaten for them
-
-    allvals = list(circleat.values()) + list(lineat.values())
-    lmean = np.mean(allvals)
-
-    lvals = set(circleat.values())
-    lvals.update(lineat.values())
-    lvals = sorted(lvals)
-    lmax = max(lvals)
-
-    normalizer = lmax # this could be lmean or lmax or something!
-
-    sys.stderr.write(f"The maximum circle or line is {lmax}. The mean is {lmean}. The normalizer is {normalizer}\n")
-    sys.stderr.write(f"There are {len(lvals)} circle or line values\n")
-    # evenly select these colors from the list
-    colorgradient = green2red
-    selcolors = list(compress(colorgradient, evenly_select(len(colorgradient), len(lvals))))
-
-    altcolorgradient = green2yellow
-    altselcolors = list(compress(altcolorgradient, evenly_select(len(altcolorgradient), len(lvals))))
-
-    colorcountsmin = {}
-    colorcountsmax = {}
-    colorvals = {}
-
-    if linewidthbyn:
-        linewidthvals = list(compress(lvals, evenly_select(len(lvals), 3)))
-        # an alternative here is [1,2,3] or so.
-        # if you adjust these, make sure you adjust the dot size
-        for t in lineat:
-            if lineat[t] <= linewidthvals[0]:
-                linedata[t]['linewidth'] = pixelwidth[0]
-            elif lineat[t] <= linewidthvals[1]:
-                linedata[t]['linewidth'] = pixelwidth[1]
-            else:
-                linedata[t]['linewidth'] = pixelwidth[2]
-
-        for t in circleat:
-            if circleat[t] <= linewidthvals[0]:
-                circledata[t]['linewidth'] = pixelwidth[0]
-            elif circleat[t] <= linewidthvals[1]:
-                circledata[t]['linewidth'] = pixelwidth[1]
-            else:
-                circledata[t]['linewidth'] = pixelwidth[2]
-
-
-    # plot the lines first so the circles are on top!
-    for tple in lineat:
-        if plotintensity:
-            idx = int((lineat[tple] / normalizer) * (len(colorgradient)-1))
-            if idx >= len(colorgradient): idx = len(colorgradient) -1
-            if linedata[tple]['samecontinent']:
-                colorline = colorgradient[idx]
-            else:
-                colorline = altcolorgradient[idx]
-        else:
-            idx = lvals.index(lineat[tple])
-            if linedata[tple]['samecontinent']:
-                colorline = selcolors[idx]
-            else:
-                colorline = altselcolors[idx]
-
-        if colorline in colorcountsmin:
-            if colorcountsmin[colorline] > lineat[tple]:
-                colorcountsmin[colorline] = lineat[tple]
-            if colorcountsmax[colorline] < lineat[tple]:
-                colorcountsmax[colorline] = lineat[tple]
-        else:
-            colorcountsmin[colorline] = lineat[tple]
-            colorcountsmax[colorline] = lineat[tple]
-
-        if colorline in colorvals:
-            colorvals[colorline].append(lineat[tple])
-        else:
-            colorvals[colorline] = [lineat[tple]]
-
-        plt.plot(linedata[tple]['x'], linedata[tple]['y'], color=colorline,
-                 linewidth=linedata[tple]['linewidth'], alpha=linedata[tple]['alpha'],
-                 zorder=idx+5, transform=ccrs.Geodetic())
-
-    # do we want to do this by intensity or by number
-    for tple in circleat:
-        if plotintensity:
-            idx = int((circleat[tple] / normalizer) * (len(colorgradient) - 1))
-            if idx >= len(colorgradient): idx = len(colorgradient) -1
-            circlecolor = colorgradient[idx]
-        else:
-            idx = lvals.index(circleat[tple])
-            circlecolor = selcolors[idx]
-
-
-        if circlecolor in colorcountsmin:
-            if colorcountsmin[circlecolor] > circleat[tple]:
-                colorcountsmin[circlecolor] = circleat[tple]
-            if colorcountsmax[circlecolor] < circleat[tple]:
-                colorcountsmax[circlecolor] = circleat[tple]
-        else:
-            colorcountsmin[circlecolor] = circleat[tple]
-            colorcountsmax[circlecolor] = circleat[tple]
-
-
-        if circlecolor in colorvals:
-            colorvals[circlecolor].append(circleat[tple])
-        else:
-            colorvals[circlecolor] = [circleat[tple]]
-
-
-        circ = Circle((tple[0], tple[1]), transform=ccrs.Geodetic(), radius=circledata[tple]['radius'],
-                      linewidth=circledata[tple]['linewidth'], alpha=circledata[tple]['alpha'],
-                      color=circlecolor, fill=circledata[tple]['fill'],
-                      zorder=100+idx)
-        ax.add_artist(circ)
 
     plt.savefig(outputfile)
 
@@ -339,15 +264,7 @@ zzzzzzzzzz
 
         legends = []
         labels  = []
-        for c in colorgradient:
-            if c in colorcountsmin:
-                # here we create an Artist object but don't need to add it anywhere
-                rect = Rectangle((10, 10), 10, 10, linewidth=5, edgecolor=c, facecolor=c)
-                legends.append(rect)
-                if colorcountsmin[c] == colorcountsmax[c]:
-                    labels.append(f"{colorcountsmin[c]}")
-                else:
-                    labels.append(f"{colorcountsmin[c]}-{colorcountsmax[c]}")
+
 
         # combine both legends and labels to make a single legend for this figure
         alleg = legends
@@ -373,13 +290,6 @@ zzzzzzzzzz
         plt.savefig(legendfile)
 
 
-    # sys.stderr.write("We drew a max of {} circles\n".format(max(circleat.values())))
-    # sys.stderr.write("And we drew a max of {} lines\n".format(max(lineat.values())))
-    sys.stderr.write("Circles,{}\nLines,{}\n".format(",".join(map(str, circleat.values())), ",".join(map(str, lineat.values()))))
-
-    sys.stderr.write("\nMAXIMUM VALUES\nCirlces: {}\nLines: {}\n".format(max(circleat.values()),
-                                                                                   max(lineat.values())
-                                                                                   ))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Plot a map using ete and lat lon')
@@ -391,7 +301,7 @@ if __name__ == '__main__':
     parser.add_argument('-c', help='color the lines between continents yellow', action='store_true')
     parser.add_argument('-n', help='Plot the intensity as a fraction of max value', action='store_true')
     parser.add_argument('-g', help="Legend file. This is a simple image with the legend, and is in a separate file")
-    parser.add_argument('-s', help='scale the line width by the number of times the line is drawn', action='store_true')
+    parser.add_argument('-s', help='plot dots and lines with only a single data point (otherwise just dots)', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
@@ -405,5 +315,4 @@ if __name__ == '__main__':
         dist = json.load(jin)
     sys.stderr.write(f"Reading json took {time.time()-t} seconds\n")
 
-    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, colorcontinents=args.c,
-            plotintensity=args.n, legendfile=args.g, linewidthbyn=args.s, verbose=args.v)
+    plotmap(lonlat, dist, args.o, plotsingle=args.s, legendfile=args.g, verbose=args.v)

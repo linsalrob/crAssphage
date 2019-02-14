@@ -28,7 +28,9 @@ green2red = ["#00FF00", "#05F900", "#0AF400", "#0FEF00", "#14EA00", "#1AE400", "
 # this is from http://colorbrewer2.org/#type=sequential&scheme=GnBu&n=5
 GnBu5 = ["#f0f9e8", "#bae4bc", "#7bccc4", "#43a2ca", "#0868ac"]
 
-
+# this is from http://colorbrewer2.org/#type=sequential&scheme=Blues&n=9 but I chose single hue
+# and took 5 of the blues
+Blues = ["#c6dbef",  "#9ecae1",  "#6baed6",  "#4292c6",  "#2171b5"]
 
 def evenly_select(n, m):
     """
@@ -37,6 +39,11 @@ def evenly_select(n, m):
     See https://stackoverflow.com/questions/46494029/nearly-evenly-select-items-from-a-list
 
     Then use itertools.compress to create the new list
+
+    The way to use this is to call the command like this:
+    colorgradient = green2red
+    lvals = [1, 3, 5, 7, 9, 10 ... ] # list of values, e.g. perhaps from  set() of all the values
+    selcolors = list(compress(colorgradient, evenly_select(len(colorgradient), len(lvals))))
 
     :param n: The length of the list
     :param m: The number of elements to return
