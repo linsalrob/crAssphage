@@ -66,6 +66,11 @@ def draw_dots(ll, dd, plt, verbose=False):
 
         plt.plot(tple[0], tple[1], 'o', color='Black', markersize=markersize,
                  transform=ccrs.PlateCarree())
+        # linewidth and color are based on values
+        markeredgewidth = 4
+        plt.plot(tple[0], tple[1], 'o', color='#0868ac', fillstyle='none', markersize=markersize,
+                 mew=markeredgewidth, transform=ccrs.PlateCarree())
+
 
         dotsizes[tple] = markersize
 
