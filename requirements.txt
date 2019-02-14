@@ -9,3 +9,6 @@ phred >= 0.071220.b
 EMBOSS >= 6.5.7.0
 samtools >= 1.5
 htslib >= 1.5
+cartopy >= 0.16
+matplotlib >= 2.2.2
+numpy >= 1.14.5
