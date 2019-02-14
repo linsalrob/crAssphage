@@ -1,6 +1,8 @@
 """
 Read a cophenetic matrix to plot the distances. You can make the matrix using ete3 and tree_to_cophenetic_matrix.py
 """
+import os
+os.environ["CARTOPY_USER_BACKGROUNDS"] = "/home/redwards/GitHubs/crAssphage/bin/map_drawing/crassphage_maps/images"
 
 import sys
 import argparse
@@ -13,6 +15,8 @@ import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
 
 import math
+import json
+import time
 
 import cartopy.crs as ccrs
 import re
@@ -20,18 +24,66 @@ import re
 import numpy as np
 from itertools import compress
 
-from .crassphage_maps import closest_dna_dist, get_lon_lat, latlon2distance, country2continent
-from .crassphage_maps import green2red, green2yellow, evenly_select
+from crassphage_maps import closest_dna_dist, get_lon_lat, latlon2distance, country2continent
+from crassphage_maps import green2red, green2yellow, evenly_select, GnBu5
 
 
-def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxlinewidth=6,
-            colorcontinents=False, plotintensity=False, legendfile=None, linewidthbyn=False):
+def draw_dots(ll, dd, plt, verbose=False):
+    """
+    draw just the dots
+    :param ll: the lat lons
+    :param dd: the distance data
+    :param plt: the matplotlib plot
+    :param verbose: more output
+    :return: the datalegend and the datalabels
+    """
+
+    # note that now we calculate where everything should be and then plot it based on maximum values!
+    dotat = {}
+    for lid in ll:
+        if lid not in dd:
+            continue
+        lonlat = ll[lid]
+        dotat[(lonlat[0], lonlat[1])] = dotat.get((lonlat[0], lonlat[1]), 0) + 1
+
+    dotlegend = []
+    dotlabels = []
+
+    markersizes = [4, 7, 10, 13, 16]
+    for m in markersizes:
+        # shp = Rectangle((0, 100), 100, 100, linewidth=5, edgecolor='black', facecolor='black', alpha=dotalpha)
+        shp = Circle((0, 100), radius=m, color='Black')
+        dotlegend.append(shp)
+        dotlabels.append(m)
+
+    for tple in sorted(dotat, key=dotat.get):
+        markersize = None
+        if dotat[tple] < 10:
+            markersize = markersizes[0]
+        elif dotat[tple] < 20:
+            markersize = markersizes[1]
+        elif dotat[tple] < 30:
+            markersize = markersizes[2]
+        elif dotat[tple] < 40:
+            markersize = markersizes[3]
+        else:
+            markersize = markersizes[-1]
+
+        plt.plot(tple[0], tple[1], 'o', color='Black', markersize=markersize,
+                 transform=ccrs.PlateCarree())
+
+    if verbose:
+        sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotat.values()))))
+
+    return dotlegend, dotlabels
+
+def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
+            colorcontinents=False, plotintensity=False, legendfile=None, linewidthbyn=False, verbose=False):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
     :param dd: The distances to use
     :param outputfile: The file name to write the image to
-    :param bounds: the boundary for the lat long as a 4-ple array
     :param maxdist: The maximum distance that we will scale to be maxlinewidth
     :param colorcontinents: color lines that go to different continents a different color (currently yellow)
     :param plotintensity: plot the colors of the lines by intensity vs. setting each number a color
@@ -39,7 +91,7 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     :param linewidthbyn: scale the line width by the number of lines drawn
     :return:
     """
-    global verbose
+
 
     if verbose:
         sys.stderr.write("Plotting the map\n")
@@ -67,10 +119,10 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 
     # make the map global rather than have it zoom in to
     # the extents of any plotted data
-    if not bounds:
-        ax.set_global()
+    ax.set_global()
 
-    ax.stock_img()
+    ax.background_img(name='grayscale_shaded', resolution='low')
+    #ax.stock_img()
     ax.coastlines()
 
     # color the lines based on the maximum distance value
@@ -78,6 +130,9 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     cNorm = colors.Normalize(vmin=0, vmax=maxdist)
     scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=jet)
 
+    """
+    
+    Probably don't need this section
     # Using contourf to provide my colorbar info, then clearing the figure
     Z = [[0, 0], [0, 0]]
     levels = range(0, int(100 * maxdist) + 10, 10)
@@ -89,47 +144,12 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
 
     # plot the circles for each sample site
     # markerfacecolor="None",
+    
+    END of the don't need
+    """
 
-    # note that now we calculate where everything should be and then plot it based on maximum values!
-    dotat = {}
-    for lid in ll:
-        if lid not in dd:
-            continue
-        lonlat = ll[lid]
-        if bounds and ((lonlat[1] < bounds[0] or lonlat[1] > bounds[2]) or
-                       (lonlat[0] < bounds[1] or lonlat[0] > bounds[3])):
-            if verbose:
-                sys.stderr.write("Not in bounding box: {}\n".format(lonlat))
-            continue
-        if verbose:
-            sys.stderr.write("Kept location: {}\n".format(lonlat))
-        # plt.plot(lonlat[0], lonlat[1], 'o', color='Black', alpha=alpha, markersize=10, transform=ccrs.PlateCarree())
-        dotat[(lonlat[0], lonlat[1])] = dotat.get((lonlat[0], lonlat[1]), 0) + 1
+    dotlegend, dotlabels = draw_dots(ll, dd, plt, verbose=verbose)
 
-    maxdot = max(dotat.values())
-    sys.stderr.write(f"Maximum dot density is {maxdot}\n")
-    # we make the mean 50% intensity this time
-    meandot = np.mean(list(dotat.values()))
-    sys.stderr.write(f"The mean dot density is {meandot}\n")
-    print()
-    # now we color the dots based on the intensity of each dot!
-    dotlegend = []
-    dotlabels = []
-    dotadded = set()
-    for tple in sorted(dotat, key=dotat.get):
-        dotalpha = (dotat[tple] / meandot) * 0.5
-        if dotalpha > 1:
-            dotalpha = 1
-        if dotat[tple] not in dotadded:
-            rect = Rectangle((0, 100), 100, 100, linewidth=5, edgecolor='black', facecolor='black', alpha=dotalpha)
-            dotlegend.append(rect)
-            dotlabels.append(dotat[tple])
-            dotadded.add(dotat[tple])
-        markeredgewidth = markersize // 5
-        plt.plot(tple[0], tple[1], 'o', color='Black', alpha=dotalpha, markersize=markersize,
-                 transform=ccrs.PlateCarree())
-        plt.plot(tple[0], tple[1], 'o', color='Black', fillstyle='none', markersize=markersize,
-                 mew=markeredgewidth, transform=ccrs.PlateCarree())
 
     # how many lines and circles do we draw?
     circleat = {}
@@ -160,16 +180,6 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                     scaledalpha = alpha * 0.25
                     samecontinent = False
 
-            if bounds and ((ll[idx1][1] < bounds[0] or ll[idx1][1] > bounds[2]) or (ll[idx1][0] < bounds[1] or ll[idx1][0] > bounds[3])):
-                if verbose:
-                    sys.stderr.write("{} out of bounds. Skipped\n".format(idx1))
-                continue
-
-            if bounds and ((ll[idx2][1] < bounds[0] or ll[idx2][1] > bounds[2]) or (ll[idx2][0] < bounds[1] or ll[idx2][0] > bounds[3])):
-                if verbose:
-                    sys.stderr.write("{} out of bounds. Skipped\n".format(idx2))
-                continue
-
             if linewidth == 0:
                 linewidth = dd[idx1][idx2]
                 linewidth = (linewidth/maxdist) * maxlinewidth
@@ -184,8 +194,6 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
                 # we need to use some simple trig to find the center of the circle whose point on the circumference
                 # is at our lat lon
                 radius = 3
-                if bounds:
-                    radius = 1.5
                 circlon = ll[idx1][0] - (radius * math.sin(2 * math.pi))
                 circlat = ll[idx1][1] - (radius * math.cos(2 * math.pi))
 
@@ -368,46 +376,34 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, bounds=None, maxdist=1, maxl
     # sys.stderr.write("We drew a max of {} circles\n".format(max(circleat.values())))
     # sys.stderr.write("And we drew a max of {} lines\n".format(max(lineat.values())))
     sys.stderr.write("Circles,{}\nLines,{}\n".format(",".join(map(str, circleat.values())), ",".join(map(str, lineat.values()))))
-    sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotat.values()))))
 
-    sys.stderr.write("\nMAXIMUM VALUES\nCirlces: {}\nLines: {}\nDots: {}\n".format(max(circleat.values()),
-                                                                                   max(lineat.values()),
-                                                                                   max(dotat.values())
+    sys.stderr.write("\nMAXIMUM VALUES\nCirlces: {}\nLines: {}\n".format(max(circleat.values()),
+                                                                                   max(lineat.values())
                                                                                    ))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Plot a map using ete and lat lon')
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
-    parser.add_argument('-m', help='cophenetic map file with same ids as id.map', required=True)
+    parser.add_argument('-j', help='json format of the cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
     parser.add_argument('-a', help='alpha level for lines. Default=0.25', type=float, default=0.25)
     parser.add_argument('-l', help='linewidth for the lines connecting similar sites', default=1, type=float)
     parser.add_argument('-c', help='color the lines between continents yellow', action='store_true')
     parser.add_argument('-n', help='Plot the intensity as a fraction of max value', action='store_true')
-    parser.add_argument('-b', help='geographic bounds. Use top left, bottom right. e.g. 75,35:35,-25')
     parser.add_argument('-g', help="Legend file. This is a simple image with the legend, and is in a separate file")
     parser.add_argument('-s', help='scale the line width by the number of times the line is drawn', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
+    t = time.time()
+    sys.stderr.write("Reading lat lon\n")
+    lonlat = get_lon_lat(args.i, verbose=args.v)
+    sys.stderr.write(f"\ttook {time.time() - t} seconds\n")
 
-    bounds = None
-    if args.b:
-        ll = args.b.split(":")
-        topleft = ll[0].split(",")
-        bottomright = ll[1].split(",")
-        try:
-            bounds=[int(topleft[0]), int(topleft[1]), int(bottomright[0]), int(bottomright[1])]
-            if bounds[0] > bounds[2]:
-                (bounds[0], bounds[2]) = (bounds[2], bounds[0])
-            if bounds[1] > bounds[3]:
-                (bounds[1], bounds[3]) = (bounds[3], bounds[1])
-        except:
-            sys.stderr.write("There was an error parsing integers from {}. Please do not include N/E/S/W, just +/- ints\n".format(args.b))
-            sys.exit()
+    t = time.time()
+    with open(args.j, 'r') as jin:
+        dist = json.load(jin)
+    sys.stderr.write(f"Reading json took {time.time()-t} seconds\n")
 
-    lonlat = get_lon_lat(args.i, args.v)
-    dist = closest_dna_dist(args.m, args.v)
-
-    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, bounds=bounds, colorcontinents=args.c,
-            plotintensity=args.n, legendfile=args.g, linewidthbyn=args.s)
+    plotmap(lonlat, dist, args.o, args.a, linewidth=args.l, colorcontinents=args.c,
+            plotintensity=args.n, legendfile=args.g, linewidthbyn=args.s, verbose=args.v)
