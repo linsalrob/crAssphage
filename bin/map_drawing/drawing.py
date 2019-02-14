@@ -48,13 +48,8 @@ def draw_dots(ll, dd, plt, verbose=False):
 
     dotlegend = []
     dotlabels = []
-
+    dotsizes = {}
     markersizes = [4, 7, 10, 13, 16]
-    for m in markersizes:
-        # shp = Rectangle((0, 100), 100, 100, linewidth=5, edgecolor='black', facecolor='black', alpha=dotalpha)
-        shp = Circle((0, 100), radius=m, color='Black')
-        dotlegend.append(shp)
-        dotlabels.append(m)
 
     for tple in sorted(dotat, key=dotat.get):
         markersize = None
@@ -72,10 +67,12 @@ def draw_dots(ll, dd, plt, verbose=False):
         plt.plot(tple[0], tple[1], 'o', color='Black', markersize=markersize,
                  transform=ccrs.PlateCarree())
 
+        dotsizes[tple] = markersize
+
     if verbose:
         sys.stderr.write("Dots,{}\n".format(",".join(map(str, dotat.values()))))
 
-    return dotlegend, dotlabels
+    return dotsizes
 
 def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
             colorcontinents=False, plotintensity=False, legendfile=None, linewidthbyn=False, verbose=False):
@@ -125,30 +122,15 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
     #ax.stock_img()
     ax.coastlines()
 
+    """
     # color the lines based on the maximum distance value
     jet = plt.get_cmap('jet')
     cNorm = colors.Normalize(vmin=0, vmax=maxdist)
     scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=jet)
-
-    """
-    
-    Probably don't need this section
-    # Using contourf to provide my colorbar info, then clearing the figure
-    Z = [[0, 0], [0, 0]]
-    levels = range(0, int(100 * maxdist) + 10, 10)
-    CS3 = plt.contourf(Z, levels, cmap=jet)
-#    plt.clf()
-
-    # NOTE: longitude before latitude!!
-    # plt.plot([sdlon, brislon], [sdlat, brislat], color='blue', linewidth=2,  transform=ccrs.Geodetic())
-
-    # plot the circles for each sample site
-    # markerfacecolor="None",
-    
-    END of the don't need
     """
 
-    dotlegend, dotlabels = draw_dots(ll, dd, plt, verbose=verbose)
+    dotsizes = draw_dots(ll, dd, plt, verbose=verbose)
+
 
 
     # how many lines and circles do we draw?
@@ -365,10 +347,25 @@ def plotmap(ll, dd, outputfile, alpha, linewidth=1, maxdist=1, maxlinewidth=6,
                     labels.append(f"{colorcountsmin[c]}-{colorcountsmax[c]}")
 
         # combine both legends and labels to make a single legend for this figure
-        alleg = legends + dotlegend
-        allab = labels + dotlabels
+        alleg = legends
+        allab = labels
 
-        ax2.legend(alleg, allab)
+        # ax2.legend(alleg, allab)
+
+        markers = []
+        legendtext = []
+        for m in sorted(dotsizes.values()):
+            emptyplot = plt.scatter([], [], s=m, marker='o', color='Black')
+            markers.append(emptyplot)
+            legendtext.append("")
+        legendtext[0]  = "Least"
+        legendtext[-1] = "Most"
+
+        ax2.legend(markers, legendtext,
+                   scatterpoints=1,
+                   loc='lower left',
+                   ncol=1,
+                   fontsize=8)
 
         plt.savefig(legendfile)
 
