@@ -8,11 +8,11 @@ import sys
 import argparse
 import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
-#plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
+# plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 
-#plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
+plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
 
-plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
+#plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
@@ -49,7 +49,9 @@ def cols(val, verbose=False, getscale=False):
     cutoffs = [10, 25, 50, 100]
 
     # current color scale. This is so we can easily change it
-    colorscale = YlOrRd
+    #colorscale = YlOrRd
+    #colorscale = ['#F2ea2a', '#e7298a', '#2C7FB8']
+    colorscale = ['#ffffb2', '#66cad7', '#dd1c77']
 
     if getscale:
         return colorscale
@@ -81,9 +83,12 @@ def get_pie_size(val, verbose=False, getscale=False):
     # piesizes = [4, 6, 8, 10, 14]
     # piesizes = [2, 4, 6, 8, 12]
     # piesizes = [0.5, 1, 1.5, 2, 2.5]
-    piesizes = [0.5, 0.7, .9, 1.1, 1.3]
+    # piesizes = [0.5, 0.7, .9, 1.1, 1.3]
+    piesizes = [0.5, 0.8, 1.1]
+
     # there should be one less maxpievals than piesizes and then we use piesizes[-1] for anything larger
-    maxpievals = [10, 20, 30, 40]
+    # maxpievals = [10, 20, 30, 40]
+    maxpievals = [20, 40]
 
     if getscale:
         return piesizes
@@ -117,7 +122,7 @@ def get_alpha(val, verbose=False, getscale=False):
     return alphalevels[-1]
 
 
-def calculate_samediff(ll, dd, samekm=100, verbose=False):
+def calculate_samediff(ll, dd, samekm=150, verbose=False):
     """
     Calculate same/different values for each location. We also concatenate all the locations
     < samekm apart.
@@ -190,7 +195,7 @@ def calculate_samediff(ll, dd, samekm=100, verbose=False):
     return data
 
 
-def plot_pie_inset(data,lat,lon,ax,width,c):
+def plot_pie_inset(data,lat,lon,ax,width,c, verbose=False):
     """
     Plot the pie charts on the axis.
     This is taken from
@@ -207,13 +212,19 @@ def plot_pie_inset(data,lat,lon,ax,width,c):
     ax_sub= inset_axes(ax, width=width, height=width, loc=10,
                        bbox_to_anchor=(lonr, latr),
                        bbox_transform=ax.transData,
-                       borderpad=0)
-    wedges,texts= ax_sub.pie(data, startangle=90, colors=c)
+                       borderpad=0,
+                       axes_kwargs={"zorder": 1/width*10})
+    wedges,texts= ax_sub.pie(data, startangle=90, colors=c, wedgeprops={'linewidth': 1, 'alpha': 0.9, 'edgecolor': 'k'})
     # set some transparancy
     #al = get_alpha(sum(data))
-    al = 0.5
+    """
+    al = 0.9
     for i in range(len(wedges)):
         wedges[i].set_alpha(al)
+    """
+
+    if verbose:
+        sys.stderr.write(f"Total: {sum(data)} Z: {1/width*10}\n")
 
     ax_sub.set_aspect("equal")
 
@@ -236,28 +247,24 @@ def add_pies(data, x, verbose=False):
         c = cols(0, getscale=True)
 
         colpos = (0,-1)
+        z = get_pie_size(t)
+
         if 0 == s and 1 ==f:
             colpos = (len(c) // 2, len(c) // 2)
+            z = 0.25
 
 
-        z = get_pie_size(t)
         if verbose:
             sys.stderr.write(f"Total: {t} Size of pie: {z}\n")
-        plot_pie_inset([f, s], o, a, x, z, [c[colpos[0]], c[colpos[-1]]])
+        plot_pie_inset([f, s], o, a, x, z, [c[colpos[0]], c[colpos[-1]]], verbose=verbose)
 
 
-def plotmap(ll, dd, outputfile, plotsingle=False, dotalpha=False, legendfile=None, verbose=False):
+def plotmap(ll, dd, outputfile, verbose=False):
     """
     Plot the map of the dna distances and lat longs
     :param ll: The lon-lats
     :param dd: The distances to use
     :param outputfile: The file name to write the image to
-    :param maxdist: The maximum distance that we will scale to be maxlinewidth
-    :param colorcontinents: color lines that go to different continents a different color (currently yellow)
-    :param dotalpha: use an alpha on the dots
-    :param plotintensity: plot the colors of the lines by intensity vs. setting each number a color
-    :param legendfile: create a separate file with the legend.
-    :param linewidthbyn: scale the line width by the number of lines drawn
     :return:
     """
 
@@ -286,21 +293,21 @@ def plotmap(ll, dd, outputfile, plotsingle=False, dotalpha=False, legendfile=Non
     ax.set_global()
     # convert to a grayscale image. Uncomment stock_img to get color
     #ax.background_img(name='grayscale_shaded', resolution='low')
-    ax.background_img(name='grey_blue_ocean6', resolution='low')
+    ax.background_img(name='PC_test', resolution='low')
 
     #ax.stock_img()
     #ax.coastlines()
 
     # figure out our dots and lines
     t = time.time()
-    data = calculate_samediff(ll, dd, samekm=250, verbose=verbose)
+    data = calculate_samediff(ll, dd, samekm=150, verbose=verbose)
     if verbose:
         sys.stderr.write(f"Calculating the lots took {time.time() - t} seconds\n")
 
     t=time.time()
     add_pies(data, ax, verbose=verbose)
 
-    makelegend = True
+    makelegend = False
     if makelegend:
         ll = -10
         ldata = {'one' : {'lon': -2, 'lat': 0, 'same': 0, 'diff': 1, 'total': 1}}
@@ -327,12 +334,6 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
     parser.add_argument('-j', help='json format of the cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
-    parser.add_argument('-a', help='use an alpha for dots. Default=False', action='store_true')
-    parser.add_argument('-l', help='linewidth for the lines connecting similar sites', default=1, type=float)
-    parser.add_argument('-c', help='color the lines between continents yellow', action='store_true')
-    parser.add_argument('-n', help='Plot the intensity as a fraction of max value', action='store_true')
-    parser.add_argument('-g', help="Legend file. This is a simple image with the legend, and is in a separate file")
-    parser.add_argument('-s', help='plot dots and lines with only a single data point (otherwise just dots)', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
@@ -346,4 +347,4 @@ if __name__ == '__main__':
         dist = json.load(jin)
     sys.stderr.write(f"Reading json took {time.time()-t} seconds\n")
 
-    plotmap(lonlat, dist, args.o, plotsingle=args.s, legendfile=args.g, dotalpha=args.a, verbose=args.v)
+    plotmap(lonlat, dist, args.o, verbose=args.v)
