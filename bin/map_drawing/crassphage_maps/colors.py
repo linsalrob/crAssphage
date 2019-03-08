@@ -36,6 +36,8 @@ Blues = ["#c6dbef",  "#9ecae1",  "#6baed6",  "#4292c6",  "#2171b5"]
 # http://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=7
 YlOrBr = ['#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02']
 
+YlOrRd = ['#ffffb2', '#fecc5c', '#fd8d3c', '#f03b20', '#bd0026']
+
 
 def evenly_select(n, m):
     """
