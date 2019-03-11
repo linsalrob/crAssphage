@@ -10,9 +10,8 @@ import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
 # plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 
-#plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
+plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
 
-plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
@@ -308,7 +307,7 @@ def plotmap(ll, dd, outputfile, verbose=False):
     # convert to a grayscale image. Uncomment stock_img to get color
     #ax.background_img(name='grayscale_shaded', resolution='low')
     #ax.background_img(name='PC_test', resolution='low') ## << OUR  FAVORITE
-    ax.background_img(name='PigmentPixelEarth', resolution='low')
+    ax.background_img(name='GreyScaleEarth', resolution='low')
 
     #ax.stock_img()
     #ax.coastlines()
@@ -349,8 +348,12 @@ if __name__ == '__main__':
     parser.add_argument('-i', help='id.map file with lat/lon information', required=True)
     parser.add_argument('-j', help='json format of the cophenetic map file with same ids as id.map', required=True)
     parser.add_argument('-o', help='output file name', required=True)
+    parser.add_argument('-l', help='make a larger figure e.g. to extract the Europe region', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
+
+    if args.l:
+        plt.rcParams["figure.figsize"] = (88, 64)  # default: 22,16; for large use 88, 64
 
     t = time.time()
     sys.stderr.write("Reading lat lon\n")
