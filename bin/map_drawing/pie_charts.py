@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 # set the figure size. This should be in inches?
 # plt.rcParams["figure.figsize"] = (22,16) # default: 22,16; for large use 88, 64
 
-plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
+#plt.rcParams["figure.figsize"] = (44,32) # default: 22,16; for large use 88, 64
 
-#plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
+plt.rcParams["figure.figsize"] = (88,64) # default: 22,16; for large use 88, 64
 import matplotlib.colors as colors
 import matplotlib.cm as cmx
 from matplotlib.patches import Circle, Rectangle
@@ -214,7 +214,9 @@ def plot_pie_inset(data,lat,lon,ax,width,c, verbose=False):
                        bbox_transform=ax.transData,
                        borderpad=0,
                        axes_kwargs={"zorder": 1/width*10})
-    wedges,texts= ax_sub.pie(data, startangle=90, colors=c, wedgeprops={'linewidth': 1, 'alpha': 0.9, 'edgecolor': 'k'})
+    #wedges,texts= ax_sub.pie(data, startangle=90, colors=c, wedgeprops={'linewidth': 1, 'alpha': 0.9, 'edgecolor': 'k'})
+    wedges, texts = ax_sub.pie(data, startangle=90, colors=c, wedgeprops={'alpha': 0.9})
+
     # set some transparancy
     #al = get_alpha(sum(data))
     """
@@ -222,6 +224,18 @@ def plot_pie_inset(data,lat,lon,ax,width,c, verbose=False):
     for i in range(len(wedges)):
         wedges[i].set_alpha(al)
     """
+    # this will add a black border to the pie, but not add edges to the wedges. Then, if we have >1 wedge we can
+    # add the wedges edges!
+
+    ctr = wedges[0].center
+    rad = wedges[0].r
+    circle = Circle(ctr, rad, fill=False, edgecolor='k', linewidth=1)
+    ax_sub.add_patch(circle)
+
+    if data[0] > 0 and data[1] > 0:
+        for i in range(len(wedges)):
+            wedges[i].set_linewidth(1)
+            wedges[i].set_edgecolor('k')
 
     if verbose:
         sys.stderr.write(f"Total: {sum(data)} Z: {1/width*10}\n")
@@ -293,7 +307,8 @@ def plotmap(ll, dd, outputfile, verbose=False):
     ax.set_global()
     # convert to a grayscale image. Uncomment stock_img to get color
     #ax.background_img(name='grayscale_shaded', resolution='low')
-    ax.background_img(name='PC_test', resolution='low')
+    #ax.background_img(name='PC_test', resolution='low') ## << OUR  FAVORITE
+    ax.background_img(name='PigmentPixelEarth', resolution='low')
 
     #ax.stock_img()
     #ax.coastlines()
