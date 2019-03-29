@@ -53,12 +53,31 @@ Note that we store seqs.C.rc.trim.aln.mldist as a gzip compressed file in the re
 
 ## Making the world maps
 
-We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements. We need to make the matrix otherwise you need to iterate over the tree to find closest neighbors.
+We use [cartopy](http://scitools.org.uk/cartopy/) to make the world maps. The maps are made in two stages. First we need to convert the tree to a cophenetic matrix, and then we use the matrix to find the closest elements. We need to make the matrix otherwise you need to iterate over the tree to find closest neighbors. As we have been through this process of refining the maps,  we have made some intermediate files that speed things up.
 
-```
-python3 ../../../bin/tree_to_cophenetic_matrix.py -t seqs.A.rc.trim.aln.treefile > seqs.A.rc.trim.matrix
-# python3 ../../../bin/matrix2map.py -i id.A.map -m seqs.A.rc.trim.matrix.gz -o PrimerA_map.alpha0.2.svg -a 0.2 -l 1.0
-python3 ../../../bin/matrix2map.py -i id.A.map -m seqs.A.rc.trim.matrix.gz -o PrimerA_map.png -s -a 1 -l 1 -g legend.png
+First, we preparse the cophenetic matrix to create a JSON file that has a dictionary where the keys are all the sequence IDs. The values are simply a dictionary with one entry, the location of the best hit and the similarity between them.
+
+```bash
+python3  ../../../bin/map_drawing/preparse_matrix.py -m seqs.A.rc.trim.matrix.gz -o seqs.A.rc.trim.json
 ```
 
-Note to make the map inset we change one of the settings in matrix2map.py (at the top of the code) which makes a really large image (88" x 64") and then use inkscape to edit out just the European portion and make that an inset in the regular image.
+You can take a look at that using the view_json.py command:
+
+```bash
+python3  ../../../bin/map_drawing/view_json.py -f seqs.A.rc.trim.json | less
+```
+
+We use the JSON file to make our pie charts:
+
+```bash
+python3 ../../../bin/map_drawing/pie_charts.py -i id.A.map -j seqs.A.rc.trim.json -o PrimerA_map.svg
+python3 ../../../bin/map_drawing/pie_charts.py -i id.A.map -j seqs.A.rc.trim.json -o PrimerA_map_Europe.svg -l
+```
+
+We make the figure in two sizes. The first is 44 x 32 and then we make a double size figure 88 x 64 that we use to cut out the inset for Europe. We add the `-l` flag to make the figure larger.
+
+Next, we edit the figure in inkscape to add the [legend](../../bin/map_drawing/legend.svg) and make the cutout for Europe. The [Europe clipping shapes](../../bin/map_drawing/europe_clip.svg) has the clipping mask for Europe that aligns to the coast of Greenland. It also contains the bounding box to put behind Europe in the cutout.
+
+Finally, we make an edit in Gimp to remove the extraneous land outside the globe. This appears to be an issue with Cartopy where it correctly reshapes the globe and adds the bounds, but does not clip beyond that.
+
+

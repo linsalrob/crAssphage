@@ -32,6 +32,13 @@ GnBu5 = ["#f0f9e8", "#bae4bc", "#7bccc4", "#43a2ca", "#0868ac"]
 # and took 5 of the blues
 Blues = ["#c6dbef",  "#9ecae1",  "#6baed6",  "#4292c6",  "#2171b5"]
 
+# Again, I choose these from but ignored the lightest/darkest
+# http://colorbrewer2.org/#type=sequential&scheme=YlOrBr&n=7
+YlOrBr = ['#fee391', '#fec44f', '#fe9929', '#ec7014', '#cc4c02']
+
+YlOrRd = ['#ffffb2', '#fecc5c', '#fd8d3c', '#f03b20', '#bd0026']
+
+
 def evenly_select(n, m):
     """
     Evenly select M elements from a list of length N.
