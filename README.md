@@ -1,3 +1,5 @@
+[![Edwards Lab](https://img.shields.io/badge/Bioinformatics-EdwardsLab-03A9F4)](https://edwards.sdsu.edu/research)
+
 # crAssphage
 
 Sequencing and analysis of crAssphage regions from around the globe and from all the metagenomes we can find.
