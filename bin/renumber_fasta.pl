@@ -3,14 +3,25 @@
 # renumber fasta sequences and write out an id map
 
 use strict;
-my $c=0;
-my $f=shift || die "fasta file?";
-my $o=shift || die "fasta output file";
-my $i=shift || die "id map file to write";
+
+my $usage = <<EOF;
+$0 <fasta file> <output file> <id map> [optional number to start at]
+
+Both output file and id map file will be appended to if they exist.
+If the number to start at is provided that is the first number in the file.
+
+EOF
+
+
+my $f=shift || die $usage;
+my $o=shift || die $usage;
+my $i=shift || die $usage;
+my $c = shift || 0;
+
 
 open(IN, "$f") || die $!;
-open(OUT, ">$o") || die $!;
-open(ID, ">$i") || die $!;
+open(OUT, ">>$o") || die $!;
+open(ID, ">>$i") || die $!;
 while(<IN>) {
 	if (s/^>//) {
 		print ID "$c\t$_";
